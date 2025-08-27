@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: ErrorTable Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: ErrorTable
+  m_TableCollectionNameGuidString: 4be5da9eefff1404292e5c016355f4b4
+  m_Entries:
+  - m_Id: 130505052160
+    m_Key: nuovaPartitaConSalvataggio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5231848263680
+    m_Key: caricaPartitaSenzaSalvataggio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 66784446451712
+    m_Key: uscitaDalGiocoAvvisoSalvataggio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2778887009169408
+    m_Key: licenziamentoAvviso
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 4093154559314624584
+  references:
+    version: 2
+    RefIds:
+    - rid: 4093154559314624584
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1755538725665

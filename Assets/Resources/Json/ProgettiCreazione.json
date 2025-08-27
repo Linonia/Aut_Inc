@@ -1,0 +1,113 @@
+﻿{
+  
+  "Sistema Ticketing Avanzato": ["AssistenzaESupportoTecnico"],
+  "Portale Supporto Clienti": ["AssistenzaESupportoTecnico"],
+  "Modulo Formazione Assistenza": ["AssistenzaESupportoTecnico"],
+  "Centro Operativo Assistenza": ["AssistenzaESupportoTecnico"],
+
+  "Automazione Test Funzionali": ["ControlloQualita"],
+  "Piattaforma Validazione Software": ["ControlloQualita"],
+  "Dashboard Bug Tracking": ["ControlloQualita"],
+  "Sistema Carico e Stress Test": ["ControlloQualita"],
+
+  "Kit Stile e Layout UI": ["UxEDesign"],
+  "Prototipazione Interattiva Avanzata": ["UxEDesign"],
+  "Sistema Raccolta Feedback Utenti": ["UxEDesign"],
+  "Tool Accessibilità Web": ["UxEDesign"],
+
+  "Framework Backend Modulare": ["SviluppoSoftware"],
+  "Sistema Autenticazione OAuth": ["SviluppoSoftware"],
+  "API Gateway Sicuro": ["SviluppoSoftware"],
+  "Tool Gestione Progetti Agile": ["SviluppoSoftware"],
+
+  
+  "Toolkit Supporto e QA": ["AssistenzaESupportoTecnico", "ControlloQualita"],
+  "Sistema Assistenza e Test": ["AssistenzaESupportoTecnico", "ControlloQualita"],
+  "Piattaforma Helpdesk QA": ["AssistenzaESupportoTecnico", "ControlloQualita"],
+
+  "Suite Supporto e UX": ["AssistenzaESupportoTecnico", "UxEDesign"],
+  "Portale Assistenza con UI": ["AssistenzaESupportoTecnico", "UxEDesign"],
+  "Tool Chat e Design": ["AssistenzaESupportoTecnico", "UxEDesign"],
+
+  "Sistema Supporto e Sviluppo": ["AssistenzaESupportoTecnico", "SviluppoSoftware"],
+  "Modulo Assistenza Backend": ["AssistenzaESupportoTecnico", "SviluppoSoftware"],
+  "Integrazione Helpdesk Dev": ["AssistenzaESupportoTecnico", "SviluppoSoftware"],
+
+  "Dashboard QA e Design": ["ControlloQualita", "UxEDesign"],
+  "Piattaforma QA UI": ["ControlloQualita", "UxEDesign"],
+  "Framework Test UX": ["ControlloQualita", "UxEDesign"],
+
+  "Piattaforma QA Backend": ["ControlloQualita", "SviluppoSoftware"],
+  "Sistema Test Software": ["ControlloQualita", "SviluppoSoftware"],
+  "Tool Validazione Codice": ["ControlloQualita", "SviluppoSoftware"],
+
+  "Suite UX e Backend": ["UxEDesign", "SviluppoSoftware"],
+  "Sistema Design e Sviluppo": ["UxEDesign", "SviluppoSoftware"],
+  "Piattaforma UI Dev": ["UxEDesign", "SviluppoSoftware"],
+
+  
+  "Piattaforma Integrata Assistenza-QA-UX": ["AssistenzaESupportoTecnico", "ControlloQualita", "UxEDesign"],
+  "Suite Completa Helpdesk QA UI": ["AssistenzaESupportoTecnico", "ControlloQualita", "UxEDesign"],
+  "Sistema Avanzato Supporto e Test UI": ["AssistenzaESupportoTecnico", "ControlloQualita", "UxEDesign"],
+
+  "Piattaforma Integrata Assistenza-QA-Sviluppo": ["AssistenzaESupportoTecnico", "ControlloQualita", "SviluppoSoftware"],
+  "Suite Completa Helpdesk QA Dev": ["AssistenzaESupportoTecnico", "ControlloQualita", "SviluppoSoftware"],
+  "Sistema Avanzato Supporto e Test Dev": ["AssistenzaESupportoTecnico", "ControlloQualita", "SviluppoSoftware"],
+
+  "Piattaforma Integrata Assistenza-UX-Sviluppo": ["AssistenzaESupportoTecnico", "UxEDesign", "SviluppoSoftware"],
+  "Suite Completa Helpdesk UI Dev": ["AssistenzaESupportoTecnico", "UxEDesign", "SviluppoSoftware"],
+  "Sistema Avanzato Supporto UI Dev": ["AssistenzaESupportoTecnico", "UxEDesign", "SviluppoSoftware"],
+
+  "Piattaforma Integrata QA-UX-Sviluppo": ["ControlloQualita", "UxEDesign", "SviluppoSoftware"],
+  "Suite Completa QA UI Dev": ["ControlloQualita", "UxEDesign", "SviluppoSoftware"],
+  "Sistema Avanzato QA UI Dev": ["ControlloQualita", "UxEDesign", "SviluppoSoftware"],
+
+  
+  "Assistente AI per Supporto Clienti": ["RicercaESviluppo", "AssistenzaESupportoTecnico"],
+  "Sistema Predittivo Helpdesk": ["RicercaESviluppo", "AssistenzaESupportoTecnico"],
+  "Tool Intelligente Assistenza": ["RicercaESviluppo", "AssistenzaESupportoTecnico"],
+
+  "Analisi Avanzata Dati QA": ["RicercaESviluppo", "ControlloQualita"],
+  "Piattaforma Intelligente QA": ["RicercaESviluppo", "ControlloQualita"],
+  "Sistema Machine Learning QA": ["RicercaESviluppo", "ControlloQualita"],
+
+  "Piattaforma Ricerca UX": ["RicercaESviluppo", "UxEDesign"],
+  "Tool Innovativo UX Research": ["RicercaESviluppo", "UxEDesign"],
+  "Sistema AI per Feedback UX": ["RicercaESviluppo", "UxEDesign"],
+
+  "Laboratorio Innovazione Software": ["RicercaESviluppo", "SviluppoSoftware"],
+  "Piattaforma Sperimentale Dev": ["RicercaESviluppo", "SviluppoSoftware"],
+  "Tool AI per Sviluppo Software": ["RicercaESviluppo", "SviluppoSoftware"],
+
+  "Gestione Campagne Marketing": ["Marketing", "AssistenzaESupportoTecnico"],
+  "Dashboard Analisi Campagne": ["Marketing", "AssistenzaESupportoTecnico"],
+  "Tool CRM per Marketing": ["Marketing", "AssistenzaESupportoTecnico"],
+
+  "Analisi SEO Avanzata": ["Marketing", "ControlloQualita"],
+  "Sistema Report SEO": ["Marketing", "ControlloQualita"],
+  "Tool Monitoraggio Ranking": ["Marketing", "ControlloQualita"],
+
+  "Suite Creativa Advertising": ["Marketing", "UxEDesign"],
+  "Piattaforma Design Ads": ["Marketing", "UxEDesign"],
+  "Tool Ottimizzazione Creatività": ["Marketing", "UxEDesign"],
+
+  "Strumenti Marketing E-commerce": ["Marketing", "SviluppoSoftware"],
+  "Piattaforma E-commerce Analytics": ["Marketing", "SviluppoSoftware"],
+  "Tool Automazione Marketing": ["Marketing", "SviluppoSoftware"],
+
+  "Piattaforma QA Hardware": ["SviluppoHardwareEInnovazioniTecnologiche", "AssistenzaESupportoTecnico"],
+  "Sistema Diagnostica Hardware": ["SviluppoHardwareEInnovazioniTecnologiche", "AssistenzaESupportoTecnico"],
+  "Tool Monitoraggio Hardware": ["SviluppoHardwareEInnovazioniTecnologiche", "AssistenzaESupportoTecnico"],
+
+  "Suite Test Firmware": ["SviluppoHardwareEInnovazioniTecnologiche", "ControlloQualita"],
+  "Sistema Automazione Firmware": ["SviluppoHardwareEInnovazioniTecnologiche", "ControlloQualita"],
+  "Tool QA Firmware": ["SviluppoHardwareEInnovazioniTecnologiche", "ControlloQualita"],
+
+  "Tool Design Embedded UI": ["SviluppoHardwareEInnovazioniTecnologiche", "UxEDesign"],
+  "Piattaforma UI Embedded": ["SviluppoHardwareEInnovazioniTecnologiche", "UxEDesign"],
+  "Sistema Interfaccia Hardware": ["SviluppoHardwareEInnovazioniTecnologiche", "UxEDesign"],
+
+  "Sviluppo Firmware IoT": ["SviluppoHardwareEInnovazioniTecnologiche", "SviluppoSoftware"],
+  "Sistema Embedded IoT": ["SviluppoHardwareEInnovazioniTecnologiche", "SviluppoSoftware"],
+  "Tool Firmware Avanzato": ["SviluppoHardwareEInnovazioniTecnologiche", "SviluppoSoftware"]
+}

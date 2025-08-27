@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Departments_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: b98bfc099504fb64c8e3d2c254b1e0ec, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 1821394169856
+    m_Localized: Technical Support and Assistance
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1914654519296
+    m_Localized: Code Quality Assurance
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1928927735808
+    m_Localized: User Experience and Design
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1939916812288
+    m_Localized: Software Development
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1952461975552
+    m_Localized: Research and Development
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1964063420416
+    m_Localized: Marketing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1976482754560
+    m_Localized: Hardware Development and Technological Innovations
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4983693864960
+    m_Localized: This department needs people who can express themselves clearly
+      and understand others needs. The ability to adapt language is essential to
+      provide effective help.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5032125493248
+    m_Localized: This area requires strong attention to detail and consistency in
+      following procedures. Accuracy is key to prevent hidden mistakes.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5457478250496
+    m_Localized: This department values the ability to notice visual and sensory
+      nuances. Aesthetic sensitivity helps create pleasant user experiences.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5497760346112
+    m_Localized: This area requires solving complex problems and thinking logically.
+      The ability to plan and stay focused is essential.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5560750403584
+    m_Localized: This department needs creativity combined with the ability to communicate
+      messages effectively. Understanding emotions is important to reach the audience.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5617612582912
+    m_Localized: This area requires curiosity and dedication to analyze and constantly
+      improve. The ability to identify patterns and experiment with new solutions
+      is crucial.
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

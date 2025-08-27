@@ -1,0 +1,212 @@
+{
+  "Comunicazione": {
+    "1": [
+      [1, 1, "Mostra difficoltà significative nel mantenere il contatto visivo durante le conversazioni e tende a evitare scambi verbali anche con interlocutori familiari."],
+      [1, 2, "Spesso non riesce a modulare il tono di voce o il ritmo del discorso; fatica a farsi comprendere in contesti sociali quotidiani."]
+    ],
+    "2": [
+      [1, 3, "Interagisce principalmente con persone conosciute. Mostra esitazioni evidenti e difficoltà a comprendere le sfumature del linguaggio non verbale."],
+      [2, 2, "Fatica a partecipare a conversazioni multiple e può avere difficoltà a interpretare domande aperte o indirette."]
+    ],
+    "3": [
+      [2, 4, "Partecipa a brevi conversazioni ma evita contesti sociali più ampi. Può avere difficoltà a comprendere battute o sarcasmo."],
+      [3, 3, "Si interrompe frequentemente mentre parla e può ripetere frasi o parole in modo stereotipato."]
+    ],
+    "4": [
+      [3, 5, "Riesce a comunicare informazioni semplici, ma può avere difficoltà a modulare espressioni facciali o gesti in modo appropriato."],
+      [4, 4, "Partecipa a scambi verbali quotidiani solo se stimolato; può evitare argomenti nuovi o incerti."]
+    ],
+    "5": [
+      [5, 5, "Gestisce conversazioni di routine con chiarezza e coerenza. Riesce a seguire e rispettare le regole sociali di base."],
+      [4, 6, "Partecipa a discussioni quotidiane mostrando consapevolezza dei turni di parola, con qualche esitazione occasionale."]
+    ],
+    "6": [
+      [5, 7, "Espone idee in modo chiaro, modulando tono e ritmo, ma può ancora manifestare una preferenza per argomenti familiari o interessi specifici."],
+      [6, 6, "Comunica efficacemente in contesti quotidiani, mostrando capacità di ascolto e comprensione verbale buone."]
+    ],
+    "7": [
+      [7, 7, "Interagisce con sicurezza anche con interlocutori nuovi. Dimostra comprensione di segnali non verbali e regole sociali implicite."],
+      [6, 8, "Gestisce conversazioni di gruppo quotidiane in modo efficace, bilanciando attenzione tra diversi interlocutori."]
+    ],
+    "8": [
+      [8, 8, "Espone informazioni chiaramente in qualsiasi contesto quotidiano e riesce a modulare registro e tono a seconda dell’interlocutore."],
+      [7, 9, "Mostra eccellenti capacità di comprensione sociale implicita e adeguamento del linguaggio in situazioni quotidiane varie."]
+    ],
+    "9": [
+      [9, 9, "Comunica in maniera fluida e coerente in tutte le situazioni quotidiane, adattando linguaggio e tono al contesto e agli interlocutori."],
+      [8, 10, "Riesce a spiegare concetti complessi con chiarezza, mostrando precisione verbale e abilità di sintesi elevate, spesso legate a interessi approfonditi."]
+    ],
+    "10": [
+      [10, 10, "Eccellente capacità comunicativa in ogni situazione quotidiana; integra chiaramente interesse per dettagli e precisione espositiva, caratteristiche tipiche di alcune persone autistiche."],
+      [9, 10, "Gestisce interazioni quotidiane complesse con massimo controllo del linguaggio e delle espressioni, dimostrando abilità avanzate di strutturazione del discorso e attenzione ai dettagli."]
+    ]
+  },
+  "InterazioneSociale": {
+    "1": [
+      [1, 1, "Preferisce trascorrere la maggior parte del tempo da solo, evitando spontaneamente qualsiasi contatto sociale."],
+      [1, 2, "Mostra scarso interesse nel partecipare ad attività collettive e tende a isolarsi anche in contesti familiari."]
+    ],
+    "2": [
+      [1, 3, "Si relaziona raramente con gli altri e cerca momenti di solitudine quando possibile."],
+      [2, 2, "Evita di unirsi a gruppi o attività sociali, mostrando una bassa motivazione a interagire."]
+    ],
+    "3": [
+      [2, 4, "Interagisce occasionalmente, ma trascorre la maggior parte del tempo in attività individuali."],
+      [3, 3, "Mostra interesse limitato verso la compagnia altrui, partecipando solo se sollecitato."]
+    ],
+    "4": [
+      [3, 5, "Apprezza la presenza degli altri in alcuni contesti, ma preferisce comunque attività solitarie."],
+      [4, 4, "Partecipa a momenti sociali brevi, mantenendo un comportamento prevalentemente indipendente."]
+    ],
+    "5": [
+      [5, 5, "Mostra un equilibrio tra momenti di socializzazione e di solitudine, interagendo quando opportuno."],
+      [4, 6, "Partecipa volentieri ad attività collettive, senza sentirsi eccessivamente isolato o forzato."]
+    ],
+    "6": [
+      [5, 7, "Apprezza la compagnia altrui e cerca occasioni per interagire in modo naturale e spontaneo."],
+      [6, 6, "Mostra un desiderio regolare di socializzare, adattandosi facilmente ai contesti di gruppo."]
+    ],
+    "7": [
+      [7, 7, "Cerca attivamente la compagnia degli altri e si impegna in interazioni sociali quotidiane."],
+      [6, 8, "Si sente motivato a partecipare a contatti sociali frequenti e a collaborare in piccoli gruppi."]
+    ],
+    "8": [
+      [8, 8, "Ha forte bisogno di interagire con gli altri; la solitudine prolungata lo rende ansioso o irritabile."],
+      [7, 9, "Cerca costantemente opportunità di socializzazione e apprezza contatti frequenti con persone diverse."]
+    ],
+    "9": [
+      [9, 9, "Dimostra intenso desiderio di socializzare; partecipa attivamente a molteplici attività collettive."],
+      [8, 10, "Si sente motivato a instaurare numerose relazioni sociali, ricercando costantemente interazioni significative."]
+    ],
+    "10": [
+      [10, 10, "Necessita di frequenti interazioni sociali; la mancanza di contatti può causare disagio significativo."],
+      [9, 10, "Mostra un desiderio costante e intenso di socializzare, cercando attivamente compagnia in ogni contesto quotidiano."]
+    ]
+  },
+  "ComportamentiRipetitiviEInteressiRistretti": {
+    "1": [
+      [1, 1, "Mostra difficoltà a concentrarsi su compiti ripetitivi; tende a cambiare frequentemente attività senza completarle."],
+      [1, 2, "Ha interessi molto generici e superficiali, con scarsa attenzione ai dettagli durante le attività quotidiane."]
+    ],
+    "2": [
+      [1, 3, "Raramente completa attività monotone senza distrarsi. Gli interessi tendono a essere saltuari e poco approfonditi."],
+      [2, 2, "Mostra attenzione minima alle piccole variazioni nelle attività ripetitive; preferisce compiti vari e stimolanti."]
+    ],
+    "3": [
+      [2, 4, "Si impegna in compiti ripetitivi solo per brevi periodi. Gli interessi sono limitati e poco dettagliati."],
+      [3, 3, "La concentrazione su attività ripetitive è spesso intermittente, con tendenza a spostarsi rapidamente tra diverse attività."]
+    ],
+    "4": [
+      [3, 5, "Partecipa a compiti ripetitivi quotidiani con attenzione moderata, ma può perdere interesse rapidamente."],
+      [4, 4, "Dimostra capacità di concentrarsi su dettagli semplici, ma fatica a mantenere impegno su attività monotone più lunghe."]
+    ],
+    "5": [
+      [5, 5, "Mantiene un livello equilibrato di concentrazione su compiti ripetitivi, completando la maggior parte delle attività senza errori significativi."],
+      [4, 6, "Mostra capacità di approfondire gli interessi in attività ripetitive, senza diventare ossessivo o troppo dettagliato."]
+    ],
+    "6": [
+      [5, 7, "Si focalizza efficacemente su compiti ripetitivi quotidiani, prestando attenzione a molti dettagli rilevanti."],
+      [6, 6, "Mostra interesse stabile e costante nelle attività ripetitive, con buona gestione della monotonia."]
+    ],
+    "7": [
+      [7, 7, "Dimostra notevole capacità di concentrazione e cura dei dettagli in compiti ripetitivi di routine."],
+      [6, 8, "Interessi ben definiti e approfonditi; mantiene alta qualità nelle attività ripetitive senza perdere motivazione."]
+    ],
+    "8": [
+      [8, 8, "Eccellente attenzione ai dettagli; riesce a completare attività monotone con precisione e costanza."],
+      [7, 9, "Mantiene elevata concentrazione su compiti ripetitivi prolungati, dimostrando interesse specifico e cura nella esecuzione."]
+    ],
+    "9": [
+      [9, 9, "Mostra una focalizzazione eccezionale; ogni dettaglio delle attività ripetitive viene eseguito con precisione."],
+      [8, 10, "Interesse altamente specifico e approfondito; le attività ripetitive vengono completate con eccellenza e costanza."]
+    ],
+    "10": [
+      [10, 10, "Eccellenza nella gestione di compiti ripetitivi e monotoni; attenzione ai dettagli impeccabile, con elevata perseveranza."],
+      [9, 10, "Interesse e precisione estremamente elevati; completa attività monotone lunghe con qualità superiore e massima cura."]
+    ]
+  },
+  "SensibilitaSensoriale": {
+    "1": [
+      [1, 1, "Non nota differenze evidenti tra colori o forme e spesso trascura dettagli negli oggetti quotidiani."],
+      [1, 2, "Ignora stimoli come suoni o variazioni visive che normalmente attirerebbero attenzione."]
+    ],
+    "2": [
+      [1, 3, "Riconosce solo differenze molto marcate tra colori o forme e può confondere elementi simili."],
+      [2, 2, "Ha difficoltà a cogliere cambiamenti sottili, trascurando dettagli anche in attività familiari."]
+    ],
+    "3": [
+      [2, 4, "Nota alcuni dettagli come colori o tonalità principali, ma trascura sfumature più fini."],
+      [3, 3, "Mostra attenzione limitata; spesso non rileva differenze tra oggetti simili o suoni lievi."]
+    ],
+    "4": [
+      [3, 5, "Riconosce differenze principali tra colori e forme, ma non sempre coglie particolari sottili."],
+      [4, 4, "Partecipa a compiti quotidiani con discreta attenzione ai dettagli, seppur limitata."]
+    ],
+    "5": [
+      [5, 5, "Nota variazioni nei colori e nelle forme durante attività quotidiane, completando i compiti con precisione adeguata."],
+      [4, 6, "Mostra buona attenzione ai particolari visivi e ai suoni più evidenti."]
+    ],
+    "6": [
+      [5, 7, "Presta attenzione a molte sfumature di colori, forme e suoni durante compiti di routine."],
+      [6, 6, "Si concentra sui dettagli importanti, dimostrando costanza nell’osservazione quotidiana."]
+    ],
+    "7": [
+      [7, 7, "Rileva variazioni sottili nei colori e nelle forme e nota piccoli dettagli che altri trascurano."],
+      [6, 8, "Dimostra osservazione attenta, gestendo compiti con più elementi da considerare."]
+    ],
+    "8": [
+      [8, 8, "Coglie rapidamente sfumature complesse di colori, forme e suoni, applicando attenzione elevata."],
+      [7, 9, "Mostra sensibilità marcata ai dettagli e capacità di adattarsi a contesti con molteplici elementi."]
+    ],
+    "9": [
+      [9, 9, "Riconosce facilmente variazioni sottili e piccoli particolari, anticipando incongruenze."],
+      [8, 10, "Dimostra capacità di osservazione superiore, notando aspetti che passerebbero inosservati alla maggior parte delle persone."]
+    ],
+    "10": [
+      [10, 10, "Gestisce con precisione qualsiasi compito complesso, cogliendo ogni minimo dettaglio senza difficoltà."],
+      [9, 10, "Eccelle nell’osservazione e nell’analisi dei particolari, completando attività quotidiane con cura e costanza straordinarie."]
+    ]
+  },
+  "CapacitaCognitive": {
+    "1": [
+      [1, 1, "Ha difficoltà a pianificare attività quotidiane e spesso non trova strategie efficaci per completare compiti semplici."],
+      [1, 2, "Mostra scarso ragionamento logico; tende a prendere decisioni poco ottimali anche in situazioni semplici."]
+    ],
+    "2": [
+      [1, 3, "Fatica a organizzare più compiti contemporaneamente e spesso richiede supporto per gestire attività quotidiane."],
+      [2, 2, "Risoluzione dei problemi limitata; difficoltà a trovare soluzioni efficienti in contesti comuni."]
+    ],
+    "3": [
+      [2, 4, "Riesce a completare attività quotidiane ma con scarsa ottimizzazione, richiedendo più tempo o risorse."],
+      [3, 3, "Mostra capacità di ragionamento limitata; soluzioni efficaci emergono solo con guida o stimolo esterno."]
+    ],
+    "4": [
+      [3, 5, "Organizza attività quotidiane con discreta efficacia, ma può trascurare opportunità di miglioramento o ottimizzazione."],
+      [4, 4, "Risoluzione dei problemi quotidiani nella norma, ma con attenzione ai dettagli e risultati non sempre ottimali."]
+    ],
+    "5": [
+      [5, 5, "Gestisce situazioni quotidiane in modo equilibrato, applicando ragionamento adeguato e discreta capacità di ottimizzazione."],
+      [4, 6, "Completa compiti quotidiani con soluzioni generalmente efficaci, trovando alternative quando necessario."]
+    ],
+    "6": [
+      [5, 7, "Mostra buona capacità di pianificazione e problem solving, ottimizzando risorse e tempo in modo efficace."],
+      [6, 6, "Riesce a trovare soluzioni pratiche e ben organizzate nella maggior parte delle attività quotidiane."]
+    ],
+    "7": [
+      [7, 7, "Dimostra ragionamento efficace e capacità di ottimizzazione, trovando soluzioni rapide anche in contesti complessi."],
+      [6, 8, "Organizza e pianifica attività in modo efficiente, riducendo sprechi e aumentando la produttività nelle situazioni quotidiane."]
+    ],
+    "8": [
+      [8, 8, "Eccellente capacità di analisi e ragionamento; trova soluzioni efficaci anche in compiti ripetitivi o complessi."],
+      [7, 9, "Dimostra forte capacità di ottimizzazione e gestione delle risorse in attività quotidiane articolate."]
+    ],
+    "9": [
+      [9, 9, "Ragionamento rapido e analitico; individua strategie ottimali e anticipa problemi potenziali con facilità."],
+      [8, 10, "Capacità superiore di organizzare e ottimizzare attività, completando compiti complessi con efficienza notevole."]
+    ],
+    "10": [
+      [10, 10, "Eccelle nel problem solving e nell’ottimizzazione; gestisce con successo attività complesse e simultanee in modo impeccabile."],
+      [9, 10, "Dimostra capacità cognitive eccezionali, trovando sempre soluzioni efficienti e ottimizzando risorse in qualsiasi contesto quotidiano."]
+    ]
+  }
+}

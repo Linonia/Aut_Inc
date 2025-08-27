@@ -155,7 +155,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3192907239354368
-    m_Localized: 'Remaining Work:'
+    m_Localized: Remaining Work
     m_Metadata:
       m_Items: []
   - m_Id: 3206702577840128
@@ -167,7 +167,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3207036058562560
-    m_Localized: 'Remaining Duration:'
+    m_Localized: 'Remaining Week:'
     m_Metadata:
       m_Items: []
   - m_Id: 3208447366361088
@@ -196,6 +196,54 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 3438362158264320
     m_Localized: Bonus/Malus Rate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3446812959404032
+    m_Localized: No delays are permitted for this project
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3446832475500544
+    m_Localized: Delays are permitted for this project
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3459855537762304
+    m_Localized: 'Remaining Work:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3471630064775168
+    m_Localized: End the contract
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3474515792064512
+    m_Localized: Low
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3474565637173248
+    m_Localized: Medium
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3474613519347712
+    m_Localized: High
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3474660642353152
+    m_Localized: 'Difficulty:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3474820084625408
+    m_Localized: 'Weeks Required:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3474853718749184
+    m_Localized: 'Work Required:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3494458625454080
+    m_Localized: New Projects List
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3498698135662592
+    m_Localized: Project Name ----
     m_Metadata:
       m_Items: []
   references:

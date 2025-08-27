@@ -250,6 +250,12 @@ public class Azienda : MonoBehaviour
         }
         return repartiSbloccati;
     }
+
+    public void OnFirmaProgetto(Progetto progetto, Action clearAction)
+    {
+        clearAction();
+        Azienda.progettiInCorso.Add(progetto);
+    }
     
     public void OnTerminaProgetto(Progetto progetto, Action clearAction, Action reloadProjectList)
     {
@@ -344,11 +350,12 @@ public class Azienda : MonoBehaviour
         var dipendente4 = dipendentiNonAssegnati[3];
         
         // Creo dei progetti di prova
-        for(int i = 0; i < 3; i++)
+        for(int i = 0; i < 1; i++)
         {
             var progetto = Progetto.CreaProgetto();
             progettiInCorso.Add(progetto);
         }
+
         
     }
     

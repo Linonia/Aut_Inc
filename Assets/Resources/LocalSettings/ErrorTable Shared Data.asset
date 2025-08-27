@@ -31,6 +31,10 @@ MonoBehaviour:
     m_Key: licenziamentoAvviso
     m_Metadata:
       m_Items: []
+  - m_Id: 3152396944240640
+    m_Key: terminaProgettoAvviso
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -13,6 +13,7 @@ namespace Scripts.Logica
         public string nome;
         public List<NomiReparti> repartiCoinvolti;
         public bool forcedEnd;
+        public string difficolta;
         
         // Informazioni riguardanti la durata del progetto
         public int durata;
@@ -41,7 +42,7 @@ namespace Scripts.Logica
             var reparti = progettoInit.Value;
             
             int roll = UnityEngine.Random.Range(0, 100);
-            int difficolta = roll < 50 ? 0 : (roll < 75 ? 1 : 2);
+            int difficolta = roll < 50 ? 0 : (roll < 80 ? 1 : 2);
             
             int produzioneDip = difficolta switch
             {
@@ -51,15 +52,23 @@ namespace Scripts.Logica
                 _ => throw new System.ArgumentOutOfRangeException()
             };
             
+            float percentualeReparto = difficolta switch
+            {
+                0 => 0.33f,  // Facile → 1/3
+                1 => 0.5f,   // Medio → 1/2
+                2 => 0.8f,   // Difficile → 80%
+                _ => 1f
+            };
+            
             var produzioneSettimanale = 0;
             var costoTotaleSettimanale = 0;
             
             foreach (var reparto in reparti)
             {
                 var nDip = Azienda.reparti[reparto].numeroMaxDipendenti;
-                var costoDip = Azienda.reparti[reparto].CostoDipendenti();
-                produzioneSettimanale += nDip * produzioneDip;
-                costoTotaleSettimanale += costoDip * nDip;
+                var costoDip = Azienda.reparti[reparto].costoDipendente;
+                produzioneSettimanale += (int) (nDip * produzioneDip * percentualeReparto);
+                costoTotaleSettimanale += (int) (costoDip * nDip * percentualeReparto);
             }
             
             int durata = difficolta switch
@@ -76,8 +85,8 @@ namespace Scripts.Logica
         
             float margine = difficolta switch
             {
-                0 => 1.10f, // Facile → guadagno modesto
-                1 => 1.35f, // Medio
+                0 => 1.20f, // Facile → guadagno modesto
+                1 => 1.40f, // Medio
                 2 => 1.70f, // Difficile → guadagno alto ma rischioso
                 _ => throw new ArgumentOutOfRangeException()
             };
@@ -121,7 +130,8 @@ namespace Scripts.Logica
                 finaleDetrazione,
                 detrazioneRescissione,
                 percentualeDetrazione,
-                forcedEnd
+                forcedEnd,
+                difficolta
             );
             return progetto;
         }
@@ -138,14 +148,15 @@ namespace Scripts.Logica
             int finaleDetrazione,
             int detrazioneRescissione,
             int percentualeDetrazione,
-            bool forcedEnd)
+            bool forcedEnd,
+            int difficolta)
         {
             this.nome = nome;
             this.repartiCoinvolti = repartiCoinvolti;
             this.durata = durata;
             this.durataRimanente = durata;
-            this.lavoroRichiesto = lavoroRichiesto;
-            this.lavoroMancante = lavoroRichiesto;
+            this.lavoroRichiesto = (int)(Math.Round(lavoroRichiesto / 100.0) * 100);
+            this.lavoroMancante = this.lavoroRichiesto;
             this.anticipo = anticipo;
             this.settimanale = settimanale;
             this.finale = finale;
@@ -153,6 +164,13 @@ namespace Scripts.Logica
             this.detrazioneRescissione = -detrazioneRescissione;
             this.percentualeDetrazione = -percentualeDetrazione;
             this.forcedEnd = forcedEnd;
+            this.difficolta = difficolta switch
+            {
+                0 => "bassa",
+                1 => "media",
+                2 => "alta",
+                _ => throw new ArgumentOutOfRangeException()
+            };
         }
         
         // Funzione di aggiornamento del progetto

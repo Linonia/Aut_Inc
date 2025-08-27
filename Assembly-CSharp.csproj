@@ -49,6 +49,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
+    <Compile Include="Assets\Resources\Scripts\VisualizzaInformazioniNuovoProgetto.cs" />
     <Compile Include="Assets\Resources\Scripts\Logica\Progetto.cs" />
     <Compile Include="Assets\Resources\Scripts\Logica\PreferenzaSociale.cs" />
     <Compile Include="Assets\Resources\Scripts\CompilatoreElencoDipendenti.cs" />
@@ -104,8 +105,10 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
     <Compile Include="Assets\Resources\Scripts\VisualizzaInformazioniNuovoDipendente.cs" />
+    <Compile Include="Assets\Resources\Scripts\CompilatoreEtichettaNuoviProgetti.cs" />
     <Compile Include="Assets\Resources\Scripts\VisualizzaInformazioniProgetto.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
+    <Compile Include="Assets\Resources\Scripts\CompilatoreElencoNuoviProgetti.cs" />
     <Compile Include="Assets\Resources\Scripts\OptionCompiler.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\Resources\Json\ProgettiCreazione.json" />

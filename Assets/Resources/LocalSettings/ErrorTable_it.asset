@@ -29,12 +29,17 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 66784446451712
-    m_Localized: "Tutti i progressi non salvati andranno persi se esci dal gioco.\r"
+    m_Localized: Tutti i progressi non salvati andranno persi se esci dal gioco.
     m_Metadata:
       m_Items: []
   - m_Id: 2778887009169408
     m_Localized: Sei sicuro di voler licenziare questo dipendente? Una volta licenziato,
       non potra' essere riassunto.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3152396944240640
+    m_Localized: Se termini il progetto ora, pagherai la somma di rescissione, ma
+      libererai i reparti coinvolti per altri progetti.
     m_Metadata:
       m_Items: []
   references:

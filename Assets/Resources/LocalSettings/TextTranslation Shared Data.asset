@@ -195,6 +195,58 @@ MonoBehaviour:
     m_Key: percentuale
     m_Metadata:
       m_Items: []
+  - m_Id: 3446812959404032
+    m_Key: ritardono
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3446832475500544
+    m_Key: ritardosi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3459855537762304
+    m_Key: lavoroMancante
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3471630064775168
+    m_Key: rescindiContratto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3474470292254720
+    m_Key: New Entry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3474515792064512
+    m_Key: difficoltabassa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3474565637173248
+    m_Key: difficoltamedia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3474613519347712
+    m_Key: difficoltaalta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3474660642353152
+    m_Key: difficolta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3474820084625408
+    m_Key: settimaneRichieste
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3474853718749184
+    m_Key: lavoroRichiesto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3494458625454080
+    m_Key: listaNuoviProgetti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3498698135662592
+    m_Key: nomeprogetto
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

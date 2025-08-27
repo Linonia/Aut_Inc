@@ -167,7 +167,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3207036058562560
-    m_Localized: 'Durata Rimanente:'
+    m_Localized: 'Sett. Rimanenti:'
     m_Metadata:
       m_Items: []
   - m_Id: 3208447366361088
@@ -195,7 +195,55 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3438362158264320
-    m_Localized: Bonus/Malus  Percentuale
+    m_Localized: Bonus/Malus Perc.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3446812959404032
+    m_Localized: Nessun ritardo e' ammesso per questo progetto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3446832475500544
+    m_Localized: Sono ammessi ritardi per questo progetto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3459855537762304
+    m_Localized: 'Lavoro Mancante:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3471630064775168
+    m_Localized: Rescindi il contratto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3474515792064512
+    m_Localized: Bassa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3474565637173248
+    m_Localized: Media
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3474613519347712
+    m_Localized: Alta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3474660642353152
+    m_Localized: 'Difficolta'':'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3474820084625408
+    m_Localized: 'Settimane Richieste:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3474853718749184
+    m_Localized: 'Lavoro Richiesto:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3494458625454080
+    m_Localized: Lista Nuovi Progetti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3498698135662592
+    m_Localized: Nome Progetto ----
     m_Metadata:
       m_Items: []
   references:

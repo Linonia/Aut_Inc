@@ -1,0 +1,203 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: TextTranslation_it
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: it
+  m_SharedData: {fileID: 11400000, guid: 81f43e739be9e9e4394f2401a2f75c15, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 65094881280
+    m_Localized: Nuova Partita
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130786070528
+    m_Localized: Carica Partita
+    m_Metadata:
+      m_Items: []
+  - m_Id: 193201508352
+    m_Localized: Opzioni
+    m_Metadata:
+      m_Items: []
+  - m_Id: 245147963392
+    m_Localized: Esci dal Gioco
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4876871733248
+    m_Localized: Lingua
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4922820333568
+    m_Localized: Colonna Sonora
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4998699487232
+    m_Localized: Effetti Sonori
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5056555716608
+    m_Localized: Risoluzione
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15586750173184
+    m_Localized: Chiudi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21754516148224
+    m_Localized: Elenco Dipendenti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21822858137600
+    m_Localized: Elenco Progetti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21899475488768
+    m_Localized: Menu di Gioco
+    m_Metadata:
+      m_Items: []
+  - m_Id: 305241483710464
+    m_Localized: Riprendi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 305345879937024
+    m_Localized: Salva
+    m_Metadata:
+      m_Items: []
+  - m_Id: 305379396620288
+    m_Localized: Esci
+    m_Metadata:
+      m_Items: []
+  - m_Id: 317113280827392
+    m_Localized: Annulla
+    m_Metadata:
+      m_Items: []
+  - m_Id: 317221636476928
+    m_Localized: Attenzione
+    m_Metadata:
+      m_Items: []
+  - m_Id: 317280809717760
+    m_Localized: Errore
+    m_Metadata:
+      m_Items: []
+  - m_Id: 384980047171584
+    m_Localized: Conferma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1117060947316736
+    m_Localized: Nessun Reparto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1117505744867328
+    m_Localized: Nessuno
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1451206152359936
+    m_Localized: Licenzia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1453400440246272
+    m_Localized: Descrizione
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1457465018617856
+    m_Localized: 'Cambia Team:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1458335957454848
+    m_Localized: Nuovo Team
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1463506884169728
+    m_Localized: Nessun Team
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3092753253494784
+    m_Localized: Nome
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3092780440973312
+    m_Localized: Reparto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3108386649239552
+    m_Localized: Lista Nuovi Dipendenti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3112629066100736
+    m_Localized: Visualizza Informazioni
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3115471097131008
+    m_Localized: Assumi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3180100095668224
+    m_Localized: Ricerca dei Nuovi Dipendenti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3180400026152960
+    m_Localized: Ricerca dei Nuovi Progetti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3183195496214528
+    m_Localized: 'Settimane Rimanenti:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3192907239354368
+    m_Localized: Lavoro Rimanente
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3206702577840128
+    m_Localized: 'Reparti Coinvolti: '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3206953074257920
+    m_Localized: Informazioni Contratto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3207036058562560
+    m_Localized: 'Durata Rimanente:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3208447366361088
+    m_Localized: Firma il Contratto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3437932602814464
+    m_Localized: Pagamento Iniziale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3438029893890048
+    m_Localized: Compenso Settimanale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3438123359760384
+    m_Localized: Saldo Finale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3438201923268608
+    m_Localized: Penale per Ritardo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3438268960829440
+    m_Localized: Costo di Recesso
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3438362158264320
+    m_Localized: Bonus/Malus  Percentuale
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

@@ -1,0 +1,208 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: TextTranslation Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: TextTranslation
+  m_TableCollectionNameGuidString: 81f43e739be9e9e4394f2401a2f75c15
+  m_Entries:
+  - m_Id: 193201508352
+    m_Key: opzioni
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65094881280
+    m_Key: nuovapartita
+    m_Metadata:
+      m_Items: []
+  - m_Id: 245147963392
+    m_Key: escidalgioco
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130786070528
+    m_Key: caricapartita
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4876871733248
+    m_Key: lingua
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4922820333568
+    m_Key: colonnasonora
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4998699487232
+    m_Key: effettisonori
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5056555716608
+    m_Key: risoluzione
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15586750173184
+    m_Key: chiudi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21754516148224
+    m_Key: elencodipendenti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21822858137600
+    m_Key: elencoprogetti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21899475488768
+    m_Key: menudigioco
+    m_Metadata:
+      m_Items: []
+  - m_Id: 305241483710464
+    m_Key: riprendi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 305345879937024
+    m_Key: salva
+    m_Metadata:
+      m_Items: []
+  - m_Id: 305379396620288
+    m_Key: esci
+    m_Metadata:
+      m_Items: []
+  - m_Id: 317113280827392
+    m_Key: annulla
+    m_Metadata:
+      m_Items: []
+  - m_Id: 317221636476928
+    m_Key: attenzione
+    m_Metadata:
+      m_Items: []
+  - m_Id: 317280809717760
+    m_Key: errore
+    m_Metadata:
+      m_Items: []
+  - m_Id: 384980047171584
+    m_Key: conferma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1117060947316736
+    m_Key: nessunReparto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1117505744867328
+    m_Key: nessunTeam
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1451206152359936
+    m_Key: licenzia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1453400440246272
+    m_Key: descrizione
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1457465018617856
+    m_Key: cambiateam
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1458335957454848
+    m_Key: nuovoteam
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1463506884169728
+    m_Key: nessunTeamAssegnato
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3092753253494784
+    m_Key: nome
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3092780440973312
+    m_Key: reparto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3108386649239552
+    m_Key: listaNuoviDipendenti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3112629066100736
+    m_Key: visualizzaInformazioni
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3115471097131008
+    m_Key: assumi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3180100095668224
+    m_Key: assumiNuovoDipendente
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3180400026152960
+    m_Key: cercaNuovoProgetto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3183195496214528
+    m_Key: settimaneRimanenti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3192907239354368
+    m_Key: lavoroRimanente
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3206702577840128
+    m_Key: repartiCoinvolti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3206953074257920
+    m_Key: informazioniContratto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3207036058562560
+    m_Key: durataRimanente
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3208447366361088
+    m_Key: firmaContratto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3437932602814464
+    m_Key: anticipo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3438029893890048
+    m_Key: settimanale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3438123359760384
+    m_Key: finale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3438201923268608
+    m_Key: detrazione
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3438268960829440
+    m_Key: rescissione
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3438362158264320
+    m_Key: percentuale
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 4093154540171034648
+  references:
+    version: 2
+    RefIds:
+    - rid: 4093154540171034648
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1755462848167

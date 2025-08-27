@@ -1,0 +1,84 @@
+<linker>
+	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
+		<type fullname="Exit">
+			<method name="ExitFromGame"/>
+			<method name="ExitFromGame"/>
+			<method name="ExitFromGame"/>
+		</type>
+		<type fullname="LocaleSelector">
+			<method name="ChangeLocale"/>
+			<method name="ChangeLocale"/>
+		</type>
+		<type fullname="SceneManagerScript">
+			<method name="LoadGame"/>
+			<method name="StartNewGame"/>
+		</type>
+	</assembly>
+	<assembly fullname="Unity.RenderPipelines.Core.Runtime" ignoreIfMissing="1">
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerButton">
+			<method name="OnAction"/>
+		</type>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerIntField">
+			<method name="OnDecrement"/>
+			<method name="OnDecrement"/>
+			<method name="OnIncrement"/>
+			<method name="OnIncrement"/>
+		</type>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerObjectPopupField">
+			<method name="OnDecrement"/>
+			<method name="OnIncrement"/>
+		</type>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerPanel">
+			<method name="OnScrollbarClicked"/>
+			<method name="OnScrollbarClicked"/>
+			<method name="ResetDebugManager"/>
+		</type>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerUIntField">
+			<method name="OnDecrement"/>
+			<method name="OnDecrement"/>
+			<method name="OnIncrement"/>
+			<method name="OnIncrement"/>
+		</type>
+	</assembly>
+	<assembly fullname="Unity.TextMeshPro" ignoreIfMissing="1">
+		<type fullname="TMPro.TMP_Text">
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+			<method name="set_text"/>
+		</type>
+	</assembly>
+	<assembly fullname="UnityEngine.CoreModule" ignoreIfMissing="1">
+		<type fullname="UnityEngine.GameObject">
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+		</type>
+	</assembly>
+</linker>

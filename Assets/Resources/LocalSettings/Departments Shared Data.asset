@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Departments Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Departments
+  m_TableCollectionNameGuidString: b98bfc099504fb64c8e3d2c254b1e0ec
+  m_Entries:
+  - m_Id: 1821394169856
+    m_Key: AssistenzaESupportoTecnico
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1914654519296
+    m_Key: ControlloQualita
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1928927735808
+    m_Key: UxEDesign
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1939916812288
+    m_Key: SviluppoSoftware
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1952461975552
+    m_Key: RicercaESviluppo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1964063420416
+    m_Key: Marketing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1976482754560
+    m_Key: SviluppoHardwareEInnovazioniTecnologiche
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4983693864960
+    m_Key: desc1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5032125493248
+    m_Key: desc2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5457478250496
+    m_Key: desc3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5497760346112
+    m_Key: desc4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5560750403584
+    m_Key: desc5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5617612582912
+    m_Key: desc6
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 4093154716790030408
+  references:
+    version: 2
+    RefIds:
+    - rid: 4093154716790030408
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1756139423958

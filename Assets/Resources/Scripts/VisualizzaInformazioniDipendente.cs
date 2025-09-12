@@ -40,8 +40,8 @@ public class VisualizzaInformazioniDipendente : MonoBehaviour
         nome.text = dipendente.nome;
         if (dipendente.team != null)
         {
-            reparto.text = LocalizationSettings.StringDatabase.GetLocalizedString("Departments", dipendente.team.reparto.codice);
-            team.text = "Team: " +(dipendente.team.reparto.teams.IndexOf(dipendente.team) + 1).ToString();
+            reparto.text = "<color=#" + LocalizationSettings.StringDatabase.GetLocalizedString("DepartmentColor", dipendente.team.reparto.codice) + ">"+ LocalizationSettings.StringDatabase.GetLocalizedString("Departments", dipendente.team.reparto.codice) + "</color>";
+            team.text = "Team: " +(dipendente.team.reparto.teams.IndexOf(dipendente.team) + 1);
             competenzaBar.GetComponent<GestioneProgressBar>().ShowValue(dipendente.competenza);
         }
         else

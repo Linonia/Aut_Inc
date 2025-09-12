@@ -51,7 +51,7 @@ public class VisualizzaInformazioniProgetto : MonoBehaviour
         repartiCoinvolti.text = "";
         foreach (var reparto in progetto.repartiCoinvolti)
         {
-            repartiCoinvolti.text += " - " + LocalizationSettings.StringDatabase.GetLocalizedString("Departments", reparto.ToString()) + "\n";
+            repartiCoinvolti.text += " - " + "<color=#" + LocalizationSettings.StringDatabase.GetLocalizedString("DepartmentColor", reparto.ToString()) + ">"+ LocalizationSettings.StringDatabase.GetLocalizedString("Departments", reparto.ToString()) + "</color>" + "\n";
         }
 
         durata.text = $"<color=#D17A22>{progetto.durataRimanente}/{progetto.durata}</color>";

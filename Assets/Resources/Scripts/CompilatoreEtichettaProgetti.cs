@@ -22,9 +22,9 @@ public class CompilatoreEtichettaProgetti : MonoBehaviour
         //nome.text = LocalizationSettings.StringDatabase.GetLocalizedString("ProjectNames", progetto.nome);
         difficolta.text = LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", "difficolta") + progetto.difficolta switch
         {
-            "bassa" => "<color=green>" + LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", "difficoltabassa") + "</color>",
-            "media" => "<color=yellow>" + LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", "difficoltamedia") + "</color>",
-            "alta" => "<color=red>" + LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", "difficoltaalta") + "</color>",
+            "bassa" => " <color=green>" + LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", "difficoltabassa") + "</color>",
+            "media" => " <color=yellow>" + LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", "difficoltamedia") + "</color>",
+            "alta" => " <color=red>" + LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", "difficoltaalta") + "</color>",
             _ => throw new System.ArgumentOutOfRangeException()
         };
         settimana.text = LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", "settimaneRimanenti") +" " + progetto.durataRimanente + "/" + progetto.durata;

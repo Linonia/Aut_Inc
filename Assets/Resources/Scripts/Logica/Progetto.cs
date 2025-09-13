@@ -14,6 +14,7 @@ namespace Scripts.Logica
         public List<NomiReparti> repartiCoinvolti;
         public bool forcedEnd;
         public string difficolta;
+        [SerializeReference] public Azienda azienda;
         
         // Informazioni riguardanti la durata del progetto
         public int durata;
@@ -35,7 +36,7 @@ namespace Scripts.Logica
         
     // Funzioni del progetto
         //Costruttore del orogetto
-        public static Progetto CreaProgetto()
+        public Progetto CreaProgetto(Azienda azienda)
         {
             var progettoInit = NomeRepartiProgetto();
             var nome = progettoInit.Key;
@@ -65,8 +66,8 @@ namespace Scripts.Logica
             
             foreach (var reparto in reparti)
             {
-                var nDip = Azienda.reparti[reparto].numeroMaxDipendenti;
-                var costoDip = Azienda.reparti[reparto].costoDipendente;
+                var nDip = azienda.reparti[reparto].numeroMaxDipendenti;
+                var costoDip = azienda.reparti[reparto].costoDipendente;
                 produzioneSettimanale += (int) (nDip * produzioneDip * percentualeReparto);
                 costoTotaleSettimanale += (int) (costoDip * nDip * percentualeReparto);
             }
@@ -131,7 +132,8 @@ namespace Scripts.Logica
                 detrazioneRescissione,
                 percentualeDetrazione,
                 forcedEnd,
-                difficolta
+                difficolta,
+                azienda
             );
             return progetto;
         }
@@ -149,7 +151,8 @@ namespace Scripts.Logica
             int detrazioneRescissione,
             int percentualeDetrazione,
             bool forcedEnd,
-            int difficolta)
+            int difficolta,
+            Azienda azienda)
         {
             this.nome = nome;
             this.repartiCoinvolti = repartiCoinvolti;
@@ -171,6 +174,7 @@ namespace Scripts.Logica
                 2 => "alta",
                 _ => throw new ArgumentOutOfRangeException()
             };
+            this.azienda = azienda;
         }
         
         // Funzione di aggiornamento del progetto
@@ -181,7 +185,7 @@ namespace Scripts.Logica
 
             foreach (var reparto in repartiCoinvolti)
             {
-                lavoroSvolto += Azienda.reparti[reparto].produzionePerProgetto;
+                lavoroSvolto += azienda.reparti[reparto].produzionePerProgetto;
             }
             
             lavoroMancante -= lavoroSvolto;
@@ -194,7 +198,7 @@ namespace Scripts.Logica
                     guadagno += settimanale * durataRimanente;
                 }
                 guadagno += finale - (finale * percentualeDetrazione / 100 * (-durataRimanente));
-                ChiudiProgetto();
+                azienda.progettiCompletatiInSettimana.Add(this);
             }
             else
             {
@@ -203,7 +207,7 @@ namespace Scripts.Logica
                     if (forcedEnd)
                     {
                         guadagno += finaleDetrazione;
-                        ChiudiProgetto();
+                        azienda.progettiCompletatiInSettimana.Add(this);
                     }
                 }
                 else
@@ -218,7 +222,7 @@ namespace Scripts.Logica
         //Rescinde il progetto
         public int rescissioneProgetto()
         {
-            Azienda.progettiInCorso.Remove(this);
+            azienda.progettiInCorso.Remove(this);
             ChiudiProgetto();
             return detrazioneRescissione;
         }
@@ -228,9 +232,9 @@ namespace Scripts.Logica
         {
             foreach (var reparto in repartiCoinvolti)
             {
-                Azienda.reparti[reparto].RimuoviProgetto();
+                azienda.reparti[reparto].RimuoviProgetto();
             }
-            Azienda.progettiInCorso.Remove(this);
+            azienda.progettiInCorso.Remove(this);
         }
 
         public static void CaricaJsonProgetti()
@@ -267,14 +271,14 @@ namespace Scripts.Logica
         }
         
         // Restituisce un nome di progetto casuale e i reparti coinvolti
-        public static KeyValuePair<string, List<NomiReparti>> NomeRepartiProgetto()
+        public KeyValuePair<string, List<NomiReparti>> NomeRepartiProgetto()
         {
             if (jsonProgetti == null)
             {
                 CaricaJsonProgetti();
             }
 
-            List<NomiReparti> repartiDisponibili = Azienda.RepartiSbloccati();
+            List<NomiReparti> repartiDisponibili = azienda.RepartiSbloccati();
             
             var progettiValidi = jsonProgetti.
                 Where(p => p.Value.

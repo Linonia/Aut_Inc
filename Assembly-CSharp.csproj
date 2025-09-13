@@ -62,6 +62,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\Resources\Scripts\CompilatoreEtichettaNuoviDipendenti.cs" />
     <Compile Include="Assets\Resources\Scripts\LocaleSelector.cs" />
+    <Compile Include="Assets\Resources\Scripts\Logica\Azienda1.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />

@@ -13,8 +13,56 @@ MonoBehaviour:
   m_Name: DepartmentColor Shared Data
   m_EditorClassIdentifier: 
   m_TableCollectionName: DepartmentColor
-  m_TableCollectionNameGuidString: 00000000000000000000000000000000
-  m_Entries: []
+  m_TableCollectionNameGuidString: ba0b5aa045ddf06489b030fb197104cd
+  m_Entries:
+  - m_Id: 9966546944
+    m_Key: AssistenzaESupportoTecnico
+    m_Metadata:
+      m_Items: []
+  - m_Id: 81533956096
+    m_Key: ControlloQualita
+    m_Metadata:
+      m_Items: []
+  - m_Id: 84608380928
+    m_Key: UxEDesign
+    m_Metadata:
+      m_Items: []
+  - m_Id: 86869110784
+    m_Key: SviluppoSoftware
+    m_Metadata:
+      m_Items: []
+  - m_Id: 89268252672
+    m_Key: RicercaESviluppo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 100999720960
+    m_Key: Marketing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36851441037312
+    m_Key: AssistenzaESupportoTecnicotext
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36872781656064
+    m_Key: ControlloQualitatext
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36899159633920
+    m_Key: UxEDesigntext
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36940142178304
+    m_Key: SviluppoSoftwaretext
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36965790347264
+    m_Key: RicercaESviluppotext
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36991253966848
+    m_Key: Marketingtext
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

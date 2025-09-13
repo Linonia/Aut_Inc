@@ -21,6 +21,8 @@ public class VisualizzaInformazioniNuovoProgetto : MonoBehaviour
     public TMP_Text percentuale;
     public TMP_Text ritardi;
     public Button FirmaProgettoButton;
+
+    public GameObject clearPanel;
     
     public Azienda azienda;
     
@@ -31,6 +33,7 @@ public class VisualizzaInformazioniNuovoProgetto : MonoBehaviour
 
     public void Compila(Progetto progetto, GameObject infoPanel)
     {
+        clearPanel.SetActive(false);
         this.progetto = progetto;
         nomeProgetto.text = progetto.nome;
         // nomeProgetto.text = LocalizationSettings.StringDatabase.GetLocalizedString("Projects", progetto.nome);
@@ -76,19 +79,20 @@ public class VisualizzaInformazioniNuovoProgetto : MonoBehaviour
 
     public void Clear()
     {
-        progetto = null;
-        nomeProgetto.text = LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", "nomeprogetto");
-        difficolta.text = LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", "difficolta") + "--";
-        repartiCoinvolti.text = "--";
-        durata.text = LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", "settimaneRichieste") + " --";
-        lavoro.text = LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", "lavoroRichiesto") + " --";
-        anticipo.text = "--";
-        settimanale.text = "--";
-        finale.text = "--";
-        detrazione.text = "--";
-        rescissione.text = "--";
-        percentuale.text = "--";
-        ritardi.text = "--";
-        FirmaProgettoButton.gameObject.SetActive(false);
+        //progetto = null;
+        //nomeProgetto.text = LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", "nomeprogetto");
+        //difficolta.text = LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", "difficolta") + "--";
+        //repartiCoinvolti.text = "--";
+        //durata.text = LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", "settimaneRichieste") + " --";
+        //lavoro.text = LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", "lavoroRichiesto") + " --";
+        //anticipo.text = "--";
+        //settimanale.text = "--";
+        //finale.text = "--";
+        //detrazione.text = "--";
+        //rescissione.text = "--";
+        //percentuale.text = "--";
+        //ritardi.text = "--";
+        //FirmaProgettoButton.gameObject.SetActive(false);
+        clearPanel.SetActive(true);
     }
 }

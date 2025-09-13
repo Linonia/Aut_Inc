@@ -25,6 +25,8 @@ public class VisualizzaInformazioniDipendente : MonoBehaviour
     public GameObject elencoDipendenti;
 
     public Azienda azienda;
+
+    public GameObject clearPanel;
     
     public Dictionary<int, (Reparto, Team)> teamSelezionato;
 
@@ -35,12 +37,13 @@ public class VisualizzaInformazioniDipendente : MonoBehaviour
 
     public void Compila(Dipendente dipendente)
     {
+        clearPanel.SetActive(false);
         this.dipendente = dipendente;
         foto.GetComponent<Image>().sprite = UnityEngine.Resources.Load<Sprite>("Images/Foto/" + dipendente.foto);
         nome.text = dipendente.nome;
         if (dipendente.team != null)
         {
-            reparto.text = "<color=#" + LocalizationSettings.StringDatabase.GetLocalizedString("DepartmentColor", dipendente.team.reparto.codice) + ">"+ LocalizationSettings.StringDatabase.GetLocalizedString("Departments", dipendente.team.reparto.codice) + "</color>";
+            reparto.text = "<color=#" + LocalizationSettings.StringDatabase.GetLocalizedString("DepartmentColor", dipendente.team.reparto.codice + "text") + ">"+ LocalizationSettings.StringDatabase.GetLocalizedString("Departments", dipendente.team.reparto.codice) + "</color>";
             team.text = "Team: " +(dipendente.team.reparto.teams.IndexOf(dipendente.team) + 1);
             competenzaBar.GetComponent<GestioneProgressBar>().ShowValue(dipendente.competenza);
         }
@@ -105,12 +108,13 @@ public class VisualizzaInformazioniDipendente : MonoBehaviour
     
     public void Ricarica()
     {
+        clearPanel.SetActive(false);
         foto.GetComponent<Image>().sprite = UnityEngine.Resources.Load<Sprite>("Images/Foto/" + dipendente.foto);
         nome.text = dipendente.nome;
         if (dipendente.team != null)
         {
-            reparto.text = LocalizationSettings.StringDatabase.GetLocalizedString("Departments", dipendente.team.reparto.codice);
-            team.text = (dipendente.team.reparto.teams.IndexOf(dipendente.team) + 1).ToString();
+            reparto.text = "<color=#" + LocalizationSettings.StringDatabase.GetLocalizedString("DepartmentColor", dipendente.team.reparto.codice + "text") + ">"+ LocalizationSettings.StringDatabase.GetLocalizedString("Departments", dipendente.team.reparto.codice) + "</color>";
+            team.text = "Team: " +(dipendente.team.reparto.teams.IndexOf(dipendente.team) + 1);
             competenzaBar.GetComponent<GestioneProgressBar>().ShowValue(dipendente.competenza);
         }
         else
@@ -174,26 +178,27 @@ public class VisualizzaInformazioniDipendente : MonoBehaviour
     
     public void Clear()
     {
-        dipendente = null;
-        nome.text = LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", "nome");
-        team.text = "Team";
-        reparto.text = LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", "reparto");
-        foto.GetComponent<Image>().sprite = null;
-        // foto.GetComponent<Image>().sprite = Resources.Load<Sprite>("Images/Foto/placeholder");
-        
-        umoreBar.GetComponent<GestioneProgressBar>().ShowValue(0);
-        competenzaBar.GetComponent<GestioneProgressBar>().ShowValue(0);
-        licenziamentoButton.gameObject.SetActive(false);
-        licenziamentoButton.onClick.RemoveAllListeners();
-        gameObject.transform.Find("ChangeTeam").gameObject.SetActive(false);
-        cambioTeamDropdown.ClearOptions();
-        cambioTeamDropdown.gameObject.SetActive(false);
-        teamSelezionato = new Dictionary<int, (Reparto, Team)>();
-        // Clear descriptions
-        for(int i = 0; i < 5; i++)
-        {
-            gameObject.transform.Find("Des" + (i + 1)).GetComponent<TMP_Text>().text = "--";
-        }
+        //dipendente = null;
+        //nome.text = LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", "nome");
+        //team.text = "Team";
+        //reparto.text = LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", "reparto");
+        //foto.GetComponent<Image>().sprite = null;
+        //// foto.GetComponent<Image>().sprite = Resources.Load<Sprite>("Images/Foto/placeholder");
+        //
+        //umoreBar.GetComponent<GestioneProgressBar>().ShowValue(0);
+        //competenzaBar.GetComponent<GestioneProgressBar>().ShowValue(0);
+        //licenziamentoButton.gameObject.SetActive(false);
+        //licenziamentoButton.onClick.RemoveAllListeners();
+        //gameObject.transform.Find("ChangeTeam").gameObject.SetActive(false);
+        //cambioTeamDropdown.ClearOptions();
+        //cambioTeamDropdown.gameObject.SetActive(false);
+        //teamSelezionato = new Dictionary<int, (Reparto, Team)>();
+        //// Clear descriptions
+        //for(int i = 0; i < 5; i++)
+        //{
+        //    gameObject.transform.Find("Des" + (i + 1)).GetComponent<TMP_Text>().text = "--";
+        //}
+        clearPanel.SetActive(true);
     }
     
     public void OnCambioTeam()

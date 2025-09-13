@@ -16,6 +16,8 @@ public class VisualizzaInformazioniNuovoDipendente : MonoBehaviour
 
     public Button assumiButton;
 
+    public GameObject clearPanel;
+
     public Azienda azienda;
 
     public void OnEnable()
@@ -25,6 +27,7 @@ public class VisualizzaInformazioniNuovoDipendente : MonoBehaviour
 
     public void Compila(Dipendente dipendente, GameObject infoPanel)
     {
+        clearPanel.SetActive(false);
         this.dipendente = dipendente;
         foto.GetComponent<Image>().sprite = UnityEngine.Resources.Load<Sprite>("Images/Foto/" + dipendente.foto);
         nome.text = dipendente.nome;
@@ -50,17 +53,18 @@ public class VisualizzaInformazioniNuovoDipendente : MonoBehaviour
     
     public void Clear()
     {
-        dipendente = null;
-        nome.text = LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", "nome");
-        foto.GetComponent<Image>().sprite = null;
-        // foto.GetComponent<Image>().sprite = Resources.Load<Sprite>("Images/Foto/placeholder");
-        
-        // Clear descriptions
-        for(int i = 0; i < 5; i++)
-        {
-            gameObject.transform.Find("Des" + (i + 1)).GetComponent<TMP_Text>().text = "--";
-        }
-        assumiButton.gameObject.SetActive(false);
+        //dipendente = null;
+        //nome.text = LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", "nome");
+        //foto.GetComponent<Image>().sprite = null;
+        //// foto.GetComponent<Image>().sprite = Resources.Load<Sprite>("Images/Foto/placeholder");
+        //
+        //// Clear descriptions
+        //for(int i = 0; i < 5; i++)
+        //{
+        //    gameObject.transform.Find("Des" + (i + 1)).GetComponent<TMP_Text>().text = "--";
+        //}
+        //assumiButton.gameObject.SetActive(false);
+        clearPanel.SetActive(true);
     }
     
 }

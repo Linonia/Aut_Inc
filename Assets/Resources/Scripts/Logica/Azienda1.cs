@@ -1,93 +1,80 @@
-﻿using UnityEngine;
+/*
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Scripts.Logica;
-using TMPro;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
+using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
+using TMPro;
 using UnityEngine.UI;
 
-public class Azienda : MonoBehaviour
+
+public class Azienda1 : MonoBehaviour
 {
-    // Istanza singleton
-    [HideInInspector] public Azienda instance;
-    private void Awake()
+    
+    public static Azienda1 instance;
+// Variabili e funzioni per la parte logica del gioco
+    // Informazioni sull'azienda
+    public static int capitale;
+    public static int costoDipendenteLibero = 1500;
+    public static int tasseMensile;
+    public static int tempoDiminuzioneGuadagno = 12;
+    
+    // Informazioni sul tempo
+    public static int anno;
+    public static int mese;
+    public static int settimana;
+    static bool pausa = false;
+    private float timer = 6f; // countdown in secondi
+    private float currentTime;
+    
+    //Informazioni riguardanti i reparti
+    public static Dictionary<NomiReparti, Reparto> reparti = new Dictionary<NomiReparti, Reparto>();
+    public static List<NomiReparti> repartiDaSbloccare = new List<NomiReparti>();
+    public static int costoReparto = 20000;
+    
+    // Informazioni riguardanti i dipendenti
+    public static List<Dipendente> dipendentiNonAssegnati = new List<Dipendente>();
+    
+    // Informazioni riguardanti i progetti
+    public static List<Progetto> progettiInCorso = new List<Progetto>();
+    public static List<Progetto> progettiCompletati = new List<Progetto>();
+    public static List<Progetto> progettiProposti;
+    
+// Funzioni
+    // Inizializzazione dell'azienda quando viene fatta una nuova partita
+    public static void AziendaInit()
     {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
-    
-    // Meomoria dell'azienda
-    // informazioni di economia dell'azienda
-    [HideInInspector] public int capitale; // capitale attuale
-    [HideInInspector] public int costoDipendenteLibero = 1500; // costo di un dipendente libero mensile
-    [HideInInspector] public int tasseMensile; // tasse mensili da pagare
-    [HideInInspector] public int tempoDiminuzioneGuadagno = 12; // mesi dopo i quali il guadagno diminuisce se non si fanno upgrades
-    
-    // informazioni sul tempo
-    [HideInInspector] public int anno = 1; // anno attuale
-    [HideInInspector] public int mese = 1; // mese attuale
-    [HideInInspector] public int settimana = 1; // settimana attuale
-    [HideInInspector] public float timer = 6f;
-    [HideInInspector] public float currentTimer;
-    [HideInInspector] public bool pausa = true;
-    [HideInInspector] private bool inPausa = true;
-    
-    // informazioni sui reparti
-    [HideInInspector] public Dictionary<NomiReparti, Reparto> reparti = new Dictionary<NomiReparti, Reparto>(); // reparti dell'azienda
-    [HideInInspector] public List<NomiReparti> repartiDaSbloccare = new List<NomiReparti>(); // reparti che si possono sbloccare
-    [HideInInspector] public int costoReparto = 20000; // costo per sbloccare un reparto
-    
-    // informazioni sui dipendenti
-    [HideInInspector] public List<Dipendente> dipendentiLiberi = new List<Dipendente>(); // dipendenti non assegnati a nessun team
-    
-    // informazioni sui progetti
-    [HideInInspector] public List<Progetto> progettiInCorso = new List<Progetto>(); // progetti attualmente in corso
-    [HideInInspector] public List<Progetto> progettiCompletatiInSettimana = new List<Progetto>(); // progetti completati nella settimana corrente
-    [HideInInspector] public List<Progetto> progettiProposti = new List<Progetto>(); // progetti che si possono iniziare
-    
-    // oggetti di gestione della UI in game
-    public TMP_Text tempo;
-    public TMP_Text capitaleText;
-    public TMP_Text dipendentiText;
-    public Image pausaImage;
-    public Image playImage;
-    
-    // Metodi di gestione della memoria dell'azienda
-    public void CreazioneAzienda()
-    {
-        dipendentiLiberi = new List<Dipendente>();
+        dipendentiNonAssegnati = new List<Dipendente>();
         reparti = new Dictionary<NomiReparti, Reparto>();
         
         reparti.Add(NomiReparti.AssistenzaESupportoTecnico, new Reparto("AssistenzaESupportoTecnico" ,new List<Categorie>
         {
             Categorie.ComunicazioneChiarezzaEspressiva,
             Categorie.ComunicazioneAdattabilitaComunicativa
-        }, "desc1", this));
-        
-        reparti.Add(NomiReparti.SviluppoSoftware, new Reparto("SviluppoSoftware", new List<Categorie>
-        {
-            Categorie.CapacitaCognitiveProblemSolvingCreativo,
-            Categorie.CapacitaCognitiveFlessibilitaCognitiva
-        }, "desc4", this));
-        
-        reparti.Add(NomiReparti.UxEDesign, new Reparto("UxEDesign", new List<Categorie>
-        {
-            Categorie.SensibilitaSensorialePercezioneSensorialeFina,
-            Categorie.SensibilitaSensorialeComfortAmbientale
-        }, "desc3", this));
+        }, "desc1"));
         
         reparti.Add(NomiReparti.ControlloQualita, new Reparto("ControlloQualita", new List<Categorie>
         {
             Categorie.ComportamentiRipetitiviEInteressiRistrettiPrecisioneOperativa,
             Categorie.ComportamentiRipetitiviEInteressiRistrettiFocalizzazioneTematica
-        }, "desc2", this));
+        }, "desc2"));
+        
+        reparti.Add(NomiReparti.UxEDesign, new Reparto("UxEDesign", new List<Categorie>
+        {
+            Categorie.SensibilitaSensorialePercezioneSensorialeFina,
+            Categorie.SensibilitaSensorialeComfortAmbientale
+        }, "desc3"));
+        
+        reparti.Add(NomiReparti.SviluppoSoftware, new Reparto("SviluppoSoftware", new List<Categorie>
+        {
+            Categorie.CapacitaCognitiveProblemSolvingCreativo,
+            Categorie.CapacitaCognitiveFlessibilitaCognitiva
+        }, "desc4"));
         
         reparti.Add(NomiReparti.RicercaESviluppo, new Reparto("RicercaESviluppo", new List<Categorie>
         {
@@ -95,7 +82,7 @@ public class Azienda : MonoBehaviour
             Categorie.CapacitaCognitiveFlessibilitaCognitiva,
             Categorie.ComportamentiRipetitiviEInteressiRistrettiPrecisioneOperativa,
             Categorie.ComportamentiRipetitiviEInteressiRistrettiFocalizzazioneTematica
-        }, "desc5", this));
+        }, "desc5"));
         
         reparti.Add(NomiReparti.Marketing, new Reparto("Marketing", new List<Categorie>
         {
@@ -103,7 +90,7 @@ public class Azienda : MonoBehaviour
             Categorie.SensibilitaSensorialeComfortAmbientale,
             Categorie.ComunicazioneChiarezzaEspressiva,
             Categorie.ComunicazioneAdattabilitaComunicativa
-        }, "desc6", this));
+        }, "desc6"));
         
         // Questi sono i reparti iniziali
         reparti[NomiReparti.SviluppoSoftware].ApriReparto();
@@ -128,46 +115,52 @@ public class Azienda : MonoBehaviour
         settimana = 1;
         
         progettiInCorso = new List<Progetto>();
-    }
-    
-    public void AperturaNuovoReparto()
-    {
-        if (repartiDaSbloccare.Count > 0 && capitale >= costoReparto)
-        {
-            var nomeReparto = repartiDaSbloccare.First();
-            reparti[nomeReparto].ApriReparto();
-            repartiDaSbloccare.Remove(nomeReparto);
-            tasseMensile += 1000;
-            capitale -= costoReparto;
-            costoReparto += 10000;
-            
-            // Aggiorna la UI
-            
-        }
+        
     }
 
-    // Aggiunge un dipendente al team se ci sono posti liberi nel reparto
-    public void AggiungiDipendente(Dipendente dipendente, Team team)
+    // Funzione per la gestione dell'acquisto di un nuovo reparto
+    public static void AperturaNuovoReparto()
     {
-        if (team.reparto.numeroPostiLiberi > 0)
+        // Parte logica per l'apertura di un nuovo reparto
+        if (repartiDaSbloccare.Count == 0)
+        {
+            return;
+        }
+        var nomeReparto = repartiDaSbloccare.First();
+        reparti[nomeReparto].ApriReparto();
+        repartiDaSbloccare.Remove(nomeReparto);
+        tasseMensile += 1000;
+        capitale -= costoReparto;
+        costoReparto += 10000;
+        
+        // Parte grafica per l'apertura di un nuovo reparto
+        // Utilizza il nome del reparto per cercare cosa aggiornare
+    }
+
+    // Funzione per l'aggiunta del dipendente ad un team
+    public static void AggiungiDipendente(Dipendente dipendente, Team team)
+    {
+        if(team.reparto.numeroPostiLiberi > 0)
         {
             team.reparto.AggiungiDipendente(team, dipendente);
-            dipendentiLiberi.Remove(dipendente);
+            dipendentiNonAssegnati.Remove(dipendente);
         }
         else
         {
-            Debug.Log("Non ci sono posti liberi nel reparto " + team.reparto.codice);
+            Debug.Log("Il reparto non ha posti disponibili");
+            // Messaggio di errore per il team pieno
         }
     }
-
-    // Rimuove un dipendente dal team e lo rende libero
-    public void RimuoviDipendente(Dipendente dipendente)
+    
+    // Funzione per rimuovere un dipendente da un team
+    public static void RimuoviDipendente(Dipendente dipendente)
     {
         dipendente.team.reparto.RimuoviDipendente(dipendente.team, dipendente);
-        dipendentiLiberi.Add(dipendente);
+        dipendentiNonAssegnati.Add(dipendente);
     }
-
-    public void SpostaDipendente(Dipendente dipendente, Team team)
+    
+    // Funzione per spostare un dipendente da un team ad un altro
+    public static void SpostaDipendente(Dipendente dipendente, Team team)
     {
         if (team.PostiDisponibiliEsistenti())
         {
@@ -175,11 +168,13 @@ public class Azienda : MonoBehaviour
             {
                 RimuoviDipendente(dipendente);
             }
+
             AggiungiDipendente(dipendente, team);
         }
         else
         {
-            Debug.Log("Non ci sono posti liberi nel reparto " + team.reparto.codice);
+            // Messaggio di errore per il team pieno
+            Debug.Log("Il team è pieno, impossibile spostare il dipendente");
             ShowErrorMessage("teamPienoErrore", () => 
             {
                 
@@ -187,25 +182,22 @@ public class Azienda : MonoBehaviour
         }
     }
 
-    public void PagaDipendenti()
+    // Funzione per pagare i dipendenti dell'azienda
+    public static void PagaDipendenti()
     {
-        var costoTotale = 0;
-        foreach (var reparto in reparti.Values)
+        var costoTotaleDipendenti = 0;
+        foreach (var tuple in reparti)
         {
-            if (!reparto.aperto) continue;
-            costoTotale += reparto.CostoDipendenti();
+            var reparto = tuple.Value;
+            costoTotaleDipendenti += reparto.CostoDipendenti();
         }
-
-        costoTotale += dipendentiLiberi.Count * costoDipendenteLibero;
-        capitale -= costoTotale;
-        
-        // eventuale aggiornamento UI
+        costoTotaleDipendenti += dipendentiNonAssegnati.Count * costoDipendenteLibero;
+        capitale -= costoTotaleDipendenti;
     }
 
-    public void Aggiorna()
+    // Funzione per aggiornare l'azienda ogni settimana
+    public static void Aggiorna()
     {
-        var guadagnoTotale = 0;
-        
         foreach (var reparto in reparti.Values)
         {
             if (reparto.aperto)
@@ -214,19 +206,22 @@ public class Azienda : MonoBehaviour
             }
         }
 
+        var guadagnoSettimanale = 0;
+        // Calcolo del guadagno settimanale da tutti i progetti
         foreach (var progetto in progettiInCorso)
         {
-            guadagnoTotale += progetto.AggiornaProgetto();
+            guadagnoSettimanale += progetto.AggiornaProgetto();
         }
 
-        foreach (var progetto in progettiCompletatiInSettimana)
+        foreach (var progetto in progettiCompletati)
         {
             progetto.ChiudiProgetto();
         }
-        progettiCompletatiInSettimana.Clear();
+        progettiCompletati.Clear();
         
-        capitale += guadagnoTotale;
-        
+
+        capitale += guadagnoSettimanale;
+
         settimana++;
         if (settimana > 4)
         {
@@ -239,7 +234,8 @@ public class Azienda : MonoBehaviour
             }
         }
         instance.aggiornaTempo();
-        
+
+        // Gestione delle tasse mensili
         if (settimana == 1)
         {
             PagaDipendenti();
@@ -253,8 +249,8 @@ public class Azienda : MonoBehaviour
         }
     }
 
-    // Potenzia un reparto
-    public void PotenziaReparto(NomiReparti nomeReparto)
+    // Funzione per potenziare un reparto
+    public static void PotenziaReparto(NomiReparti nomeReparto)
     {
         var reparto = reparti[nomeReparto];
         if (capitale < reparto.costoPotenziamento)
@@ -266,9 +262,9 @@ public class Azienda : MonoBehaviour
         reparto.AumentaLivello();
         tasseMensile += 500;
     }
-    
+
     // Funzione per ottenere i reparti sbloccati
-    public List<NomiReparti> RepartiSbloccati()
+    public static List<NomiReparti> RepartiSbloccati()
     {
         List<NomiReparti> repartiSbloccati = new List<NomiReparti>();
         foreach (var reparto in reparti)
@@ -280,15 +276,13 @@ public class Azienda : MonoBehaviour
         }
         return repartiSbloccati;
     }
-    
-    // Funzione per firmare un progetto e aggiungerlo alla lista dei progetti in corso
+
     public void OnFirmaProgetto(Progetto progetto, Action clearAction)
     {
         clearAction();
-        progettiInCorso.Add(progetto);
+        Azienda.progettiInCorso.Add(progetto);
     }
     
-    // Funzione per terminare un progetto e rimuoverlo dalla lista dei progetti in corso
     public void OnTerminaProgetto(Progetto progetto, Action clearAction, Action reloadProjectList)
     {
         if (progetto == null) return;
@@ -306,7 +300,7 @@ public class Azienda : MonoBehaviour
     }
     
     // Funzione di rescissione di un contratto
-    public void RescindiContratto(Progetto progetto)
+    public static void RescindiContratto(Progetto progetto)
     {
         if (progetto == null) return;
         
@@ -333,48 +327,107 @@ public class Azienda : MonoBehaviour
         }, "conferma", "annulla");
     }
     
-    // Funzione per licenziare un dipendente
-    public void LicenziaDipendente(Dipendente dipendente)
+    public static void LicenziaDipendente(Dipendente dipendente)
     {
         if ( dipendente.team != null)
         {
             dipendente.team.reparto.RimuoviDipendente(dipendente.team, dipendente);
         }
         // Rimuovo il dipendente dalla lista dei dipendenti non assegnati
-        dipendentiLiberi.Remove(dipendente);
+        dipendentiNonAssegnati.Remove(dipendente);
         // Messaggio di successo per il licenziamento
         Debug.Log($"Dipendente {dipendente.nome} licenziato con successo.");
     }
-    
-    // Funzione per assumere un dipendente
+
     public void OnAssumiDipendente(Dipendente dipendente, Action clearAction)
     {
         clearAction();
         Azienda.AssumiDipendente(dipendente);
     }
     
-    public void AssumiDipendente(Dipendente dipendente)
+    public static void AssumiDipendente(Dipendente dipendente)
     {
-        dipendentiLiberi.Add(dipendente);
+        dipendentiNonAssegnati.Add(dipendente);
         // Messaggio di successo per l'assunzione
         Debug.Log($"Dipendente {dipendente.nome} assunto con successo.");
     }
+
+
+// Funzioni per la gestione estetica e di funzionalità del gioco
+
+    public TMP_Text tempo;
+    public TMP_Text numDipendenti;
+    public Image play;
+    public Image pause;
+    private bool isPaused = true;
+    public TMP_Text capitaleText;
     
     
-    // Apertura dei pannelli dei dipendenti e dei progetti
-    public void OpenEmployeePanel()
+    
+    void Update()
     {
-        GameObject DipendentiPanel = gameObject.transform.Find("DipendentiPanel").gameObject;
-        DipendentiPanel.SetActive(true);
+        // Se il gioco è in pausa → blocco il timer
+        if (Azienda.pausa) return;
+
+        // Aggiorno il timer
+        currentTime -= Time.deltaTime;
+
+        if (currentTime <= 0f)
+        {
+            // Richiamo la funzione Aggiorna
+            Azienda.Aggiorna();
+
+            // Resetto il timer
+            currentTime = timer;
+        }
+    }
+    
+    private void Start()
+    {
+        instance = this;
+        // Inizializzo l'azienda
+        AziendaInit();
+        Dipendente.CaricaJsonCategorie();
+        Progetto.CaricaJsonProgetti();
+        
+        // Crea 4 dipendenti di prova
+        for(int i = 0; i < 4; i++)
+        {
+            Dipendente dipendente = Dipendente.GeneraDipendente2();
+            dipendentiNonAssegnati.Add(dipendente);
+        }
+        
+        // Assegno i dipendenti ai reparti
+        var dipendente1 = dipendentiNonAssegnati[0];
+        var dipendente2 = dipendentiNonAssegnati[1];
+        var dipendente3 = dipendentiNonAssegnati[2];
+        var dipendente4 = dipendentiNonAssegnati[3];
+        
+        // Creo dei progetti di prova
+        for(int i = 0; i < 1; i++)
+        {
+            var progetto = Progetto.CreaProgetto();
+            progettiInCorso.Add(progetto);
+        }
+
+        
+    }
+    
+    public void OnLoadGame()
+    {
+        
+    }
+    
+    public void OnSaveGame()
+    {
+        
     }
 
-    public void OpenProjectPanel()
+    public void OnNewGame()
     {
-        GameObject ProgettiPanel = gameObject.transform.Find("ProgettiPanel").gameObject;
-        ProgettiPanel.SetActive(true);
+        
     }
     
-    // Funzioni di uscita del gioco
     public void OnExitGame()
     {
         ShowWarningMessage("uscitaDalGiocoAvvisoSalvataggio", ExitGame, () =>
@@ -390,45 +443,19 @@ public class Azienda : MonoBehaviour
         var SceneManagerInstance = SceneManagerScript.instance;
         SceneManagerInstance.UnloadGameScene();
     }
-    
-    // Funzioni di caricamento del salvataggio
-    public void OnLoadGame()
+
+    public void OpenEmployeePanel()
     {
-        
-    }
-    
-    // Funzioni di salvataggio del gioco
-    public void OnSaveGame()
-    {
-        
+        GameObject DipendentiPanel = gameObject.transform.Find("DipendentiPanel").gameObject;
+        DipendentiPanel.SetActive(true);
     }
 
-    // Funzioni di creazione di una nuova partita
-    public void OnNewGame()
+    public void OpenProjectPanel()
     {
-        // Inizializzo le variabili dell'azienda
-        CreazioneAzienda();
-        
-        Dipendente.CaricaJsonCategorie();
-        Progetto.CaricaJsonProgetti();
-        
-        // Crea 4 dipendenti di prova
-        for(int i = 0; i < 4; i++)
-        {
-            Dipendente dipendente = Dipendente.GeneraDipendente2();
-            dipendentiLiberi.Add(dipendente);
-        }
-        
-        
-        // Creo dei progetti di prova
-        for(int i = 0; i < 1; i++)
-        {
-            var progetto = Progetto.CreaProgetto(this);
-            progettiInCorso.Add(progetto);
-        }
+        GameObject ProgettiPanel = gameObject.transform.Find("ProgettiPanel").gameObject;
+        ProgettiPanel.SetActive(true);
     }
-    
-    // Funzione di show del pannello di errore
+
     public void ShowErrorMessage(string message, Action onClose, string confirmText = "chiudi")
     {
         GameObject ErrorPanel = gameObject.transform.Find("ErrorPanel").gameObject;
@@ -441,7 +468,6 @@ public class Azienda : MonoBehaviour
         ConfirmButton.GetComponent<Button>().onClick.AddListener(() => onClose());
     }
     
-    // Funzione di show del pannello di avviso
     public void ShowWarningMessage(string message, Action onConfirm, Action onRetry, string confirmText = "continua", string retryText = "annulla")
     {
         GameObject WarningPanel = gameObject.transform.Find("WarningPanel").gameObject;
@@ -469,8 +495,57 @@ public class Azienda : MonoBehaviour
         
         WarningPanel.SetActive(true);
     }
+
+    public void UpdateTime()
+    {
+        
+    }
+
+    // segna che il gioco deve essere messo in pausa e che non deve essere tolta la pausa
+    public void PauseClick()
+    {
+        isPaused = true;
+        Pause();
+    }
+
+    // pause mette sempre in pausa il gioco
+    public void Pause()
+    {
+        pause.GetComponent<Image>().sprite = UnityEngine.Resources.Load<Sprite>("Images/Icons/pauseEnable2");
+        play.GetComponent<Image>().sprite = UnityEngine.Resources.Load<Sprite>("Images/Icons/playDisable");
+        pausa = true;
+    }
     
-    // Funzione di aggiornamento del tempo di gioco
+    // playClick toglie la pausa e segna che il gioco deve essere ripreso
+    public void PlayClick()
+    {
+        isPaused = false;
+        Play();
+    }
+    
+    public void Play()
+    {
+        if (!isPaused)
+        {
+            pause.GetComponent<Image>().sprite = UnityEngine.Resources.Load<Sprite>("Images/Icons/pauseDisable");
+            play.GetComponent<Image>().sprite = UnityEngine.Resources.Load<Sprite>("Images/Icons/playEnable2");
+            pausa = false;
+        }
+        
+    }
+
+    public void disableBottoniTempo()
+    {
+        play.GetComponent<Button>().interactable = false;
+        pause.GetComponent<Button>().interactable = false;
+    }
+    
+    public void enableBottoniTempo()
+    {
+        play.GetComponent<Button>().interactable = true;
+        pause.GetComponent<Button>().interactable = true;
+    }
+    
     public void aggiornaTempo()
     {
         if (LocalizationSettings.SelectedLocale.Identifier.Code == "it")
@@ -482,36 +557,5 @@ public class Azienda : MonoBehaviour
             tempo.text = anno + "Y " + mese + "M " + settimana + "W";
         }
     }
-    
-    // Funzione di gestione del tempo di gioco
-    // playClick toglie la pausa e segna che il gioco deve essere ripreso
-    public void PlayClick()
-    {
-        inPausa = false;
-        Play();
-    }
-    
-    public void Play()
-    {
-        if (!inPausa)
-        {
-            pausaImage.GetComponent<Image>().sprite = UnityEngine.Resources.Load<Sprite>("Images/Icons/pauseDisable");
-            playImage.GetComponent<Image>().sprite = UnityEngine.Resources.Load<Sprite>("Images/Icons/playEnable2");
-            pausa = false;
-        }
-        
-    }
-
-    public void disableBottoniTempo()
-    {
-        playImage.GetComponent<Button>().interactable = false;
-        pausaImage.GetComponent<Button>().interactable = false;
-    }
-    
-    public void enableBottoniTempo()
-    {
-        playImage.GetComponent<Button>().interactable = true;
-        pausaImage.GetComponent<Button>().interactable = true;
-    }
-
 }
+*/

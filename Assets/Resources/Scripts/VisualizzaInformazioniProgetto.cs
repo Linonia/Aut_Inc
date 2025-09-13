@@ -24,6 +24,8 @@ public class VisualizzaInformazioniProgetto : MonoBehaviour
     public TMP_Text percentuale;
     public TMP_Text ritardi;
     public Button terminaProgettoButton;
+
+    public GameObject clearPanel;
     
     public Azienda azienda;
     public GameObject elencoProgetti;
@@ -35,6 +37,7 @@ public class VisualizzaInformazioniProgetto : MonoBehaviour
     
     public void Compila(Progetto progetto)
     {
+        clearPanel.SetActive(false);
         this.progetto = progetto;
         
         nomeProgetto.text = progetto.nome;
@@ -51,7 +54,7 @@ public class VisualizzaInformazioniProgetto : MonoBehaviour
         repartiCoinvolti.text = "";
         foreach (var reparto in progetto.repartiCoinvolti)
         {
-            repartiCoinvolti.text += " - " + "<color=#" + LocalizationSettings.StringDatabase.GetLocalizedString("DepartmentColor", reparto.ToString()) + ">"+ LocalizationSettings.StringDatabase.GetLocalizedString("Departments", reparto.ToString()) + "</color>" + "\n";
+            repartiCoinvolti.text += " - " + "<color=#" + LocalizationSettings.StringDatabase.GetLocalizedString("DepartmentColor", reparto + "text") + ">"+ LocalizationSettings.StringDatabase.GetLocalizedString("Departments", reparto.ToString()) + "</color>" + "\n";
         }
 
         durata.text = $"<color=#D17A22>{progetto.durataRimanente}/{progetto.durata}</color>";
@@ -85,21 +88,22 @@ public class VisualizzaInformazioniProgetto : MonoBehaviour
 
     public void Clear()
     {
-        progetto = null;
-        nomeProgetto.text = LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", "nomeprogetto");
-        difficolta.text = LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", "difficolta") + "--";
-        repartiCoinvolti.text = "--";
-        durata.text = " --";
-        durataRimanente.SetActive(false);
-        lavoro.text = " --";
-        lavoroMancante.SetActive(false);
-        anticipo.text = "--";
-        settimanale.text = "--";
-        finale.text = "--";
-        detrazione.text = "--";
-        rescissione.text = "--";
-        percentuale.text = "--";
-        ritardi.text = "--";
-        terminaProgettoButton.gameObject.SetActive(false);
+        //progetto = null;
+        //nomeProgetto.text = LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", "nomeprogetto");
+        //difficolta.text = LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", "difficolta") + "--";
+        //repartiCoinvolti.text = "--";
+        //durata.text = " --";
+        //durataRimanente.SetActive(false);
+        //lavoro.text = " --";
+        //lavoroMancante.SetActive(false);
+        //anticipo.text = "--";
+        //settimanale.text = "--";
+        //finale.text = "--";
+        //detrazione.text = "--";
+        //rescissione.text = "--";
+        //percentuale.text = "--";
+        //ritardi.text = "--";
+        //terminaProgettoButton.gameObject.SetActive(false);
+        clearPanel.SetActive(true);
     }
 }

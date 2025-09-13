@@ -30,6 +30,11 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ba0b5aa045ddf06489b030fb197104cd
+    m_Address: Assets/Resources/LocalSettings/DepartmentColor Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 315cd0ff173c1d2449ff209538257e3b, type: 2}
   m_SchemaSet:

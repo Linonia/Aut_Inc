@@ -35,7 +35,7 @@ public class Azienda : MonoBehaviour
     [HideInInspector] public int mese = 1; // mese attuale
     [HideInInspector] public int settimana = 1; // settimana attuale
     [HideInInspector] public float timer = 6f;
-    [HideInInspector] public float currentTimer;
+    [HideInInspector] public float currentTimer = 6f;
     [HideInInspector] public bool pausa = true;
     [HideInInspector] private bool inPausa = true;
     
@@ -246,7 +246,7 @@ public class Azienda : MonoBehaviour
             capitale -= tasseMensile;
             if (capitale < 0)
             {
-                Debug.Log("Capitale insufficiente per pagare le tasse");
+                //Debug.Log("Capitale insufficiente per pagare le tasse");
                 // Messaggio di errore per capitale insufficiente
                 // Game over
             }
@@ -296,7 +296,7 @@ public class Azienda : MonoBehaviour
         // Chiedo conferma per la terminazione del progetto
         ShowWarningMessage("terminaProgettoAvviso", () =>
         {
-            Azienda.RescindiContratto(progetto);
+            this.RescindiContratto(progetto);
             clearAction();
             reloadProjectList();
         }, () => 
@@ -324,7 +324,7 @@ public class Azienda : MonoBehaviour
         // Chiedo conferma per il licenziamento
         ShowWarningMessage("licenziamentoAvviso", () =>
         {
-            Azienda.LicenziaDipendente(dipendente);
+            this.LicenziaDipendente(dipendente);
             clearAction();
             reloadEmployeeList();
         }, () => 
@@ -350,7 +350,7 @@ public class Azienda : MonoBehaviour
     public void OnAssumiDipendente(Dipendente dipendente, Action clearAction)
     {
         clearAction();
-        Azienda.AssumiDipendente(dipendente);
+        this.AssumiDipendente(dipendente);
     }
     
     public void AssumiDipendente(Dipendente dipendente)
@@ -498,10 +498,26 @@ public class Azienda : MonoBehaviour
             pausaImage.GetComponent<Image>().sprite = UnityEngine.Resources.Load<Sprite>("Images/Icons/pauseDisable");
             playImage.GetComponent<Image>().sprite = UnityEngine.Resources.Load<Sprite>("Images/Icons/playEnable2");
             pausa = false;
+            
         }
         
     }
 
+    // segna che il gioco deve essere messo in pausa e che non deve essere tolta la pausa
+    public void PauseClick()
+    {
+        inPausa = true;
+        Pause();
+    }
+
+    // pause mette sempre in pausa il gioco
+    public void Pause()
+    {
+        pausaImage.GetComponent<Image>().sprite = UnityEngine.Resources.Load<Sprite>("Images/Icons/pauseEnable2");
+        playImage.GetComponent<Image>().sprite = UnityEngine.Resources.Load<Sprite>("Images/Icons/playDisable");
+        pausa = true;
+    }
+    
     public void disableBottoniTempo()
     {
         playImage.GetComponent<Button>().interactable = false;
@@ -514,4 +530,49 @@ public class Azienda : MonoBehaviour
         pausaImage.GetComponent<Button>().interactable = true;
     }
 
+
+    public void Start()
+    {
+        PauseClick();
+        instance = this;
+        // Inizializzo l'azienda
+        CreazioneAzienda();
+        currentTimer = 6f;
+        aggiornaTempo();
+        Dipendente.CaricaJsonCategorie();
+        Progetto.CaricaJsonProgetti();
+        
+        // Crea 4 dipendenti di prova
+        for(int i = 0; i < 4; i++)
+        {
+            Dipendente dipendente = Dipendente.GeneraDipendente2();
+            dipendentiLiberi.Add(dipendente);
+        }
+        
+        // Creo dei progetti di prova
+        for(int i = 0; i < 1; i++)
+        {
+            var progetto = Progetto.CreaProgetto(this);
+            progettiInCorso.Add(progetto);
+        }
+    }
+    
+    // Funzione di update dello scorrere del tempo
+    void Update()
+    {
+        // Se il gioco è in pausa → blocco il timer
+        if (pausa) return;
+
+        // Aggiorno il timer
+        currentTimer -= Time.deltaTime;
+
+        if (currentTimer <= 0f)
+        {
+            // Richiamo la funzione Aggiorna
+            Aggiorna();
+
+            // Resetto il timer
+            currentTimer = timer;
+        }
+    }
 }

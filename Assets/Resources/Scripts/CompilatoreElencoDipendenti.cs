@@ -8,6 +8,7 @@ public class CompilatoreElencoDipendenti : MonoBehaviour
 
     public GameObject prefabDipendente;
     public GameObject prefabDipendenteNuovo;
+    public Azienda azienda;
     
     public void OnEnable()
     {
@@ -19,9 +20,9 @@ public class CompilatoreElencoDipendenti : MonoBehaviour
         
         Transform contenitore = gameObject.transform;
         // Riempi la lista dei dipendenti
-        foreach (var reparto in Azienda.RepartiSbloccati())
+        foreach (var reparto in azienda.RepartiSbloccati())
         {
-            foreach (var team in Azienda.reparti[reparto].teams)
+            foreach (var team in azienda.reparti[reparto].teams)
             {
                 foreach (var dipendente in team.dipendenti)
                 {
@@ -31,7 +32,7 @@ public class CompilatoreElencoDipendenti : MonoBehaviour
             }
         }
 
-        foreach (var dipendente in Azienda.dipendentiLiberi)
+        foreach (var dipendente in azienda.dipendentiLiberi)
         {
             GameObject nuovoDip = Instantiate(prefabDipendente, contenitore);
             nuovoDip.GetComponent<CompilatoreEtichettaDipendenti>().Compila(dipendente);

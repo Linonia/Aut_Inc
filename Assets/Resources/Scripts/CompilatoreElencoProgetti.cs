@@ -7,6 +7,7 @@ public class CompilatoreElencoProgetti : MonoBehaviour
 {
     public GameObject prefabProgetto;
     public GameObject prefabProgettoNuovo;
+    public Azienda azienda;
 
     public void OnEnable()
     {
@@ -18,7 +19,7 @@ public class CompilatoreElencoProgetti : MonoBehaviour
 
         Transform contenitore = gameObject.transform;
         // Riempi la lista dei progetti
-        var progetti = Azienda.progettiInCorso.OrderBy(p => p.durataRimanente)
+        var progetti = azienda.progettiInCorso.OrderBy(p => p.durataRimanente)
             .ToList();
         foreach (var progetto in progetti)
         {

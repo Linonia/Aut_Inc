@@ -37,9 +37,12 @@ namespace Scripts.Logica
         // Descrizione testuale del reparto
         public string descrizione;
         
+        // Riferimento all'azienda a cui appartiene il reparto
+        [SerializeReference] public Azienda azienda;
+        
     // Funzioni del reparto
         // Costruttore del reparto
-        public Reparto(string codice, List<Categorie> categorie, string descrizione)
+        public Reparto(string codice, List<Categorie> categorie, string descrizione, Azienda azienda)
         {
             this.codice = codice;
             this.descrizione = descrizione;
@@ -52,6 +55,7 @@ namespace Scripts.Logica
             costoDipendente = costo;
             costoPotenziamento = costoPot;
             livelloRepartoMax = LivelliReparti.LivelloReparto.Count;
+            this.azienda = azienda;
         }
 
         // Aumenta il livello del reparto
@@ -159,7 +163,7 @@ namespace Scripts.Logica
             int variazioneMassima = (int)(lavoroTotale * variazionePercentuale);
             int delta = UnityEngine.Random.Range(-variazioneMassima, variazioneMassima + 1);
             produzioneSettimanale = lavoroTotale + delta;
-            produzionePerProgetto = produzioneSettimanale / numeroProgetti;
+            produzionePerProgetto = (numeroProgetti > 0) ? produzioneSettimanale / numeroProgetti : 0;
         }
         
         // Aggiunge un progetto al reparto

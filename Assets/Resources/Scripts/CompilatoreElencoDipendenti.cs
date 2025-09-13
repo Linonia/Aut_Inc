@@ -8,6 +8,7 @@ public class CompilatoreElencoDipendenti : MonoBehaviour
 
     public GameObject prefabDipendente;
     public GameObject prefabDipendenteNuovo;
+    
     public void OnEnable()
     {
         // Ripulisci la lista dei dipendenti
@@ -30,7 +31,7 @@ public class CompilatoreElencoDipendenti : MonoBehaviour
             }
         }
 
-        foreach (var dipendente in Azienda.dipendentiNonAssegnati)
+        foreach (var dipendente in Azienda.dipendentiLiberi)
         {
             GameObject nuovoDip = Instantiate(prefabDipendente, contenitore);
             nuovoDip.GetComponent<CompilatoreEtichettaDipendenti>().Compila(dipendente);

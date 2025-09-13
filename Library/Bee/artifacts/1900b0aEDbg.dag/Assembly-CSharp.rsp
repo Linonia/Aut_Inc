@@ -463,6 +463,7 @@
 "Assets/Resources/Scripts/GestioneProgressBar.cs"
 "Assets/Resources/Scripts/LocaleSelector.cs"
 "Assets/Resources/Scripts/Logica/Azienda.cs"
+"Assets/Resources/Scripts/Logica/Azienda1.cs"
 "Assets/Resources/Scripts/Logica/Categorie.cs"
 "Assets/Resources/Scripts/Logica/Dipendente.cs"
 "Assets/Resources/Scripts/Logica/LivelliReparti.cs"

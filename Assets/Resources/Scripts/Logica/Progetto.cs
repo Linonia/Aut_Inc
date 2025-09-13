@@ -36,9 +36,9 @@ namespace Scripts.Logica
         
     // Funzioni del progetto
         //Costruttore del orogetto
-        public Progetto CreaProgetto(Azienda azienda)
+        public static Progetto CreaProgetto(Azienda azienda)
         {
-            var progettoInit = NomeRepartiProgetto();
+            var progettoInit = NomeRepartiProgetto(azienda);
             var nome = progettoInit.Key;
             var reparti = progettoInit.Value;
             
@@ -271,7 +271,7 @@ namespace Scripts.Logica
         }
         
         // Restituisce un nome di progetto casuale e i reparti coinvolti
-        public KeyValuePair<string, List<NomiReparti>> NomeRepartiProgetto()
+        public static KeyValuePair<string, List<NomiReparti>> NomeRepartiProgetto(Azienda azienda)
         {
             if (jsonProgetti == null)
             {

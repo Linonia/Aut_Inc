@@ -4,6 +4,7 @@ using UnityEngine;
 public class CompilatoreElencoNuoviProgetti : MonoBehaviour
 {
     public GameObject prefabNuovoProgetto;
+    public Azienda azienda;
     public void OnEnable()
     {
         // Ripulisci la lista dei progetti
@@ -16,7 +17,7 @@ public class CompilatoreElencoNuoviProgetti : MonoBehaviour
         // Riempi la lista con dei nuovi progetti
         for (int i = 0; i < 4; i++)
         {   
-            Progetto progetto = Progetto.CreaProgetto();
+            Progetto progetto = Progetto.CreaProgetto(azienda);
             GameObject nuovoProgetto = Instantiate(prefabNuovoProgetto, contenitore);
             nuovoProgetto.GetComponent<CompilatoreEtichettaNuoviProgetti>().Compila(progetto);
         }

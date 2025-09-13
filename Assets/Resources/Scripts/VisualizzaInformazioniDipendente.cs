@@ -82,10 +82,10 @@ public class VisualizzaInformazioniDipendente : MonoBehaviour
         };
         teamSelezionato = new Dictionary<int, (Reparto, Team)>();
         teamSelezionato.Add(index, (null, null));
-        foreach (var repartiNome in Azienda.RepartiSbloccati())
+        foreach (var repartiNome in azienda.RepartiSbloccati())
         {
-            var repNome = LocalizationSettings.StringDatabase.GetLocalizedString("Departments", Azienda.reparti[repartiNome].codice);
-            foreach (var team in Azienda.reparti[repartiNome].teams)
+            var repNome = LocalizationSettings.StringDatabase.GetLocalizedString("Departments", azienda.reparti[repartiNome].codice);
+            foreach (var team in azienda.reparti[repartiNome].teams)
             {
                 index++;
                 var teamNumber = team.reparto.teams.IndexOf(team) + 1;
@@ -94,11 +94,11 @@ public class VisualizzaInformazioniDipendente : MonoBehaviour
                     selectedTeam = index;
                 }
                 options.Add($"{repNome} - {teamNumber.ToString()}");
-                teamSelezionato.Add(index, (Azienda.reparti[repartiNome], team));
+                teamSelezionato.Add(index, (azienda.reparti[repartiNome], team));
             }
             index++;
             options.Add($"{repNome} - {LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", "nuovoteam")}");
-            teamSelezionato.Add(index, (Azienda.reparti[repartiNome], null));
+            teamSelezionato.Add(index, (azienda.reparti[repartiNome], null));
         }
         cambioTeamDropdown.AddOptions(options);
         cambioTeamDropdown.onValueChanged.RemoveAllListeners();
@@ -152,10 +152,10 @@ public class VisualizzaInformazioniDipendente : MonoBehaviour
         };
         teamSelezionato = new Dictionary<int, (Reparto, Team)>();
         teamSelezionato.Add(index, (null, null));
-        foreach (var repartiNome in Azienda.RepartiSbloccati())
+        foreach (var repartiNome in azienda.RepartiSbloccati())
         {
-            var repNome = LocalizationSettings.StringDatabase.GetLocalizedString("Departments", Azienda.reparti[repartiNome].codice);
-            foreach (var team in Azienda.reparti[repartiNome].teams)
+            var repNome = LocalizationSettings.StringDatabase.GetLocalizedString("Departments", azienda.reparti[repartiNome].codice);
+            foreach (var team in azienda.reparti[repartiNome].teams)
             {
                 index++;
                 var teamNumber = team.reparto.teams.IndexOf(team) + 1;
@@ -164,11 +164,11 @@ public class VisualizzaInformazioniDipendente : MonoBehaviour
                     selectedTeam = index;
                 }
                 options.Add($"{repNome} - {teamNumber.ToString()}");
-                teamSelezionato.Add(index, (Azienda.reparti[repartiNome], team));
+                teamSelezionato.Add(index, (azienda.reparti[repartiNome], team));
             }
             index++;
             options.Add($"{repNome} - {LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", "nuovoteam")}");
-            teamSelezionato.Add(index, (Azienda.reparti[repartiNome], null));
+            teamSelezionato.Add(index, (azienda.reparti[repartiNome], null));
         }
         cambioTeamDropdown.AddOptions(options);
         cambioTeamDropdown.onValueChanged.RemoveAllListeners();
@@ -210,13 +210,13 @@ public class VisualizzaInformazioniDipendente : MonoBehaviour
             if (reparto == null)
             {
                 if (dipendente.team == null) return; // No change needed, already not in a team
-                Azienda.RimuoviDipendente(dipendente);
+                azienda.RimuoviDipendente(dipendente);
             }
             else if (team != null)
             {
                 if (dipendente.team == team) return; // No change needed
                 if(team.PostiDisponibiliEsistenti())
-                    Azienda.SpostaDipendente(dipendente, team);
+                    azienda.SpostaDipendente(dipendente, team);
                 else
                 {
                     Debug.Log("Non puoi inserire in un team pieno");
@@ -229,7 +229,7 @@ public class VisualizzaInformazioniDipendente : MonoBehaviour
                 {
                     reparto.AggiungiTeam();
                     var newTeam = reparto.teams.Last();
-                    Azienda.SpostaDipendente(dipendente, newTeam);
+                    azienda.SpostaDipendente(dipendente, newTeam);
                 }
             }
         }

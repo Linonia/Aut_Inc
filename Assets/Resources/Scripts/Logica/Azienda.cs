@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Scripts.Logica;
@@ -34,8 +35,8 @@ public class Azienda : MonoBehaviour
     [HideInInspector] public int anno = 1; // anno attuale
     [HideInInspector] public int mese = 1; // mese attuale
     [HideInInspector] public int settimana = 1; // settimana attuale
-    [HideInInspector] public float timer = 6f;
-    [HideInInspector] public float currentTimer = 6f;
+    [HideInInspector] public float timer = 4f;
+    [HideInInspector] public float currentTimer = 4f;
     [HideInInspector] public bool pausa = true;
     [HideInInspector] private bool inPausa = true;
     
@@ -58,6 +59,10 @@ public class Azienda : MonoBehaviour
     public TMP_Text dipendentiText;
     public Image pausaImage;
     public Image playImage;
+    public TMP_Text cambioCapitale;
+    public RectTransform capitalePanel;
+    
+    public Dictionary<string, bool> flags = new Dictionary<string, bool>();
     
     // Metodi di gestione della memoria dell'azienda
     public void CreazioneAzienda()
@@ -128,21 +133,22 @@ public class Azienda : MonoBehaviour
         settimana = 1;
         
         progettiInCorso = new List<Progetto>();
+        
+        //creazioneFlags
+        flags = new Dictionary<string, bool>();
+        flags.Add("licenziamento", false);
     }
     
-    public void AperturaNuovoReparto()
+    public void AperturaNuovoReparto(NomiReparti nomeReparto)
     {
-        if (repartiDaSbloccare.Count > 0 && capitale >= costoReparto)
+        if (repartiDaSbloccare.Contains(nomeReparto) && capitale >= costoReparto)
         {
-            var nomeReparto = repartiDaSbloccare.First();
             reparti[nomeReparto].ApriReparto();
             repartiDaSbloccare.Remove(nomeReparto);
             tasseMensile += 1000;
             capitale -= costoReparto;
             costoReparto += 10000;
-            
             // Aggiorna la UI
-            
         }
     }
 
@@ -187,7 +193,7 @@ public class Azienda : MonoBehaviour
         }
     }
 
-    public void PagaDipendenti()
+    public int PagaDipendenti()
     {
         var costoTotale = 0;
         foreach (var reparto in reparti.Values)
@@ -197,8 +203,8 @@ public class Azienda : MonoBehaviour
         }
 
         costoTotale += dipendentiLiberi.Count * costoDipendenteLibero;
-        capitale -= costoTotale;
-        
+        return costoTotale;
+
         // eventuale aggiornamento UI
     }
 
@@ -225,8 +231,6 @@ public class Azienda : MonoBehaviour
         }
         progettiCompletatiInSettimana.Clear();
         
-        capitale += guadagnoTotale;
-        
         settimana++;
         if (settimana > 4)
         {
@@ -242,15 +246,19 @@ public class Azienda : MonoBehaviour
         
         if (settimana == 1)
         {
-            PagaDipendenti();
-            capitale -= tasseMensile;
-            if (capitale < 0)
-            {
-                //Debug.Log("Capitale insufficiente per pagare le tasse");
-                // Messaggio di errore per capitale insufficiente
-                // Game over
-            }
+            guadagnoTotale -= PagaDipendenti();
+            guadagnoTotale -= tasseMensile;
         }
+        
+        if (capitale < 0)
+        {
+            //Debug.Log("Capitale insufficiente per pagare le tasse");
+            // Messaggio di errore per capitale insufficiente
+            // Game over
+        }
+        
+        capitale += guadagnoTotale;
+        aggiornaCapitale(guadagnoTotale, true);
     }
 
     // Potenzia un reparto
@@ -285,7 +293,7 @@ public class Azienda : MonoBehaviour
     public void OnFirmaProgetto(Progetto progetto, Action clearAction)
     {
         clearAction();
-        progettiInCorso.Add(progetto);
+        progetto.ApriProgetto();
     }
     
     // Funzione per terminare un progetto e rimuoverlo dalla lista dei progetti in corso
@@ -330,7 +338,7 @@ public class Azienda : MonoBehaviour
         }, () => 
         {
             
-        }, "conferma", "annulla");
+        }, "conferma", "annulla", "licenziamento");
     }
     
     // Funzione per licenziare un dipendente
@@ -342,8 +350,8 @@ public class Azienda : MonoBehaviour
         }
         // Rimuovo il dipendente dalla lista dei dipendenti non assegnati
         dipendentiLiberi.Remove(dipendente);
+        aggiornaDipendenti();
         // Messaggio di successo per il licenziamento
-        Debug.Log($"Dipendente {dipendente.nome} licenziato con successo.");
     }
     
     // Funzione per assumere un dipendente
@@ -356,8 +364,8 @@ public class Azienda : MonoBehaviour
     public void AssumiDipendente(Dipendente dipendente)
     {
         dipendentiLiberi.Add(dipendente);
+        aggiornaDipendenti();
         // Messaggio di successo per l'assunzione
-        Debug.Log($"Dipendente {dipendente.nome} assunto con successo.");
     }
     
     
@@ -429,7 +437,7 @@ public class Azienda : MonoBehaviour
     }
     
     // Funzione di show del pannello di errore
-    public void ShowErrorMessage(string message, Action onClose, string confirmText = "chiudi")
+    public void ShowErrorMessage(string message, Action onClose, string confirmText = "chiudi", string flag = "")
     {
         GameObject ErrorPanel = gameObject.transform.Find("ErrorPanel").gameObject;
         // Gestisco il messaggio di errore
@@ -442,33 +450,61 @@ public class Azienda : MonoBehaviour
     }
     
     // Funzione di show del pannello di avviso
-    public void ShowWarningMessage(string message, Action onConfirm, Action onRetry, string confirmText = "continua", string retryText = "annulla")
+    public void ShowWarningMessage(string message, Action onConfirm, Action onRetry, string confirmText = "continua", string retryText = "annulla", string flag = "")
+{
+    GameObject WarningPanel = gameObject.transform.Find("WarningPanel").gameObject;
+    Toggle toggle = WarningPanel.transform.Find("Toggle").GetComponent<Toggle>();
+
+    if (!string.IsNullOrEmpty(flag) && flags.ContainsKey(flag) && flags[flag])
     {
-        GameObject WarningPanel = gameObject.transform.Find("WarningPanel").gameObject;
-        // Gestisco il messaggio di avviso
-        string text = LocalizationSettings.StringDatabase.GetLocalizedString("ErrorTable", message);
-        WarningPanel.transform.Find("Text").GetComponent<TMP_Text>().text = text;
-        
-        GameObject ConfirmButton = WarningPanel.transform.Find("Confirm").gameObject;
-        ConfirmButton.GetComponentInChildren<TMP_Text>().text = LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", confirmText);
-        ConfirmButton.GetComponent<Button>().onClick.RemoveAllListeners();
-        ConfirmButton.GetComponent<Button>().onClick.AddListener(() =>
-        {
-            onConfirm();
-            WarningPanel.SetActive(false);
-        });     
-        
-        GameObject RetryButton = WarningPanel.transform.Find("Retry").gameObject;
-        RetryButton.GetComponentInChildren<TMP_Text>().text = LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation",retryText);
-        RetryButton.GetComponent<Button>().onClick.RemoveAllListeners();
-        RetryButton.GetComponent<Button>().onClick.AddListener(() =>
-        {
-            onRetry();
-            WarningPanel.SetActive(false);
-        });
-        
-        WarningPanel.SetActive(true);
+        onConfirm();
+        return;
     }
+
+    if (!string.IsNullOrEmpty(flag))
+    {
+        WarningPanel.transform.Find("TextShow").gameObject.SetActive(true);
+        toggle.gameObject.SetActive(true);
+        toggle.isOn = false;
+    }
+    else
+    {
+        WarningPanel.transform.Find("TextShow").gameObject.SetActive(false);
+        toggle.gameObject.SetActive(false);
+        toggle.isOn = false;
+    }
+
+    // Gestisco il messaggio di avviso
+    string text = LocalizationSettings.StringDatabase.GetLocalizedString("ErrorTable", message);
+    WarningPanel.transform.Find("Text").GetComponent<TMP_Text>().text = text;
+
+    GameObject ConfirmButton = WarningPanel.transform.Find("Confirm").gameObject;
+    ConfirmButton.GetComponentInChildren<TMP_Text>().text = LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", confirmText);
+    ConfirmButton.GetComponent<Button>().onClick.RemoveAllListeners();
+    ConfirmButton.GetComponent<Button>().onClick.AddListener(() =>
+    {
+        if (!string.IsNullOrEmpty(flag) && toggle.isOn)
+            flags[flag] = true;
+
+        onConfirm();
+        WarningPanel.SetActive(false);
+    });
+
+    GameObject RetryButton = WarningPanel.transform.Find("Retry").gameObject;
+    RetryButton.GetComponentInChildren<TMP_Text>().text = LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", retryText);
+    RetryButton.GetComponent<Button>().onClick.RemoveAllListeners();
+    RetryButton.GetComponent<Button>().onClick.AddListener(() =>
+    {
+        if (!string.IsNullOrEmpty(flag) && toggle.isOn)
+            flags[flag] = true;
+
+        onRetry();
+        WarningPanel.SetActive(false);
+    });
+
+    WarningPanel.SetActive(true);
+}
+
     
     // Funzione di aggiornamento del tempo di gioco
     public void aggiornaTempo()
@@ -480,6 +516,63 @@ public class Azienda : MonoBehaviour
         else
         {
             tempo.text = anno + "Y " + mese + "M " + settimana + "W";
+        }
+    }
+    
+    // Funzione di aggiornamento del numero di dipendenti
+    public void aggiornaDipendenti()
+    {
+        var numeroTotali = 0;
+		var numeroDip = 0;
+        foreach (var reparto in reparti.Values)
+        {
+            if (reparto.aperto)
+            {
+				numeroDip += reparto.NumeroDipendenti();
+                numeroTotali += reparto.numeroMaxDipendenti;
+            }
+        }
+		numeroDip += dipendentiLiberi.Count;
+        dipendentiText.text = numeroDip + "/" + numeroTotali;
+    }
+    
+    // Funzione di aggiornamento del capitale
+    public void aggiornaCapitale(int ammontareDifferenza = 0, bool apparizione = false)
+    {
+        if (apparizione)
+        {
+            // rosso se negativo, verde se positivo
+            if (ammontareDifferenza < 0)
+                cambioCapitale.text = "<color=red>- $" + string.Format("{0:N2}", -ammontareDifferenza) + "</color>";
+            else
+                cambioCapitale.text = "<color=green>+ $" + string.Format("{0:N2}", ammontareDifferenza) + "</color>";
+            StartCoroutine(MuoviPanel());
+        }
+        // Aggiorno il testo del capitale principale
+        capitaleText.text = "<color=green>$" + string.Format("{0:N2}", capitale) + "</color>";
+    }
+    
+    // Animazione del cambiamento del capitale
+    IEnumerator MuoviPanel(float durata = 0.5f, float attesa = 2f, float xTarget = 325f)
+    {
+        Vector2 posIniziale = capitalePanel.anchoredPosition;
+        Vector2 posTarget = new Vector2(xTarget, posIniziale.y);
+        // Vai avanti
+        yield return StartCoroutine(FaiTransizione(posIniziale, posTarget, durata));
+        // Aspetta
+        yield return new WaitForSeconds(attesa);
+        // Torna indietro
+        yield return StartCoroutine(FaiTransizione(posTarget, posIniziale, durata));
+    }
+    
+    IEnumerator FaiTransizione(Vector2 start, Vector2 end, float tempo)
+    {
+        float t = 0f;
+        while (t < 1f)
+        {
+            t += Time.deltaTime / tempo;
+            capitalePanel.anchoredPosition = Vector2.Lerp(start, end, t);
+            yield return null;
         }
     }
     
@@ -537,8 +630,7 @@ public class Azienda : MonoBehaviour
         instance = this;
         // Inizializzo l'azienda
         CreazioneAzienda();
-        currentTimer = 6f;
-        aggiornaTempo();
+        currentTimer = 4f;
         Dipendente.CaricaJsonCategorie();
         Progetto.CaricaJsonProgetti();
         
@@ -555,6 +647,10 @@ public class Azienda : MonoBehaviour
             var progetto = Progetto.CreaProgetto(this);
             progettiInCorso.Add(progetto);
         }
+        
+        aggiornaDipendenti();
+        aggiornaTempo();
+        aggiornaCapitale(0);
     }
     
     // Funzione di update dello scorrere del tempo

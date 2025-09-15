@@ -247,6 +247,10 @@ MonoBehaviour:
     m_Key: nomeprogetto
     m_Metadata:
       m_Items: []
+  - m_Id: 10347932822630400
+    m_Key: noshowwarning
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

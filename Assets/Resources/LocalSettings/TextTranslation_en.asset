@@ -207,7 +207,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3459855537762304
-    m_Localized: 'Remaining Work:'
+    m_Localized: 'Work done:'
     m_Metadata:
       m_Items: []
   - m_Id: 3471630064775168
@@ -244,6 +244,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 3498698135662592
     m_Localized: Project Name ----
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10347932822630400
+    m_Localized: Do not show this message again
     m_Metadata:
       m_Items: []
   references:

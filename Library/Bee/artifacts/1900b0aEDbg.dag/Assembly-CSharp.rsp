@@ -458,6 +458,7 @@
 "Assets/Resources/Scripts/CompilatoreEtichettaNuoviDipendenti.cs"
 "Assets/Resources/Scripts/CompilatoreEtichettaNuoviProgetti.cs"
 "Assets/Resources/Scripts/CompilatoreEtichettaProgetti.cs"
+"Assets/Resources/Scripts/DropdownColorato.cs"
 "Assets/Resources/Scripts/ErrorPanelScript.cs"
 "Assets/Resources/Scripts/Exit.cs"
 "Assets/Resources/Scripts/GestioneProgressBar.cs"

@@ -195,9 +195,12 @@ namespace Scripts.Logica
             {
                 if (durataRimanente > 0)
                 {
+                    Debug.Log("Progetto " + nome + " completato in anticipo! Pagamento settimane arretrate: " + settimanale * durataRimanente);
                     guadagno += settimanale * durataRimanente;
                 }
-                guadagno += finale - (finale * percentualeDetrazione / 100 * (-durataRimanente));
+                Debug.Log("Finale: " + finale + " con detrazione/bonus di percentuale " + percentualeDetrazione + "% per " + durataRimanente + " settimane di anticipo.");
+                guadagno += finale - (finale * percentualeDetrazione / 100 * (durataRimanente));
+                Debug.Log("Guadagno totale progetto " + nome + ": " + guadagno);
                 azienda.progettiCompletatiInSettimana.Add(this);
             }
             else
@@ -235,6 +238,19 @@ namespace Scripts.Logica
                 azienda.reparti[reparto].RimuoviProgetto();
             }
             azienda.progettiInCorso.Remove(this);
+        }
+        
+        // Apre il progetto
+        public void ApriProgetto()
+        {
+            foreach (var reparto in repartiCoinvolti)
+            {
+                azienda.reparti[reparto].AggiungiProgetto();
+            }
+
+            azienda.capitale += anticipo;
+            azienda.progettiInCorso.Add(this);
+            azienda.aggiornaCapitale();
         }
 
         public static void CaricaJsonProgetti()

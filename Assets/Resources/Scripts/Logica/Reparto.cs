@@ -81,7 +81,6 @@ namespace Scripts.Logica
             {
                 team.RimuoviDipendente(dipendente);
                 numeroPostiLiberi++;
-                Debug.Log("Numero dipendenti del team dopo la rimozione: " + team.NumeroDipendenti());
                 if (team.NumeroDipendenti() == 0)
                 {
                     RimuoviTeam(team);
@@ -146,7 +145,6 @@ namespace Scripts.Logica
             {
                 lavoroTotale += team.GetProduzioneSettimanale();
             }
-            
             var numeroTeamAttivi = NumeroTeamAttivi();
             var distanzaTeam = 0;
             if(numeroTeamAttivi < numeroMinimoTeam)
@@ -200,7 +198,16 @@ namespace Scripts.Logica
                 team.Aggiorna();
             }
         }
-        
+
+        public int NumeroDipendenti()
+        {
+            var count = 0;
+            foreach (var team in teams)
+            {
+                count += team.NumeroDipendenti();
+            }
+            return count;
+        }
         
     }
 }

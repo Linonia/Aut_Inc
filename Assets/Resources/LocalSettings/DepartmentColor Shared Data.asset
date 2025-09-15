@@ -63,6 +63,30 @@ MonoBehaviour:
     m_Key: Marketingtext
     m_Metadata:
       m_Items: []
+  - m_Id: 855413009248256
+    m_Key: AssistenzaESupportoTecnicobg
+    m_Metadata:
+      m_Items: []
+  - m_Id: 855477865771008
+    m_Key: ControlloQualitabg
+    m_Metadata:
+      m_Items: []
+  - m_Id: 855514314272768
+    m_Key: UxEDesignbg
+    m_Metadata:
+      m_Items: []
+  - m_Id: 855541778575360
+    m_Key: SviluppoSoftwarebg
+    m_Metadata:
+      m_Items: []
+  - m_Id: 855588100468736
+    m_Key: RicercaESviluppobg
+    m_Metadata:
+      m_Items: []
+  - m_Id: 855616730787840
+    m_Key: Marketingbg
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -61,8 +61,9 @@ public class VisualizzaInformazioniProgetto : MonoBehaviour
         durataRimanente.SetActive(true);
         durataRimanente.GetComponent<GestioneProgressBar>().ShowValue( Math.Max( (float) progetto.durataRimanente * 100 / progetto.durata, 0) );
         
-        lavoro.text = $"<color=#2F6F4E>{progetto.lavoroMancante.ToString("F0")}/{progetto.lavoroRichiesto.ToString("F0")}</color>";
+        lavoro.text = $"<color=#2F6F4E>{(progetto.lavoroRichiesto - progetto.lavoroMancante).ToString("F0")}/{progetto.lavoroRichiesto.ToString("F0")}</color>";
         lavoroMancante.SetActive(true);
+        // Stampa nel debug il lavoro Mancante e quello richiesto con il nome del progetto
         lavoroMancante.GetComponent<GestioneProgressBar>().ShowValue( Math.Max( (float) (progetto.lavoroRichiesto - progetto.lavoroMancante) * 100 / progetto.lavoroRichiesto, 0) );
         
         anticipo.text = "<color=green>+" + progetto.anticipo.ToString("F2") + "$</color>";

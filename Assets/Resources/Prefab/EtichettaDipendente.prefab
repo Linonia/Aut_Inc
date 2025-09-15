@@ -759,6 +759,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e1e59c83274c8548b4b4b4e9e7b61d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sfondo: {fileID: 3454216866215876729}
   foto: {fileID: 1110430234044213464}
   nome: {fileID: 2940492051388073815}
   reparto: {fileID: 7723480107640820799}

@@ -207,7 +207,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3459855537762304
-    m_Localized: 'Lavoro Mancante:'
+    m_Localized: 'Lavoro svolto:'
     m_Metadata:
       m_Items: []
   - m_Id: 3471630064775168
@@ -244,6 +244,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 3498698135662592
     m_Localized: Nome Progetto ----
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10347932822630400
+    m_Localized: Non mostrare piu' questo messaggio
     m_Metadata:
       m_Items: []
   references:

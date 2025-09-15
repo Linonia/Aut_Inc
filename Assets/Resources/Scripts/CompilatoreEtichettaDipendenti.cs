@@ -8,6 +8,7 @@ using UnityEngine.UI;
 
 public class CompilatoreEtichettaDipendenti : MonoBehaviour
 {
+    public Image sfondo;
     public Image foto;
     public TMP_Text nome;
     public TMP_Text reparto;
@@ -22,7 +23,11 @@ public class CompilatoreEtichettaDipendenti : MonoBehaviour
         nome.text = dipendente.nome;
         if (dipendente.team != null)
         {
-            reparto.text = LocalizationSettings.StringDatabase.GetLocalizedString("Departments", dipendente.team.reparto.codice);
+            sfondo.color = ColorUtility.TryParseHtmlString(
+                "#" + LocalizationSettings.StringDatabase.GetLocalizedString("DepartmentColor", dipendente.team.reparto.codice + "bg"), 
+                out var c
+            ) ? c : ColorUtility.TryParseHtmlString("#C8D2D2", out var fallback) ? fallback : Color.white;
+            reparto.text = "<color=#" + LocalizationSettings.StringDatabase.GetLocalizedString("DepartmentColor", dipendente.team.reparto.codice + "text") + ">"+ LocalizationSettings.StringDatabase.GetLocalizedString("Departments", dipendente.team.reparto.codice) + "</color>";
             team.text = (dipendente.team.reparto.teams.IndexOf(dipendente.team) + 1).ToString();
             competenzaBar.GetComponent<GestioneProgressBar>().ShowValue(dipendente.competenza);
         }

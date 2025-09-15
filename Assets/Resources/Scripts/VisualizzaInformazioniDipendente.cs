@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Scripts.Logica;
 using TMPro;
+using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine.Localization.Settings;
 
 public class VisualizzaInformazioniDipendente : MonoBehaviour
@@ -72,6 +73,11 @@ public class VisualizzaInformazioniDipendente : MonoBehaviour
         });
 
         
+        licenziamentoButton.gameObject.SetActive(true);
+        licenziamentoButton.onClick.AddListener(() =>
+        {
+            azienda.OnLicenziaDipendente(dipendente, Clear, elencoDipendenti.GetComponent<CompilatoreElencoDipendenti>().OnEnable);
+        });
         gameObject.transform.Find("ChangeTeam").gameObject.SetActive(true);
         int index = 0;
         int selectedTeam = 0;
@@ -82,29 +88,61 @@ public class VisualizzaInformazioniDipendente : MonoBehaviour
         };
         teamSelezionato = new Dictionary<int, (Reparto, Team)>();
         teamSelezionato.Add(index, (null, null));
+        if(dipendente.team == null)
+            cambioTeamDropdown.GetComponent<Image>().color = new Color32(245, 245, 245, 255);
         foreach (var repartiNome in azienda.RepartiSbloccati())
         {
             var repNome = LocalizationSettings.StringDatabase.GetLocalizedString("Departments", azienda.reparti[repartiNome].codice);
+            string colorHex = "#" + LocalizationSettings.StringDatabase.GetLocalizedString("DepartmentColor", azienda.reparti[repartiNome].codice + "text");
+            
             foreach (var team in azienda.reparti[repartiNome].teams)
             {
                 index++;
                 var teamNumber = team.reparto.teams.IndexOf(team) + 1;
                 if (team == dipendente.team)
                 {
+                    cambioTeamDropdown.GetComponent<Image>().color =
+                        ColorUtility.TryParseHtmlString("#" + LocalizationSettings.StringDatabase.GetLocalizedString("DepartmentColor", azienda.reparti[repartiNome].codice + "bg"), out var c) ? c : new Color32(245, 245, 245, 255);
                     selectedTeam = index;
                 }
-                options.Add($"{repNome} - {teamNumber.ToString()}");
+                options.Add($"<color={colorHex}>{repNome} - {teamNumber}</color>");
                 teamSelezionato.Add(index, (azienda.reparti[repartiNome], team));
             }
             index++;
-            options.Add($"{repNome} - {LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", "nuovoteam")}");
+            options.Add($"<color={colorHex}>{repNome} - {LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", "nuovoteam")}</color>");
             teamSelezionato.Add(index, (azienda.reparti[repartiNome], null));
         }
         cambioTeamDropdown.AddOptions(options);
         cambioTeamDropdown.onValueChanged.RemoveAllListeners();
         cambioTeamDropdown.value = selectedTeam;
+        //cambioTeamDropdown.coloriTuple = teamSelezionato;
         cambioTeamDropdown.onValueChanged.AddListener(delegate { OnCambioTeam(); Ricarica(); });
+
     }
+    
+    private void SetLastOptionsBackground(Color color, int totalOptions)
+    {
+        Transform content = cambioTeamDropdown.template.Find("Viewport/Content");
+        Debug.Log("Opzioni totali: " + content.childCount + " Mentre da colorare: " + totalOptions);
+        if (content == null) return;
+
+        int startIndex = Mathf.Max(0, content.childCount - totalOptions); // partiamo solo dalle ultime aggiunte
+
+        for (int i = startIndex; i < content.childCount; i++)
+        {
+            Transform item = content.GetChild(i);
+            Transform bgTransform = item.Find("Item Background"); // cerca il child
+            if (bgTransform != null)
+            {
+                Image bg = bgTransform.GetComponent<Image>();
+                if (bg != null)
+                {
+                    bg.color = color;
+                }
+            }
+        }
+    }
+
     
     public void Ricarica()
     {
@@ -142,6 +180,11 @@ public class VisualizzaInformazioniDipendente : MonoBehaviour
         });
 
         
+        licenziamentoButton.gameObject.SetActive(true);
+        licenziamentoButton.onClick.AddListener(() =>
+        {
+            azienda.OnLicenziaDipendente(dipendente, Clear, elencoDipendenti.GetComponent<CompilatoreElencoDipendenti>().OnEnable);
+        });
         gameObject.transform.Find("ChangeTeam").gameObject.SetActive(true);
         int index = 0;
         int selectedTeam = 0;
@@ -152,27 +195,34 @@ public class VisualizzaInformazioniDipendente : MonoBehaviour
         };
         teamSelezionato = new Dictionary<int, (Reparto, Team)>();
         teamSelezionato.Add(index, (null, null));
+        if(dipendente.team == null)
+            cambioTeamDropdown.GetComponent<Image>().color = new Color32(245, 245, 245, 255);
         foreach (var repartiNome in azienda.RepartiSbloccati())
         {
             var repNome = LocalizationSettings.StringDatabase.GetLocalizedString("Departments", azienda.reparti[repartiNome].codice);
+            string colorHex = "#" + LocalizationSettings.StringDatabase.GetLocalizedString("DepartmentColor", azienda.reparti[repartiNome].codice + "text");
+            
             foreach (var team in azienda.reparti[repartiNome].teams)
             {
                 index++;
                 var teamNumber = team.reparto.teams.IndexOf(team) + 1;
                 if (team == dipendente.team)
                 {
+                    cambioTeamDropdown.GetComponent<Image>().color =
+                        ColorUtility.TryParseHtmlString("#" + LocalizationSettings.StringDatabase.GetLocalizedString("DepartmentColor", azienda.reparti[repartiNome].codice + "bg"), out var c) ? c : new Color32(245, 245, 245, 255);
                     selectedTeam = index;
                 }
-                options.Add($"{repNome} - {teamNumber.ToString()}");
+                options.Add($"<color={colorHex}>{repNome} - {teamNumber}</color>");
                 teamSelezionato.Add(index, (azienda.reparti[repartiNome], team));
             }
             index++;
-            options.Add($"{repNome} - {LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", "nuovoteam")}");
+            options.Add($"<color={colorHex}>{repNome} - {LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", "nuovoteam")}</color>");
             teamSelezionato.Add(index, (azienda.reparti[repartiNome], null));
         }
         cambioTeamDropdown.AddOptions(options);
         cambioTeamDropdown.onValueChanged.RemoveAllListeners();
         cambioTeamDropdown.value = selectedTeam;
+        //cambioTeamDropdown.coloriTuple = teamSelezionato;
         cambioTeamDropdown.onValueChanged.AddListener(delegate { OnCambioTeam(); Ricarica(); });
     }
     

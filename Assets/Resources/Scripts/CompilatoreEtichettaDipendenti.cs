@@ -38,7 +38,10 @@ public class CompilatoreEtichettaDipendenti : MonoBehaviour
         }
         
         umoreBar.GetComponent<GestioneProgressBar>().ShowValue(dipendente.umore);
-        competenzaBar.GetComponent<GestioneProgressBar>().ShowValue(dipendente.competenza);
+        if (dipendente.attesaCompetenza > 0)
+            competenzaBar.GetComponent<GestioneProgressBar>().ShowValue(-1);
+        else
+            competenzaBar.GetComponent<GestioneProgressBar>().ShowValue(dipendente.competenza);
         
 
         GameObject infoDipendente = transform.parent.parent.parent.parent.Find("InfoDipendente").gameObject;

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using UnityEngine;
 
@@ -14,7 +15,7 @@ namespace Scripts.Logica
         public List<NomiReparti> repartiCoinvolti;
         public bool forcedEnd;
         public string difficolta;
-        [SerializeReference] public Azienda azienda;
+        [JsonIgnore][SerializeReference] public Azienda azienda;
         
         // Informazioni riguardanti la durata del progetto
         public int durata;
@@ -138,6 +139,7 @@ namespace Scripts.Logica
             return progetto;
         }
         
+        public Progetto(){}
         // Costruttore del progetto
         public Progetto(
             string nome,
@@ -302,6 +304,12 @@ namespace Scripts.Logica
             
             var index = UnityEngine.Random.Range(0, (int) progettiValidi.Count);
             return progettiValidi[index];
+        }
+        
+        // Funzione di caricamento del salvataggio
+        public void OnAfterLoad(Azienda azienda)
+        {
+            this.azienda = azienda;
         }
     }
 }

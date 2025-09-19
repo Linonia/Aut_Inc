@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using Newtonsoft.Json;
 using UnityEngine;
 
 namespace Scripts.Logica
@@ -38,11 +40,14 @@ namespace Scripts.Logica
         public string descrizione;
         
         // Riferimento all'azienda a cui appartiene il reparto
-        [SerializeReference] public Azienda azienda;
+        [JsonIgnore][SerializeReference] public Azienda azienda;
+
+        [JsonIgnore][SerializeReference] public CompilatoreEtichettaDipartimenti etichetta;
         
     // Funzioni del reparto
+        public Reparto(){}
         // Costruttore del reparto
-        public Reparto(string codice, List<Categorie> categorie, string descrizione, Azienda azienda)
+        public Reparto(string codice, List<Categorie> categorie, string descrizione, Azienda azienda, CompilatoreEtichettaDipartimenti etichetta)
         {
             this.codice = codice;
             this.descrizione = descrizione;
@@ -54,8 +59,11 @@ namespace Scripts.Logica
             numeroPostiLiberi = maxDipendenti;
             costoDipendente = costo;
             costoPotenziamento = costoPot;
+            livelloReparto = 1;
             livelloRepartoMax = LivelliReparti.LivelloReparto.Count;
             this.azienda = azienda;
+            this.etichetta = etichetta;
+            etichetta.NascondiEtichetta();
         }
 
         // Aumenta il livello del reparto
@@ -85,6 +93,7 @@ namespace Scripts.Logica
                 {
                     RimuoviTeam(team);
                 }
+                etichetta.aggiornaDipendenti();
             }
         }
         
@@ -95,6 +104,7 @@ namespace Scripts.Logica
             {
                 team.AggiungiDipendente(dipendente);
                 numeroPostiLiberi--;
+                etichetta.aggiornaDipendenti();
             }
         }
 
@@ -186,7 +196,13 @@ namespace Scripts.Logica
             {
                 aperto = true;
                 numeroProgetti = 0;
+                etichetta.repartoComprato();
             }
+        }
+
+        public void SbloccaAcquisto()
+        {
+            etichetta.SbloccaPossibilitaCompra();
         }
         
         // Aggiornamento del reparto
@@ -208,6 +224,42 @@ namespace Scripts.Logica
             }
             return count;
         }
+        
+        // Funzione di caricamento del salvataggio
+        public void OnAfterLoad(Azienda azienda, CompilatoreEtichettaDipartimenti etichetta)
+        {
+            // Riaggancio i riferimenti non serializzabili
+            this.azienda = azienda;
+            this.etichetta = etichetta;
+
+            // Ricostruisco i riferimenti dei team
+            foreach (var team in teams)
+            {
+                team.OnAfterLoad(this);
+            }
+
+            // Eventualmente puoi aggiornare subito la UI
+            if (aperto)
+            {
+                etichetta.repartoComprato();
+            }
+            else
+            {
+                if (azienda.repartiDaSbloccare.Count > 0)
+                {
+                    var prossimoReparto = azienda.repartiDaSbloccare[0]; // il primo della lista
+                    if (azienda.reparti[prossimoReparto].codice == codice)
+                    {
+                        etichetta.SbloccaPossibilitaCompra();
+                    }
+                    else
+                    {
+                        etichetta.NascondiEtichetta();
+                    }
+                }
+            }
+        }
+
         
     }
 }

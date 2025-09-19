@@ -73,6 +73,7 @@ public class VisualizzaInformazioniNuovoProgetto : MonoBehaviour
         FirmaProgettoButton.onClick.AddListener(() =>
         {
             Destroy(infoPanel);
+            azienda.progettiProposti.Remove(this.progetto);
             azienda.OnFirmaProgetto(this.progetto, Clear);
         });
     }

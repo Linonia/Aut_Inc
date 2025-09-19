@@ -46,7 +46,6 @@ public class VisualizzaInformazioniDipendente : MonoBehaviour
         {
             reparto.text = "<color=#" + LocalizationSettings.StringDatabase.GetLocalizedString("DepartmentColor", dipendente.team.reparto.codice + "text") + ">"+ LocalizationSettings.StringDatabase.GetLocalizedString("Departments", dipendente.team.reparto.codice) + "</color>";
             team.text = "Team: " +(dipendente.team.reparto.teams.IndexOf(dipendente.team) + 1);
-            competenzaBar.GetComponent<GestioneProgressBar>().ShowValue(dipendente.competenza);
         }
         else
         {
@@ -55,7 +54,10 @@ public class VisualizzaInformazioniDipendente : MonoBehaviour
         }
         
         umoreBar.GetComponent<GestioneProgressBar>().ShowValue(dipendente.umore);
-        competenzaBar.GetComponent<GestioneProgressBar>().ShowValue(dipendente.competenza);
+        if (dipendente.attesaCompetenza > 0)
+            competenzaBar.GetComponent<GestioneProgressBar>().ShowValue(-1);
+        else
+            competenzaBar.GetComponent<GestioneProgressBar>().ShowValue(dipendente.competenza);
 
         /*
         for(int i = 0; i < dipendente.codiciDescrizioni.Length; i++)
@@ -116,7 +118,10 @@ public class VisualizzaInformazioniDipendente : MonoBehaviour
         cambioTeamDropdown.onValueChanged.RemoveAllListeners();
         cambioTeamDropdown.value = selectedTeam;
         //cambioTeamDropdown.coloriTuple = teamSelezionato;
-        cambioTeamDropdown.onValueChanged.AddListener(delegate { OnCambioTeam(); Ricarica(); });
+        //cambioTeamDropdown.onValueChanged.AddListener(delegate { OnCambioTeam(); Ricarica(); });
+        cambioTeamDropdown.onValueChanged.AddListener(delegate {
+            OnCambioTeam();
+        });
 
     }
     
@@ -142,7 +147,6 @@ public class VisualizzaInformazioniDipendente : MonoBehaviour
             }
         }
     }
-
     
     public void Ricarica()
     {
@@ -162,7 +166,10 @@ public class VisualizzaInformazioniDipendente : MonoBehaviour
         }
         
         umoreBar.GetComponent<GestioneProgressBar>().ShowValue(dipendente.umore);
-        competenzaBar.GetComponent<GestioneProgressBar>().ShowValue(dipendente.competenza);
+        if (dipendente.attesaCompetenza > 0)
+            competenzaBar.GetComponent<GestioneProgressBar>().ShowValue(-1);
+        else
+            competenzaBar.GetComponent<GestioneProgressBar>().ShowValue(dipendente.competenza);
 
         /*
         for(int i = 0; i < dipendente.codiciDescrizioni.Length; i++)
@@ -223,7 +230,11 @@ public class VisualizzaInformazioniDipendente : MonoBehaviour
         cambioTeamDropdown.onValueChanged.RemoveAllListeners();
         cambioTeamDropdown.value = selectedTeam;
         //cambioTeamDropdown.coloriTuple = teamSelezionato;
-        cambioTeamDropdown.onValueChanged.AddListener(delegate { OnCambioTeam(); Ricarica(); });
+        //cambioTeamDropdown.onValueChanged.AddListener(delegate { OnCambioTeam(); Ricarica(); });
+        cambioTeamDropdown.onValueChanged.AddListener(delegate {
+            OnCambioTeam();
+        });
+        elencoDipendenti.GetComponent<CompilatoreElencoDipendenti>().OnEnable();
     }
     
     public void Clear()
@@ -257,35 +268,178 @@ public class VisualizzaInformazioniDipendente : MonoBehaviour
         if (teamSelezionato.ContainsKey(selectedIndex))
         {
             var (reparto, team) = teamSelezionato[selectedIndex];
-            if (reparto == null)
+
+            if (dipendente.team == null)
             {
-                if (dipendente.team == null) return; // No change needed, already not in a team
-                azienda.RimuoviDipendente(dipendente);
-            }
-            else if (team != null)
-            {
-                if (dipendente.team == team) return; // No change needed
-                if(team.PostiDisponibiliEsistenti())
-                    azienda.SpostaDipendente(dipendente, team);
+                // qui il dipendente non è in un team
+                if (reparto == null) return;
+                if (team == null)
+                {
+                    if (reparto.numeroPostiLiberi > 0)
+                    {
+                        // posso creare un nuovo team
+                        reparto.AggiungiTeam();
+                        var newTeam = reparto.teams.Last();
+                        azienda.SpostaDipendente(dipendente, newTeam);
+                        Ricarica();
+                    }
+                    else
+                    {
+                        // errore reparto pieno
+                        azienda.ShowErrorMessage("erroreDipartimentoPieno", () =>
+                                Ricarica(),
+                            "chiudi"
+                        );
+                    }
+                }
                 else
                 {
-                    Debug.Log("Non puoi inserire in un team pieno");
-                    // Non puoi inserire in un team pieno
+                    if (reparto.numeroPostiLiberi > 0)
+                    {
+                        // posso inserire in un team esistente
+                        azienda.SpostaDipendente(dipendente, team);
+                        Ricarica();
+                    }
+                    else
+                    {
+                        // errore reparto pieno
+                        azienda.ShowErrorMessage("erroreDipartimentoPieno", () =>
+                                Ricarica(),
+                            "chiudi"
+                        );
+                    }
                 }
             }
             else
             {
-                if (reparto.numeroPostiLiberi > 0)
+                // qui il dipendente è in un team e deve essere rimosso da quel team prima di essere spostato
+                if (reparto == null)
                 {
-                    reparto.AggiungiTeam();
-                    var newTeam = reparto.teams.Last();
-                    azienda.SpostaDipendente(dipendente, newTeam);
+                    // Messaggio di avviso che il dipendente verrà rimosso dal team
+                    // rimozione dal team
+                    azienda.ShowWarningMessage(
+                        "cambioTeamAvviso",
+                        onConfirm: () =>
+                        {
+                            azienda.RimuoviDipendente(dipendente);
+                            Ricarica();
+                        },
+                        onRetry: () => { cambioTeamDropdown.Hide(); },
+                        confirmText: "conferma",
+                        retryText: "annulla",
+                        flag: "cambioTeam"
+                    );
+                }
+                else
+                {
+                    // controllo se è lo stesso reparto
+                    if (reparto == dipendente.team.reparto)
+                    {
+                        //controllo se è nuovo team
+                        if (team == null)
+                        {
+                            azienda.ShowWarningMessage(
+                                "cambioTeamAvviso",
+                                onConfirm: () =>
+                                {
+                                    reparto.AggiungiTeam();
+                                    var newTeam = reparto.teams.Last();
+                                    azienda.SpostaDipendente(dipendente, newTeam);
+                                    Ricarica();
+                                },
+                                onRetry: () => { cambioTeamDropdown.Hide(); },
+                                confirmText: "conferma",
+                                retryText: "annulla",
+                                flag: "cambioTeam"
+                            );
+                        }
+                        // se è stesso reparto controllo se è stesso team
+                        else if (team == dipendente.team) return;
+                        else
+                        {
+                            //messaggio di avviso che il dipendente verrà spostato di team
+                            // spostamento di team
+                            azienda.ShowWarningMessage(
+                                "cambioTeamAvviso",
+                                onConfirm: () =>
+                                {
+                                    azienda.SpostaDipendente(dipendente, team);
+                                    Ricarica();
+                                },
+                                onRetry: () => { cambioTeamDropdown.Hide(); },
+                                confirmText: "conferma",
+                                retryText: "annulla",
+                                flag: "cambioTeam"
+                            );
+                        }
+                    }
+                    else
+                    {
+                        // reparto diverso
+                        // se il team è nullo creo un nuovo team se disponibile
+                        if (team == null)
+                        {
+                            if (reparto.numeroPostiLiberi > 0)
+                            {
+                                // posso creare un nuovo team
+                                azienda.ShowWarningMessage(
+                                    "cambioTeamAvviso",
+                                    onConfirm: () =>
+                                    {
+                                        reparto.AggiungiTeam();
+                                        var newTeam = reparto.teams.Last();
+                                        azienda.SpostaDipendente(dipendente, newTeam);
+                                        Ricarica();
+                                    },
+                                    onRetry: () => { cambioTeamDropdown.Hide(); },
+                                    confirmText: "conferma",
+                                    retryText: "annulla",
+                                    flag: "cambioTeam"
+                                );
+                            }
+                            else
+                            {
+                                // errore reparto pieno
+                                azienda.ShowErrorMessage("erroreDipartimentoPieno", () =>
+                                        Ricarica(),
+                                    "chiudi"
+                                );
+                            }
+                        }
+                        else
+                        {
+                            if (reparto.numeroPostiLiberi > 0)
+                            {
+                                // posso inserire in un team esistente
+                                azienda.ShowWarningMessage(
+                                    "cambioTeamAvviso",
+                                    onConfirm: () =>
+                                    {
+                                        azienda.SpostaDipendente(dipendente, team);
+                                        Ricarica();
+                                    },
+                                    onRetry: () => { cambioTeamDropdown.Hide(); },
+                                    confirmText: "conferma",
+                                    retryText: "annulla",
+                                    flag: "cambioTeam"
+                                );
+                            }
+                            else
+                            {
+                                // errore reparto pieno
+                                azienda.ShowErrorMessage("erroreDipartimentoPieno", () =>
+                                        Ricarica(),
+                                    "chiudi"
+                                );
+                            }
+                        }
+                    }
                 }
             }
-        }
-        
-        Ricarica();
 
-        elencoDipendenti.GetComponent<CompilatoreElencoDipendenti>().OnEnable();
+            Ricarica();
+
+            elencoDipendenti.GetComponent<CompilatoreElencoDipendenti>().OnEnable();
+        }
     }
 }

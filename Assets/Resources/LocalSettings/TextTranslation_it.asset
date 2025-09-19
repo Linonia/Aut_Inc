@@ -143,11 +143,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3180100095668224
-    m_Localized: Ricerca dei Nuovi Dipendenti
+    m_Localized: Ricerca dei nuovi Dipendenti
     m_Metadata:
       m_Items: []
   - m_Id: 3180400026152960
-    m_Localized: Ricerca dei Nuovi Progetti
+    m_Localized: Esplora nuovi Progetti
     m_Metadata:
       m_Items: []
   - m_Id: 3183195496214528
@@ -248,6 +248,66 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 10347932822630400
     m_Localized: Non mostrare piu' questo messaggio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10683049784995840
+    m_Localized: Informazioni
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10683916810547200
+    m_Localized: Compra il Reparto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10781753409892352
+    m_Localized: Ignota
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10808648520265728
+    m_Localized: 'Dipendenti: '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10809744651284480
+    m_Localized: 'Numero di team consigliato:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10810787334287360
+    m_Localized: 'Numero team presenti:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10834676202434560
+    m_Localized: Livello
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10839298883284992
+    m_Localized: 'Costo di un dipendente:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10839478059757568
+    m_Localized: 'Costo di miglioramento:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10839734864408576
+    m_Localized: Migliora
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10855952774164480
+    m_Localized: Umore
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10855984906727424
+    m_Localized: Competenza
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11532873245749248
+    m_Localized: Salvataggio completato con successo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11801648075468800
+    m_Localized: I tuoi Dipendenti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11802642729496576
+    m_Localized: I tuoi Progetti
     m_Metadata:
       m_Items: []
   references:

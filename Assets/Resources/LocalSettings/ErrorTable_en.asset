@@ -19,8 +19,8 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 130505052160
-    m_Localized: "There is a saved game. Starting a new game will overwrite your
-      previous save.\r"
+    m_Localized: There is a saved game. Starting a new game will overwrite your previous
+      save. Do you want to continue?
     m_Metadata:
       m_Items: []
   - m_Id: 5231848263680
@@ -29,7 +29,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 66784446451712
-    m_Localized: All unsaved progress will be lost if you exit the game.
+    m_Localized: All unsaved progress will be lost if you exit the game. Exit anyway?
     m_Metadata:
       m_Items: []
   - m_Id: 2778887009169408
@@ -39,7 +39,42 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 3152396944240640
     m_Localized: If you end the project now, you will pay the termination fee, but
-      you will free up the involved departments for other projects.
+      you will free up the involved departments for other projects. Do you want to
+      continue?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10102359615959040
+    m_Localized: If you move this employee to another team, both their previous team
+      and the employee will lose mood. Do you want to continue?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10368067285381120
+    m_Localized: You don't have enough capital to purchase this new department.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10403086393503744
+    m_Localized: By proceeding with the purchase of this department, you will spend
+      {costo}. Do you want to continue?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11215674601730048
+    m_Localized: 'The save did not complete successfully. Please try again later.
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11294212856049664
+    m_Localized: The department you are trying to assign this employee to is full.
+      Remove another employee from one of its teams before assigning a new one.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11500384447983616
+    m_Localized: Insufficient capital to proceed with the search for new employees.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11509405229871104
+    m_Localized: Starting a new employee search will remove the currently available
+      candidates.
     m_Metadata:
       m_Items: []
   references:

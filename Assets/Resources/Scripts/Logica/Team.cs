@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using Newtonsoft.Json;
 using UnityEngine;
 
 namespace Scripts.Logica
@@ -11,8 +13,9 @@ namespace Scripts.Logica
         public List<Dipendente> dipendenti;
         
         // Reparto a cui appartiene il team
-        [SerializeReference]public Reparto reparto;
+        [JsonIgnore][SerializeReference] public Reparto reparto;
         
+        public Team(){}
         // Costruttore del team
         public Team(Reparto reparto)
         {
@@ -89,6 +92,16 @@ namespace Scripts.Logica
         public bool PostiDisponibiliEsistenti()
         {
             return reparto.numeroPostiLiberi > 0;
+        }
+
+        // Funzione di caricamento del salvataggio
+        public void OnAfterLoad(Reparto reparto)
+        {
+            this.reparto = reparto;
+            foreach (var dipendente in dipendenti)
+            {
+                dipendente.OnAfterLoad(this);
+            }
         }
     }
 }

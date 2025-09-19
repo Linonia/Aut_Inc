@@ -19,8 +19,8 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 130505052160
-    m_Localized: "Esiste un salvataggio di gioco. Avviando una nuova partita andrai
-      a cancellare quello precedente.\r"
+    m_Localized: Esiste un salvataggio di gioco. Avviando una nuova partita andrai
+      a cancellare quello precedente. Vuoi continuare?
     m_Metadata:
       m_Items: []
   - m_Id: 5231848263680
@@ -30,6 +30,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 66784446451712
     m_Localized: Tutti i progressi non salvati andranno persi se esci dal gioco.
+      Vuoi comunque uscire?
     m_Metadata:
       m_Items: []
   - m_Id: 2778887009169408
@@ -39,7 +40,42 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 3152396944240640
     m_Localized: Se termini il progetto ora, pagherai la somma di rescissione, ma
-      libererai i reparti coinvolti per altri progetti.
+      libererai i reparti coinvolti per altri progetti. Vuoi continuare?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10102359615959040
+    m_Localized: Se sposti questo dipendente in un altro team, sia il team di provenienza
+      che il dipendente perderanno umore. Vuoi continuare?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10368067285381120
+    m_Localized: Non hai capitale sufficiente per acquistare questo nuovo reparto.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10403086393503744
+    m_Localized: Procedendo con l'acquisto di questo reparto, spenderai {costo}.
+      Vuoi continuare?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11215674601730048
+    m_Localized: 'Il salvataggio non e'' andato a buon fine. Riprova piu'' tardi.
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11294212856049664
+    m_Localized: Il dipartimento a cui stai cercando di assegnare questo dipendente
+      e' pieno. Rimuovi un altro dipendente da uno dei suoi team prima di assegnarne
+      uno nuovo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11500384447983616
+    m_Localized: Capitale insufficiente per procedere con la ricerca di nuovi dipendenti.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11509405229871104
+    m_Localized: Avviando una nuova ricerca di dipendenti, quelli attualmente disponibili
+      non saranno piu' visibili.
     m_Metadata:
       m_Items: []
   references:

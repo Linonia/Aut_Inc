@@ -61,6 +61,8 @@ public class SceneManagerScript : MonoBehaviour
         if (!active)
         {
             StartCoroutine(SetResolution(resolution));
+            PlayerPrefs.SetInt("Resolution", resolution);
+            PlayerPrefs.Save();
         }
     }
     

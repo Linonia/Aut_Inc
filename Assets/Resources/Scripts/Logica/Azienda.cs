@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Newtonsoft.Json;
 using Scripts.Logica;
 using TMPro;
 using UnityEngine.Localization.Settings;
@@ -11,7 +12,7 @@ using UnityEngine.UI;
 public class Azienda : MonoBehaviour
 {
     // Istanza singleton
-    [HideInInspector] public Azienda instance;
+    [JsonIgnore] public Azienda instance;
     private void Awake()
     {
         if (instance == null)
@@ -35,15 +36,18 @@ public class Azienda : MonoBehaviour
     [HideInInspector] public int anno = 1; // anno attuale
     [HideInInspector] public int mese = 1; // mese attuale
     [HideInInspector] public int settimana = 1; // settimana attuale
-    [HideInInspector] public float timer = 4f;
-    [HideInInspector] public float currentTimer = 4f;
-    [HideInInspector] public bool pausa = true;
-    [HideInInspector] private bool inPausa = true;
+    [JsonIgnore][SerializeReference] public float timer = 4f;
+    [JsonIgnore][SerializeReference] public float currentTimer = 4f;
+    [JsonIgnore][SerializeReference] public bool pausa = true;
+    [JsonIgnore][SerializeReference] public bool inPausa = true;
     
     // informazioni sui reparti
     [HideInInspector] public Dictionary<NomiReparti, Reparto> reparti = new Dictionary<NomiReparti, Reparto>(); // reparti dell'azienda
     [HideInInspector] public List<NomiReparti> repartiDaSbloccare = new List<NomiReparti>(); // reparti che si possono sbloccare
-    [HideInInspector] public int costoReparto = 20000; // costo per sbloccare un reparto
+    [HideInInspector] public int costoReparto = 40000; // costo per sbloccare un reparto
+    [HideInInspector] public int costoAssunzioneDipendente = 2000;
+    [HideInInspector] public int costoLicenziamento = 3000;
+    [HideInInspector] public int ricercheDipendentiGratuite = 3;
     
     // informazioni sui dipendenti
     [HideInInspector] public List<Dipendente> dipendentiLiberi = new List<Dipendente>(); // dipendenti non assegnati a nessun team
@@ -54,16 +58,28 @@ public class Azienda : MonoBehaviour
     [HideInInspector] public List<Progetto> progettiProposti = new List<Progetto>(); // progetti che si possono iniziare
     
     // oggetti di gestione della UI in game
-    public TMP_Text tempo;
-    public TMP_Text capitaleText;
-    public TMP_Text dipendentiText;
-    public Image pausaImage;
-    public Image playImage;
-    public TMP_Text cambioCapitale;
-    public RectTransform capitalePanel;
+    [JsonIgnore] public TMP_Text tempo;
+    [JsonIgnore] public TMP_Text capitaleText;
+    [JsonIgnore] public TMP_Text dipendentiText;
+    [JsonIgnore] public Image pausaImage;
+    [JsonIgnore] public Image playImage;
+    [JsonIgnore] public TMP_Text cambioCapitale;
+    [JsonIgnore] public RectTransform capitalePanel;
+
+    [JsonIgnore] public GameObject salvataggioCompletato;
+
+    [JsonIgnore] public CompilatoreEtichettaDipartimenti etichettaAssistenza;
+    [JsonIgnore] public CompilatoreEtichettaDipartimenti etichettaSviluppo;
+    [JsonIgnore] public CompilatoreEtichettaDipartimenti etichettaUxE;
+    [JsonIgnore] public CompilatoreEtichettaDipartimenti etichettaQualita;
+    [JsonIgnore] public CompilatoreEtichettaDipartimenti etichettaRicerca;
+    [JsonIgnore] public CompilatoreEtichettaDipartimenti etichettaMarketing;
     
-    public Dictionary<string, bool> flags = new Dictionary<string, bool>();
+    [JsonIgnore] public CompilaTutorialPanel tutorialPanel;
     
+    [HideInInspector]public Dictionary<string, bool> flags = new Dictionary<string, bool>();
+    
+    public Azienda(){}
     // Metodi di gestione della memoria dell'azienda
     public void CreazioneAzienda()
     {
@@ -74,25 +90,25 @@ public class Azienda : MonoBehaviour
         {
             Categorie.ComunicazioneChiarezzaEspressiva,
             Categorie.ComunicazioneAdattabilitaComunicativa
-        }, "desc1", this));
+        }, "desc1", this, etichettaAssistenza));
         
         reparti.Add(NomiReparti.SviluppoSoftware, new Reparto("SviluppoSoftware", new List<Categorie>
         {
             Categorie.CapacitaCognitiveProblemSolvingCreativo,
             Categorie.CapacitaCognitiveFlessibilitaCognitiva
-        }, "desc4", this));
+        }, "desc4", this, etichettaSviluppo));
         
         reparti.Add(NomiReparti.UxEDesign, new Reparto("UxEDesign", new List<Categorie>
         {
             Categorie.SensibilitaSensorialePercezioneSensorialeFina,
             Categorie.SensibilitaSensorialeComfortAmbientale
-        }, "desc3", this));
+        }, "desc3", this, etichettaUxE));
         
         reparti.Add(NomiReparti.ControlloQualita, new Reparto("ControlloQualita", new List<Categorie>
         {
             Categorie.ComportamentiRipetitiviEInteressiRistrettiPrecisioneOperativa,
             Categorie.ComportamentiRipetitiviEInteressiRistrettiFocalizzazioneTematica
-        }, "desc2", this));
+        }, "desc2", this, etichettaQualita));
         
         reparti.Add(NomiReparti.RicercaESviluppo, new Reparto("RicercaESviluppo", new List<Categorie>
         {
@@ -100,7 +116,7 @@ public class Azienda : MonoBehaviour
             Categorie.CapacitaCognitiveFlessibilitaCognitiva,
             Categorie.ComportamentiRipetitiviEInteressiRistrettiPrecisioneOperativa,
             Categorie.ComportamentiRipetitiviEInteressiRistrettiFocalizzazioneTematica
-        }, "desc5", this));
+        }, "desc5", this, etichettaRicerca));
         
         reparti.Add(NomiReparti.Marketing, new Reparto("Marketing", new List<Categorie>
         {
@@ -108,11 +124,7 @@ public class Azienda : MonoBehaviour
             Categorie.SensibilitaSensorialeComfortAmbientale,
             Categorie.ComunicazioneChiarezzaEspressiva,
             Categorie.ComunicazioneAdattabilitaComunicativa
-        }, "desc6", this));
-        
-        // Questi sono i reparti iniziali
-        reparti[NomiReparti.SviluppoSoftware].ApriReparto();
-        reparti[NomiReparti.AssistenzaESupportoTecnico].ApriReparto();
+        }, "desc6", this, etichettaMarketing));
         
         // Reparti da sbloccare
         repartiDaSbloccare = new List<NomiReparti>
@@ -123,10 +135,14 @@ public class Azienda : MonoBehaviour
             NomiReparti.Marketing,
             //NomiReparti.SviluppoHardwareEInnovazioniTecnologiche
         };
-
-        tasseMensile = 10000; // Tasse mensili dell'azienda
         
-        capitale = 100000; // Capitale iniziale dell'azienda
+        // Sblocco il primo reparto
+        AperturaNuovoReparto(NomiReparti.AssistenzaESupportoTecnico);
+        AperturaNuovoReparto(NomiReparti.SviluppoSoftware);
+
+        tasseMensile = 8000; // Tasse mensili dell'azienda
+        
+        capitale = 50000; // Capitale iniziale dell'azienda
         
         anno = 1;
         mese = 1;
@@ -137,19 +153,52 @@ public class Azienda : MonoBehaviour
         //creazioneFlags
         flags = new Dictionary<string, bool>();
         flags.Add("licenziamento", false);
+        flags.Add("rescissione", false);
+        flags.Add("cambioTeam", false);
+        flags.Add("acquistoReparto", false);
+        flags.Add("avvisoRicaricaDipendenti", false);
+    }
+
+    public void CompraNuovoReparto(NomiReparti nomeReparto)
+    {
+        if (repartiDaSbloccare.Contains(nomeReparto) && capitale >= costoReparto)
+        {
+            ShowWarningMessage("acquistoRepartoAvviso", () =>
+            {
+                tasseMensile += 5000;
+                capitale -= costoReparto;
+                costoReparto += 40000;
+                AperturaNuovoReparto(nomeReparto);
+                aggiornaDipendenti();
+                aggiornaCapitale();
+            }, () => 
+            {
+                
+            }, "conferma", "annulla", "acquistoReparto", new Dictionary<string, string>
+            {
+                { "costo", "<color=red> " +  string.Format("{0:N2}", costoReparto) + "$</color>" }
+            });
+        }
+        else
+        {
+            ShowErrorMessage("erroreAcquistoReparto", () =>
+            {
+                
+            }, "chiudi");
+        }
     }
     
     public void AperturaNuovoReparto(NomiReparti nomeReparto)
     {
-        if (repartiDaSbloccare.Contains(nomeReparto) && capitale >= costoReparto)
+        
+        reparti[nomeReparto].ApriReparto();
+        repartiDaSbloccare.Remove(nomeReparto);
+        if (repartiDaSbloccare.Count > 0)
         {
-            reparti[nomeReparto].ApriReparto();
-            repartiDaSbloccare.Remove(nomeReparto);
-            tasseMensile += 1000;
-            capitale -= costoReparto;
-            costoReparto += 10000;
-            // Aggiorna la UI
+            var prossimoReparto = repartiDaSbloccare[0]; // il primo della lista
+            reparti[prossimoReparto].SbloccaAcquisto();
         }
+        // Aggiorna la UI
     }
 
     // Aggiunge un dipendente al team se ci sono posti liberi nel reparto
@@ -175,7 +224,7 @@ public class Azienda : MonoBehaviour
 
     public void SpostaDipendente(Dipendente dipendente, Team team)
     {
-        if (team.PostiDisponibiliEsistenti())
+        if (team.PostiDisponibiliEsistenti() || dipendente.team != null && dipendente.team.reparto == team.reparto )
         {
             if (dipendente.team != null)
             {
@@ -220,6 +269,11 @@ public class Azienda : MonoBehaviour
             }
         }
 
+        foreach (var dip in dipendentiLiberi)
+        {
+            dip.Aggiorna();
+        }
+
         foreach (var progetto in progettiInCorso)
         {
             guadagnoTotale += progetto.AggiornaProgetto();
@@ -243,6 +297,7 @@ public class Azienda : MonoBehaviour
             }
         }
         instance.aggiornaTempo();
+        generaProgettiSettimanali();
         
         if (settimana == 1)
         {
@@ -289,6 +344,17 @@ public class Azienda : MonoBehaviour
         return repartiSbloccati;
     }
     
+    // Funzione per generare nuovi progetti settimanali
+    public void generaProgettiSettimanali()
+    {
+        progettiProposti.Clear();
+        for (int i = 0; i < 5; i++)
+        {   
+            Progetto progetto = Progetto.CreaProgetto(this);
+            progettiProposti.Add(progetto);
+        }
+    }
+    
     // Funzione per firmare un progetto e aggiungerlo alla lista dei progetti in corso
     public void OnFirmaProgetto(Progetto progetto, Action clearAction)
     {
@@ -296,7 +362,7 @@ public class Azienda : MonoBehaviour
         progetto.ApriProgetto();
     }
     
-    // Funzione per terminare un progetto e rimuoverlo dalla lista dei progetti in corso
+    // Funzione per terminare un progetto e rimuoverlo dalla lista dei progetti in corso con flag
     public void OnTerminaProgetto(Progetto progetto, Action clearAction, Action reloadProjectList)
     {
         if (progetto == null) return;
@@ -310,7 +376,7 @@ public class Azienda : MonoBehaviour
         }, () => 
         {
             
-        }, "conferma", "annulla");
+        }, "conferma", "annulla", "rescissione");
     }
     
     // Funzione di rescissione di un contratto
@@ -324,7 +390,7 @@ public class Azienda : MonoBehaviour
         // Messaggio di successo per la rescissione del contratto
     }
     
-    // Funzione per licenziare un dipendente
+    // Funzione per licenziare un dipendente con flag
     public void OnLicenziaDipendente(Dipendente dipendente, Action clearAction, Action reloadEmployeeList)
     {
         if (dipendente == null) return;
@@ -338,7 +404,10 @@ public class Azienda : MonoBehaviour
         }, () => 
         {
             
-        }, "conferma", "annulla", "licenziamento");
+        }, "conferma", "annulla", "licenziamento", new Dictionary<string, string>(
+        {
+            {"costo", "<color=red>-"+ costoLicenziamento + "$</color>"}
+        });
     }
     
     // Funzione per licenziare un dipendente
@@ -350,6 +419,7 @@ public class Azienda : MonoBehaviour
         }
         // Rimuovo il dipendente dalla lista dei dipendenti non assegnati
         dipendentiLiberi.Remove(dipendente);
+        capitale -= costoLicenziamento;
         aggiornaDipendenti();
         // Messaggio di successo per il licenziamento
     }
@@ -382,6 +452,15 @@ public class Azienda : MonoBehaviour
         ProgettiPanel.SetActive(true);
     }
     
+    public void OpenDepartmentPanel(NomiReparti reparto)
+    {
+        GameObject RepartiPanel = gameObject.transform.Find("Dipartimento").gameObject;
+        RepartiPanel.SetActive(true);
+        RepartiPanel.GetComponent<VisualizzaInformazioniDipartimento>().Compila(reparto);
+        //RepartiPanel.GetComponent<CompilatorePannelloReparti>().setDepartment(reparto);
+        //RepartiPanel.GetComponent<CompilatorePannelloReparti>().AggiornaUI();
+    }
+    
     // Funzioni di uscita del gioco
     public void OnExitGame()
     {
@@ -402,13 +481,68 @@ public class Azienda : MonoBehaviour
     // Funzioni di caricamento del salvataggio
     public void OnLoadGame()
     {
-        
+        SalvataggioAzienda.Carica(this);
+
+        // Inizializza eventuali null
+        reparti ??= new Dictionary<NomiReparti, Reparto>();
+        dipendentiLiberi ??= new List<Dipendente>();
+        repartiDaSbloccare ??= new List<NomiReparti>();
+        progettiInCorso ??= new List<Progetto>();
+        progettiCompletatiInSettimana ??= new List<Progetto>();
+        progettiProposti ??= new List<Progetto>();
+        flags ??= new Dictionary<string,bool>();
+
+        // Ripristina UI dei reparti solo se esistono
+        if (reparti.TryGetValue(NomiReparti.AssistenzaESupportoTecnico, out var r1))
+            r1.OnAfterLoad(this, etichettaAssistenza);
+        if (reparti.TryGetValue(NomiReparti.SviluppoSoftware, out var r2))
+            r2.OnAfterLoad(this, etichettaSviluppo);
+        if (reparti.TryGetValue(NomiReparti.UxEDesign, out var r3))
+            r3.OnAfterLoad(this, etichettaUxE);
+        if (reparti.TryGetValue(NomiReparti.ControlloQualita, out var r4))
+            r4.OnAfterLoad(this, etichettaQualita);
+        if (reparti.TryGetValue(NomiReparti.RicercaESviluppo, out var r5))
+            r5.OnAfterLoad(this, etichettaRicerca);
+        if (reparti.TryGetValue(NomiReparti.Marketing, out var r6))
+            r6.OnAfterLoad(this, etichettaMarketing);
+
+        Dipendente.CaricaJsonCategorie();
+        Progetto.CaricaJsonProgetti();
+        // Aggiorna la UI generale
+        AggiornaUIIniziale();
+    }
+
+
+    public void AggiornaUIIniziale()
+    {
+        aggiornaCapitale();
+        aggiornaDipendenti();
+        aggiornaTempo();
     }
     
     // Funzioni di salvataggio del gioco
     public void OnSaveGame()
     {
-        
+        try
+        {
+            SalvataggioAzienda.Salva(this);
+            StartCoroutine(MostraAvvisoSalvataggioCompletato());
+        }
+        catch (Exception e)
+        {
+            Debug.LogError("Errore durante il salvataggio: " + e.Message);
+            ShowErrorMessage("erroreSalvataggio", () =>
+            {
+                
+            }, "chiudi");
+        }
+    }
+    
+    private IEnumerator MostraAvvisoSalvataggioCompletato()
+    {
+        salvataggioCompletato.gameObject.SetActive(true);
+        yield return new WaitForSeconds(3f); // rimane visibile 3 secondi
+        salvataggioCompletato.gameObject.SetActive(false);
     }
 
     // Funzioni di creazione di una nuova partita
@@ -416,24 +550,12 @@ public class Azienda : MonoBehaviour
     {
         // Inizializzo le variabili dell'azienda
         CreazioneAzienda();
-        
+        PauseClick();
+        currentTimer = 4f;
         Dipendente.CaricaJsonCategorie();
         Progetto.CaricaJsonProgetti();
-        
-        // Crea 4 dipendenti di prova
-        for(int i = 0; i < 4; i++)
-        {
-            Dipendente dipendente = Dipendente.GeneraDipendente2();
-            dipendentiLiberi.Add(dipendente);
-        }
-        
-        
-        // Creo dei progetti di prova
-        for(int i = 0; i < 1; i++)
-        {
-            var progetto = Progetto.CreaProgetto(this);
-            progettiInCorso.Add(progetto);
-        }
+        generaProgettiSettimanali();
+        AggiornaUIIniziale();
     }
     
     // Funzione di show del pannello di errore
@@ -444,66 +566,82 @@ public class Azienda : MonoBehaviour
         string text = LocalizationSettings.StringDatabase.GetLocalizedString("ErrorTable", message);
         ErrorPanel.transform.Find("Text").GetComponent<TMP_Text>().text = text;
         
-        GameObject ConfirmButton = ErrorPanel.transform.Find("Confirm").gameObject;
-        ConfirmButton.GetComponentInChildren<TMP_Text>().text = LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", confirmText);
-        ConfirmButton.GetComponent<Button>().onClick.AddListener(() => onClose());
+        GameObject CloseButton = ErrorPanel.transform.Find("Close").gameObject;
+        CloseButton.GetComponentInChildren<TMP_Text>().text = LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", confirmText);
+        CloseButton.GetComponent<Button>().onClick.AddListener(() =>
+        {
+            onClose();
+            ErrorPanel.SetActive(false);
+        });
+        ErrorPanel.SetActive(true);
     }
     
     // Funzione di show del pannello di avviso
-    public void ShowWarningMessage(string message, Action onConfirm, Action onRetry, string confirmText = "continua", string retryText = "annulla", string flag = "")
-{
-    GameObject WarningPanel = gameObject.transform.Find("WarningPanel").gameObject;
-    Toggle toggle = WarningPanel.transform.Find("Toggle").GetComponent<Toggle>();
-
-    if (!string.IsNullOrEmpty(flag) && flags.ContainsKey(flag) && flags[flag])
+    public void ShowWarningMessage(string message, Action onConfirm, Action onRetry, string confirmText = "continua", string retryText = "annulla", string flag = "", Dictionary<string, string> replacements = null)
     {
-        onConfirm();
-        return;
+        GameObject WarningPanel = gameObject.transform.Find("WarningPanel").gameObject;
+        Toggle toggle = WarningPanel.transform.Find("Toggle").GetComponent<Toggle>();
+
+        if (!string.IsNullOrEmpty(flag) && flags.ContainsKey(flag) && flags[flag])
+        {
+            onConfirm();
+            return;
+        }
+
+        if (!string.IsNullOrEmpty(flag))
+        {
+            WarningPanel.transform.Find("TextShow").gameObject.SetActive(true);
+            toggle.gameObject.SetActive(true);
+            toggle.isOn = false;
+        }
+        else
+        {
+            WarningPanel.transform.Find("TextShow").gameObject.SetActive(false);
+            toggle.gameObject.SetActive(false);
+            toggle.isOn = false;
+        }
+
+        // Gestisco il messaggio di avviso
+        string text = LocalizationSettings.StringDatabase.GetLocalizedString("ErrorTable", message);
+        
+        // Se ci sono replacements, sostituisco i placeholder
+        if (replacements != null)
+        {
+            foreach (var kv in replacements)
+            {
+                // Sostituisce {chiave} con il valore corrispondente
+                text = text.Replace("{" + kv.Key + "}", kv.Value);
+            }
+        }
+        
+        WarningPanel.transform.Find("Text").GetComponent<TMP_Text>().text = text;
+
+        GameObject ConfirmButton = WarningPanel.transform.Find("Confirm").gameObject;
+        ConfirmButton.GetComponentInChildren<TMP_Text>().text = LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", confirmText);
+        ConfirmButton.GetComponent<Button>().onClick.RemoveAllListeners();
+        ConfirmButton.GetComponent<Button>().onClick.AddListener(() =>
+        {
+            if (!string.IsNullOrEmpty(flag) && toggle.isOn)
+                flags[flag] = true;
+
+            onConfirm();
+            WarningPanel.SetActive(false);
+        });
+
+        GameObject RetryButton = WarningPanel.transform.Find("Retry").gameObject;
+        RetryButton.GetComponentInChildren<TMP_Text>().text = LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", retryText);
+        RetryButton.GetComponent<Button>().onClick.RemoveAllListeners();
+        RetryButton.GetComponent<Button>().onClick.AddListener(() =>
+        {
+            if (!string.IsNullOrEmpty(flag) && toggle.isOn)
+                flags[flag] = true;
+
+            onRetry();
+            WarningPanel.SetActive(false);
+        });
+
+        WarningPanel.SetActive(true);
     }
-
-    if (!string.IsNullOrEmpty(flag))
-    {
-        WarningPanel.transform.Find("TextShow").gameObject.SetActive(true);
-        toggle.gameObject.SetActive(true);
-        toggle.isOn = false;
-    }
-    else
-    {
-        WarningPanel.transform.Find("TextShow").gameObject.SetActive(false);
-        toggle.gameObject.SetActive(false);
-        toggle.isOn = false;
-    }
-
-    // Gestisco il messaggio di avviso
-    string text = LocalizationSettings.StringDatabase.GetLocalizedString("ErrorTable", message);
-    WarningPanel.transform.Find("Text").GetComponent<TMP_Text>().text = text;
-
-    GameObject ConfirmButton = WarningPanel.transform.Find("Confirm").gameObject;
-    ConfirmButton.GetComponentInChildren<TMP_Text>().text = LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", confirmText);
-    ConfirmButton.GetComponent<Button>().onClick.RemoveAllListeners();
-    ConfirmButton.GetComponent<Button>().onClick.AddListener(() =>
-    {
-        if (!string.IsNullOrEmpty(flag) && toggle.isOn)
-            flags[flag] = true;
-
-        onConfirm();
-        WarningPanel.SetActive(false);
-    });
-
-    GameObject RetryButton = WarningPanel.transform.Find("Retry").gameObject;
-    RetryButton.GetComponentInChildren<TMP_Text>().text = LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", retryText);
-    RetryButton.GetComponent<Button>().onClick.RemoveAllListeners();
-    RetryButton.GetComponent<Button>().onClick.AddListener(() =>
-    {
-        if (!string.IsNullOrEmpty(flag) && toggle.isOn)
-            flags[flag] = true;
-
-        onRetry();
-        WarningPanel.SetActive(false);
-    });
-
-    WarningPanel.SetActive(true);
-}
 
     
     // Funzione di aggiornamento del tempo di gioco
@@ -553,7 +691,7 @@ public class Azienda : MonoBehaviour
     }
     
     // Animazione del cambiamento del capitale
-    IEnumerator MuoviPanel(float durata = 0.5f, float attesa = 2f, float xTarget = 325f)
+    IEnumerator MuoviPanel(float durata = 0.2f, float attesa = 2.5f, float xTarget = 325f)
     {
         Vector2 posIniziale = capitalePanel.anchoredPosition;
         Vector2 posTarget = new Vector2(xTarget, posIniziale.y);
@@ -626,31 +764,7 @@ public class Azienda : MonoBehaviour
 
     public void Start()
     {
-        PauseClick();
-        instance = this;
-        // Inizializzo l'azienda
-        CreazioneAzienda();
-        currentTimer = 4f;
-        Dipendente.CaricaJsonCategorie();
-        Progetto.CaricaJsonProgetti();
-        
-        // Crea 4 dipendenti di prova
-        for(int i = 0; i < 4; i++)
-        {
-            Dipendente dipendente = Dipendente.GeneraDipendente2();
-            dipendentiLiberi.Add(dipendente);
-        }
-        
-        // Creo dei progetti di prova
-        for(int i = 0; i < 1; i++)
-        {
-            var progetto = Progetto.CreaProgetto(this);
-            progettiInCorso.Add(progetto);
-        }
-        
-        aggiornaDipendenti();
-        aggiornaTempo();
-        aggiornaCapitale(0);
+        OnNewGame();
     }
     
     // Funzione di update dello scorrere del tempo

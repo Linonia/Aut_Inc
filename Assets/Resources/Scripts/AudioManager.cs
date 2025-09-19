@@ -57,6 +57,8 @@ public class AudioManager : MonoBehaviour
             sound.source.volume = volume;
         }
         soundtrackVolume = volume;
+        PlayerPrefs.SetFloat("SoundtrackVolume", volume);
+        PlayerPrefs.Save();
     }
     
     public void ChangeSoundEffectVolume(float volume)
@@ -67,6 +69,8 @@ public class AudioManager : MonoBehaviour
             sound.source.volume = volume;
         }
         soundEffectVolume = volume;
+        PlayerPrefs.SetFloat("SoundEffectVolume", volume);
+        PlayerPrefs.Save();
     }
 
     public void StartSoundtrack()

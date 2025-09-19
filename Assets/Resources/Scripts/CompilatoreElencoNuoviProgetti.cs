@@ -15,9 +15,16 @@ public class CompilatoreElencoNuoviProgetti : MonoBehaviour
         
         Transform contenitore = gameObject.transform;
         // Riempi la lista con dei nuovi progetti
+        /*
         for (int i = 0; i < 4; i++)
         {   
             Progetto progetto = Progetto.CreaProgetto(azienda);
+            GameObject nuovoProgetto = Instantiate(prefabNuovoProgetto, contenitore);
+            nuovoProgetto.GetComponent<CompilatoreEtichettaNuoviProgetti>().Compila(progetto);
+        }*/
+        
+        foreach (var progetto in azienda.progettiProposti)
+        {
             GameObject nuovoProgetto = Instantiate(prefabNuovoProgetto, contenitore);
             nuovoProgetto.GetComponent<CompilatoreEtichettaNuoviProgetti>().Compila(progetto);
         }

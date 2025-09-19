@@ -4,7 +4,6 @@ using System.Linq;
 using Newtonsoft.Json;
 using UnityEngine;
 using Newtonsoft.Json.Linq;
-using Random = Unity.Mathematics.Random;
 
 namespace Scripts.Logica
 {
@@ -39,12 +38,13 @@ namespace Scripts.Logica
         public int competenzaIdeale;
         public int aggiornamentoCompetenza = 5;
         public int diminuzioneCompetenza = 15;
+        public int attesaCompetenza = 4;
         
         // informazioni riguardanti la produzione del dipendente
         public int produzioneSettimanale;
         
         // Informazioni riguardanti il team del dipendente
-        [SerializeReference]public Team team;
+        [JsonIgnore][SerializeReference] public Team team;
         
         // Informazioni riguardanti il reparto del dipendente
         //[SerializeReference]public Reparto reparto;
@@ -56,6 +56,7 @@ namespace Scripts.Logica
         // Istanza statica del json per la creazione dei dipendenti
         public static Dictionary<string, Dictionary<int, List<(int, int, string)>>> jsonDipendenti;
         
+        public Dipendente(){}
         // Costruttore del dipendente
         public Dipendente(Dictionary<Categorie, int> categorie, string[] codiciDescrizioni, string foto, string nome)
         {
@@ -79,6 +80,7 @@ namespace Scripts.Logica
             
             repartoCodice = "";
             staLavorando = false;
+            attesaCompetenza = 4;
         }
         
         // Aggiornamento dell'umore del dipendente
@@ -124,6 +126,7 @@ namespace Scripts.Logica
                     competenza = competenzaIdeale;
                 }
             }
+            attesaCompetenza = attesaCompetenza > 0 ? attesaCompetenza - 1 : 0;
         }
         
         // Aggiornamento della produzione settimanale del dipendente
@@ -180,6 +183,7 @@ namespace Scripts.Logica
             team = null;
             umoreIdeale = 100;
             staLavorando = false;
+            attesaCompetenza = 4;
         }
         
         // Funzione di ingresso nel team
@@ -445,6 +449,12 @@ namespace Scripts.Logica
             Dipendente dipendente = new Dipendente(categorie, descrizioneCompleta.ToArray(), fotoProfilo, nome);
 
             return dipendente;
+        }
+
+        // Funzione di caricamento del salvataggio
+        public void OnAfterLoad(Team team)
+        {
+            this.team = team;
         }
     }
 }

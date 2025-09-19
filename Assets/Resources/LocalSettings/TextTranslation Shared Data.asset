@@ -251,6 +251,66 @@ MonoBehaviour:
     m_Key: noshowwarning
     m_Metadata:
       m_Items: []
+  - m_Id: 10683049784995840
+    m_Key: informazioni
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10683916810547200
+    m_Key: compra
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10781753409892352
+    m_Key: ignoto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10808648520265728
+    m_Key: dipendenti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10809744651284480
+    m_Key: numeroTeamConsigliati
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10810787334287360
+    m_Key: numeroTeamPresenti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10834676202434560
+    m_Key: livello
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10839298883284992
+    m_Key: costoDipendente
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10839478059757568
+    m_Key: miglioramento
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10839734864408576
+    m_Key: migliora
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10855952774164480
+    m_Key: umore
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10855984906727424
+    m_Key: competenza
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11532873245749248
+    m_Key: salvataggioCompletato
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11801648075468800
+    m_Key: tuoiDipendenti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11802642729496576
+    m_Key: tuoiProgetti
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

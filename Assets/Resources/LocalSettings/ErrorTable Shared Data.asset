@@ -35,6 +35,34 @@ MonoBehaviour:
     m_Key: terminaProgettoAvviso
     m_Metadata:
       m_Items: []
+  - m_Id: 10102359615959040
+    m_Key: cambioTeamAvviso
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10368067285381120
+    m_Key: erroreAcquistoReparto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10403086393503744
+    m_Key: acquistoRepartoAvviso
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11215674601730048
+    m_Key: erroreSalvataggio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11294212856049664
+    m_Key: erroreDipartimentoPieno
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11500384447983616
+    m_Key: erroreNoCapitaleAssunzione
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11509405229871104
+    m_Key: avvisoRicaricaDipendenti
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

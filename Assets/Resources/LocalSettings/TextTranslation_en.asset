@@ -147,7 +147,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3180400026152960
-    m_Localized: Search for New Projects
+    m_Localized: Discover new projects
     m_Metadata:
       m_Items: []
   - m_Id: 3183195496214528
@@ -248,6 +248,66 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 10347932822630400
     m_Localized: Do not show this message again
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10683049784995840
+    m_Localized: Details
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10683916810547200
+    m_Localized: Buy Department
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10781753409892352
+    m_Localized: Uknown
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10808648520265728
+    m_Localized: 'Employees: '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10809744651284480
+    m_Localized: 'Suggested number of teams:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10810787334287360
+    m_Localized: 'Current number of teams:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10834676202434560
+    m_Localized: Level
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10839298883284992
+    m_Localized: 'Single employee cost:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10839478059757568
+    m_Localized: 'Upgrade cost:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10839734864408576
+    m_Localized: Upgrade
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10855952774164480
+    m_Localized: Mood
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10855984906727424
+    m_Localized: Skill
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11532873245749248
+    m_Localized: Save completed successfully
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11801648075468800
+    m_Localized: Your Employees
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11802642729496576
+    m_Localized: Your Projects
     m_Metadata:
       m_Items: []
   references:

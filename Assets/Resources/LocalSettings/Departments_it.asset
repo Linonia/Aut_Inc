@@ -47,9 +47,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4983693864960
-    m_Localized: Questo reparto richiede persone capaci di esprimersi in modo chiaro
-      e di comprendere bene le esigenze degli altri. La capacita di adattare il proprio
-      linguaggio e fondamentale per aiutare in modo efficace.
+    m_Localized: Questo dipartimento richiede persone capaci di esprimersi in modo
+      chiaro e di comprendere bene le esigenze degli altri. La capacita' di adattare
+      il proprio linguaggio e' fondamentale per aiutare in modo efficace.
     m_Metadata:
       m_Items: []
   - m_Id: 5032125493248
@@ -58,9 +58,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 5457478250496
-    m_Localized: Questo reparto cerca persone capaci di cogliere sfumature visive
-      e sensoriali. La sensibilita estetica aiuta a creare esperienze piacevoli per
-      gli utenti.
+    m_Localized: Questo dipartimento cerca persone capaci di cogliere sfumature visive
+      e sensoriali. La sensibilita' estetica aiuta a creare esperienze piacevoli
+      per gli utenti.
     m_Metadata:
       m_Items: []
   - m_Id: 5497760346112

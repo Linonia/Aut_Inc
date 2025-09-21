@@ -92,22 +92,14 @@ public class AudioManager : MonoBehaviour
     public void PlaySoundTrack(string name)
     {
         Sound sound = Array.Find(soundtracks, s => s.name == name);
-        if (sound == null)
-        {
-            Debug.LogWarning("Soundtrack: " + name + " not found!");
-            return;
-        }
+        if (sound == null) return;
         sound.source.Play();
     }
 
     public void StopSoundTrack(string name)
     {
         Sound sound = Array.Find(soundtracks, s => s.name == name);
-        if (sound == null)
-        {
-            Debug.LogWarning("Soundtrack: " + name + " not found!");
-            return;
-        }
+        if (sound == null) return;
         sound.source.Stop();
     }
 
@@ -130,22 +122,14 @@ public class AudioManager : MonoBehaviour
     public void PlaySoundEffect(string name)
     {
         Sound sound = Array.Find(soundEffects, s => s.name == name);
-        if (sound == null)
-        {
-            Debug.LogWarning("Sound effect: " + name + " not found!");
-            return;
-        }
+        if (sound == null) return;
         sound.source.Play();
     }
     
     public void StopSoundEffect(string name)
     {
         Sound sound = Array.Find(soundEffects, s => s.name == name);
-        if (sound == null)
-        {
-            Debug.LogWarning("Sound effect: " + name + " not found!");
-            return;
-        }
+        if (sound == null) return;
         sound.source.Stop();
     }
 

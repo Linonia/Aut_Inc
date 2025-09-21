@@ -1,0 +1,156 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Tutorial Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Tutorial
+  m_TableCollectionNameGuidString: 567da0f27ceb5364a9fea3c9364162c3
+  m_Entries:
+  - m_Id: 772112045641728
+    m_Key: introduzione1TITOLO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 772221651193856
+    m_Key: introduzione1TESTO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 772392208371712
+    m_Key: introduzione2TITOLO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 772448646926336
+    m_Key: introduzione2TESTO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 772635696107520
+    m_Key: introduzione3TITOLO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 772674849935360
+    m_Key: introduzione3TESTO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 772966798659584
+    m_Key: introduzione4TITOLO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 773064983121920
+    m_Key: introduzione4TESTO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 773202392715264
+    m_Key: introduzione5TITOLO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 773230901399552
+    m_Key: introduzione5TESTO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 773376175312896
+    m_Key: introduzione6TITOLO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 773431074557952
+    m_Key: introduzione6TESTO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 773544673087488
+    m_Key: dipendenti1TITOLO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 773593087938560
+    m_Key: dipendenti1TESTO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 773976912891904
+    m_Key: dipendenti2TITOLO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 774005882949632
+    m_Key: dipendenti2TESTO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 774180353413120
+    m_Key: nuoviDipendenti1TITOLO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 774315187703808
+    m_Key: nuoviDipendenti1TESTO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 774446192594944
+    m_Key: progetti1TITOLO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 774477284970496
+    m_Key: progetti1TESTO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 774574848675840
+    m_Key: progetti2TITOLO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 774598252892160
+    m_Key: progetti2TESTO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 774697569816576
+    m_Key: progetti3TITOLO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 774699759243264
+    m_Key: progetti3TESTO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 775311402012672
+    m_Key: nuoviProgetti1TITOLO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 775319954198528
+    m_Key: nuoviProgetti1TESTO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 775518277668864
+    m_Key: dipartimenti1TITOLO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 775521297567744
+    m_Key: dipartimenti1TESTO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 775793113632768
+    m_Key: dipartimenti2TITOLO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 775817667088384
+    m_Key: dipartimenti2TESTO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 775929000693760
+    m_Key: dipartimenti3TITOLO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 775953231187968
+    m_Key: dipartimenti3TESTO
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 5506140265592651850
+  references:
+    version: 2
+    RefIds:
+    - rid: 5506140265592651850
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1758290357581

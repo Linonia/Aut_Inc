@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Scripts.Logica;
 using TMPro;
 using UnityEngine;
@@ -46,11 +47,13 @@ public class CompilatoreElencoNuoviDipendenti : MonoBehaviour
         {
             azienda.ShowWarningMessage("avvisoRicaricaDipendenti", () =>
             {
-                if(azienda.ricercheDipendentiGratuite > 0)
-                    azienda.capitale -= azienda.costoAssunzioneDipendente;
-                azienda.ricercheDipendentiGratuite = azienda.ricercheDipendentiGratuite > 0 ? azienda.ricercheDipendentiGratuite - 1 : 0;
-                azienda.aggiornaCapitale();
                 OnEnable();
+                if (azienda.ricercheDipendentiGratuite > 0)
+                {
+                    azienda.ricercheDipendentiGratuite -= 1;
+                    return;
+                }
+                azienda.aggiornaCapitale(-azienda.costoAssunzioneDipendente, new List<string>{"ricercaDipendenti"});
             }, () => {}, "conferma", "annulla", "avvisoRicaricaDipendenti");
         }
         else

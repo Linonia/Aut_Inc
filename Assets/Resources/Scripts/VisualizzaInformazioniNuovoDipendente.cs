@@ -13,6 +13,7 @@ public class VisualizzaInformazioniNuovoDipendente : MonoBehaviour
     
     public TMP_Text nome;
     public Image foto;
+    public TMP_Text descrizione;
 
     public Button assumiButton;
 
@@ -31,14 +32,17 @@ public class VisualizzaInformazioniNuovoDipendente : MonoBehaviour
         this.dipendente = dipendente;
         foto.GetComponent<Image>().sprite = UnityEngine.Resources.Load<Sprite>("Images/Foto/" + dipendente.foto);
         nome.text = dipendente.nome;
-        
-        /*
+
+        var des = "";
         for(int i = 0; i < dipendente.codiciDescrizioni.Length; i++)
         {
             string codice = dipendente.codiciDescrizioni[i];
-            string descrizione = LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", codice);
-            gameObject.transform.Find("Des" + (i + 1)).GetComponent<TMP_Text>().text = descrizione;
-        }*/
+            des += "- " + LocalizationSettings.StringDatabase.GetLocalizedString("Descrizioni", codice);
+            if(i != dipendente.codiciDescrizioni.Length - 1)
+                des += "\n";
+        }
+        // Setta la descrizione
+        descrizione.text = des;
 
         
         assumiButton.gameObject.SetActive(true);

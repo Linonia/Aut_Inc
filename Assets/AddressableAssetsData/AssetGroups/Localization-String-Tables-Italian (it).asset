@@ -21,6 +21,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-it
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 29f2dc6c1993b2548bf8680a09dacdd6
+    m_Address: Tutorial_it
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-it
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2a446b4fd1e9a194f80b2699a6a0e68a
     m_Address: DepartmentColor_it
     m_ReadOnly: 1
@@ -32,7 +38,18 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-it
-    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 67a0489ad5600234997da7e6cdf43198
+    m_Address: Descrizioni_it
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-it
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cc3b1915178c23a41927ecdfcfb65fdb
+    m_Address: NomiProgetti_it
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-it
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: df42a325bdcd4864cb5b527acc3056bc
     m_Address: ErrorTable_it
@@ -40,6 +57,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-it
     - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fa2ef3da4b5f09845ad9d478e3e23b15
+    m_Address: Transizioni_it
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-it
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 315cd0ff173c1d2449ff209538257e3b, type: 2}

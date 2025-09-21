@@ -164,7 +164,7 @@ namespace Scripts.Logica
             // Stampa informazioni per il debug
             // Stampa il codice del reparto, il codice del reparto del team e le categorie del reparto
             // Stampa una alla volta le informazioni nella riga successiva
-            //Debug.Log($"Reparto codice: {repartoCodice}, Team reparto codice: {team.reparto.codice}, Categorie reparto: {string.Join(", ", team.reparto.categorie)}");
+            
             
             foreach (var categoria in team.reparto.categorie)
             {
@@ -220,11 +220,7 @@ namespace Scripts.Logica
             
             TextAsset jsonFile = UnityEngine.Resources.Load<TextAsset>(resourcePath);
             
-            if (jsonFile == null)
-            {
-                Debug.LogError($"Impossibile caricare il file JSON da {resourcePath}");
-                return;
-            }
+            if (jsonFile == null) return;
             
             string contenutoJson = jsonFile.text;
             

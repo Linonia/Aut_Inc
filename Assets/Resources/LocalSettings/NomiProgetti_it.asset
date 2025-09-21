@@ -1,0 +1,351 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: NomiProgetti_it
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: it
+  m_SharedData: {fileID: 11400000, guid: 814322a5041d086439edf345a1a5cdaa, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 17225289728
+    m_Localized: Sistema Ticketing Avanzato
+    m_Metadata:
+      m_Items: []
+  - m_Id: 231063490560
+    m_Localized: Portale Supporto Clienti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 370180165632
+    m_Localized: Modulo Formazione Assistenza
+    m_Metadata:
+      m_Items: []
+  - m_Id: 606411755520
+    m_Localized: Centro Operativo Assistenza
+    m_Metadata:
+      m_Items: []
+  - m_Id: 622287196160
+    m_Localized: Automazione Test Funzionali
+    m_Metadata:
+      m_Items: []
+  - m_Id: 634438094848
+    m_Localized: Piattaforma Validazione Software
+    m_Metadata:
+      m_Items: []
+  - m_Id: 646542856192
+    m_Localized: Dashboard Bug Tracking
+    m_Metadata:
+      m_Items: []
+  - m_Id: 659662639104
+    m_Localized: Sistema Carico e Stress Test
+    m_Metadata:
+      m_Items: []
+  - m_Id: 672836947968
+    m_Localized: Kit Stile e Layout UI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 688842412032
+    m_Localized: Prototipazione Interattiva Avanzata
+    m_Metadata:
+      m_Items: []
+  - m_Id: 702180298752
+    m_Localized: Sistema Raccolta Feedback Utenti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 717061689344
+    m_Localized: "Tool Accessibilit\xE0 Web"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 740793061376
+    m_Localized: Framework Backend Modulare
+    m_Metadata:
+      m_Items: []
+  - m_Id: 772577497088
+    m_Localized: Sistema Autenticazione OAuth
+    m_Metadata:
+      m_Items: []
+  - m_Id: 785999269888
+    m_Localized: API Gateway Sicuro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 801920847872
+    m_Localized: Tool Gestione Progetti Agile
+    m_Metadata:
+      m_Items: []
+  - m_Id: 818425434112
+    m_Localized: Toolkit Supporto e QA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 833986301952
+    m_Localized: Sistema Assistenza e Test
+    m_Metadata:
+      m_Items: []
+  - m_Id: 850440556544
+    m_Localized: Piattaforma Helpdesk QA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 862717284352
+    m_Localized: Suite Supporto e UX
+    m_Metadata:
+      m_Items: []
+  - m_Id: 886402519040
+    m_Localized: Portale Assistenza con UI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 902139547648
+    m_Localized: Tool Chat e Design
+    m_Metadata:
+      m_Items: []
+  - m_Id: 923769573376
+    m_Localized: Sistema Supporto e Sviluppo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 937086488576
+    m_Localized: Modulo Assistenza Backend
+    m_Metadata:
+      m_Items: []
+  - m_Id: 950835417088
+    m_Localized: Integrazione Helpdesk Dev
+    m_Metadata:
+      m_Items: []
+  - m_Id: 963405746176
+    m_Localized: Dashboard QA e Design
+    m_Metadata:
+      m_Items: []
+  - m_Id: 977808986112
+    m_Localized: Piattaforma QA UI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 993239830528
+    m_Localized: Framework Test UX
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007433355264
+    m_Localized: Piattaforma QA Backend
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1022352494592
+    m_Localized: Sistema Test Software
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1039771439104
+    m_Localized: Tool Validazione Codice
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1052354351104
+    m_Localized: Suite UX e Backend
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1066371715072
+    m_Localized: Sistema Design e Sviluppo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1079671853056
+    m_Localized: Piattaforma UI Dev
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1094314168320
+    m_Localized: Piattaforma Integrata Assistenza-QA-UX
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1108318949376
+    m_Localized: Suite Completa Helpdesk QA UI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1123162591232
+    m_Localized: Sistema Avanzato Supporto e Test UI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1146092851200
+    m_Localized: Piattaforma Integrata Assistenza-QA-Sviluppo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1162060566528
+    m_Localized: Suite Completa Helpdesk QA Dev
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1176237314048
+    m_Localized: Sistema Avanzato Supporto e Test Dev
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1192918061056
+    m_Localized: Piattaforma Integrata Assistenza-UX-Sviluppo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1214682304512
+    m_Localized: Suite Completa Helpdesk UI Dev
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1250837204992
+    m_Localized: Sistema Avanzato Supporto UI Dev
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1273213816832
+    m_Localized: Piattaforma Integrata QA-UX-Sviluppo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1288342671360
+    m_Localized: Suite Completa QA UI Dev
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1407033085952
+    m_Localized: Sistema Avanzato QA UI Dev
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1421004312576
+    m_Localized: Assistente AI per Supporto Clienti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1434694520832
+    m_Localized: Sistema Predittivo Helpdesk
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1455972225024
+    m_Localized: Tool Intelligente Assistenza
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1470790701056
+    m_Localized: Analisi Avanzata Dati QA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1476729835520
+    m_Localized: Piattaforma Intelligente QA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1548188192768
+    m_Localized: Sistema Machine Learning QA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1561505107968
+    m_Localized: Piattaforma Ricerca UX
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1616643428352
+    m_Localized: Tool Innovativo UX Research
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1672637386752
+    m_Localized: Sistema AI per Feedback UX
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1687581691904
+    m_Localized: Laboratorio Innovazione Software
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1705185185792
+    m_Localized: Piattaforma Sperimentale Dev
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1719148023808
+    m_Localized: Tool AI per Sviluppo Software
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1736692797440
+    m_Localized: Gestione Campagne Marketing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1757442019328
+    m_Localized: Dashboard Analisi Campagne
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1900660723712
+    m_Localized: Tool CRM per Marketing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1913864392704
+    m_Localized: Analisi SEO Avanzata
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1928800309248
+    m_Localized: Sistema Report SEO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1942398242816
+    m_Localized: Tool Monitoraggio Ranking
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1956482715648
+    m_Localized: Suite Creativa Advertising
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1968650391552
+    m_Localized: Piattaforma Design Ads
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1984341282816
+    m_Localized: "Tool Ottimizzazione Creativit\xE0"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1996848697344
+    m_Localized: Strumenti Marketing E-commerce
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2011142885376
+    m_Localized: Piattaforma E-commerce Analytics
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2031363624960
+    m_Localized: Tool Automazione Marketing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2045720727552
+    m_Localized: Piattaforma QA Hardware
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2065098412032
+    m_Localized: Sistema Diagnostica Hardware
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2175228252160
+    m_Localized: Tool Monitoraggio Hardware
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2191292436480
+    m_Localized: Suite Test Firmware
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2206316433408
+    m_Localized: Sistema Automazione Firmware
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2220040196096
+    m_Localized: Tool QA Firmware
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2235928219648
+    m_Localized: Tool Design Embedded UI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2255494647808
+    m_Localized: Piattaforma UI Embedded
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2287019036672
+    m_Localized: Sistema Interfaccia Hardware
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2300877017088
+    m_Localized: Sviluppo Firmware IoT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2318350487552
+    m_Localized: Sistema Embedded IoT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2331579322368
+    m_Localized: Tool Firmware Avanzato
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

@@ -15,6 +15,12 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-English (en)
   m_GUID: eed5672b21bb9fc48aba37a4ac01519c
   m_SerializeEntries:
+  - m_GUID: 1b9523b258d8e344e80a3fad12c381a0
+    m_Address: Tutorial_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 26df7a98a378e57499c0974001c61881
     m_Address: Departments_en
     m_ReadOnly: 1
@@ -26,7 +32,6 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
-    - Preload
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3ce21746acfcc4e41950978adfdefbaa
     m_Address: DepartmentColor_en
@@ -40,6 +45,24 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en
     - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 45f623d4358a8e64ca202d9e62c74d00
+    m_Address: Transizioni_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8d622a2e8f182114f96d6a5c5f2e835e
+    m_Address: NomiProgetti_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aef85486c5f46654487460a9af8b4aa7
+    m_Address: Descrizioni_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 315cd0ff173c1d2449ff209538257e3b, type: 2}

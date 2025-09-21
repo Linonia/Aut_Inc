@@ -63,6 +63,18 @@ MonoBehaviour:
     m_Key: avvisoRicaricaDipendenti
     m_Metadata:
       m_Items: []
+  - m_Id: 11558157089075200
+    m_Key: potenziamentoRepartoAvviso
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11559272237068288
+    m_Key: errorePotenziamentoReparto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11569178864349184
+    m_Key: gameOver
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

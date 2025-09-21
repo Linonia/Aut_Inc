@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Transizioni Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Transizioni
+  m_TableCollectionNameGuidString: 95f7a02a6cd24de499fcf95b0cd8d033
+  m_Entries:
+  - m_Id: 14160850944
+    m_Key: acquistoReparto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 310081581056
+    m_Key: tasse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 400359780352
+    m_Key: licenziamento
+    m_Metadata:
+      m_Items: []
+  - m_Id: 423973711872
+    m_Key: compensoSettimanale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 870230880256
+    m_Key: potenziamentoReparto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 873565351936
+    m_Key: firmaProgetto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 875314376704
+    m_Key: ricercaDipendenti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2057940332544
+    m_Key: pagamentoFinaleBuono
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2467237294080
+    m_Key: pagamentoFinaleBrutto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2936722518016
+    m_Key: progettoRescisso
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 5506140289769406536
+  references:
+    version: 2
+    RefIds:
+    - rid: 5506140289769406536
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1758367629409

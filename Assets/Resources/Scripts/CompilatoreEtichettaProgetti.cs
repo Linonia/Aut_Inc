@@ -18,8 +18,8 @@ public class CompilatoreEtichettaProgetti : MonoBehaviour
 
     public void Compila(Progetto progetto)
     {
-        nome.text = progetto.nome;
-        //nome.text = LocalizationSettings.StringDatabase.GetLocalizedString("ProjectNames", progetto.nome);
+        nome.text = LocalizationSettings.StringDatabase.GetLocalizedString("NomiProgetti", progetto.nome);
+            //progetto.nome;
         difficolta.text = LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", "difficolta") + progetto.difficolta switch
         {
             "bassa" => " <color=green>" + LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", "difficoltabassa") + "</color>",

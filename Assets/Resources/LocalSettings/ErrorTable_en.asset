@@ -34,7 +34,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 2778887009169408
     m_Localized: Are you sure you want to fire this employee? Once dismissed, they
-      cannot be rehired.
+      cannot be rehired. This action will cost {costo}
     m_Metadata:
       m_Items: []
   - m_Id: 3152396944240640
@@ -75,6 +75,23 @@ MonoBehaviour:
   - m_Id: 11509405229871104
     m_Localized: Starting a new employee search will remove the currently available
       candidates.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11558157089075200
+    m_Localized: Upgrading this department costs {costo}. Are you sure you want to
+      proceed?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11559272237068288
+    m_Localized: You do not have enough money to upgrade this department.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11569178864349184
+    m_Localized: 'Your company has run out of capital and can no longer operate.
+      Unfortunately, you cannot continue.
+
+      Thank you for playing AUT-INC! Review
+      your strategies and try again to achieve better results.'
     m_Metadata:
       m_Items: []
   references:

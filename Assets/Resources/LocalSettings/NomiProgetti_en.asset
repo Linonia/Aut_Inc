@@ -1,0 +1,351 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: NomiProgetti_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 814322a5041d086439edf345a1a5cdaa, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 17225289728
+    m_Localized: Advanced Ticketing System
+    m_Metadata:
+      m_Items: []
+  - m_Id: 231063490560
+    m_Localized: Customer Support Portal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 370180165632
+    m_Localized: Assistance Training Module
+    m_Metadata:
+      m_Items: []
+  - m_Id: 606411755520
+    m_Localized: "Assistance Operations Center\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 622287196160
+    m_Localized: Functional Test Automation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 634438094848
+    m_Localized: Software Validation Platform
+    m_Metadata:
+      m_Items: []
+  - m_Id: 646542856192
+    m_Localized: Bug Tracking Dashboard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 659662639104
+    m_Localized: Load and Stress Test System
+    m_Metadata:
+      m_Items: []
+  - m_Id: 672836947968
+    m_Localized: UI Style and Layout Kit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 688842412032
+    m_Localized: Advanced Interactive Prototyping
+    m_Metadata:
+      m_Items: []
+  - m_Id: 702180298752
+    m_Localized: User Feedback Collection System
+    m_Metadata:
+      m_Items: []
+  - m_Id: 717061689344
+    m_Localized: Web Accessibility Tool
+    m_Metadata:
+      m_Items: []
+  - m_Id: 740793061376
+    m_Localized: Modular Backend Framework
+    m_Metadata:
+      m_Items: []
+  - m_Id: 772577497088
+    m_Localized: OAuth Authentication System
+    m_Metadata:
+      m_Items: []
+  - m_Id: 785999269888
+    m_Localized: Secure API Gateway
+    m_Metadata:
+      m_Items: []
+  - m_Id: 801920847872
+    m_Localized: Agile Project Management Tool
+    m_Metadata:
+      m_Items: []
+  - m_Id: 818425434112
+    m_Localized: Support and QA Toolkit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 833986301952
+    m_Localized: Assistance and Test System
+    m_Metadata:
+      m_Items: []
+  - m_Id: 850440556544
+    m_Localized: Helpdesk QA Platform
+    m_Metadata:
+      m_Items: []
+  - m_Id: 862717284352
+    m_Localized: Support and UX Suite
+    m_Metadata:
+      m_Items: []
+  - m_Id: 886402519040
+    m_Localized: Assistance Portal with UI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 902139547648
+    m_Localized: Chat and Design Tool
+    m_Metadata:
+      m_Items: []
+  - m_Id: 923769573376
+    m_Localized: Support and Development System
+    m_Metadata:
+      m_Items: []
+  - m_Id: 937086488576
+    m_Localized: Backend Assistance Module
+    m_Metadata:
+      m_Items: []
+  - m_Id: 950835417088
+    m_Localized: Helpdesk Dev Integration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 963405746176
+    m_Localized: QA and Design Dashboard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 977808986112
+    m_Localized: QA UI Platform
+    m_Metadata:
+      m_Items: []
+  - m_Id: 993239830528
+    m_Localized: UX Test Framework
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007433355264
+    m_Localized: QA Backend Platform
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1022352494592
+    m_Localized: Software Test System
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1039771439104
+    m_Localized: Code Validation Tool
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1052354351104
+    m_Localized: UX and Backend Suite
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1066371715072
+    m_Localized: Design and Development System
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1079671853056
+    m_Localized: UI Dev Platform
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1094314168320
+    m_Localized: Integrated Assistance-QA-UX Platform
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1108318949376
+    m_Localized: Complete Helpdesk QA UI Suite
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1123162591232
+    m_Localized: Advanced Support and UI Test System
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1146092851200
+    m_Localized: Integrated Assistance-QA-Development Platform
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1162060566528
+    m_Localized: Complete Helpdesk QA Dev Suite
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1176237314048
+    m_Localized: Advanced Support and Dev Test System
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1192918061056
+    m_Localized: Integrated Assistance-UX-Development Platform
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1214682304512
+    m_Localized: Complete Helpdesk UI Dev Suite
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1250837204992
+    m_Localized: Advanced Support UI Dev System
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1273213816832
+    m_Localized: Integrated QA-UX-Development Platform
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1288342671360
+    m_Localized: Complete QA UI Dev Suite
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1407033085952
+    m_Localized: Advanced QA UI Dev System
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1421004312576
+    m_Localized: AI Assistant for Customer Support
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1434694520832
+    m_Localized: Predictive Helpdesk System
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1455972225024
+    m_Localized: Smart Assistance Tool
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1470790701056
+    m_Localized: Advanced QA Data Analysis
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1476729835520
+    m_Localized: Intelligent QA Platform
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1548188192768
+    m_Localized: Machine Learning QA System
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1561505107968
+    m_Localized: UX Research Platform
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1616643428352
+    m_Localized: Innovative UX Research Tool
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1672637386752
+    m_Localized: AI System for UX Feedback
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1687581691904
+    m_Localized: Software Innovation Lab
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1705185185792
+    m_Localized: Experimental Dev Platform
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1719148023808
+    m_Localized: AI Tool for Software Development
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1736692797440
+    m_Localized: Marketing Campaign Management
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1757442019328
+    m_Localized: Campaign Analysis Dashboard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1900660723712
+    m_Localized: CRM Tool for Marketing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1913864392704
+    m_Localized: Advanced SEO Analysis
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1928800309248
+    m_Localized: SEO Report System
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1942398242816
+    m_Localized: Ranking Monitoring Tool
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1956482715648
+    m_Localized: Creative Advertising Suite
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1968650391552
+    m_Localized: Ads Design Platform
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1984341282816
+    m_Localized: Creativity Optimization Tool
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1996848697344
+    m_Localized: E-commerce Marketing Tools
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2011142885376
+    m_Localized: E-commerce Analytics Platform
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2031363624960
+    m_Localized: Marketing Automation Tool
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2045720727552
+    m_Localized: QA Hardware Platform
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2065098412032
+    m_Localized: Hardware Diagnostic System
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2175228252160
+    m_Localized: Hardware Monitoring Tool
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2191292436480
+    m_Localized: Firmware Test Suite
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2206316433408
+    m_Localized: Firmware Automation System
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2220040196096
+    m_Localized: QA Firmware Tool
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2235928219648
+    m_Localized: Embedded UI Design Tool
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2255494647808
+    m_Localized: Embedded UI Platform
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2287019036672
+    m_Localized: Hardware Interface System
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2300877017088
+    m_Localized: IoT Firmware Development
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2318350487552
+    m_Localized: Embedded IoT System
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2331579322368
+    m_Localized: Advanced Firmware Tool
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

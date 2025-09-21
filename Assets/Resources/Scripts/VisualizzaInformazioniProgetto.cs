@@ -40,8 +40,8 @@ public class VisualizzaInformazioniProgetto : MonoBehaviour
         clearPanel.SetActive(false);
         this.progetto = progetto;
         
-        nomeProgetto.text = progetto.nome;
-        // nomeProgetto.text = LocalizationSettings.StringDatabase.GetLocalizedString("Projects", progetto.nome);
+        nomeProgetto.text = nomeProgetto.text = LocalizationSettings.StringDatabase.GetLocalizedString("NomiProgetti", progetto.nome);
+        // progetto.nome;
         
         difficolta.text = LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", "difficolta") + progetto.difficolta switch
         {

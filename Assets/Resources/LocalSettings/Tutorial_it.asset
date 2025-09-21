@@ -1,0 +1,265 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Tutorial_it
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: it
+  m_SharedData: {fileID: 11400000, guid: 567da0f27ceb5364a9fea3c9364162c3, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 773544673087488
+    m_Localized: Lista dei dipendenti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 773593087938560
+    m_Localized: 'Nella schermata dei dipendenti potrai visualizzare l''elenco dei
+      tuoi lavoratori, ordinato per dipartimento. All''interno di ciascun dipartimento,
+      i dipendenti sono disposti in base al team di appartenenza.
+
+      Verso la
+      fine dell''elenco troverai i dipendenti gia'' assunti ma non ancora operativi,
+      in quanto non assegnati ad alcun team.
+
+      Infine, e'' presente l''opzione
+      di ricerca dei candidati da assumere. Ricorda pero'' che ogni ricerca comporta
+      un costo!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 773431074557952
+    m_Localized: 'Il tempo e'' una risorsa fondamentale nel gioco. Potrai interrompere
+      lo scorrere delle settimane premendo il simbolo della pausa nel riquadro in
+      alto, cosi'' da gestire con calma dipendenti e contratti.
+
+      Aprendo una
+      qualsiasi delle altre schermate, il tempo di gioco si interrompera'' automaticamente.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 773376175312896
+    m_Localized: Gestione del tempo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 773230901399552
+    m_Localized: 'Dalla schermata principale potrai consultare le informazioni dei
+      dipartimenti attivi, gestire l''elenco dei dipendenti dell''azienda e monitorare
+      i contratti in corso.
+
+      In alto a sinistra sono inoltre disponibili alcune
+      informazioni fondamentali: il numero dei dipendenti, il tempo trascorso dall''apertura
+      dell''azienda e il capitale attuale.
+
+      Per prendere confidenza con l''interfaccia
+      e'' consigliabile aprire le schermate nel seguente ordine: dipartimenti, dipendenti,
+      progetti.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 773202392715264
+    m_Localized: Interfaccia principale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 772966798659584
+    m_Localized: Scopo del gioco
+    m_Metadata:
+      m_Items: []
+  - m_Id: 773064983121920
+    m_Localized: L'obiettivo del gioco e' far crescere l'azienda evitando la bancarotta.
+      Sara' quindi fondamentale potenziare i reparti e sbloccarne di nuovi, cosi'
+      da offrire ai clienti soluzioni sempre piu' tecnologiche e avanzate, restando
+      al passo con il mercato.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 772674849935360
+    m_Localized: 'Impersonerai il datore di lavoro e manager di un''emergente azienda
+      informatica. Il tuo compito e'' gestire dipendenti e reparti per favorirne
+      la crescita.
+
+      Nel corso del gioco dovrai espandere l''azienda, cosi''
+      da poter offrire nuovi servizi ai clienti che ti affideranno lo sviluppo dei
+      loro progetti.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 772635696107520
+    m_Localized: Introduzione al gioco
+    m_Metadata:
+      m_Items: []
+  - m_Id: 772392208371712
+    m_Localized: Cosa e' AUT-INC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 772448646926336
+    m_Localized: Questo videogioco rappresenta un progetto di laurea volto allo sviluppo
+      di un serious game finalizzato alla sensibilizzazione sull'autismo, con particolare
+      attenzione alle potenzialita' delle persone autistiche, soprattutto in ambito
+      lavorativo, dove e' possibile valorizzarne i punti di forza e le abilita' distintive.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 772221651193856
+    m_Localized: 'Benvenuto in AUT-INC!
+
+      AUT-INC e'' un videogioco gestionale
+      sviluppato da Daniele Gentile, studente dell''Universita'' degli Studi di Bari
+      Aldo Moro.
+
+      Un sentito ringraziamento alla professoressa Veronica Rossano,
+      docente associato presso il Dipartimento di Informatica dell''Universita''
+      degli Studi di Bari Aldo Moro, per il ruolo di supervisore del progetto e per
+      il supporto offerto durante lo sviluppo di AUT-INC.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 772112045641728
+    m_Localized: AUT-INC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 773976912891904
+    m_Localized: Informazioni dei Dipendenti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 774005882949632
+    m_Localized: 'Selezionando un dipendente potrai visualizzarne le informazioni,
+      analizzarne le caratteristiche e modificarne l''assegnazione al team.
+
+      Ricorda
+      che rimuovendo un dipendente dal team, sia lui che i colleghi subiranno un
+      calo temporaneo di umore, con conseguente riduzione della produttivita''.
+
+      Se
+      ritieni che un dipendente non sia piu'' in grado di apportare valore all''azienda,
+      e'' possibile licenziarlo, sostenendo pero'' il costo di una quota di licenziamento.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 774180353413120
+    m_Localized: Assunzione nuovi dipendenti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 774315187703808
+    m_Localized: 'Nella schermata dei candidati disponibili all''assunzione e'' possibile
+      analizzare le loro descrizioni per valutare l''idoneita'' alla posizione prevista
+      in azienda. E'' possibile effettuare piu'' ricerche consecutive, a condizione
+      di pagare il relativo costo.
+
+      Attenzione: richiedendo una nuova ricerca,
+      i candidati attualmente in lista spariranno, lasciando il posto a nuovi candidati.
+      Assicurati di esaminarli con cura prima di procedere.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 774477284970496
+    m_Localized: 'Nella schermata dei progetti e'' possibile visualizzare l''elenco
+      dei progetti attualmente in sviluppo dall''azienda. Per ciascun progetto sono
+      disponibili le informazioni principali: il tempo rimanente alla consegna e
+      il lavoro ancora da completare.
+
+      In fondo alla lista, tramite un pulsante,
+      e'' possibile accedere all''elenco dei progetti proposti all''azienda ma non
+      ancora accettati.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 774446192594944
+    m_Localized: Lista dei progetti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 774598252892160
+    m_Localized: 'Selezionando un progetto potrai visualizzarne i dettagli. E'' possibile
+      verificare quali reparti devono lavorare al progetto, quante settimane restano
+      e quanto lavoro manca.
+
+      Sono inoltre disponibili numerose informazioni
+      economiche relative al progetto: l''anticipo, il pagamento settimanale e il
+      pagamento finale.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 774574848675840
+    m_Localized: Informazioni progetti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 774699759243264
+    m_Localized: 'Un progetto e'' considerato concluso se completato entro la scadenza
+      o se non completato e non ammette ritardi.
+
+      Quando il progetto viene
+      completato, riceverai il pagamento finale aumentato o ridotto in base a quante
+      settimane in anticipo o in ritardo e'' stato consegnato.
+
+      Se non riesci
+      a completare un progetto, dovrai pagare una penalita'' per la mancata consegna
+      entro i tempi previsti.
+
+      Se non sei sicuro di poter portare a termine
+      un progetto, puoi rescindere il contratto pagando una penale, permettendo cosi''
+      ai tuoi dipendenti di concentrarsi su altri incarichi.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 774697569816576
+    m_Localized: Conclusione progetti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 775319954198528
+    m_Localized: 'Nella schermata dei nuovi progetti puoi visualizzare le richieste
+      rivolte all''azienda. E'' possibile consultare le informazioni dei progetti
+      per valutare se accettarli o rifiutarli.
+
+      I nuovi progetti cambiano
+      ogni settimana, quindi ricorda di controllare regolarmente per scoprire eventuali
+      opportunita'' interessanti e vantaggiose da sviluppare.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 775311402012672
+    m_Localized: Nuovi progetti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 775521297567744
+    m_Localized: 'Nella schermata di ciascun dipartimento e'' presente una descrizione
+      delle attivita'' da svolgere e delle abilita'' richieste per svolgere efficacemente
+      il lavoro.
+
+      Sono inoltre disponibili informazioni relative al numero
+      di dipendenti presenti, allo stipendio mensile di ciascun dipendente, al numero
+      consigliato di team e al numero attuale di team nel dipartimento.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 775518277668864
+    m_Localized: Dipartimenti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 775817667088384
+    m_Localized: 'Nella schermata e'' possibile visualizzare la suddivisione in team
+      del dipartimento.
+
+      Cerca di mantenere il numero di team il piu'' vicino
+      possibile a quello consigliato; altrimenti il dipartimento non sara'' organizzato
+      in modo ottimale e la sua produttivita'' ne risentira''.
+
+      Presta inoltre
+      attenzione alle preferenze dei dipendenti riguardo al lavoro da soli o in gruppo,
+      per mantenerli felici e aumentare la loro produttivita''.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 775793113632768
+    m_Localized: I Team
+    m_Metadata:
+      m_Items: []
+  - m_Id: 775953231187968
+    m_Localized: 'Quando desideri, e'' possibile migliorare un dipartimento. Il miglioramento
+      consente di aumentare il numero massimo di dipendenti, incrementando la produttivita''.
+
+      Tieni
+      presente pero'' che il numero consigliato di team puo'' variare e lo stipendio
+      dei dipendenti aumentera'', poiche'' il dipartimento diventera'' piu'' specializzato.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 775929000693760
+    m_Localized: Miglioramento del Dipartimento
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

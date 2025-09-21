@@ -79,6 +79,8 @@ namespace Scripts.Logica
                 numeroMaxDipendenti = maxDipendenti;
                 costoDipendente = costo;
                 costoPotenziamento = costoPot;
+                etichetta.aggiornaDipendenti();
+                azienda.RicaricaDepartimentPanel();
             }
         }
         

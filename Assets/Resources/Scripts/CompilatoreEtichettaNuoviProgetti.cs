@@ -14,8 +14,8 @@ public class CompilatoreEtichettaNuoviProgetti : MonoBehaviour
     
     public void Compila(Progetto progetto)
     {
-        nomeProgetto.text = progetto.nome;
-        //nomeProgetto.text = LocalizationSettings.StringDatabase.GetLocalizedString("ProjectNames", progetto.nome);
+        nomeProgetto.text = LocalizationSettings.StringDatabase.GetLocalizedString("NomiProgetti", progetto.nome);
+            //progetto.nome;
         settimane.text = progetto.durata.ToString();
         lavoro.text = progetto.lavoroRichiesto.ToString();
         

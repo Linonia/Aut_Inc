@@ -1,0 +1,525 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Descrizioni_it
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: it
+  m_SharedData: {fileID: 11400000, guid: 1b77d9ca9e88bb049991216d2a207921, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 6713075109888
+    m_Localized: Mostra difficolta' significative nel mantenere il contatto visivo
+      durante le conversazioni e tende a evitare scambi verbali anche con interlocutori
+      familiari.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6753474646016
+    m_Localized: Spesso non riesce a modulare il tono di voce o il ritmo del discorso;
+      fatica a farsi comprendere in contesti sociali quotidiani.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6773607305216
+    m_Localized: Interagisce principalmente con persone conosciute. Mostra esitazioni
+      evidenti e difficolta' a comprendere le sfumature del linguaggio non verbale.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6803978260480
+    m_Localized: Fatica a partecipare a conversazioni multiple e puo' avere difficolta'
+      a interpretare domande aperte o indirette.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6823855067136
+    m_Localized: Partecipa a brevi conversazioni ma evita contesti sociali piu- ampi.
+      Puo' avere difficolta' a comprendere battute o sarcasmo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6844553957376
+    m_Localized: Si interrompe frequentemente mentre parla e puo' ripetere frasi
+      o parole in modo stereotipato.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6868033671168
+    m_Localized: Riesce a comunicare informazioni semplici, ma puo' avere difficolta'
+      a modulare espressioni facciali o gesti in modo appropriato.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6891114926080
+    m_Localized: Partecipa a scambi verbali quotidiani solo se stimolato; puo' evitare
+      argomenti nuovi o incerti.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6910115123200
+    m_Localized: Gestisce conversazioni di routine con chiarezza e coerenza. Riesce
+      a seguire e rispettare le regole sociali di base.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6932344934400
+    m_Localized: Partecipa a discussioni quotidiane mostrando consapevolezza dei
+      turni di parola, con qualche esitazione occasionale.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6984266223616
+    m_Localized: Espone idee in modo chiaro, modulando tono e ritmo, ma puo' ancora
+      manifestare una preferenza per argomenti familiari o interessi specifici.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7002251399168
+    m_Localized: Comunica efficacemente in contesti quotidiani, mostrando capacita'
+      di ascolto e comprensione verbale buone.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7022048514048
+    m_Localized: Interagisce con sicurezza anche con interlocutori nuovi. Dimostra
+      comprensione di segnali non verbali e regole sociali implicite.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7058278912000
+    m_Localized: Gestisce conversazioni di gruppo quotidiane in modo efficace, bilanciando
+      attenzione tra diversi interlocutori.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7082245165056
+    m_Localized: Espone informazioni chiaramente in qualsiasi contesto quotidiano
+      e riesce a modulare registro e tono a seconda dell'interlocutore.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7106421133312
+    m_Localized: Mostra eccellenti capacita' di comprensione sociale implicita e
+      adeguamento del linguaggio in situazioni quotidiane varie.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7128101490688
+    m_Localized: Comunica in maniera fluida e coerente in tutte le situazioni quotidiane,
+      adattando linguaggio e tono al contesto e agli interlocutori.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7151052722176
+    m_Localized: Riesce a spiegare concetti complessi con chiarezza, mostrando precisione
+      verbale e abilita' di sintesi elevate, spesso legate a interessi approfonditi.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7178676408320
+    m_Localized: Eccellente capacita' comunicativa in ogni situazione quotidiana;
+      integra chiaramente interesse per dettagli e precisione espositiva, caratteristiche
+      tipiche di alcune persone autistiche.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7204286828544
+    m_Localized: Gestisce interazioni quotidiane complesse con massimo controllo
+      del linguaggio e delle espressioni, dimostrando abilita' avanzate di strutturazione
+      del discorso e attenzione ai dettagli.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10493640380416
+    m_Localized: Preferisce trascorrere la maggior parte del tempo da solo, evitando
+      spontaneamente qualsiasi contatto sociale.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10518793621504
+    m_Localized: Mostra scarso interesse nel partecipare ad attivita' collettive
+      e tende a isolarsi anche in contesti familiari.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10542017482752
+    m_Localized: Si relaziona raramente con gli altri e cerca momenti di solitudine
+      quando possibile.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10571474079744
+    m_Localized: Evita di unirsi a gruppi o attivita' sociali, mostrando una bassa
+      motivazione a interagire.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10590952427520
+    m_Localized: Interagisce occasionalmente, ma trascorre la maggior parte del tempo
+      in attivita' individuali.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10624234229760
+    m_Localized: Mostra interesse limitato verso la compagnia altrui, partecipando
+      solo se sollecitato.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10643645468672
+    m_Localized: Apprezza la presenza degli altri in alcuni rari contesti, ma preferisce
+      comunque attivita' solitarie.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10664860258304
+    m_Localized: Partecipa a momenti sociali brevi, mantenendo un comportamento prevalentemente
+      indipendente.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10687333339136
+    m_Localized: Mostra un equilibrio tra momenti di socializzazione e di solitudine,
+      interagendo quando opportuno.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10707604410368
+    m_Localized: Partecipa volentieri ad attivita' collettive, senza sentirsi eccessivamente
+      isolato o forzato.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10729788084224
+    m_Localized: Apprezza la compagnia altrui e cerca occasioni per interagire in
+      modo naturale e spontaneo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10754513506304
+    m_Localized: Mostra un desiderio regolare di socializzare, adattandosi facilmente
+      ai contesti di gruppo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10773203324928
+    m_Localized: Cerca attivamente la compagnia degli altri e si impegna in interazioni
+      sociali quotidiane.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10793092714496
+    m_Localized: Si sente motivato a partecipare a contatti sociali frequenti e a
+      collaborare in piccoli gruppi.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10811371491328
+    m_Localized: Ha forte bisogno di interagire con gli altri; la solitudine prolungata
+      lo rende ansioso o irritabile.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10834222059520
+    m_Localized: Cerca costantemente opportunita' di socializzazione e apprezza contatti
+      frequenti con persone diverse.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10860931387392
+    m_Localized: Dimostra intenso desiderio di socializzare; partecipa attivamente
+      a molteplici attivita' collettive.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10884343992320
+    m_Localized: Si sente motivato a instaurare numerose relazioni sociali, ricercando
+      costantemente interazioni significative.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10907207143424
+    m_Localized: Necessita di frequenti interazioni sociali; la mancanza di contatti
+      puo' causare disagio significativo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10933794836480
+    m_Localized: Mostra un desiderio costante e intenso di socializzare, cercando
+      attivamente compagnia in ogni contesto quotidiano.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14012577550336
+    m_Localized: Mostra difficolta' a concentrarsi su compiti ripetitivi; tende a
+      cambiare frequentemente attivita' senza completarle.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14043380518912
+    m_Localized: Ha interessi molto generici e superficiali, con scarsa attenzione
+      ai dettagli durante le attivita' quotidiane.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14072765812736
+    m_Localized: Raramente completa attivita' monotone senza distrarsi. Gli interessi
+      tendono a essere saltuari e poco approfonditi.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14122912911360
+    m_Localized: Mostra attenzione minima alle piccole variazioni nelle attivita'
+      ripetitive; preferisce compiti vari e stimolanti.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14137496506368
+    m_Localized: Si impegna in compiti ripetitivi solo per brevi periodi. Gli interessi
+      sono limitati e poco dettagliati.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14151052496896
+    m_Localized: La concentrazione su attivita' ripetitive e' spesso intermittente,
+      con tendenza a spostarsi rapidamente tra diverse attivita'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14163673157632
+    m_Localized: Partecipa a compiti ripetitivi quotidiani con attenzione moderata,
+      ma puo' perdere interesse rapidamente.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14175912136704
+    m_Localized: Dimostra capacita' di concentrarsi su dettagli semplici, ma fatica
+      a mantenere impegno su attivita' monotone piu' lunghe.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14189371658240
+    m_Localized: Mantiene un livello equilibrato di concentrazione su compiti ripetitivi,
+      completando la maggior parte delle attivita' senza errori significativi.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14202868928512
+    m_Localized: Mostra capacita' di approfondire gli interessi in attivita' ripetitive,
+      senza diventare ossessivo o troppo dettagliato.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14262662926336
+    m_Localized: Si focalizza efficacemente su compiti ripetitivi quotidiani, prestando
+      attenzione a molti dettagli rilevanti.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14279423365120
+    m_Localized: Mostra interesse stabile e costante nelle attivita' ripetitive,
+      con buona gestione della monotonia.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14295936339968
+    m_Localized: Dimostra notevole capacita' di concentrazione e cura dei dettagli
+      in compiti ripetitivi di routine.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14312126353408
+    m_Localized: Interessi ben definiti e approfonditi; mantiene alta qualita' nelle
+      attivita' ripetitive senza perdere motivazione.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14349602459648
+    m_Localized: Eccellente attenzione ai dettagli; riesce a completare attivita'
+      monotone con precisione e costanza.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14374436933632
+    m_Localized: Mantiene elevata concentrazione su compiti ripetitivi prolungati,
+      dimostrando interesse specifico e cura nella esecuzione.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14387548327936
+    m_Localized: Mostra una focalizzazione eccezionale; ogni dettaglio delle attivita'
+      ripetitive viene eseguito con precisione.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14410428256256
+    m_Localized: Interesse altamente specifico e approfondito; le attivita' ripetitive
+      vengono completate con eccellenza e costanza.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14435090763776
+    m_Localized: Eccellenza nella gestione di compiti ripetitivi e monotoni; attenzione
+      ai dettagli impeccabile, con elevata perseveranza.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14465713377280
+    m_Localized: Interesse e precisione estremamente elevati; completa attivita'
+      monotone lunghe con qualita' superiore e massima cura.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17074339778560
+    m_Localized: Non nota differenze evidenti tra colori o forme e spesso trascura
+      dettagli negli oggetti quotidiani.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17113665572864
+    m_Localized: Ignora stimoli come suoni o variazioni visive che normalmente attirerebbero
+      attenzione.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17130648309760
+    m_Localized: Riconosce solo differenze molto marcate tra colori o forme e puo'
+      confondere elementi simili.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17151061987328
+    m_Localized: Ha difficolta' a cogliere cambiamenti sottili, trascurando dettagli
+      anche in attivita' familiari.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17166434111488
+    m_Localized: Nota alcuni dettagli come colori o tonalita' principali, ma trascura
+      sfumature piu' fini.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17180640219136
+    m_Localized: Mostra attenzione limitata; spesso non rileva differenze tra oggetti
+      simili o suoni lievi.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17195026681856
+    m_Localized: Riconosce differenze principali tra colori e forme, ma non sempre
+      coglie particolari sottili.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17210839207936
+    m_Localized: Partecipa a compiti quotidiani con discreta attenzione ai dettagli,
+      seppur limitata.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17229231230976
+    m_Localized: Nota variazioni nei colori e nelle forme durante attivita' quotidiane,
+      completando i compiti con precisione adeguata.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17241700896768
+    m_Localized: Mostra buona attenzione ai particolari visivi e ai suoni piu' evidenti.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17252744499200
+    m_Localized: Presta attenzione a molte sfumature di colori, forme e suoni durante
+      compiti di routine.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17268045320192
+    m_Localized: Si concentra sui dettagli importanti, dimostrando costanza nell'osservazione
+      quotidiana.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17281978798080
+    m_Localized: Rileva variazioni sottili nei colori e nelle forme e nota piccoli
+      dettagli che altri trascurano.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17294519767040
+    m_Localized: Dimostra osservazione attenta, gestendo compiti con piu' elementi
+      da considerare.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17309908668416
+    m_Localized: Coglie rapidamente sfumature complesse di colori, forme e suoni,
+      applicando attenzione elevata.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17326010601472
+    m_Localized: Mostra sensibilita' marcata ai dettagli e capacita' di adattarsi
+      a contesti con molteplici elementi.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17343450517504
+    m_Localized: Riconosce facilmente variazioni sottili e piccoli particolari, anticipando
+      incongruenze.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17362924670976
+    m_Localized: Dimostra capacita' di osservazione superiore, notando aspetti che
+      passerebbero inosservati alla maggior parte delle persone.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17379370536960
+    m_Localized: Gestisce con precisione qualsiasi compito complesso, cogliendo ogni
+      minimo dettaglio senza difficolta'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17399213789184
+    m_Localized: Eccelle nell'osservazione e nell'analisi dei particolari, completando
+      attivita' quotidiane con cura e costanza straordinarie.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19565479530496
+    m_Localized: Ha difficolta' a pianificare attivita' quotidiane e spesso non trova
+      strategie efficaci per completare compiti semplici.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19600254504960
+    m_Localized: Mostra scarso ragionamento logico; tende a prendere decisioni poco
+      ottimali anche in situazioni semplici.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19620588490752
+    m_Localized: Fatica a organizzare piu' compiti contemporaneamente e spesso richiede
+      supporto per gestire attivita' quotidiane.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19638061961216
+    m_Localized: Risoluzione dei problemi limitata; difficolta' a trovare soluzioni
+      efficienti in contesti comuni.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19651399847936
+    m_Localized: Riesce a completare attivita' quotidiane ma con scarsa ottimizzazione,
+      richiedendo piu' tempo o risorse.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19663940816896
+    m_Localized: Mostra capacita' di ragionamento limitata; soluzioni efficaci emergono
+      solo con guida o stimolo esterno.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19675533873152
+    m_Localized: Organizza attivita' quotidiane con discreta efficacia, ma puo' trascurare
+      opportunita' di miglioramento o ottimizzazione.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19696316649472
+    m_Localized: Risoluzione dei problemi quotidiani nella norma, ma con attenzione
+      ai dettagli e risultati non sempre ottimali.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19711567138816
+    m_Localized: Gestisce situazioni quotidiane in modo equilibrato, applicando ragionamento
+      adeguato e discreta capacita' di ottimizzazione.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19742391078912
+    m_Localized: Completa compiti quotidiani con soluzioni generalmente efficaci,
+      trovando alternative quando necessario.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19757821923328
+    m_Localized: Mostra buona capacita' di pianificazione e problem solving, ottimizzando
+      risorse e tempo in modo efficace.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19778319486976
+    m_Localized: Riesce a trovare soluzioni pratiche e ben organizzate nella maggior
+      parte delle attivita' quotidiane.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19798041104384
+    m_Localized: Dimostra ragionamento efficace e capacita' di ottimizzazione, trovando
+      soluzioni rapide anche in contesti complessi.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19817276182528
+    m_Localized: Organizza e pianifica attivita' in modo efficiente, riducendo sprechi
+      e aumentando la produttivita' nelle situazioni quotidiane.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19842983071744
+    m_Localized: Eccellente capacita' di analisi e ragionamento; trova soluzioni
+      efficaci anche in compiti ripetitivi o complessi.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19860305547264
+    m_Localized: Dimostra forte capacita' di ottimizzazione e gestione delle risorse
+      in attivita' quotidiane articolate.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19885555257344
+    m_Localized: Ragionamento rapido e analitico; individua strategie ottimali e
+      anticipa problemi potenziali con facilita'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19905163628544
+    m_Localized: Capacita' superiore di organizzare e ottimizzare attivita', completando
+      compiti complessi con efficienza notevole.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19918463766528
+    m_Localized: Eccelle nel problem solving e nell'ottimizzazione; gestisce con
+      successo attivita' complesse e simultanee in modo impeccabile.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19937451380736
+    m_Localized: Dimostra capacita' cognitive eccezionali, trovando sempre soluzioni
+      efficienti e ottimizzando risorse in qualsiasi contesto quotidiano.
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

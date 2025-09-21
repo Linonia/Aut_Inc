@@ -311,6 +311,18 @@ MonoBehaviour:
     m_Key: tuoiProgetti
     m_Metadata:
       m_Items: []
+  - m_Id: 11886090970296320
+    m_Key: gameOver
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12701994707128320
+    m_Key: selezionaDipendente
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12702498623393792
+    m_Key: selezionaProgetto
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

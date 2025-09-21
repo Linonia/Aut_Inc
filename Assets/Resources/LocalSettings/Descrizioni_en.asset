@@ -1,0 +1,525 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Descrizioni_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 1b77d9ca9e88bb049991216d2a207921, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 6713075109888
+    m_Localized: The employee struggles to maintain eye contact during conversations.
+      The employee tend to avoid verbal exchanges with familiar coworkers.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6753474646016
+    m_Localized: The employee often fails to modulate voice force or speed of speech.
+      The employee struggles to make oneself understood in routine social environments.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6773607305216
+    m_Localized: The employee interacts with strangers mainly. The employee hesitates
+      and struggles to understand the nuances of body language.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6803978260480
+    m_Localized: The employee struggles to join multiple conversations and can struggle
+      to understand open questions or indirect ones.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6823855067136
+    m_Localized: The employee joins short conversations but avoids broader social
+      contexts. The employee struggles to underestand jokes or sarcasm.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6844553957376
+    m_Localized: The employee often stops oneself while talking then the employee
+      repeats phrases or words stereotypically.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6868033671168
+    m_Localized: The employee provides simple information but the employee struggles
+      to control facial expression or gestures properly.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6891114926080
+    m_Localized: The employee joins daily verbal exchanges only when encouraged.
+      The employee avoids new or unceratin issues.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6910115123200
+    m_Localized: The employee manages routine conversations with clarity and consistency.
+      The employee follows and respects basic social rules.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6932344934400
+    m_Localized: The employee takes part in everyday discussions with awareness of
+      conversational turn-taking and occasional hesitation.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6984266223616
+    m_Localized: The employee expresses ideas clearly with tone and pace management
+      though still showing a preference for familiar topics or personal interests.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7002251399168
+    m_Localized: The employee communicates effectively in daily contexts with good
+      listening and verbal comprehension skills.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7022048514048
+    m_Localized: The employee interacts confidently even with new interlocutors with
+      understanding of nonverbal cues and implicit social rules.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7058278912000
+    m_Localized: The employee manages everyday group conversations effectively with
+      balanced attention among different interlocutors.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7082245165056
+    m_Localized: The employee provides information clearly in any daily context and
+      can control tone and register of voice according to the interlocutor.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7106421133312
+    m_Localized: The employee shows excellent understanding of implicit social meaning
+      with appropriate language adaptationacross varied situations.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7128101490688
+    m_Localized: The employee communicates fluently and coherently in all daily situations.
+      The employee adapts language and tone of voice to context and audience.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7151052722176
+    m_Localized: The employee explains complex concepts with clarity with precision
+      of language and strong summarizing skills, often linked to deep personal interests.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7178676408320
+    m_Localized: The employee demonstrates excellent communication skills in all
+      daily contexts. The employee ntegrates attention to details and expositive
+      precision, which are traits often observed in autistic individuals.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7204286828544
+    m_Localized: The employee manages complex daily interactions with full control
+      over language and expressions with advanced discourse structuring and strong
+      attention to detail.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10493640380416
+    m_Localized: The employee prefers to spend most of the time alone. The employee
+      spontaneously avoids social contact.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10518793621504
+    m_Localized: The employee shows little interest in joining group activities.
+      The employee tends to isolate even in familiar settings.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10542017482752
+    m_Localized: The employee rarely engages with others. The empployee seeks solitude
+      whenever possible.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10571474079744
+    m_Localized: The employee avoids joining group or social activities then the
+      employee shows low motivation to interact.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10590952427520
+    m_Localized: The employee interacts occasionally but the employee spends most
+      time in solitary activities.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10624234229760
+    m_Localized: The employee shows limited interest in have some company then the
+      employee joins activites only when asked.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10643645468672
+    m_Localized: The employee appreciates the presence of others in certain rare
+      contexts but the employee still prefers solitary activities.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10664860258304
+    m_Localized: The employee joins in brief social moments with predominant independent
+      behavior.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10687333339136
+    m_Localized: The employee balances moments of socialization and solitude but
+      the employee interacts at the right time only.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10707604410368
+    m_Localized: The employee willingly joins group activities without excessively
+      isolation or without a stretch.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10729788084224
+    m_Localized: The employee appreciates other people's company then the employee
+      naturally seeks opportunities to interact.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10754513506304
+    m_Localized: The employee shows a standard desire to socialize with easy adaptation
+      to group contexts.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10773203324928
+    m_Localized: The employee actively seeks the company of others then the employee
+      engages in daily social interactions.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10793092714496
+    m_Localized: The employee feels motivated to join in frequent social contact
+      and the employee cooperates with small teams.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10811371491328
+    m_Localized: The employee has a strong need to interact with others then long-term
+      solitude causes anxiety or irritability.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10834222059520
+    m_Localized: The employee constantly seeks social opportunities. The employee
+      values frequent contact with different people.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10860931387392
+    m_Localized: The employee shows a strong desire to socialize with high involvement
+      with several group activities.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10884343992320
+    m_Localized: The employee feels motivated to develop plenty of social relationships
+      with a costant search for meaningful interactions.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10907207143424
+    m_Localized: The employee often requires social interactions then the lack of
+      contact may cause significant discomfort.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10933794836480
+    m_Localized: The employee shows a constant and intense desire to socialize with
+      an active search for company in every daily context.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14012577550336
+    m_Localized: The employee struggles to stay focused on repetitive tasks. The
+      employee often switches activities without completing them.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14043380518912
+    m_Localized: The employee has very general and superficial interests with little
+      attention to detail in daily activities.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14072765812736
+    m_Localized: The employee rarely completes monotonous tasks without distraction.
+      The employee interests are sporadic and not in depth.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14122912911360
+    m_Localized: The employee shows minimal attention to small variations in repetitive
+      tasks with a preference to varied and stimulating activities.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14137496506368
+    m_Localized: The employee engages in repetitive tasks only for short periods.
+      The employee interests are limited and shallow.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14151052496896
+    m_Localized: The employee focus on repetitive activities is often inconsistent
+      with a tendency to quickly switch between tasks.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14163673157632
+    m_Localized: The employee joins daily repetitive tasks with moderate attention
+      but the employee may lose interest quickly.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14175912136704
+    m_Localized: The employee shows ability to focus on simple details but the employee
+      struggles to sustain engagement in longer monotonous tasks.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14189371658240
+    m_Localized: The employee maintains a balanced concentration level on repetitive
+      tasks without significant errors in execution.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14202868928512
+    m_Localized: The employee shows ability to take and in-depth look at the interests
+      during repetitive activities without excessive obsession or accuracy.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14262662926336
+    m_Localized: The employee focuses effectively on daily repetitive tasks and the
+      employee pays attention to many relevant details.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14279423365120
+    m_Localized: The employee shows stable and consistent interest in repetitive
+      activities with good monotony management.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14295936339968
+    m_Localized: The employee demonstrates strong concentration and attention to
+      detail in daily repetitive tasks.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14312126353408
+    m_Localized: The employee shows well-defined and in-depth interests and the employee
+      maintains high quality in repetitive tasks without losing motivation.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14349602459648
+    m_Localized: The employee displays excellent attention to detail and the employee
+      completes monotonous tasks with precision and consistency.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14374436933632
+    m_Localized: The employee maintains strong focus on prolonged repetitive tasks
+      with specific interest and careful execution.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14387548327936
+    m_Localized: The employee shows exceptional focus in completing every drepetitive
+      tasks detail with precision.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14410428256256
+    m_Localized: The employee has highly specific and in-depth interests then repetitive
+      tasks are completed with excellence and consistency.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14435090763776
+    m_Localized: The employee excels at managing repetitive and monotonous tasks,
+      with flawless attention to detail and high perseverance.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14465713377280
+    m_Localized: The employee displays extremely high interest and precision. The
+      employee completes long monotonous tasks with superior quality and care.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17074339778560
+    m_Localized: The employee does not notice clear differences in colors or shapes
+      with neglect of details in everyday objects.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17113665572864
+    m_Localized: The employee ignores sounds or visual changes that would normally
+      draw attention.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17130648309760
+    m_Localized: The employee recognizes very marked differences in colors or shapes
+      only but the employee may confuse similar elements.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17151061987328
+    m_Localized: The employee struggles to perceive subtle changes with little regards
+      for details even in familiar activities.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17166434111488
+    m_Localized: The employee notices some details such as main colors or tones but
+      the employee misses finer nuances.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17180640219136
+    m_Localized: The employee shows limited attention. The employee often fails to
+      detect differences between similar objects or faint sounds.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17195026681856
+    m_Localized: The employee recognizes main differences in colors and shapes but
+      the employee does not always perceive subtle details.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17210839207936
+    m_Localized: The employee handles daily tasks with fair attention to detail though
+      still limited.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17229231230976
+    m_Localized: The employee notices variations in colors and shapes during daily
+      activities with adequate precision in completing task.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17241700896768
+    m_Localized: Shows good attention to prominent visual details and sounds.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17252744499200
+    m_Localized: The employee pays attention to many shades of colors, shapes, and
+      sounds during routine tasks.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17268045320192
+    m_Localized: The employee focuses on important details with consistency in daily
+      observation.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17281978798080
+    m_Localized: The employee detects subtle variations in colors and shapes. The
+      employee notices small details that others may overlook.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17294519767040
+    m_Localized: The employee demonstrates careful observation. The employee manages
+      tasks that involve several elements.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17309908668416
+    m_Localized: The employee quickly perceives complex nuances in colors, shapes,
+      and sounds with a high level of attention applied.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17326010601472
+    m_Localized: The employee shows marked sensitivity to details. The employee adapts
+      well to contexts with multiple stimuli.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17343450517504
+    m_Localized: The employee easily recognizes subtle variations and small details
+      with hight attention to inconsistencies.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17362924670976
+    m_Localized: The employee demonstrates superior observational skills. The employee
+      notices aspects most people would miss.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17379370536960
+    m_Localized: The employee handles complex tasks precisely then every detail is
+      caught without difficulty.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17399213789184
+    m_Localized: The employee excels in observation and analysis of details with
+      extraordinary care and consistency in completing daily activities.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19565479530496
+    m_Localized: The employee struggles to plan daily activities. The employee often
+      fails to find effective strategies for completing simple tasks.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19600254504960
+    m_Localized: The employee shows poor logical reasoning with wrong decisions even
+      in simple situations.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19620588490752
+    m_Localized: The employee has struggles to manage  multiple tasks at once then
+      the employee often requires support with daily activities.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19638061961216
+    m_Localized: The employee shows limited problem-solving then the employee struggles
+      to find efficient solutions in common situations.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19651399847936
+    m_Localized: The employee can complete daily activities but with low efficiency.
+      The employee often requires extra time or resources.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19663940816896
+    m_Localized: The employee shows limited reasoning ability. The employee effective
+      solutions appear with external guidance or prompting only.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19675533873152
+    m_Localized: The employee organizes daily activities with fair effectiveness
+      but the employee may overlook opportunities for improvement or optimization.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19696316649472
+    m_Localized: The employee handles everyday problem-solving adequately but with
+      attention to details and outcomes that are not always optimal.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19711567138816
+    m_Localized: The employee manages daily situations in a balanced way with adequate
+      reasoning and fair optimization skills.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19742391078912
+    m_Localized: The employee completes daily tasks with generally effective solutions
+      with alternatives when necessary.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19757821923328
+    m_Localized: The employees shows good planning and problem-solving skills with
+      time and resources effectively optimized.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19778319486976
+    m_Localized: The employee finds practical and well-organized solutions in most
+      daily activities.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19798041104384
+    m_Localized: The employee demonstrates effective reasoning and optimization with
+      quick solutions even in complex contexts.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19817276182528
+    m_Localized: The employee organizes and plans tasks efficiently. The employee
+      reeduces waste and increases productivity in daily situations.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19842983071744
+    m_Localized: The employee shows excellent analytical and reasoning skills with
+      effective solutions even in repetitive or complex tasks.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19860305547264
+    m_Localized: The employee demonstrates strong optimization and resource management
+      in complex daily activities.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19885555257344
+    m_Localized: The employee displays quick and analytical reasoning. The employee
+      identifies optimal strategies and anticipates potential issues with ease.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19905163628544
+    m_Localized: The employee shows superior ability to organize and optimize activities
+      with complex tasks completed with notable efficiency.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19918463766528
+    m_Localized: The employee excels in problem-solving and optimization. The employee
+      manages complex and simultaneous activities impeccably.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19937451380736
+    m_Localized: The employee demonstrates exceptional cognitive abilities. The employee
+      consistently finds efficient solutions and optimizes resources in any daily
+      context.
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

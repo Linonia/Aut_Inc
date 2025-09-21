@@ -37,6 +37,7 @@ public class CompilatoreElencoProgetti : MonoBehaviour
             root.Find("ProgettiPanel").gameObject.SetActive(false);
             // Attivo NuoviProgetti
             root.Find("NuoviProgetti").gameObject.SetActive(true);
+            azienda.tutorialPanel.MostraTutorial("nuoviProgetti1");
         });
     }
 }

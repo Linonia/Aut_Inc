@@ -1,113 +1,113 @@
 ﻿{
   
-  "Sistema Ticketing Avanzato": ["AssistenzaESupportoTecnico"],
-  "Portale Supporto Clienti": ["AssistenzaESupportoTecnico"],
-  "Modulo Formazione Assistenza": ["AssistenzaESupportoTecnico"],
-  "Centro Operativo Assistenza": ["AssistenzaESupportoTecnico"],
+  "prog1": ["AssistenzaESupportoTecnico"],
+  "prog2": ["AssistenzaESupportoTecnico"],
+  "prog3": ["AssistenzaESupportoTecnico"],
+  "prog4": ["AssistenzaESupportoTecnico"],
 
-  "Automazione Test Funzionali": ["ControlloQualita"],
-  "Piattaforma Validazione Software": ["ControlloQualita"],
-  "Dashboard Bug Tracking": ["ControlloQualita"],
-  "Sistema Carico e Stress Test": ["ControlloQualita"],
+  "prog5": ["ControlloQualita"],
+  "prog6": ["ControlloQualita"],
+  "prog7": ["ControlloQualita"],
+  "prog8": ["ControlloQualita"],
 
-  "Kit Stile e Layout UI": ["UxEDesign"],
-  "Prototipazione Interattiva Avanzata": ["UxEDesign"],
-  "Sistema Raccolta Feedback Utenti": ["UxEDesign"],
-  "Tool Accessibilità Web": ["UxEDesign"],
+  "prog9": ["UxEDesign"],
+  "prog10": ["UxEDesign"],
+  "prog11": ["UxEDesign"],
+  "prog12": ["UxEDesign"],
 
-  "Framework Backend Modulare": ["SviluppoSoftware"],
-  "Sistema Autenticazione OAuth": ["SviluppoSoftware"],
-  "API Gateway Sicuro": ["SviluppoSoftware"],
-  "Tool Gestione Progetti Agile": ["SviluppoSoftware"],
-
-  
-  "Toolkit Supporto e QA": ["AssistenzaESupportoTecnico", "ControlloQualita"],
-  "Sistema Assistenza e Test": ["AssistenzaESupportoTecnico", "ControlloQualita"],
-  "Piattaforma Helpdesk QA": ["AssistenzaESupportoTecnico", "ControlloQualita"],
-
-  "Suite Supporto e UX": ["AssistenzaESupportoTecnico", "UxEDesign"],
-  "Portale Assistenza con UI": ["AssistenzaESupportoTecnico", "UxEDesign"],
-  "Tool Chat e Design": ["AssistenzaESupportoTecnico", "UxEDesign"],
-
-  "Sistema Supporto e Sviluppo": ["AssistenzaESupportoTecnico", "SviluppoSoftware"],
-  "Modulo Assistenza Backend": ["AssistenzaESupportoTecnico", "SviluppoSoftware"],
-  "Integrazione Helpdesk Dev": ["AssistenzaESupportoTecnico", "SviluppoSoftware"],
-
-  "Dashboard QA e Design": ["ControlloQualita", "UxEDesign"],
-  "Piattaforma QA UI": ["ControlloQualita", "UxEDesign"],
-  "Framework Test UX": ["ControlloQualita", "UxEDesign"],
-
-  "Piattaforma QA Backend": ["ControlloQualita", "SviluppoSoftware"],
-  "Sistema Test Software": ["ControlloQualita", "SviluppoSoftware"],
-  "Tool Validazione Codice": ["ControlloQualita", "SviluppoSoftware"],
-
-  "Suite UX e Backend": ["UxEDesign", "SviluppoSoftware"],
-  "Sistema Design e Sviluppo": ["UxEDesign", "SviluppoSoftware"],
-  "Piattaforma UI Dev": ["UxEDesign", "SviluppoSoftware"],
+  "prog13": ["SviluppoSoftware"],
+  "prog14": ["SviluppoSoftware"],
+  "prog15": ["SviluppoSoftware"],
+  "prog16": ["SviluppoSoftware"],
 
   
-  "Piattaforma Integrata Assistenza-QA-UX": ["AssistenzaESupportoTecnico", "ControlloQualita", "UxEDesign"],
-  "Suite Completa Helpdesk QA UI": ["AssistenzaESupportoTecnico", "ControlloQualita", "UxEDesign"],
-  "Sistema Avanzato Supporto e Test UI": ["AssistenzaESupportoTecnico", "ControlloQualita", "UxEDesign"],
+  "prog17": ["AssistenzaESupportoTecnico", "ControlloQualita"],
+  "prog18": ["AssistenzaESupportoTecnico", "ControlloQualita"],
+  "prog19": ["AssistenzaESupportoTecnico", "ControlloQualita"],
 
-  "Piattaforma Integrata Assistenza-QA-Sviluppo": ["AssistenzaESupportoTecnico", "ControlloQualita", "SviluppoSoftware"],
-  "Suite Completa Helpdesk QA Dev": ["AssistenzaESupportoTecnico", "ControlloQualita", "SviluppoSoftware"],
-  "Sistema Avanzato Supporto e Test Dev": ["AssistenzaESupportoTecnico", "ControlloQualita", "SviluppoSoftware"],
+  "prog20": ["AssistenzaESupportoTecnico", "UxEDesign"],
+  "prog21": ["AssistenzaESupportoTecnico", "UxEDesign"],
+  "prog22": ["AssistenzaESupportoTecnico", "UxEDesign"],
 
-  "Piattaforma Integrata Assistenza-UX-Sviluppo": ["AssistenzaESupportoTecnico", "UxEDesign", "SviluppoSoftware"],
-  "Suite Completa Helpdesk UI Dev": ["AssistenzaESupportoTecnico", "UxEDesign", "SviluppoSoftware"],
-  "Sistema Avanzato Supporto UI Dev": ["AssistenzaESupportoTecnico", "UxEDesign", "SviluppoSoftware"],
+  "prog23": ["AssistenzaESupportoTecnico", "SviluppoSoftware"],
+  "prog24": ["AssistenzaESupportoTecnico", "SviluppoSoftware"],
+  "prog25": ["AssistenzaESupportoTecnico", "SviluppoSoftware"],
 
-  "Piattaforma Integrata QA-UX-Sviluppo": ["ControlloQualita", "UxEDesign", "SviluppoSoftware"],
-  "Suite Completa QA UI Dev": ["ControlloQualita", "UxEDesign", "SviluppoSoftware"],
-  "Sistema Avanzato QA UI Dev": ["ControlloQualita", "UxEDesign", "SviluppoSoftware"],
+  "prog26": ["ControlloQualita", "UxEDesign"],
+  "prog27": ["ControlloQualita", "UxEDesign"],
+  "prog28": ["ControlloQualita", "UxEDesign"],
+
+  "prog29": ["ControlloQualita", "SviluppoSoftware"],
+  "prog30": ["ControlloQualita", "SviluppoSoftware"],
+  "prog31": ["ControlloQualita", "SviluppoSoftware"],
+
+  "prog32": ["UxEDesign", "SviluppoSoftware"],
+  "prog33": ["UxEDesign", "SviluppoSoftware"],
+  "prog34": ["UxEDesign", "SviluppoSoftware"],
 
   
-  "Assistente AI per Supporto Clienti": ["RicercaESviluppo", "AssistenzaESupportoTecnico"],
-  "Sistema Predittivo Helpdesk": ["RicercaESviluppo", "AssistenzaESupportoTecnico"],
-  "Tool Intelligente Assistenza": ["RicercaESviluppo", "AssistenzaESupportoTecnico"],
+  "prog35": ["AssistenzaESupportoTecnico", "ControlloQualita", "UxEDesign"],
+  "prog36": ["AssistenzaESupportoTecnico", "ControlloQualita", "UxEDesign"],
+  "prog37": ["AssistenzaESupportoTecnico", "ControlloQualita", "UxEDesign"],
 
-  "Analisi Avanzata Dati QA": ["RicercaESviluppo", "ControlloQualita"],
-  "Piattaforma Intelligente QA": ["RicercaESviluppo", "ControlloQualita"],
-  "Sistema Machine Learning QA": ["RicercaESviluppo", "ControlloQualita"],
+  "prog38": ["AssistenzaESupportoTecnico", "ControlloQualita", "SviluppoSoftware"],
+  "prog39": ["AssistenzaESupportoTecnico", "ControlloQualita", "SviluppoSoftware"],
+  "prog40": ["AssistenzaESupportoTecnico", "ControlloQualita", "SviluppoSoftware"],
 
-  "Piattaforma Ricerca UX": ["RicercaESviluppo", "UxEDesign"],
-  "Tool Innovativo UX Research": ["RicercaESviluppo", "UxEDesign"],
-  "Sistema AI per Feedback UX": ["RicercaESviluppo", "UxEDesign"],
+  "prog41": ["AssistenzaESupportoTecnico", "UxEDesign", "SviluppoSoftware"],
+  "prog42": ["AssistenzaESupportoTecnico", "UxEDesign", "SviluppoSoftware"],
+  "prog43": ["AssistenzaESupportoTecnico", "UxEDesign", "SviluppoSoftware"],
 
-  "Laboratorio Innovazione Software": ["RicercaESviluppo", "SviluppoSoftware"],
-  "Piattaforma Sperimentale Dev": ["RicercaESviluppo", "SviluppoSoftware"],
-  "Tool AI per Sviluppo Software": ["RicercaESviluppo", "SviluppoSoftware"],
+  "prog44": ["ControlloQualita", "UxEDesign", "SviluppoSoftware"],
+  "prog45": ["ControlloQualita", "UxEDesign", "SviluppoSoftware"],
+  "prog46": ["ControlloQualita", "UxEDesign", "SviluppoSoftware"],
 
-  "Gestione Campagne Marketing": ["Marketing", "AssistenzaESupportoTecnico"],
-  "Dashboard Analisi Campagne": ["Marketing", "AssistenzaESupportoTecnico"],
-  "Tool CRM per Marketing": ["Marketing", "AssistenzaESupportoTecnico"],
+  
+  "prog47": ["RicercaESviluppo", "AssistenzaESupportoTecnico"],
+  "prog48": ["RicercaESviluppo", "AssistenzaESupportoTecnico"],
+  "prog49": ["RicercaESviluppo", "AssistenzaESupportoTecnico"],
 
-  "Analisi SEO Avanzata": ["Marketing", "ControlloQualita"],
-  "Sistema Report SEO": ["Marketing", "ControlloQualita"],
-  "Tool Monitoraggio Ranking": ["Marketing", "ControlloQualita"],
+  "prog50": ["RicercaESviluppo", "ControlloQualita"],
+  "prog51": ["RicercaESviluppo", "ControlloQualita"],
+  "prog52": ["RicercaESviluppo", "ControlloQualita"],
 
-  "Suite Creativa Advertising": ["Marketing", "UxEDesign"],
-  "Piattaforma Design Ads": ["Marketing", "UxEDesign"],
-  "Tool Ottimizzazione Creatività": ["Marketing", "UxEDesign"],
+  "prog53": ["RicercaESviluppo", "UxEDesign"],
+  "prog54": ["RicercaESviluppo", "UxEDesign"],
+  "prog55": ["RicercaESviluppo", "UxEDesign"],
 
-  "Strumenti Marketing E-commerce": ["Marketing", "SviluppoSoftware"],
-  "Piattaforma E-commerce Analytics": ["Marketing", "SviluppoSoftware"],
-  "Tool Automazione Marketing": ["Marketing", "SviluppoSoftware"],
+  "prog56": ["RicercaESviluppo", "SviluppoSoftware"],
+  "prog57": ["RicercaESviluppo", "SviluppoSoftware"],
+  "prog58": ["RicercaESviluppo", "SviluppoSoftware"],
 
-  "Piattaforma QA Hardware": ["SviluppoHardwareEInnovazioniTecnologiche", "AssistenzaESupportoTecnico"],
-  "Sistema Diagnostica Hardware": ["SviluppoHardwareEInnovazioniTecnologiche", "AssistenzaESupportoTecnico"],
-  "Tool Monitoraggio Hardware": ["SviluppoHardwareEInnovazioniTecnologiche", "AssistenzaESupportoTecnico"],
+  "prog59": ["Marketing", "AssistenzaESupportoTecnico"],
+  "prog60": ["Marketing", "AssistenzaESupportoTecnico"],
+  "prog61": ["Marketing", "AssistenzaESupportoTecnico"],
 
-  "Suite Test Firmware": ["SviluppoHardwareEInnovazioniTecnologiche", "ControlloQualita"],
-  "Sistema Automazione Firmware": ["SviluppoHardwareEInnovazioniTecnologiche", "ControlloQualita"],
-  "Tool QA Firmware": ["SviluppoHardwareEInnovazioniTecnologiche", "ControlloQualita"],
+  "prog62": ["Marketing", "ControlloQualita"],
+  "prog63": ["Marketing", "ControlloQualita"],
+  "prog64": ["Marketing", "ControlloQualita"],
 
-  "Tool Design Embedded UI": ["SviluppoHardwareEInnovazioniTecnologiche", "UxEDesign"],
-  "Piattaforma UI Embedded": ["SviluppoHardwareEInnovazioniTecnologiche", "UxEDesign"],
-  "Sistema Interfaccia Hardware": ["SviluppoHardwareEInnovazioniTecnologiche", "UxEDesign"],
+  "prog65": ["Marketing", "UxEDesign"],
+  "prog66": ["Marketing", "UxEDesign"],
+  "prog67": ["Marketing", "UxEDesign"],
 
-  "Sviluppo Firmware IoT": ["SviluppoHardwareEInnovazioniTecnologiche", "SviluppoSoftware"],
-  "Sistema Embedded IoT": ["SviluppoHardwareEInnovazioniTecnologiche", "SviluppoSoftware"],
-  "Tool Firmware Avanzato": ["SviluppoHardwareEInnovazioniTecnologiche", "SviluppoSoftware"]
+  "prog68": ["Marketing", "SviluppoSoftware"],
+  "prog69": ["Marketing", "SviluppoSoftware"],
+  "prog70": ["Marketing", "SviluppoSoftware"],
+
+  "prog71": ["SviluppoHardwareEInnovazioniTecnologiche", "AssistenzaESupportoTecnico"],
+  "prog72": ["SviluppoHardwareEInnovazioniTecnologiche", "AssistenzaESupportoTecnico"],
+  "prog73": ["SviluppoHardwareEInnovazioniTecnologiche", "AssistenzaESupportoTecnico"],
+
+  "prog74": ["SviluppoHardwareEInnovazioniTecnologiche", "ControlloQualita"],
+  "prog75": ["SviluppoHardwareEInnovazioniTecnologiche", "ControlloQualita"],
+  "prog76": ["SviluppoHardwareEInnovazioniTecnologiche", "ControlloQualita"],
+
+  "prog77": ["SviluppoHardwareEInnovazioniTecnologiche", "UxEDesign"],
+  "prog78": ["SviluppoHardwareEInnovazioniTecnologiche", "UxEDesign"],
+  "prog79": ["SviluppoHardwareEInnovazioniTecnologiche", "UxEDesign"],
+
+  "prog80": ["SviluppoHardwareEInnovazioniTecnologiche", "SviluppoSoftware"],
+  "prog81": ["SviluppoHardwareEInnovazioniTecnologiche", "SviluppoSoftware"],
+  "prog82": ["SviluppoHardwareEInnovazioniTecnologiche", "SviluppoSoftware"]
 }

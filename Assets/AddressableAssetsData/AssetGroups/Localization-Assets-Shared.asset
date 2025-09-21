@@ -15,13 +15,33 @@ MonoBehaviour:
   m_GroupName: Localization-Assets-Shared
   m_GUID: e1ede8465dae72743b6ccff46b32add3
   m_SerializeEntries:
+  - m_GUID: 1b77d9ca9e88bb049991216d2a207921
+    m_Address: Assets/Resources/LocalSettings/Descrizioni Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4be5da9eefff1404292e5c016355f4b4
     m_Address: Assets/Resources/LocalSettings/ErrorTable Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 567da0f27ceb5364a9fea3c9364162c3
+    m_Address: Assets/Resources/LocalSettings/Tutorial Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 814322a5041d086439edf345a1a5cdaa
+    m_Address: Assets/Resources/LocalSettings/NomiProgetti Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 81f43e739be9e9e4394f2401a2f75c15
     m_Address: Assets/Resources/LocalSettings/TextTranslation Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 95f7a02a6cd24de499fcf95b0cd8d033
+    m_Address: Assets/Resources/LocalSettings/Transizioni Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

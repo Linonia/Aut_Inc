@@ -3,9 +3,9 @@
     public static class ParametriContratto
     {
         // Moltiplicatori sulla produzione settimanale per calcolare il valore totale del contratto
-        public static float MoltiplicatorePagaFacile { get; set; } = 0.9f;
-        public static float MoltiplicatorePagaMedia { get; set; } = 1.1f;
-        public static float MoltiplicatorePagaDifficile { get; set; } = 1.35f;
+        public static float MoltiplicatorePagaFacile { get; set; } = 0.8f;
+        public static float MoltiplicatorePagaMedia { get; set; } = 1.0f;
+        public static float MoltiplicatorePagaDifficile { get; set; } = 1.30f;
 
         // Percentuali dei pagamenti (rispetto al valore totale)
         public static float PercentualeAnticipo { get; set; } = 0.15f;  // 15% all'inizio

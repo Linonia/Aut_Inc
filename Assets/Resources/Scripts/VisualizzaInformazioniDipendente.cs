@@ -5,7 +5,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using Scripts.Logica;
 using TMPro;
-using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine.Localization.Settings;
 
 public class VisualizzaInformazioniDipendente : MonoBehaviour
@@ -19,6 +18,8 @@ public class VisualizzaInformazioniDipendente : MonoBehaviour
 
     public GameObject umoreBar;
     public GameObject competenzaBar;
+    
+    public TMP_Text descrizione;
     
     public Button licenziamentoButton;
     public TMP_Dropdown cambioTeamDropdown;
@@ -59,13 +60,17 @@ public class VisualizzaInformazioniDipendente : MonoBehaviour
         else
             competenzaBar.GetComponent<GestioneProgressBar>().ShowValue(dipendente.competenza);
 
-        /*
+        
+        var des = "";
         for(int i = 0; i < dipendente.codiciDescrizioni.Length; i++)
         {
             string codice = dipendente.codiciDescrizioni[i];
-            string descrizione = LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", codice);
-            gameObject.transform.Find("Des" + (i + 1)).GetComponent<TMP_Text>().text = descrizione;
-        }*/
+            des += "- " + LocalizationSettings.StringDatabase.GetLocalizedString("Descrizioni", codice);
+            if(i != dipendente.codiciDescrizioni.Length - 1)
+                des += "\n";
+        }
+        // Setta la descrizione
+        descrizione.text = des;
 
         
         licenziamentoButton.gameObject.SetActive(true);
@@ -128,7 +133,6 @@ public class VisualizzaInformazioniDipendente : MonoBehaviour
     private void SetLastOptionsBackground(Color color, int totalOptions)
     {
         Transform content = cambioTeamDropdown.template.Find("Viewport/Content");
-        Debug.Log("Opzioni totali: " + content.childCount + " Mentre da colorare: " + totalOptions);
         if (content == null) return;
 
         int startIndex = Mathf.Max(0, content.childCount - totalOptions); // partiamo solo dalle ultime aggiunte
@@ -171,13 +175,17 @@ public class VisualizzaInformazioniDipendente : MonoBehaviour
         else
             competenzaBar.GetComponent<GestioneProgressBar>().ShowValue(dipendente.competenza);
 
-        /*
+        
+        var des = "";
         for(int i = 0; i < dipendente.codiciDescrizioni.Length; i++)
         {
             string codice = dipendente.codiciDescrizioni[i];
-            string descrizione = LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", codice);
-            gameObject.transform.Find("Des" + (i + 1)).GetComponent<TMP_Text>().text = descrizione;
-        }*/
+            des += "- " + LocalizationSettings.StringDatabase.GetLocalizedString("Descrizioni", codice);
+            if(i != dipendente.codiciDescrizioni.Length - 1)
+                des += "\n";
+        }
+        // Setta la descrizione
+        descrizione.text = des;
 
         
         licenziamentoButton.gameObject.SetActive(true);

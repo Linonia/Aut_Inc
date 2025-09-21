@@ -95,6 +95,14 @@ namespace Scripts.Logica
 
             // Valore economico totale del contratto
             int valoreTotale = (int)(costoTotaleContratto * margine);
+            
+            // Applica diminuzione per tempoDiminuzioneGuadagno
+            if (azienda.tempoDiminuzioneGuadagno < 0)
+            {
+                int decrementi = -azienda.tempoDiminuzioneGuadagno; // quanto sotto lo 0
+                float fattoreDiminuzione = 1f - 0.05f * decrementi; // 5% per ogni valore sotto lo 0
+                valoreTotale = (int)(valoreTotale * fattoreDiminuzione);
+            }
         
             // Pagamenti
             int anticipo = (int)(valoreTotale * ParametriContratto.PercentualeAnticipo);
@@ -178,6 +186,28 @@ namespace Scripts.Logica
             };
             this.azienda = azienda;
         }
+
+
+        public int AggiornaProgetto2()
+        {
+            int guadagnoSettimanale = 0;
+            int lavoroSvolto = 0;
+
+            foreach (var reparto in repartiCoinvolti)
+            {
+                lavoroSvolto += azienda.reparti[reparto].produzionePerProgetto;
+            }
+
+            lavoroMancante -= lavoroSvolto;
+            durataRimanente--;
+
+            // Ogni settimana si guadagna solo la quota settimanale
+            if(durataRimanente >= 0)
+                guadagnoSettimanale += settimanale;
+
+            // Non tocciamo qui il finale o la penalità
+            return guadagnoSettimanale;
+        }
         
         // Funzione di aggiornamento del progetto
         public int AggiornaProgetto()
@@ -197,12 +227,9 @@ namespace Scripts.Logica
             {
                 if (durataRimanente > 0)
                 {
-                    Debug.Log("Progetto " + nome + " completato in anticipo! Pagamento settimane arretrate: " + settimanale * durataRimanente);
                     guadagno += settimanale * durataRimanente;
                 }
-                Debug.Log("Finale: " + finale + " con detrazione/bonus di percentuale " + percentualeDetrazione + "% per " + durataRimanente + " settimane di anticipo.");
                 guadagno += finale - (finale * percentualeDetrazione / 100 * (durataRimanente));
-                Debug.Log("Guadagno totale progetto " + nome + ": " + guadagno);
                 azienda.progettiCompletatiInSettimana.Add(this);
             }
             else
@@ -224,12 +251,29 @@ namespace Scripts.Logica
             return guadagno;
         }
         
-        //Rescinde il progetto
-        public int rescissioneProgetto()
+        
+        public int ChiudiProgetto2()
         {
-            azienda.progettiInCorso.Remove(this);
-            ChiudiProgetto();
-            return detrazioneRescissione;
+            var guadagno = 0;
+            if (lavoroMancante <= 0)
+            {
+                // progetto completato
+                if (durataRimanente > 0)
+                {
+                    // guadagno per settimane rimanenti
+                    guadagno += settimanale * durataRimanente;
+                }
+                // guadagno finale con detrazione/bonus
+                guadagno += finale - (finale * percentualeDetrazione / 100 * (durataRimanente));
+                ChiudiProgetto();
+            }
+            else if(durataRimanente == 0 && forcedEnd)
+            {
+                //se il progetto è appena terminato e non può essere consegnato in ritardo
+                guadagno += finaleDetrazione;
+                ChiudiProgetto();
+            }
+            return guadagno;
         }
         
         // Chiude il progetto
@@ -242,6 +286,13 @@ namespace Scripts.Logica
             azienda.progettiInCorso.Remove(this);
         }
         
+        //Rescinde il progetto
+        public int rescissioneProgetto()
+        {
+            ChiudiProgetto();
+            return detrazioneRescissione;
+        }
+        
         // Apre il progetto
         public void ApriProgetto()
         {
@@ -250,9 +301,9 @@ namespace Scripts.Logica
                 azienda.reparti[reparto].AggiungiProgetto();
             }
 
-            azienda.capitale += anticipo;
+            //azienda.capitale += anticipo;
+            azienda.aggiornaCapitale(anticipo, new List<string>{"firmaProgetto"});
             azienda.progettiInCorso.Add(this);
-            azienda.aggiornaCapitale();
         }
 
         public static void CaricaJsonProgetti()

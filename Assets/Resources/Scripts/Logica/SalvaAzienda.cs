@@ -18,6 +18,8 @@ public class SalvaAzienda
     public int settimana;
 
     public int costoReparto;
+    public int costoAssunzioneDipendente;
+    public int ricercheDipendentiGratuite;
 
     public List<NomiReparti> repartiDaSbloccare;
     public List<Dipendente> dipendentiLiberi;
@@ -47,6 +49,8 @@ public static class SalvataggioAzienda
             settimana = azienda.settimana,
 
             costoReparto = azienda.costoReparto,
+            costoAssunzioneDipendente = azienda.costoAssunzioneDipendente,
+            ricercheDipendentiGratuite = azienda.ricercheDipendentiGratuite,
 
             reparti = azienda.reparti,
             repartiDaSbloccare = azienda.repartiDaSbloccare,
@@ -62,9 +66,12 @@ public static class SalvataggioAzienda
         
 
         string json = JsonConvert.SerializeObject(data, Formatting.Indented,
-            new JsonSerializerSettings{ReferenceLoopHandling = ReferenceLoopHandling.Ignore});
+            new JsonSerializerSettings {
+                ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
+                Converters = new List<JsonConverter> { new Newtonsoft.Json.Converters.StringEnumConverter() }
+            });
+
         File.WriteAllText(GetPath(), json);
-        Debug.Log("Salvataggio completato: " + GetPath());
     }
 
     public static void Carica(Azienda azienda)
@@ -97,6 +104,8 @@ public static class SalvataggioAzienda
             azienda.settimana = data.settimana;
 
             azienda.costoReparto = data.costoReparto;
+            azienda.costoAssunzioneDipendente = data.costoAssunzioneDipendente;
+            azienda.ricercheDipendentiGratuite = data.ricercheDipendentiGratuite;
 
             azienda.reparti = data.reparti;
             azienda.repartiDaSbloccare = data.repartiDaSbloccare;
@@ -106,8 +115,6 @@ public static class SalvataggioAzienda
             azienda.progettiProposti = data.progettiProposti;
 
             azienda.flags = data.flags;
-
-            Debug.Log("Caricamento completato: " + path);
         }
         catch (Exception e)
         {

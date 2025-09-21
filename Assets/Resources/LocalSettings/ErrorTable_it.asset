@@ -35,7 +35,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 2778887009169408
     m_Localized: Sei sicuro di voler licenziare questo dipendente? Una volta licenziato,
-      non potra' essere riassunto.
+      non potra' essere riassunto. Questa operazione ti costera' {costo}
     m_Metadata:
       m_Items: []
   - m_Id: 3152396944240640
@@ -49,11 +49,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10368067285381120
-    m_Localized: Non hai capitale sufficiente per acquistare questo nuovo reparto.
+    m_Localized: Non hai capitale sufficiente per acquistare questo nuovo dipartimento.
     m_Metadata:
       m_Items: []
   - m_Id: 10403086393503744
-    m_Localized: Procedendo con l'acquisto di questo reparto, spenderai {costo}.
+    m_Localized: Procedendo con l'acquisto di questo dipartimento, spenderai {costo}.
       Vuoi continuare?
     m_Metadata:
       m_Items: []
@@ -76,6 +76,23 @@ MonoBehaviour:
   - m_Id: 11509405229871104
     m_Localized: Avviando una nuova ricerca di dipendenti, quelli attualmente disponibili
       non saranno piu' visibili.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11558157089075200
+    m_Localized: Il potenziamento del dipartimento ha un costo di {costo}. Sei sicuro
+      di voler procedere?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11559272237068288
+    m_Localized: Non hai fondi a sufficienza per potenziare questo dipartimento.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11569178864349184
+    m_Localized: 'La tua azienda ha esaurito il capitale e non e piu in grado di
+      operare. Purtroppo non puoi proseguire oltre.
+
+      Grazie per aver giocato
+      a AUT-INC! Valuta le tue strategie e prova di nuovo per ottenere migliori risultati.'
     m_Metadata:
       m_Items: []
   references:

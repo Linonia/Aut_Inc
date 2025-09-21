@@ -95,7 +95,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1117060947316736
-    m_Localized: Nessun Reparto
+    m_Localized: Nessun Dipartimento
     m_Metadata:
       m_Items: []
   - m_Id: 1117505744867328
@@ -127,11 +127,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3092780440973312
-    m_Localized: Reparto
+    m_Localized: Dipartimento
     m_Metadata:
       m_Items: []
   - m_Id: 3108386649239552
-    m_Localized: Lista Nuovi Dipendenti
+    m_Localized: Lista dei candidati
     m_Metadata:
       m_Items: []
   - m_Id: 3112629066100736
@@ -255,7 +255,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10683916810547200
-    m_Localized: Compra il Reparto
+    m_Localized: Compra il Dipartimento
     m_Metadata:
       m_Items: []
   - m_Id: 10781753409892352
@@ -308,6 +308,18 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 11802642729496576
     m_Localized: I tuoi Progetti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11886090970296320
+    m_Localized: Game Over
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12701994707128320
+    m_Localized: Seleziona qualsiasi dipendente per vedere le sue informazioni
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12702498623393792
+    m_Localized: Seleziona un qualsiasi progetto per vedere le sue informazioni
     m_Metadata:
       m_Items: []
   references:

@@ -1,0 +1,428 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Descrizioni Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Descrizioni
+  m_TableCollectionNameGuidString: 1b77d9ca9e88bb049991216d2a207921
+  m_Entries:
+  - m_Id: 6713075109888
+    m_Key: des1-1-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6753474646016
+    m_Key: des1-1-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6773607305216
+    m_Key: des1-2-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6803978260480
+    m_Key: des1-2-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6823855067136
+    m_Key: des1-3-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6844553957376
+    m_Key: des1-3-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6868033671168
+    m_Key: des1-4-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6891114926080
+    m_Key: des1-4-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6910115123200
+    m_Key: des1-5-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6932344934400
+    m_Key: des1-5-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6984266223616
+    m_Key: des1-6-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7002251399168
+    m_Key: des1-6-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7022048514048
+    m_Key: des1-7-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7058278912000
+    m_Key: des1-7-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7082245165056
+    m_Key: des1-8-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7106421133312
+    m_Key: des1-8-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7128101490688
+    m_Key: des1-9-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7151052722176
+    m_Key: des1-9-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7178676408320
+    m_Key: des1-10-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7204286828544
+    m_Key: des1-10-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10493640380416
+    m_Key: des2-1-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10518793621504
+    m_Key: des2-1-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10542017482752
+    m_Key: des2-2-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10571474079744
+    m_Key: des2-2-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10590952427520
+    m_Key: des2-3-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10624234229760
+    m_Key: des2-3-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10643645468672
+    m_Key: des2-4-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10664860258304
+    m_Key: des2-4-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10687333339136
+    m_Key: des2-5-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10707604410368
+    m_Key: des2-5-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10729788084224
+    m_Key: des2-6-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10754513506304
+    m_Key: des2-6-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10773203324928
+    m_Key: des2-7-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10793092714496
+    m_Key: des2-7-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10811371491328
+    m_Key: des2-8-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10834222059520
+    m_Key: des2-8-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10860931387392
+    m_Key: des2-9-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10884343992320
+    m_Key: des2-9-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10907207143424
+    m_Key: des2-10-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10933794836480
+    m_Key: des2-10-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14012577550336
+    m_Key: des3-1-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14043380518912
+    m_Key: des3-1-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14072765812736
+    m_Key: des3-2-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14122912911360
+    m_Key: des3-2-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14137496506368
+    m_Key: des3-3-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14151052496896
+    m_Key: des3-3-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14163673157632
+    m_Key: des3-4-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14175912136704
+    m_Key: des3-4-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14189371658240
+    m_Key: des3-5-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14202868928512
+    m_Key: des3-5-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14262662926336
+    m_Key: des3-6-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14279423365120
+    m_Key: des3-6-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14295936339968
+    m_Key: des3-7-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14312126353408
+    m_Key: des3-7-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14349602459648
+    m_Key: des3-8-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14374436933632
+    m_Key: des3-8-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14387548327936
+    m_Key: des3-9-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14410428256256
+    m_Key: des3-9-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14435090763776
+    m_Key: des3-10-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14465713377280
+    m_Key: des3-10-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17074339778560
+    m_Key: des4-1-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17113665572864
+    m_Key: des4-1-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17130648309760
+    m_Key: des4-2-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17151061987328
+    m_Key: des4-2-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17166434111488
+    m_Key: des4-3-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17180640219136
+    m_Key: des4-3-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17195026681856
+    m_Key: des4-4-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17210839207936
+    m_Key: des4-4-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17229231230976
+    m_Key: des4-5-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17241700896768
+    m_Key: des4-5-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17252744499200
+    m_Key: des4-6-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17268045320192
+    m_Key: des4-6-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17281978798080
+    m_Key: des4-7-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17294519767040
+    m_Key: des4-7-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17309908668416
+    m_Key: des4-8-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17326010601472
+    m_Key: des4-8-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17343450517504
+    m_Key: des4-9-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17362924670976
+    m_Key: des4-9-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17379370536960
+    m_Key: des4-10-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17399213789184
+    m_Key: des4-10-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19565479530496
+    m_Key: des5-1-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19600254504960
+    m_Key: des5-1-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19620588490752
+    m_Key: des5-2-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19638061961216
+    m_Key: des5-2-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19651399847936
+    m_Key: des5-3-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19663940816896
+    m_Key: des5-3-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19675533873152
+    m_Key: des5-4-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19696316649472
+    m_Key: des5-4-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19711567138816
+    m_Key: des5-5-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19742391078912
+    m_Key: des5-5-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19757821923328
+    m_Key: des5-6-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19778319486976
+    m_Key: des5-6-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19798041104384
+    m_Key: des5-7-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19817276182528
+    m_Key: des5-7-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19842983071744
+    m_Key: des5-8-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19860305547264
+    m_Key: des5-8-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19885555257344
+    m_Key: des5-9-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19905163628544
+    m_Key: des5-9-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19918463766528
+    m_Key: des5-10-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19937451380736
+    m_Key: des5-10-2
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 5506140319488671821
+  references:
+    version: 2
+    RefIds:
+    - rid: 5506140319488671821
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1758485511389

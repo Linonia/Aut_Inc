@@ -27,17 +27,17 @@ public class Azienda : MonoBehaviour
     
     // Meomoria dell'azienda
     // informazioni di economia dell'azienda
-    [HideInInspector] public int capitale; // capitale attuale
+    [HideInInspector] public int capitale = 50000; // capitale attuale
     [HideInInspector] public int costoDipendenteLibero = 1500; // costo di un dipendente libero mensile
-    [HideInInspector] public int tasseMensile; // tasse mensili da pagare
-    [HideInInspector] public int tempoDiminuzioneGuadagno = 12; // mesi dopo i quali il guadagno diminuisce se non si fanno upgrades
+    [HideInInspector] public int tasseMensile = 8000; // tasse mensili da pagare
+    [HideInInspector] public int tempoDiminuzioneGuadagno = 18; // mesi dopo i quali il guadagno diminuisce se non si fanno upgrades
     
     // informazioni sul tempo
     [HideInInspector] public int anno = 1; // anno attuale
     [HideInInspector] public int mese = 1; // mese attuale
     [HideInInspector] public int settimana = 1; // settimana attuale
-    [JsonIgnore][SerializeReference] public float timer = 4f;
-    [JsonIgnore][SerializeReference] public float currentTimer = 4f;
+    [JsonIgnore][SerializeReference] public float timer = 8f;
+    [JsonIgnore][SerializeReference] public float currentTimer = 8f;
     [JsonIgnore][SerializeReference] public bool pausa = true;
     [JsonIgnore][SerializeReference] public bool inPausa = true;
     
@@ -45,9 +45,9 @@ public class Azienda : MonoBehaviour
     [HideInInspector] public Dictionary<NomiReparti, Reparto> reparti = new Dictionary<NomiReparti, Reparto>(); // reparti dell'azienda
     [HideInInspector] public List<NomiReparti> repartiDaSbloccare = new List<NomiReparti>(); // reparti che si possono sbloccare
     [HideInInspector] public int costoReparto = 40000; // costo per sbloccare un reparto
-    [HideInInspector] public int costoAssunzioneDipendente = 2000;
+    [HideInInspector] public int costoAssunzioneDipendente = 5000;
     [HideInInspector] public int costoLicenziamento = 3000;
-    [HideInInspector] public int ricercheDipendentiGratuite = 3;
+    [HideInInspector] public int ricercheDipendentiGratuite = 2; // (sono in realtà 3, parte da 0)
     
     // informazioni sui dipendenti
     [HideInInspector] public List<Dipendente> dipendentiLiberi = new List<Dipendente>(); // dipendenti non assegnati a nessun team
@@ -63,8 +63,11 @@ public class Azienda : MonoBehaviour
     [JsonIgnore] public TMP_Text dipendentiText;
     [JsonIgnore] public Image pausaImage;
     [JsonIgnore] public Image playImage;
-    [JsonIgnore] public TMP_Text cambioCapitale;
-    [JsonIgnore] public RectTransform capitalePanel;
+    [JsonIgnore] public GameObject weekSlider;
+    
+    [JsonIgnore] public GameObject capitalePanel;
+    [JsonIgnore] private Queue<(int, List<string>)> codaEventi = new Queue<(int, List<string>)>();
+    [JsonIgnore] private bool animazioneInCorso = false;
 
     [JsonIgnore] public GameObject salvataggioCompletato;
 
@@ -76,6 +79,7 @@ public class Azienda : MonoBehaviour
     [JsonIgnore] public CompilatoreEtichettaDipartimenti etichettaMarketing;
     
     [JsonIgnore] public CompilaTutorialPanel tutorialPanel;
+    [JsonIgnore] public GameObject bancarottaPanel;
     
     [HideInInspector]public Dictionary<string, bool> flags = new Dictionary<string, bool>();
     
@@ -139,16 +143,24 @@ public class Azienda : MonoBehaviour
         // Sblocco il primo reparto
         AperturaNuovoReparto(NomiReparti.AssistenzaESupportoTecnico);
         AperturaNuovoReparto(NomiReparti.SviluppoSoftware);
-
-        tasseMensile = 8000; // Tasse mensili dell'azienda
-        
-        capitale = 50000; // Capitale iniziale dell'azienda
-        
-        anno = 1;
-        mese = 1;
-        settimana = 1;
         
         progettiInCorso = new List<Progetto>();
+        
+        capitale = 50000;
+        costoDipendenteLibero = 1500;
+        tasseMensile = 8000;
+        tempoDiminuzioneGuadagno = 18;
+        settimana = 1;
+        mese = 1;
+        anno = 1;
+        timer = 8f;
+        currentTimer = 8f;
+        pausa = true;
+        inPausa = true;
+        costoReparto = 40000;
+        costoAssunzioneDipendente = 5000;
+        costoLicenziamento = 3000;
+        ricercheDipendentiGratuite = 2;
         
         //creazioneFlags
         flags = new Dictionary<string, bool>();
@@ -157,6 +169,27 @@ public class Azienda : MonoBehaviour
         flags.Add("cambioTeam", false);
         flags.Add("acquistoReparto", false);
         flags.Add("avvisoRicaricaDipendenti", false);
+        flags.Add("potenziaReparto", false);
+        
+        //tutorial
+        
+        flags.Add("introduzione1", false);
+        flags.Add("introduzione2", false);
+        flags.Add("introduzione3", false);
+        flags.Add("introduzione4", false);
+        flags.Add("introduzione5", false);
+        flags.Add("introduzione6", false);
+        flags.Add("dipendenti1", false);
+        flags.Add("dipendenti2", false);
+        flags.Add("nuoviDipendenti1", false);
+        flags.Add("progetti1", false);
+        flags.Add("progetti2", false);
+        flags.Add("progetti3", false);
+        flags.Add("nuoviProgetti1", false);
+        flags.Add("dipartimenti1", false);
+        flags.Add("dipartimenti2", false);
+        flags.Add("dipartimenti3", false);
+        
     }
 
     public void CompraNuovoReparto(NomiReparti nomeReparto)
@@ -165,12 +198,13 @@ public class Azienda : MonoBehaviour
         {
             ShowWarningMessage("acquistoRepartoAvviso", () =>
             {
+                //capitale -= costoReparto;
+                aggiornaCapitale(-costoReparto, new List<string>{"acquistoReparto"});
                 tasseMensile += 5000;
-                capitale -= costoReparto;
-                costoReparto += 40000;
+                costoReparto += costoReparto;
+                tempoDiminuzioneGuadagno = Math.Min(tempoDiminuzioneGuadagno + 18, 18);
                 AperturaNuovoReparto(nomeReparto);
                 aggiornaDipendenti();
-                aggiornaCapitale();
             }, () => 
             {
                 
@@ -211,7 +245,7 @@ public class Azienda : MonoBehaviour
         }
         else
         {
-            Debug.Log("Non ci sono posti liberi nel reparto " + team.reparto.codice);
+            ShowErrorMessage("erroreDipartimentoPieno", () => {});
         }
     }
 
@@ -234,11 +268,7 @@ public class Azienda : MonoBehaviour
         }
         else
         {
-            Debug.Log("Non ci sono posti liberi nel reparto " + team.reparto.codice);
-            ShowErrorMessage("teamPienoErrore", () => 
-            {
-                
-            }, "chiudi");
+            ShowErrorMessage("erroreDipartimentoPieno", () => {});
         }
     }
 
@@ -260,6 +290,7 @@ public class Azienda : MonoBehaviour
     public void Aggiorna()
     {
         var guadagnoTotale = 0;
+        List<string> motiv = new List<string>();
         
         foreach (var reparto in reparti.Values)
         {
@@ -274,16 +305,36 @@ public class Azienda : MonoBehaviour
             dip.Aggiorna();
         }
 
+        var guadagniProgetto = 0;
         foreach (var progetto in progettiInCorso)
         {
-            guadagnoTotale += progetto.AggiornaProgetto();
+            guadagniProgetto += progetto.AggiornaProgetto2();
+        }
+        
+        motiv.Add("compensoSettimanale");
+        
+        guadagnoTotale += guadagniProgetto;
+
+        var chiusureProgetti = 0;
+        var almenoUnoChiuso = false;
+        foreach (var progetto in progettiInCorso)
+        {
+            var singoloProgetto = progetto.ChiudiProgetto2();
+            chiusureProgetti += singoloProgetto;
+            almenoUnoChiuso = singoloProgetto != 0 || almenoUnoChiuso;
         }
 
-        foreach (var progetto in progettiCompletatiInSettimana)
+        if (almenoUnoChiuso)
         {
-            progetto.ChiudiProgetto();
+            if (chiusureProgetti > 0)
+            {
+                motiv.Add("pagamentoFinaleBuono");
+            }
+            else if (chiusureProgetti < 0)
+            {
+                motiv.Add("pagamentoFinaleBrutto");
+            }
         }
-        progettiCompletatiInSettimana.Clear();
         
         settimana++;
         if (settimana > 4)
@@ -297,23 +348,26 @@ public class Azienda : MonoBehaviour
             }
         }
         instance.aggiornaTempo();
-        generaProgettiSettimanali();
+        tempoDiminuzioneGuadagno = Math.Max(-12, tempoDiminuzioneGuadagno - 1);
+        GeneraProgettiSettimanali();
         
         if (settimana == 1)
         {
             guadagnoTotale -= PagaDipendenti();
             guadagnoTotale -= tasseMensile;
+            motiv.Add("tasse");
         }
         
-        if (capitale < 0)
-        {
-            //Debug.Log("Capitale insufficiente per pagare le tasse");
-            // Messaggio di errore per capitale insufficiente
-            // Game over
-        }
-        
-        capitale += guadagnoTotale;
-        aggiornaCapitale(guadagnoTotale, true);
+        aggiornaCapitale(guadagnoTotale, motiv);
+    }
+
+    public void Bancarotta()
+    {
+        bancarottaPanel.SetActive(true);
+        PauseClick();
+        codaEventi.Clear();
+        StopAllCoroutines();
+        animazioneInCorso = false;
     }
 
     // Potenzia un reparto
@@ -322,12 +376,35 @@ public class Azienda : MonoBehaviour
         var reparto = reparti[nomeReparto];
         if (capitale < reparto.costoPotenziamento)
         {
-            // Messaggio di errore per capitale insufficiente
-            Debug.Log("Capitale insufficiente per potenziare il reparto");
+            ShowErrorMessage("errorePotenziamentoReparto", () => 
+            {
+                
+            }, "chiudi");
         }
-        capitale -= reparto.costoPotenziamento;
-        reparto.AumentaLivello();
-        tasseMensile += 500;
+        else
+        {
+            ShowWarningMessage(
+                "potenziamentoRepartoAvviso", 
+                () =>
+                {
+                    //capitale -= reparto.costoPotenziamento;
+                    aggiornaCapitale(-reparto.costoPotenziamento, new List<string>{"potenziamentoReparto"});
+                    tempoDiminuzioneGuadagno = Math.Min(tempoDiminuzioneGuadagno + 18, 18);
+                    reparto.AumentaLivello();
+                    tasseMensile += 1000;
+                }, 
+                () => 
+                {
+                    
+                }, 
+                "conferma", 
+                "annulla", 
+                "potenziaReparto", 
+                new Dictionary<string, string>
+                {
+                    { "costo", "<color=red> " +  string.Format("{0:N2}", reparto.costoPotenziamento) + "$</color>" }
+                });
+        }
     }
     
     // Funzione per ottenere i reparti sbloccati
@@ -345,10 +422,11 @@ public class Azienda : MonoBehaviour
     }
     
     // Funzione per generare nuovi progetti settimanali
-    public void generaProgettiSettimanali()
+    public void GeneraProgettiSettimanali()
     {
         progettiProposti.Clear();
-        for (int i = 0; i < 5; i++)
+        int numeroProgetti = 3 + RepartiSbloccati().Count;
+        for (int i = 0; i < numeroProgetti; i++)
         {   
             Progetto progetto = Progetto.CreaProgetto(this);
             progettiProposti.Add(progetto);
@@ -385,8 +463,8 @@ public class Azienda : MonoBehaviour
         if (progetto == null) return;
         
         // Aggiungo la penale al capitale
-        capitale += progetto.rescissioneProgetto();
-        
+        var costo = progetto.rescissioneProgetto();
+        aggiornaCapitale(costo, new List<string>{"progettoRescisso"});
         // Messaggio di successo per la rescissione del contratto
     }
     
@@ -396,18 +474,25 @@ public class Azienda : MonoBehaviour
         if (dipendente == null) return;
         
         // Chiedo conferma per il licenziamento
-        ShowWarningMessage("licenziamentoAvviso", () =>
-        {
-            this.LicenziaDipendente(dipendente);
-            clearAction();
-            reloadEmployeeList();
-        }, () => 
+        ShowWarningMessage("licenziamentoAvviso",
+            () =>
+                {
+                    this.LicenziaDipendente(dipendente);
+                    clearAction();
+                    reloadEmployeeList();
+                },
+            () => 
         {
             
-        }, "conferma", "annulla", "licenziamento", new Dictionary<string, string>(
-        {
-            {"costo", "<color=red>-"+ costoLicenziamento + "$</color>"}
-        });
+        },
+            "conferma",
+            "annulla",
+            "licenziamento",
+            new Dictionary<string, string>{
+                    {"costo", "<color=red>-"+ costoLicenziamento + "$</color>"}
+                }
+            );
+        
     }
     
     // Funzione per licenziare un dipendente
@@ -419,8 +504,9 @@ public class Azienda : MonoBehaviour
         }
         // Rimuovo il dipendente dalla lista dei dipendenti non assegnati
         dipendentiLiberi.Remove(dipendente);
-        capitale -= costoLicenziamento;
+        //capitale -= costoLicenziamento;
         aggiornaDipendenti();
+        aggiornaCapitale(-costoLicenziamento, new List<string>{"licenziamento"});
         // Messaggio di successo per il licenziamento
     }
     
@@ -444,12 +530,14 @@ public class Azienda : MonoBehaviour
     {
         GameObject DipendentiPanel = gameObject.transform.Find("DipendentiPanel").gameObject;
         DipendentiPanel.SetActive(true);
+        tutorialPanel.MostraTutorial("dipendenti1");
     }
 
     public void OpenProjectPanel()
     {
         GameObject ProgettiPanel = gameObject.transform.Find("ProgettiPanel").gameObject;
         ProgettiPanel.SetActive(true);
+        tutorialPanel.MostraTutorial("progetti1");
     }
     
     public void OpenDepartmentPanel(NomiReparti reparto)
@@ -457,8 +545,16 @@ public class Azienda : MonoBehaviour
         GameObject RepartiPanel = gameObject.transform.Find("Dipartimento").gameObject;
         RepartiPanel.SetActive(true);
         RepartiPanel.GetComponent<VisualizzaInformazioniDipartimento>().Compila(reparto);
+        tutorialPanel.MostraTutorial("dipartimenti1");
         //RepartiPanel.GetComponent<CompilatorePannelloReparti>().setDepartment(reparto);
         //RepartiPanel.GetComponent<CompilatorePannelloReparti>().AggiornaUI();
+    }
+
+    public void RicaricaDepartimentPanel()
+    {
+        GameObject RepartiPanel = gameObject.transform.Find("Dipartimento").gameObject;
+        RepartiPanel.SetActive(true);
+        RepartiPanel.GetComponent<VisualizzaInformazioniDipartimento>().Ricarica();
     }
     
     // Funzioni di uscita del gioco
@@ -515,9 +611,12 @@ public class Azienda : MonoBehaviour
 
     public void AggiornaUIIniziale()
     {
-        aggiornaCapitale();
+        capitaleText.text = capitale >= 0
+            ? "<color=green>$" + string.Format("{0:N2}", capitale) + "</color>"
+            : "<color=red>$" + string.Format("{0:N2}", capitale) + "</color>";
         aggiornaDipendenti();
         aggiornaTempo();
+        weekSlider.GetComponent<GestioneProgressBar>().ShowValue(0);
     }
     
     // Funzioni di salvataggio del gioco
@@ -551,11 +650,12 @@ public class Azienda : MonoBehaviour
         // Inizializzo le variabili dell'azienda
         CreazioneAzienda();
         PauseClick();
-        currentTimer = 4f;
+        currentTimer = timer;
         Dipendente.CaricaJsonCategorie();
         Progetto.CaricaJsonProgetti();
-        generaProgettiSettimanali();
+        GeneraProgettiSettimanali();
         AggiornaUIIniziale();
+        tutorialPanel.MostraTutorial("introduzione1");
     }
     
     // Funzione di show del pannello di errore
@@ -674,26 +774,62 @@ public class Azienda : MonoBehaviour
         dipendentiText.text = numeroDip + "/" + numeroTotali;
     }
     
-    // Funzione di aggiornamento del capitale
-    public void aggiornaCapitale(int ammontareDifferenza = 0, bool apparizione = false)
+    public void aggiornaCapitale(int ammontareDifferenza, List<string> motivazioni)
     {
-        if (apparizione)
+        // Accodo direttamente tupla (differenza, motivazioni)
+        codaEventi.Enqueue((ammontareDifferenza, motivazioni));
+
+        if (!animazioneInCorso)
+            StartCoroutine(EseguiAnimazioni());
+    }
+    
+    IEnumerator EseguiAnimazioni()
+    {
+        animazioneInCorso = true;
+
+        while (codaEventi.Count > 0)
         {
-            // rosso se negativo, verde se positivo
-            if (ammontareDifferenza < 0)
-                cambioCapitale.text = "<color=red>- $" + string.Format("{0:N2}", -ammontareDifferenza) + "</color>";
-            else
-                cambioCapitale.text = "<color=green>+ $" + string.Format("{0:N2}", ammontareDifferenza) + "</color>";
-            StartCoroutine(MuoviPanel());
+            // Dequeue della tupla
+            var evento = codaEventi.Dequeue();
+            int differenza = evento.Item1;
+            List<string> motivazioni = evento.Item2;
+
+            // --- Testo motivazioni ---
+            TMP_Text motivazioniText = capitalePanel.transform.Find("TestoCapitale").GetComponent<TMP_Text>();
+            motivazioniText.text = LocalizationSettings.StringDatabase.GetLocalizedString("Transizioni", motivazioni[0]);
+            for (int i = 1; i < motivazioni.Count; i++)
+            {
+                motivazioniText.text += " + " + LocalizationSettings.StringDatabase.GetLocalizedString("Transizioni", motivazioni[i]);
+            }
+
+            // --- Testo ammontare ---
+            TMP_Text ammontare = capitalePanel.transform.Find("CapitaleText").GetComponent<TMP_Text>();
+            ammontare.text = differenza < 0
+                ? "<color=red>- $" + string.Format("{0:N2}", -differenza) + "</color>"
+                : "<color=green>+ $" + string.Format("{0:N2}", differenza) + "</color>";
+
+            // aggiorno il capitale effettivo con la cifra
+            capitale += differenza;
+            capitaleText.text = capitale >= 0
+                ? "<color=green>$" + string.Format("{0:N2}", capitale) + "</color>"
+                : "<color=red>$" + string.Format("{0:N2}", capitale) + "</color>";
+            
+            // --- Animazione ---
+            yield return StartCoroutine(MuoviPanel());
+            
+            if (capitale < 0)
+            {
+                Bancarotta();
+            }
         }
-        // Aggiorno il testo del capitale principale
-        capitaleText.text = "<color=green>$" + string.Format("{0:N2}", capitale) + "</color>";
+
+        animazioneInCorso = false;
     }
     
     // Animazione del cambiamento del capitale
-    IEnumerator MuoviPanel(float durata = 0.2f, float attesa = 2.5f, float xTarget = 325f)
+    IEnumerator MuoviPanel(float durata = 0.15f, float attesa = 2f, float xTarget = 490f)
     {
-        Vector2 posIniziale = capitalePanel.anchoredPosition;
+        Vector2 posIniziale = capitalePanel.GetComponent<RectTransform>().anchoredPosition;
         Vector2 posTarget = new Vector2(xTarget, posIniziale.y);
         // Vai avanti
         yield return StartCoroutine(FaiTransizione(posIniziale, posTarget, durata));
@@ -709,7 +845,7 @@ public class Azienda : MonoBehaviour
         while (t < 1f)
         {
             t += Time.deltaTime / tempo;
-            capitalePanel.anchoredPosition = Vector2.Lerp(start, end, t);
+            capitalePanel.GetComponent<RectTransform>().anchoredPosition = Vector2.Lerp(start, end, t);
             yield return null;
         }
     }
@@ -728,10 +864,10 @@ public class Azienda : MonoBehaviour
         {
             pausaImage.GetComponent<Image>().sprite = UnityEngine.Resources.Load<Sprite>("Images/Icons/pauseDisable");
             playImage.GetComponent<Image>().sprite = UnityEngine.Resources.Load<Sprite>("Images/Icons/playEnable2");
+            Image targetImage = weekSlider.transform.Find("Image").GetComponent<Image>();
+            targetImage.color = ColorUtility.TryParseHtmlString("#249E59", out var fallback) ? fallback : Color.green;
             pausa = false;
-            
         }
-        
     }
 
     // segna che il gioco deve essere messo in pausa e che non deve essere tolta la pausa
@@ -746,6 +882,8 @@ public class Azienda : MonoBehaviour
     {
         pausaImage.GetComponent<Image>().sprite = UnityEngine.Resources.Load<Sprite>("Images/Icons/pauseEnable2");
         playImage.GetComponent<Image>().sprite = UnityEngine.Resources.Load<Sprite>("Images/Icons/playDisable");
+        Image targetImage = weekSlider.transform.Find("Image").GetComponent<Image>();
+        targetImage.color = ColorUtility.TryParseHtmlString("#B32F3C", out var fallback) ? fallback : Color.darkRed;
         pausa = true;
     }
     
@@ -784,5 +922,6 @@ public class Azienda : MonoBehaviour
             // Resetto il timer
             currentTimer = timer;
         }
+        weekSlider.GetComponent<GestioneProgressBar>().ShowValue((timer - currentTimer)/ timer * 100);
     }
 }

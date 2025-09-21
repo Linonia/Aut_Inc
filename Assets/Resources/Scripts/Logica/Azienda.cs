@@ -189,7 +189,6 @@ public class Azienda : MonoBehaviour
         flags.Add("dipartimenti1", false);
         flags.Add("dipartimenti2", false);
         flags.Add("dipartimenti3", false);
-        
     }
 
     public void CompraNuovoReparto(NomiReparti nomeReparto)

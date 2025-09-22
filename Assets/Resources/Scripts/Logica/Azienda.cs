@@ -81,7 +81,8 @@ public class Azienda : MonoBehaviour
     [JsonIgnore] public CompilaTutorialPanel tutorialPanel;
     [JsonIgnore] public GameObject bancarottaPanel;
     
-    [HideInInspector]public Dictionary<string, bool> flags = new Dictionary<string, bool>();
+    [HideInInspector]public Dictionary<string, bool> warningFlags = new Dictionary<string, bool>();
+    [HideInInspector]public Dictionary<string, bool> tutorialFlags = new Dictionary<string, bool>();
     
     public Azienda(){}
     // Metodi di gestione della memoria dell'azienda
@@ -163,32 +164,31 @@ public class Azienda : MonoBehaviour
         ricercheDipendentiGratuite = 2;
         
         //creazioneFlags
-        flags = new Dictionary<string, bool>();
-        flags.Add("licenziamento", false);
-        flags.Add("rescissione", false);
-        flags.Add("cambioTeam", false);
-        flags.Add("acquistoReparto", false);
-        flags.Add("avvisoRicaricaDipendenti", false);
-        flags.Add("potenziaReparto", false);
+        warningFlags = new Dictionary<string, bool>();
+        warningFlags.Add("licenziamento", false);
+        warningFlags.Add("rescissione", false);
+        warningFlags.Add("cambioTeam", false);
+        warningFlags.Add("acquistoReparto", false);
+        warningFlags.Add("avvisoRicaricaDipendenti", false);
+        warningFlags.Add("potenziaReparto", false);
         
         //tutorial
-        
-        flags.Add("introduzione1", false);
-        flags.Add("introduzione2", false);
-        flags.Add("introduzione3", false);
-        flags.Add("introduzione4", false);
-        flags.Add("introduzione5", false);
-        flags.Add("introduzione6", false);
-        flags.Add("dipendenti1", false);
-        flags.Add("dipendenti2", false);
-        flags.Add("nuoviDipendenti1", false);
-        flags.Add("progetti1", false);
-        flags.Add("progetti2", false);
-        flags.Add("progetti3", false);
-        flags.Add("nuoviProgetti1", false);
-        flags.Add("dipartimenti1", false);
-        flags.Add("dipartimenti2", false);
-        flags.Add("dipartimenti3", false);
+        tutorialFlags.Add("introduzione1", false);
+        tutorialFlags.Add("introduzione2", false);
+        tutorialFlags.Add("introduzione3", false);
+        tutorialFlags.Add("introduzione4", false);
+        tutorialFlags.Add("introduzione5", false);
+        tutorialFlags.Add("introduzione6", false);
+        tutorialFlags.Add("dipartimenti1", false);
+        tutorialFlags.Add("dipartimenti2", false);
+        tutorialFlags.Add("dipartimenti3", false);
+        tutorialFlags.Add("dipendenti1", false);
+        tutorialFlags.Add("dipendenti2", false);
+        tutorialFlags.Add("nuoviDipendenti1", false);
+        tutorialFlags.Add("progetti1", false);
+        tutorialFlags.Add("progetti2", false);
+        tutorialFlags.Add("progetti3", false);
+        tutorialFlags.Add("nuoviProgetti1", false);
     }
 
     public void CompraNuovoReparto(NomiReparti nomeReparto)
@@ -585,7 +585,7 @@ public class Azienda : MonoBehaviour
         progettiInCorso ??= new List<Progetto>();
         progettiCompletatiInSettimana ??= new List<Progetto>();
         progettiProposti ??= new List<Progetto>();
-        flags ??= new Dictionary<string,bool>();
+        warningFlags ??= new Dictionary<string,bool>();
 
         // Ripristina UI dei reparti solo se esistono
         if (reparti.TryGetValue(NomiReparti.AssistenzaESupportoTecnico, out var r1))
@@ -681,7 +681,7 @@ public class Azienda : MonoBehaviour
         GameObject WarningPanel = gameObject.transform.Find("WarningPanel").gameObject;
         Toggle toggle = WarningPanel.transform.Find("Toggle").GetComponent<Toggle>();
 
-        if (!string.IsNullOrEmpty(flag) && flags.ContainsKey(flag) && flags[flag])
+        if (!string.IsNullOrEmpty(flag) && warningFlags.ContainsKey(flag) && warningFlags[flag])
         {
             onConfirm();
             return;
@@ -721,7 +721,7 @@ public class Azienda : MonoBehaviour
         ConfirmButton.GetComponent<Button>().onClick.AddListener(() =>
         {
             if (!string.IsNullOrEmpty(flag) && toggle.isOn)
-                flags[flag] = true;
+                warningFlags[flag] = true;
 
             onConfirm();
             WarningPanel.SetActive(false);
@@ -733,7 +733,7 @@ public class Azienda : MonoBehaviour
         RetryButton.GetComponent<Button>().onClick.AddListener(() =>
         {
             if (!string.IsNullOrEmpty(flag) && toggle.isOn)
-                flags[flag] = true;
+                warningFlags[flag] = true;
 
             onRetry();
             WarningPanel.SetActive(false);

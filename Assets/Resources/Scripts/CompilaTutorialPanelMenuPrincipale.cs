@@ -5,12 +5,12 @@ using UnityEngine.UI;
 using System.Collections;
 using System;
 
-public class CompilaTutorialPanel : MonoBehaviour
+public class CompilaTutorialPanelMenuPrincipale : MonoBehaviour
 {
     public TMP_Text titolo;
     public TMP_Text testo;
     public Button chiudiButton;
-    public Azienda azienda;
+    public VisualizzaTutorialMenuPrincipale visualizzaTutorialPanel;
     public float fadeDuration = 0.3f; // Durata della dissolvenza in secondi
 
     private CanvasGroup canvasGroup;
@@ -30,12 +30,11 @@ public class CompilaTutorialPanel : MonoBehaviour
 
     public void MostraTutorial(string tit, Action chiudiAction = null, bool mostraComunque = false, bool continua = true)
     {
-        if (azienda.tutorialFlags.ContainsKey(tit) && (azienda.tutorialFlags[tit] == false || mostraComunque))
+        if (visualizzaTutorialPanel.tutorialFlags.Contains(tit) && mostraComunque)
         {
             // Imposta testo
             titolo.text = LocalizationSettings.StringDatabase.GetLocalizedString("Tutorial", tit + "TITOLO");
             testo.text = LocalizationSettings.StringDatabase.GetLocalizedString("Tutorial", tit + "TESTO");
-            azienda.tutorialFlags[tit] = true;
 
             // Avvia fade-in
             StartCoroutine(FadeIn());

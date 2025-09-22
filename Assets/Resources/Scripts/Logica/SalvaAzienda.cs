@@ -59,7 +59,7 @@ public static class SalvataggioAzienda
             progettiCompletatiInSettimana = azienda.progettiCompletatiInSettimana,
             progettiProposti = azienda.progettiProposti,
 
-            flags = azienda.flags
+            flags = azienda.warningFlags
         };
 
         // convertiamo i dizionari con enum come chiave in stringhe
@@ -114,7 +114,7 @@ public static class SalvataggioAzienda
             azienda.progettiCompletatiInSettimana = data.progettiCompletatiInSettimana;
             azienda.progettiProposti = data.progettiProposti;
 
-            azienda.flags = data.flags;
+            azienda.warningFlags = data.flags;
         }
         catch (Exception e)
         {

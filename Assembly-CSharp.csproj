@@ -53,6 +53,7 @@
     <Compile Include="Assets\Resources\Scripts\MancanzaTeams.cs" />
     <Compile Include="Assets\Resources\Scripts\VisualizzaInformazioniNuovoProgetto.cs" />
     <Compile Include="Assets\Resources\Scripts\Logica\Progetto.cs" />
+    <Compile Include="Assets\Resources\Scripts\VisualizzaTutorial.cs" />
     <Compile Include="Assets\Resources\Scripts\Logica\PreferenzaSociale.cs" />
     <Compile Include="Assets\Resources\Scripts\CompilatoreElencoDipendenti.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -104,6 +105,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
     <Compile Include="Assets\Resources\Scripts\Logica\Team.cs" />
+    <Compile Include="Assets\Resources\Scripts\CompilaTutorialPanelMenuPrincipale.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
     <Compile Include="Assets\Resources\Scripts\CompilatoreElencoProgetti.cs" />
@@ -119,6 +121,7 @@
     <Compile Include="Assets\Resources\Scripts\CompilatoreElencoNuoviProgetti.cs" />
     <Compile Include="Assets\Resources\Scripts\CompilaTutorialPanel.cs" />
     <Compile Include="Assets\Resources\Scripts\OptionCompiler.cs" />
+    <Compile Include="Assets\Resources\Scripts\VisualizzaTutorialMenuPrincipale.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\Resources\Json\ProgettiCreazione.json" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
@@ -137,7 +140,6 @@
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
-    <None Include="Assets\AddressableAssetsData\link.xml" />
     <None Include="Assets\Resources\Json\NomiDipendenti.json" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />

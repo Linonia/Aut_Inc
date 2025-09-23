@@ -47,7 +47,7 @@ public class Azienda : MonoBehaviour
     [HideInInspector] public int costoReparto = 40000; // costo per sbloccare un reparto
     [HideInInspector] public int costoAssunzioneDipendente = 5000;
     [HideInInspector] public int costoLicenziamento = 3000;
-    [HideInInspector] public int ricercheDipendentiGratuite = 2; // (sono in realtà 3, parte da 0)
+    [HideInInspector] public int ricercheDipendentiGratuite = 3;
     
     // informazioni sui dipendenti
     [HideInInspector] public List<Dipendente> dipendentiLiberi = new List<Dipendente>(); // dipendenti non assegnati a nessun team
@@ -95,25 +95,25 @@ public class Azienda : MonoBehaviour
         {
             Categorie.ComunicazioneChiarezzaEspressiva,
             Categorie.ComunicazioneAdattabilitaComunicativa
-        }, "desc1", this, etichettaAssistenza));
+        }, 1 , "desc1", this, etichettaAssistenza));
         
         reparti.Add(NomiReparti.SviluppoSoftware, new Reparto("SviluppoSoftware", new List<Categorie>
         {
             Categorie.CapacitaCognitiveProblemSolvingCreativo,
             Categorie.CapacitaCognitiveFlessibilitaCognitiva
-        }, "desc4", this, etichettaSviluppo));
+        }, 1.5f ,  "desc4", this, etichettaSviluppo));
         
         reparti.Add(NomiReparti.UxEDesign, new Reparto("UxEDesign", new List<Categorie>
         {
             Categorie.SensibilitaSensorialePercezioneSensorialeFina,
             Categorie.SensibilitaSensorialeComfortAmbientale
-        }, "desc3", this, etichettaUxE));
+        }, 2.5f , "desc3", this, etichettaUxE));
         
         reparti.Add(NomiReparti.ControlloQualita, new Reparto("ControlloQualita", new List<Categorie>
         {
             Categorie.ComportamentiRipetitiviEInteressiRistrettiPrecisioneOperativa,
             Categorie.ComportamentiRipetitiviEInteressiRistrettiFocalizzazioneTematica
-        }, "desc2", this, etichettaQualita));
+        }, 3 , "desc2", this, etichettaQualita));
         
         reparti.Add(NomiReparti.RicercaESviluppo, new Reparto("RicercaESviluppo", new List<Categorie>
         {
@@ -121,7 +121,7 @@ public class Azienda : MonoBehaviour
             Categorie.CapacitaCognitiveFlessibilitaCognitiva,
             Categorie.ComportamentiRipetitiviEInteressiRistrettiPrecisioneOperativa,
             Categorie.ComportamentiRipetitiviEInteressiRistrettiFocalizzazioneTematica
-        }, "desc5", this, etichettaRicerca));
+        }, 4.5f , "desc5", this, etichettaRicerca));
         
         reparti.Add(NomiReparti.Marketing, new Reparto("Marketing", new List<Categorie>
         {
@@ -129,7 +129,7 @@ public class Azienda : MonoBehaviour
             Categorie.SensibilitaSensorialeComfortAmbientale,
             Categorie.ComunicazioneChiarezzaEspressiva,
             Categorie.ComunicazioneAdattabilitaComunicativa
-        }, "desc6", this, etichettaMarketing));
+        }, 5 , "desc6", this, etichettaMarketing));
         
         // Reparti da sbloccare
         repartiDaSbloccare = new List<NomiReparti>
@@ -140,10 +140,6 @@ public class Azienda : MonoBehaviour
             NomiReparti.Marketing,
             //NomiReparti.SviluppoHardwareEInnovazioniTecnologiche
         };
-        
-        // Sblocco il primo reparto
-        AperturaNuovoReparto(NomiReparti.AssistenzaESupportoTecnico);
-        AperturaNuovoReparto(NomiReparti.SviluppoSoftware);
         
         progettiInCorso = new List<Progetto>();
         
@@ -158,10 +154,14 @@ public class Azienda : MonoBehaviour
         currentTimer = 8f;
         pausa = true;
         inPausa = true;
-        costoReparto = 40000;
+        costoReparto = 30000;
         costoAssunzioneDipendente = 5000;
         costoLicenziamento = 3000;
-        ricercheDipendentiGratuite = 2;
+        ricercheDipendentiGratuite = 3;
+        
+        // Sblocco il primo reparto
+        AperturaNuovoReparto(NomiReparti.AssistenzaESupportoTecnico);
+        AperturaNuovoReparto(NomiReparti.SviluppoSoftware);
         
         //creazioneFlags
         warningFlags = new Dictionary<string, bool>();
@@ -182,8 +182,10 @@ public class Azienda : MonoBehaviour
         tutorialFlags.Add("dipartimenti1", false);
         tutorialFlags.Add("dipartimenti2", false);
         tutorialFlags.Add("dipartimenti3", false);
+        tutorialFlags.Add("dipartimenti4", false);
         tutorialFlags.Add("dipendenti1", false);
         tutorialFlags.Add("dipendenti2", false);
+        tutorialFlags.Add("dipendenti3", false);
         tutorialFlags.Add("nuoviDipendenti1", false);
         tutorialFlags.Add("progetti1", false);
         tutorialFlags.Add("progetti2", false);
@@ -424,7 +426,8 @@ public class Azienda : MonoBehaviour
     public void GeneraProgettiSettimanali()
     {
         progettiProposti.Clear();
-        int numeroProgetti = 3 + RepartiSbloccati().Count;
+        //int numeroProgetti = 3 + RepartiSbloccati().Count;
+        int numeroProgetti = 1;
         for (int i = 0; i < numeroProgetti; i++)
         {   
             Progetto progetto = Progetto.CreaProgetto(this);
@@ -901,7 +904,7 @@ public class Azienda : MonoBehaviour
 
     public void Start()
     {
-        OnNewGame();
+        // OnNewGame();
     }
     
     // Funzione di update dello scorrere del tempo

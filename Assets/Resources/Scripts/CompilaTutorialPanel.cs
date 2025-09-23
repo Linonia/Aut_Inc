@@ -11,7 +11,7 @@ public class CompilaTutorialPanel : MonoBehaviour
     public TMP_Text testo;
     public Button chiudiButton;
     public Azienda azienda;
-    public float fadeDuration = 0.3f; // Durata della dissolvenza in secondi
+    public float fadeDuration = 0.2f; // Durata della dissolvenza in secondi
 
     private CanvasGroup canvasGroup;
 
@@ -53,10 +53,12 @@ public class CompilaTutorialPanel : MonoBehaviour
                     "introduzione4" => "introduzione5",
                     "introduzione5" => "introduzione6",
                     "dipendenti1" => "dipendenti2",
+                    "dipendenti2" => "dipendenti3",
                     "progetti1" => "progetti2",
                     "progetti2" => "progetti3",
                     "dipartimenti1" => "dipartimenti2",
                     "dipartimenti2" => "dipartimenti3",
+                    "dipartimenti3" => "dipartimenti4",
                     _ => null
                 };
 

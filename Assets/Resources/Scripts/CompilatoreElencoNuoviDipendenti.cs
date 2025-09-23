@@ -47,13 +47,15 @@ public class CompilatoreElencoNuoviDipendenti : MonoBehaviour
         {
             azienda.ShowWarningMessage("avvisoRicaricaDipendenti", () =>
             {
-                OnEnable();
+                
                 if (azienda.ricercheDipendentiGratuite > 0)
                 {
                     azienda.ricercheDipendentiGratuite -= 1;
-                    return;
                 }
-                azienda.aggiornaCapitale(-azienda.costoAssunzioneDipendente, new List<string>{"ricercaDipendenti"});
+                else
+                    azienda.aggiornaCapitale(-azienda.costoAssunzioneDipendente, new List<string> { "ricercaDipendenti" });
+                
+                OnEnable();
             }, () => {}, "conferma", "annulla", "avvisoRicaricaDipendenti");
         }
         else

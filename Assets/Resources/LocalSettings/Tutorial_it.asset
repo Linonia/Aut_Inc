@@ -149,7 +149,11 @@ MonoBehaviour:
 
       Attenzione: richiedendo una nuova ricerca,
       i candidati attualmente in lista spariranno, lasciando il posto a nuovi candidati.
-      Assicurati di esaminarli con cura prima di procedere.'
+      Assicurati di esaminarli con cura prima di procedere.
+
+
+      Le prime 3 ricerche
+      sono gratuite.'
     m_Metadata:
       m_Items: []
   - m_Id: 774477284970496
@@ -207,8 +211,8 @@ MonoBehaviour:
       rivolte all''azienda. E'' possibile consultare le informazioni dei progetti
       per valutare se accettarli o rifiutarli.
 
-      I nuovi progetti cambiano
-      ogni settimana, quindi ricorda di controllare regolarmente per scoprire eventuali
+      I nuovi progetti cambiano ogni
+      settimana, quindi ricorda di controllare regolarmente per scoprire eventuali
       opportunita'' interessanti e vantaggiose da sviluppare.'
     m_Metadata:
       m_Items: []
@@ -258,6 +262,37 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 775929000693760
     m_Localized: Miglioramento del Dipartimento
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1124317296160768
+    m_Localized: Produzione di lavoro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1124355837620224
+    m_Localized: 'Per portare avanti i progetti, i dipendenti di ogni reparto possono
+      produrre fino a 100 unita'' di lavoro a settimana. Aumentando il livello di
+      un reparto puoi assumere piu'' dipendenti e, di conseguenza, aumentare la quantita''
+      di lavoro prodotta.
+
+      Ricorda pero'' che, per ottenere buoni risultati,
+      e'' fondamentale organizzare i team in modo efficace, cosi'' che ogni dipendente
+      possa rendere al meglio.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1125040931041280
+    m_Localized: Produzione di un Dipendente
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1125112792051712
+    m_Localized: 'Un dipendente puo'' produrre fino a un massimo di 100 unita'' di
+      lavoro a settimana.
+
+      La sua competenza dipende dal reparto in cui lavora,
+      mentre il suo umore e'' influenzato dal numero di persone presenti nel team.
+
+      Per
+      ottenere il massimo, cerca di assegnare ogni dipendente al contesto piu'' adatto
+      alle sue caratteristiche.'
     m_Metadata:
       m_Items: []
   references:

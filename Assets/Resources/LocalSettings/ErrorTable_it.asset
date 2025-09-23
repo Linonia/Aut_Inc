@@ -95,6 +95,10 @@ MonoBehaviour:
       a AUT-INC! Valuta le tue strategie e prova di nuovo per ottenere migliori risultati.'
     m_Metadata:
       m_Items: []
+  - m_Id: 12782075493838848
+    m_Localized: Sei sicuro di voler uscire dal gioco?
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

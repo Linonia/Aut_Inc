@@ -75,6 +75,10 @@ MonoBehaviour:
     m_Key: gameOver
     m_Metadata:
       m_Items: []
+  - m_Id: 12782075493838848
+    m_Key: uscitaDalGioco
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

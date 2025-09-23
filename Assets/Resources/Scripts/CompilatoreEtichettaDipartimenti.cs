@@ -16,6 +16,7 @@ public class CompilatoreEtichettaDipartimenti : MonoBehaviour
     [JsonIgnore] public TMP_Text compraText;
     
     [JsonIgnore] public Azienda azienda;
+    [JsonIgnore] public Image sfondo;
 
     [JsonIgnore] public bool sbloccato = false;
 
@@ -47,6 +48,10 @@ public class CompilatoreEtichettaDipartimenti : MonoBehaviour
             azienda.OpenDepartmentPanel(nomeReparto);
         });
         aggiornaDipendenti();
+        // se trova la risorsa la carica, altrimenti non fa niente, rimane la stessa
+        sfondo.sprite = Resources.Load<Sprite>($"Images/Background/Dipartimenti/{nomeReparto}")
+                        ?? sfondo.sprite;
+        
     }
 
     public void CompraReparto()
@@ -62,7 +67,7 @@ public class CompilatoreEtichettaDipartimenti : MonoBehaviour
         sbloccato = false;
         image.gameObject.SetActive(false);
         numeroDipendenti.gameObject.SetActive(false);
-        var text = LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", "compra") + "<color=red> " +  string.Format("{0:N2}", -azienda.costoReparto) + "$</color>";
+        var text = LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", "compra") + "<color=red> -" +  string.Format("{0:N2}", azienda.costoReparto) + " $</color>";
         compraText.text = text;
     }
 

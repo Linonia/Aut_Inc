@@ -61,17 +61,18 @@ public class CompilatoreElencoDipendenti : MonoBehaviour
             azienda.tutorialPanel.MostraTutorial("nuoviDipendenti1");
             if (azienda.capitale > azienda.costoAssunzioneDipendente)
             {
-                // Disattivo DipendentiPanel
-                root.Find("DipendentiPanel").gameObject.SetActive(false);
-                // Attivo NuoviDipendenti
-                root.Find("NuoviDipendenti").gameObject.SetActive(true);
                 // paga il costo di assunzione
                 if (azienda.ricercheDipendentiGratuite > 0)
                 {
                     azienda.ricercheDipendentiGratuite -= 1;
-                    return;
                 }
-                azienda.aggiornaCapitale(-azienda.costoAssunzioneDipendente, new List<string>{"ricercaDipendenti"});
+                else
+                    azienda.aggiornaCapitale(-azienda.costoAssunzioneDipendente, new List<string>{"ricercaDipendenti"});
+                
+                // Disattivo DipendentiPanel
+                root.Find("DipendentiPanel").gameObject.SetActive(false);
+                // Attivo NuoviDipendenti
+                root.Find("NuoviDipendenti").gameObject.SetActive(true);
             }
             else
             {

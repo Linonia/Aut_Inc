@@ -133,7 +133,11 @@ MonoBehaviour:
 
       Warning:
       requesting a new search will remove all current candidates from the list, replacing
-      them with new ones. Make sure to review them carefully before proceeding.'
+      them with new ones. Make sure to review them carefully before proceeding.
+
+
+      The
+      first 3 searches are free.'
     m_Metadata:
       m_Items: []
   - m_Id: 774477284970496
@@ -167,16 +171,15 @@ MonoBehaviour:
     m_Localized: 'A project is considered complete if finished by the deadline, or
       incomplete if it does not allow delays.
 
-      Upon completion, the final
-      payment will be adjusted based on how many weeks early or late the project
-      is delivered.
+      Upon completion, the final payment
+      will be adjusted based on how many weeks early or late the project is delivered.
 
-      If you fail to complete a project, you must pay a penalty
-      for missing the deadline.
+      If
+      you fail to complete a project, you must pay a penalty for missing the deadline.
 
-      If you are unsure about finishing a project,
-      you may terminate the contract by paying a penalty, allowing your employees
-      to focus on other projects.
+      If
+      you are unsure about finishing a project, you may terminate the contract by
+      paying a penalty, allowing your employees to focus on other projects.
 
 '
     m_Metadata:
@@ -234,6 +237,35 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 775929000693760
     m_Localized: Department Upgrade
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1124317296160768
+    m_Localized: Work production
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1124355837620224
+    m_Localized: 'To carry out projects, employees in each department can produce
+      up to 100 units of work per week. By upgrading a department, you can hire more
+      employees and therefore increase the total amount of work produced.
+
+      However,
+      to ensure high performance, it is essential to manage your teams effectively
+      so that each employee can give their best.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1125112792051712
+    m_Localized: 'An employee can produce up to 100 units of work per week.
+
+      Their
+      competence depends on the department they work in, while their mood is influenced
+      by the number of people in their team.
+
+      To get the best results, try
+      to assign each employee to the context that suits them best.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1125040931041280
+    m_Localized: Employee Production
     m_Metadata:
       m_Items: []
   references:

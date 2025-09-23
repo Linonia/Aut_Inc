@@ -12,6 +12,10 @@ public class SceneManagerScript : MonoBehaviour
     [HideInInspector] public bool isFullScreen = false;
     [HideInInspector] public int BaseResolutionX = 1280;
     [HideInInspector] public int BaseResolutionY = 720;
+    
+    private int fullScreenWidth;
+    private int fullScreenHeight;
+    
     private bool active = false;
     
     private bool applyFullscreenAfterLoad = false;
@@ -43,13 +47,15 @@ public class SceneManagerScript : MonoBehaviour
             case 0: // Windowed 1280x720
                 Screen.SetResolution(BaseResolutionX, BaseResolutionY, false);
                 isFullScreen = false;
+                PlayerPrefs.SetInt("RisoluzioneIndex", 0);
                 break;
             case 1: // Fullscreen
                 Resolution res = Screen.currentResolution;
-                Screen.SetResolution(res.width, res.height, true);
-                BaseResolutionX = res.width;
-                BaseResolutionY = res.height;
+                fullScreenWidth = res.width;
+                fullScreenHeight = res.height;
+                Screen.SetResolution(fullScreenWidth, fullScreenHeight, true);
                 isFullScreen = true;
+                PlayerPrefs.SetInt("RisoluzioneIndex", 1);
                 break;
         }
         active = false;
@@ -66,6 +72,7 @@ public class SceneManagerScript : MonoBehaviour
         }
     }
     
+    /*
     public void ChangeScene(string sceneName, PostLoadAction action)
     {
         applyFullscreenAfterLoad = isFullScreen;
@@ -74,6 +81,50 @@ public class SceneManagerScript : MonoBehaviour
         pendingAction = action;
 
         SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
+    }*/
+    
+    public void ChangeScene(string sceneName, PostLoadAction action)
+    {
+        pendingAction = action;
+        applyFullscreenAfterLoad = isFullScreen;
+
+        StartCoroutine(LoadSceneWithResolution(sceneName));
+    }
+
+    private IEnumerator LoadSceneWithResolution(string sceneName)
+    {
+        // Avvio il caricamento asincrono ma senza attivare subito la scena
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
+        asyncLoad.allowSceneActivation = false;
+
+        // Aspetto che sia quasi completamente carica
+        while (asyncLoad.progress < 0.80f)
+        {
+            yield return null;
+        }
+
+        // Ora la scena e' in memoria ma non ancora attiva.
+        // Porto la risoluzione a 1280x720
+        ChangeResolution(0);
+
+        // Aspetto un frame per assicurarmi che Unity applichi la risoluzione
+        yield return null;
+
+        // Attivo la scena immediatamente
+        asyncLoad.allowSceneActivation = true;
+
+        // Aspetto che la scena sia effettivamente attivata
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+
+        // Reimposto la risoluzione selezionata (fullscreen se era attivo)
+        if (applyFullscreenAfterLoad)
+        {
+            ChangeResolution(1);
+            applyFullscreenAfterLoad = false;
+        }
     }
     
     public void UnloadGameScene()

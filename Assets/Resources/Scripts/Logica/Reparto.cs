@@ -14,6 +14,7 @@ namespace Scripts.Logica
         public int livelloReparto = 1;
         public int livelloRepartoMax;
         public int costoPotenziamento;
+        public float moltiplicatoreCostoPotenziamento;
         
         // Informazioni riguardanti le categorie del reparto
         public List<Categorie> categorie;
@@ -47,7 +48,7 @@ namespace Scripts.Logica
     // Funzioni del reparto
         public Reparto(){}
         // Costruttore del reparto
-        public Reparto(string codice, List<Categorie> categorie, string descrizione, Azienda azienda, CompilatoreEtichettaDipartimenti etichetta)
+        public Reparto(string codice, List<Categorie> categorie, float moltiplicatore, string descrizione, Azienda azienda, CompilatoreEtichettaDipartimenti etichetta)
         {
             this.codice = codice;
             this.descrizione = descrizione;
@@ -58,7 +59,8 @@ namespace Scripts.Logica
             numeroMaxDipendenti = maxDipendenti;
             numeroPostiLiberi = maxDipendenti;
             costoDipendente = costo;
-            costoPotenziamento = costoPot;
+            moltiplicatoreCostoPotenziamento = moltiplicatore;
+            costoPotenziamento = (int)(costoPot * moltiplicatoreCostoPotenziamento);
             livelloReparto = 1;
             livelloRepartoMax = LivelliReparti.LivelloReparto.Count;
             this.azienda = azienda;
@@ -78,7 +80,7 @@ namespace Scripts.Logica
                 numeroPostiLiberi += maxDipendenti - numeroMaxDipendenti;
                 numeroMaxDipendenti = maxDipendenti;
                 costoDipendente = costo;
-                costoPotenziamento = costoPot;
+                costoPotenziamento = (int)(costoPot * moltiplicatoreCostoPotenziamento);
                 etichetta.aggiornaDipendenti();
                 azienda.RicaricaDepartimentPanel();
             }
@@ -226,6 +228,31 @@ namespace Scripts.Logica
             }
             return count;
         }
+
+        /*
+        public void AggiornaEtichetta()
+        {
+            if(aperto)
+            {
+                etichetta.repartoComprato();
+            }
+            else
+            {
+                if (azienda.repartiDaSbloccare.Count > 0)
+                {
+                    var prossimoReparto = azienda.repartiDaSbloccare[0]; // il primo della lista
+                    if (azienda.reparti[prossimoReparto].codice == codice)
+                    {
+                        etichetta.SbloccaPossibilitaCompra();
+                    }
+                    else
+                    {
+                        etichetta.NascondiEtichetta();
+                    }
+                }
+            }
+        }
+        */
         
         // Funzione di caricamento del salvataggio
         public void OnAfterLoad(Azienda azienda, CompilatoreEtichettaDipartimenti etichetta)
@@ -252,7 +279,7 @@ namespace Scripts.Logica
                     var prossimoReparto = azienda.repartiDaSbloccare[0]; // il primo della lista
                     if (azienda.reparti[prossimoReparto].codice == codice)
                     {
-                        etichetta.SbloccaPossibilitaCompra();
+                        SbloccaAcquisto();
                     }
                     else
                     {

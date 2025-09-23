@@ -15,6 +15,7 @@
 *.pidb
 *.unityproj
 *.booproj
+*.zip
 
 # OS files
 .DS_Store

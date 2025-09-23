@@ -11,7 +11,7 @@ public class CompilaTutorialPanelMenuPrincipale : MonoBehaviour
     public TMP_Text testo;
     public Button chiudiButton;
     public VisualizzaTutorialMenuPrincipale visualizzaTutorialPanel;
-    public float fadeDuration = 0.3f; // Durata della dissolvenza in secondi
+    public float fadeDuration = 0.2f; // Durata della dissolvenza in secondi
 
     private CanvasGroup canvasGroup;
 

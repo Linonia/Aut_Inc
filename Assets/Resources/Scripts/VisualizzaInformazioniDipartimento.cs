@@ -80,7 +80,7 @@ public class VisualizzaInformazioniDipartimento : MonoBehaviour
         else
         {
             miglioramento.color = ColorUtility.TryParseHtmlString(coloreScritte, out colore) ? colore : Color.white;
-            numeroMiglioramento.text = reparto.costoPotenziamento + " $";
+            numeroMiglioramento.text = ((int)(reparto.costoPotenziamento * reparto.moltiplicatoreCostoPotenziamento)) + " $";
             numeroMiglioramento.color = ColorUtility.TryParseHtmlString("#FF0000", out colore) ? colore : Color.white;
             miglioramentoButton.interactable = true;
             miglioramentoButton.onClick.RemoveAllListeners();
@@ -149,7 +149,7 @@ public class VisualizzaInformazioniDipartimento : MonoBehaviour
         else
         {
             miglioramento.color = ColorUtility.TryParseHtmlString(coloreScritte, out colore) ? colore : Color.white;
-            numeroMiglioramento.text = reparto.costoPotenziamento + " $";
+            numeroMiglioramento.text = ((int)(reparto.costoPotenziamento * reparto.moltiplicatoreCostoPotenziamento)) + " $";
             numeroMiglioramento.color = ColorUtility.TryParseHtmlString("#FF0000", out colore) ? colore : Color.white;
             miglioramentoButton.interactable = true;
             miglioramentoButton.onClick.RemoveAllListeners();

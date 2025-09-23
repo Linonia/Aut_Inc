@@ -45,6 +45,7 @@ namespace Scripts.Logica
             
             int roll = UnityEngine.Random.Range(0, 100);
             int difficolta = roll < 50 ? 0 : (roll < 80 ? 1 : 2);
+            TipoVarianteProgetto variante = ParametriContratto.GetVariante(difficolta);
             
             int produzioneDip = difficolta switch
             {
@@ -82,6 +83,14 @@ namespace Scripts.Logica
             };
             
             int lavoroRichiesto = produzioneSettimanale * durata;
+            if (variante == TipoVarianteProgetto.MoltoSemplice)
+            {
+                lavoroRichiesto = (int)(lavoroRichiesto * ParametriContratto.ImpattoVariante_MoltoSemplice);
+            }
+            else if (variante == TipoVarianteProgetto.MoltoDifficile)
+            {
+                lavoroRichiesto = (int)(lavoroRichiesto * ParametriContratto.ImpattoVariante_MoltoDifficile);
+            }
 
             int costoTotaleContratto = costoTotaleSettimanale * durata;
         
@@ -102,6 +111,15 @@ namespace Scripts.Logica
                 int decrementi = -azienda.tempoDiminuzioneGuadagno; // quanto sotto lo 0
                 float fattoreDiminuzione = 1f - 0.05f * decrementi; // 5% per ogni valore sotto lo 0
                 valoreTotale = (int)(valoreTotale * fattoreDiminuzione);
+            }
+            
+            if (variante == TipoVarianteProgetto.PocoRemunerativo)
+            {
+                valoreTotale = (int)(valoreTotale * ParametriContratto.ImpattoVariante_PocoRemunerativo);
+            }
+            else if (variante == TipoVarianteProgetto.MoltoRemunerativo)
+            {
+                valoreTotale = (int)(valoreTotale * ParametriContratto.ImpattoVariante_MoltoRemunerativo);
             }
         
             // Pagamenti

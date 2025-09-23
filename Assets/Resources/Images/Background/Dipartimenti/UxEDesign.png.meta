@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 39ab6de386ab3134bb335c3a276ab0a9
+guid: 038019ac34b71d64a90725607d19071b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5871693244954693823
-    second: Opera_senza_titolo(2)_0
+      213: -7226114966682635213
+    second: UxEDesign_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Opera_senza_titolo(2)_0
+      name: UxEDesign_0
       rect:
         serializedVersion: 2
         x: 0
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fb0d59f85e17c7150800000000000000
-      internalID: 5871693244954693823
+      spriteID: 3347fb039bea7bb90800000000000000
+      internalID: -7226114966682635213
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Opera_senza_titolo(2)_0: 5871693244954693823
+      UxEDesign_0: -7226114966682635213
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

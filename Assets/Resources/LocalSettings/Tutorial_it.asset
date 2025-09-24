@@ -18,281 +18,327 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 773544673087488
-    m_Localized: Lista dei dipendenti
+  - m_Id: 1800890303213568
+    m_Localized: Un consiglio utile
     m_Metadata:
       m_Items: []
-  - m_Id: 773593087938560
-    m_Localized: 'Nella schermata dei dipendenti potrai visualizzare l''elenco dei
-      tuoi lavoratori, ordinato per dipartimento. All''interno di ciascun dipartimento,
-      i dipendenti sono disposti in base al team di appartenenza.
+  - m_Id: 1800913753567232
+    m_Localized: 'Vuoi avere successo?
 
-      Verso la
-      fine dell''elenco troverai i dipendenti gia'' assunti ma non ancora operativi,
-      in quanto non assegnati ad alcun team.
-
-      Infine, e'' presente l''opzione
-      di ricerca dei candidati da assumere. Ricorda pero'' che ogni ricerca comporta
-      un costo!'
+      Non pensare solo al guadagno: dipendenti
+      felici e ben organizzati producono molto di piu''!'
     m_Metadata:
       m_Items: []
-  - m_Id: 773431074557952
-    m_Localized: 'Il tempo e'' una risorsa fondamentale nel gioco. Potrai interrompere
-      lo scorrere delle settimane premendo il simbolo della pausa nel riquadro in
-      alto, cosi'' da gestire con calma dipendenti e contratti.
-
-      Aprendo una
-      qualsiasi delle altre schermate, il tempo di gioco si interrompera'' automaticamente.'
+  - m_Id: 1800786590658560
+    m_Localized: Primi passi
     m_Metadata:
       m_Items: []
-  - m_Id: 773376175312896
+  - m_Id: 1800814117875712
+    m_Localized: 'Sei nuovo?
+
+      Per orientarti ti consiglio di aprire i menu
+      in questo ordine:
+
+      - Dipartimenti
+
+      - Dipendenti
+
+      - Progetti
+
+      Cosi''
+      capirai subito come funziona l''azienda.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1800608940912640
     m_Localized: Gestione del tempo
     m_Metadata:
       m_Items: []
-  - m_Id: 773230901399552
-    m_Localized: 'Dalla schermata principale potrai consultare le informazioni dei
-      dipartimenti attivi, gestire l''elenco dei dipendenti dell''azienda e monitorare
-      i contratti in corso.
+  - m_Id: 1800613319766016
+    m_Localized: 'Il tempo e'' prezioso.
 
-      In alto a sinistra sono inoltre disponibili alcune
-      informazioni fondamentali: il numero dei dipendenti, il tempo trascorso dall''apertura
-      dell''azienda e il capitale attuale.
+      Ogni settimana che passa i progetti
+      avanzano!
 
-      Per prendere confidenza con l''interfaccia
-      e'' consigliabile aprire le schermate nel seguente ordine: dipartimenti, dipendenti,
-      progetti.'
+      - Premi il simbolo della pausa per fermare il tempo.
+
+      -
+      Quando apri un menu (dipendenti, progetti, reparti), il gioco si mette in pausa
+      da solo.'
     m_Metadata:
       m_Items: []
-  - m_Id: 773202392715264
+  - m_Id: 1800558235971584
+    m_Localized: 'Dalla schermata principale puoi tenere tutto sotto controllo:
+
+      -
+      dipartimenti,
+
+      - dipendenti,
+
+      - progetti in corso.
+
+      In
+      alto a sinistra trovi i dati essenziali: numero di dipendenti, tempo trascorso
+      e capitale disponibile.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1800528586436608
     m_Localized: Interfaccia principale
     m_Metadata:
       m_Items: []
-  - m_Id: 772966798659584
-    m_Localized: Scopo del gioco
+  - m_Id: 1800420423725056
+    m_Localized: Obiettivo del gioco
     m_Metadata:
       m_Items: []
-  - m_Id: 773064983121920
-    m_Localized: L'obiettivo del gioco e' far crescere l'azienda evitando la bancarotta.
-      Sara' quindi fondamentale potenziare i reparti e sbloccarne di nuovi, cosi'
-      da offrire ai clienti soluzioni sempre piu' tecnologiche e avanzate, restando
-      al passo con il mercato.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 772674849935360
-    m_Localized: 'Impersonerai il datore di lavoro e manager di un''emergente azienda
-      informatica. Il tuo compito e'' gestire dipendenti e reparti per favorirne
-      la crescita.
+  - m_Id: 1800447858667520
+    m_Localized: 'Il tuo obiettivo?
 
-      Nel corso del gioco dovrai espandere l''azienda, cosi''
-      da poter offrire nuovi servizi ai clienti che ti affideranno lo sviluppo dei
-      loro progetti.'
+      Far crescere l''azienda senza finire
+      in bancarotta. Per riuscirci dovrai:
+
+      - migliorare i reparti,
+
+      -
+      sbloccarne di nuovi,
+
+      - accettare i giusti progetti dai clienti.
+
+      Piu''
+      cresci, piu'' opportunita'' si aprono!
+
+'
     m_Metadata:
       m_Items: []
-  - m_Id: 772635696107520
-    m_Localized: Introduzione al gioco
-    m_Metadata:
-      m_Items: []
-  - m_Id: 772392208371712
-    m_Localized: Cosa e' AUT-INC
-    m_Metadata:
-      m_Items: []
-  - m_Id: 772448646926336
-    m_Localized: Questo videogioco rappresenta un progetto di laurea volto allo sviluppo
-      di un serious game finalizzato alla sensibilizzazione sull'autismo, con particolare
-      attenzione alle potenzialita' delle persone autistiche, soprattutto in ambito
-      lavorativo, dove e' possibile valorizzarne i punti di forza e le abilita' distintive.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 772221651193856
+  - m_Id: 1800347358949376
     m_Localized: 'Benvenuto in AUT-INC!
 
-      AUT-INC e'' un videogioco gestionale
-      sviluppato da Daniele Gentile, studente dell''Universita'' degli Studi di Bari
-      Aldo Moro.
-
-      Un sentito ringraziamento alla professoressa Veronica Rossano,
-      docente associato presso il Dipartimento di Informatica dell''Universita''
-      degli Studi di Bari Aldo Moro, per il ruolo di supervisore del progetto e per
-      il supporto offerto durante lo sviluppo di AUT-INC.'
+      Sei il manager di una nuova azienda
+      informatica: il tuo compito e'' gestire dipendenti e reparti per farla crescere.
+      Preparati a prendere decisioni importanti ogni settimana!'
     m_Metadata:
       m_Items: []
-  - m_Id: 772112045641728
-    m_Localized: AUT-INC
+  - m_Id: 1800314693709824
+    m_Localized: Benvenuto
     m_Metadata:
       m_Items: []
-  - m_Id: 773976912891904
-    m_Localized: Informazioni dei Dipendenti
-    m_Metadata:
-      m_Items: []
-  - m_Id: 774005882949632
-    m_Localized: 'Selezionando un dipendente potrai visualizzarne le informazioni,
-      analizzarne le caratteristiche e modificarne l''assegnazione al team.
-
-      Ricorda
-      che rimuovendo un dipendente dal team, sia lui che i colleghi subiranno un
-      calo temporaneo di umore, con conseguente riduzione della produttivita''.
-
-      Se
-      ritieni che un dipendente non sia piu'' in grado di apportare valore all''azienda,
-      e'' possibile licenziarlo, sostenendo pero'' il costo di una quota di licenziamento.'
-    m_Metadata:
-      m_Items: []
-  - m_Id: 774180353413120
-    m_Localized: Assunzione nuovi dipendenti
-    m_Metadata:
-      m_Items: []
-  - m_Id: 774315187703808
-    m_Localized: 'Nella schermata dei candidati disponibili all''assunzione e'' possibile
-      analizzare le loro descrizioni per valutare l''idoneita'' alla posizione prevista
-      in azienda. E'' possibile effettuare piu'' ricerche consecutive, a condizione
-      di pagare il relativo costo.
-
-      Attenzione: richiedendo una nuova ricerca,
-      i candidati attualmente in lista spariranno, lasciando il posto a nuovi candidati.
-      Assicurati di esaminarli con cura prima di procedere.
-
-
-      Le prime 3 ricerche
-      sono gratuite.'
-    m_Metadata:
-      m_Items: []
-  - m_Id: 774477284970496
-    m_Localized: 'Nella schermata dei progetti e'' possibile visualizzare l''elenco
-      dei progetti attualmente in sviluppo dall''azienda. Per ciascun progetto sono
-      disponibili le informazioni principali: il tempo rimanente alla consegna e
-      il lavoro ancora da completare.
-
-      In fondo alla lista, tramite un pulsante,
-      e'' possibile accedere all''elenco dei progetti proposti all''azienda ma non
-      ancora accettati.'
-    m_Metadata:
-      m_Items: []
-  - m_Id: 774446192594944
-    m_Localized: Lista dei progetti
-    m_Metadata:
-      m_Items: []
-  - m_Id: 774598252892160
-    m_Localized: 'Selezionando un progetto potrai visualizzarne i dettagli. E'' possibile
-      verificare quali reparti devono lavorare al progetto, quante settimane restano
-      e quanto lavoro manca.
-
-      Sono inoltre disponibili numerose informazioni
-      economiche relative al progetto: l''anticipo, il pagamento settimanale e il
-      pagamento finale.'
-    m_Metadata:
-      m_Items: []
-  - m_Id: 774574848675840
-    m_Localized: Informazioni progetti
-    m_Metadata:
-      m_Items: []
-  - m_Id: 774699759243264
-    m_Localized: 'Un progetto e'' considerato concluso se completato entro la scadenza
-      o se non completato e non ammette ritardi.
-
-      Quando il progetto viene
-      completato, riceverai il pagamento finale aumentato o ridotto in base a quante
-      settimane in anticipo o in ritardo e'' stato consegnato.
-
-      Se non riesci
-      a completare un progetto, dovrai pagare una penalita'' per la mancata consegna
-      entro i tempi previsti.
-
-      Se non sei sicuro di poter portare a termine
-      un progetto, puoi rescindere il contratto pagando una penale, permettendo cosi''
-      ai tuoi dipendenti di concentrarsi su altri incarichi.'
-    m_Metadata:
-      m_Items: []
-  - m_Id: 774697569816576
-    m_Localized: Conclusione progetti
-    m_Metadata:
-      m_Items: []
-  - m_Id: 775319954198528
-    m_Localized: 'Nella schermata dei nuovi progetti puoi visualizzare le richieste
-      rivolte all''azienda. E'' possibile consultare le informazioni dei progetti
-      per valutare se accettarli o rifiutarli.
-
-      I nuovi progetti cambiano ogni
-      settimana, quindi ricorda di controllare regolarmente per scoprire eventuali
-      opportunita'' interessanti e vantaggiose da sviluppare.'
-    m_Metadata:
-      m_Items: []
-  - m_Id: 775311402012672
-    m_Localized: Nuovi progetti
-    m_Metadata:
-      m_Items: []
-  - m_Id: 775521297567744
-    m_Localized: 'Nella schermata di ciascun dipartimento e'' presente una descrizione
-      delle attivita'' da svolgere e delle abilita'' richieste per svolgere efficacemente
-      il lavoro.
-
-      Sono inoltre disponibili informazioni relative al numero
-      di dipendenti presenti, allo stipendio mensile di ciascun dipendente, al numero
-      consigliato di team e al numero attuale di team nel dipartimento.'
-    m_Metadata:
-      m_Items: []
-  - m_Id: 775518277668864
+  - m_Id: 1804463497900032
     m_Localized: Dipartimenti
     m_Metadata:
       m_Items: []
-  - m_Id: 775817667088384
-    m_Localized: 'Nella schermata e'' possibile visualizzare la suddivisione in team
-      del dipartimento.
+  - m_Id: 1804513217179648
+    m_Localized: 'Ogni dipartimento ha una descrizione delle attivita'' e delle abilita''
+      richieste.
 
-      Cerca di mantenere il numero di team il piu'' vicino
-      possibile a quello consigliato; altrimenti il dipartimento non sara'' organizzato
-      in modo ottimale e la sua produttivita'' ne risentira''.
+      Leggi attentamente queste informazioni per capire quali dipendenti
+      assegnare e ottenere il massimo dalla tua squadra.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1804574353354752
+    m_Localized: 'All''interno di ogni dipartimento puoi creare uno o piu'' team.
 
-      Presta inoltre
-      attenzione alle preferenze dei dipendenti riguardo al lavoro da soli o in gruppo,
-      per mantenerli felici e aumentare la loro produttivita''.'
+      Cerca
+      di mantenere il numero di team vicino a quello consigliato e rispetta le preferenze
+      dei dipendenti sul lavoro da soli o in gruppo per aumentare la produttivita''
+      e la soddisfazione del team.'
     m_Metadata:
       m_Items: []
-  - m_Id: 775793113632768
-    m_Localized: I Team
+  - m_Id: 1804551695724544
+    m_Localized: Gestione dei Team
     m_Metadata:
       m_Items: []
-  - m_Id: 775953231187968
-    m_Localized: 'Quando desideri, e'' possibile migliorare un dipartimento. Il miglioramento
-      consente di aumentare il numero massimo di dipendenti, incrementando la produttivita''.
+  - m_Id: 1804665034207232
+    m_Localized: Migliorare il Dipartimento
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1804748916092928
+    m_Localized: 'Puoi migliorare un dipartimento per aumentare il numero massimo
+      di dipendenti e la produttivita''.
 
-      Tieni
-      presente pero'' che il numero consigliato di team puo'' variare e lo stipendio
-      dei dipendenti aumentera'', poiche'' il dipartimento diventera'' piu'' specializzato.'
+      Tieni presente che i miglioramenti
+      possono influenzare stipendi e numero consigliato di team: organizza con attenzione
+      la tua squadra.'
     m_Metadata:
       m_Items: []
-  - m_Id: 775929000693760
-    m_Localized: Miglioramento del Dipartimento
+  - m_Id: 1804796106207232
+    m_Localized: Produzione di Lavoro
     m_Metadata:
       m_Items: []
-  - m_Id: 1124317296160768
-    m_Localized: Produzione di lavoro
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1124355837620224
-    m_Localized: 'Per portare avanti i progetti, i dipendenti di ogni reparto possono
-      produrre fino a 100 unita'' di lavoro a settimana. Aumentando il livello di
-      un reparto puoi assumere piu'' dipendenti e, di conseguenza, aumentare la quantita''
-      di lavoro prodotta.
+  - m_Id: 1804833741697024
+    m_Localized: 'Ogni dipendente produce fino a 100 unita'' di lavoro a settimana.
 
-      Ricorda pero'' che, per ottenere buoni risultati,
-      e'' fondamentale organizzare i team in modo efficace, cosi'' che ogni dipendente
-      possa rendere al meglio.'
+      Aumentare
+      il livello del dipartimento ti permette di assumere piu'' dipendenti e produrre
+      di piu''.
+
+      Organizza i team in modo efficace per ottenere il massimo
+      da ciascun membro del reparto.'
     m_Metadata:
       m_Items: []
-  - m_Id: 1125040931041280
-    m_Localized: Produzione di un Dipendente
+  - m_Id: 1805028562923520
+    m_Localized: Lista dei Dipendenti
     m_Metadata:
       m_Items: []
-  - m_Id: 1125112792051712
-    m_Localized: 'Un dipendente puo'' produrre fino a un massimo di 100 unita'' di
-      lavoro a settimana.
+  - m_Id: 1805057881108480
+    m_Localized: 'Qui puoi vedere tutti i tuoi dipendenti, ordinati per dipartimento
+      e team.
 
-      La sua competenza dipende dal reparto in cui lavora,
-      mentre il suo umore e'' influenzato dal numero di persone presenti nel team.
+      Verso la fine troverai quelli assunti ma non ancora operativi.
 
-      Per
-      ottenere il massimo, cerca di assegnare ogni dipendente al contesto piu'' adatto
-      alle sue caratteristiche.'
+      Usa
+      la funzione di ricerca per trovare nuovi candidati, ma ricorda: ogni ricerca
+      ha un costo!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1805139581956096
+    m_Localized: Dettagli del Dipendente
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1805163527237632
+    m_Localized: 'Seleziona un dipendente per visualizzare le sue informazioni e
+      caratteristiche.
+
+      Puoi modificare il team di appartenenza, ma attenzione:
+      spostare o rimuovere un dipendente puo'' ridurre temporaneamente l''umore e
+      la produttivita'' del team.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1805211916922880
+    m_Localized: Produzione del Dipendente
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1805246956138496
+    m_Localized: 'Ogni dipendente puo'' produrre fino a 100 unita'' di lavoro a settimana.
+
+      La
+      sua efficacia dipende dal reparto e dall''umore, che e'' influenzato dal numero
+      di colleghi nel team.
+
+      Assegna ciascun dipendente al contesto piu'' adatto
+      per ottenere il massimo.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1805331223900160
+    m_Localized: Assunzione di Nuovi Dipendenti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1805372923670528
+    m_Localized: 'Esamina le descrizioni dei candidati per capire chi e'' piu'' adatto
+      al ruolo.
+
+      Puoi fare piu'' ricerche consecutive, pagando il relativo
+      costo.
+
+      Attenzione: i candidati attuali spariranno quando richiederai
+      una nuova ricerca.
+
+      Le prime 3 ricerche sono gratuite!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1805659512074240
+    m_Localized: Lista dei Progetti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1805712922341376
+    m_Localized: 'Qui puoi vedere tutti i progetti in sviluppo e quelli proposti
+      ma non ancora accettati.
+
+      Ogni progetto mostra tempo rimanente e lavoro
+      ancora da completare.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1805757205803008
+    m_Localized: Dettagli del Progetto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1805777598509056
+    m_Localized: 'Seleziona un progetto per vedere quali dipartimenti sono coinvolti,
+      quanto lavoro resta e quante settimane mancano.
+
+      Puoi anche consultare
+      le informazioni economiche: anticipo, pagamenti settimanali e finali.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1805846259265536
+    m_Localized: Progetti e Dipartimenti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1805884054138880
+    m_Localized: 'Alcuni progetti richiedono il lavoro di piu'' dipartimenti contemporaneamente.
+
+      Assegna
+      i dipendenti giusti ad ogni reparto per completare il progetto con successo.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1805979180953600
+    m_Localized: 'Un progetto si considera completato se finito entro la scadenza.
+
+      Il
+      pagamento finale aumenta o diminuisce in base alla consegna in anticipo o in
+      ritardo.
+
+      Se non puoi completare un progetto, puoi rescindere il contratto
+      pagando una penale, liberando i dipendenti per altri incarichi.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1805953398566912
+    m_Localized: Conclusione dei Progetti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1806103017779200
+    m_Localized: Nuovi Progetti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1806148668583936
+    m_Localized: 'Ogni settimana arrivano nuovi progetti da valutare.
+
+      Controlla
+      regolarmente per scoprire opportunita'' interessanti e vantaggiose per la tua
+      azienda.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1806390327603200
+    m_Localized: Team del Progetto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1806418907590656
+    m_Localized: 'AUT-INC e'' stato sviluppato da Daniele Gentile, studente di Informatica
+      all''Universita'' degli Studi di Bari Aldo Moro.
+
+      Per la parte grafica
+      hanno collaborato in maniera volontaria Vanessa Romano e Dario Gentile, creando
+      le immagini in pixel art presenti nel gioco.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1806510599270400
+    m_Localized: 'Il progetto e'' stato realizzato presso il Dipartimento di Informatica
+      dell''Universita'' degli Studi di Bari Aldo Moro.
+
+      Un ringraziamento
+      speciale alla professoressa Veronica Rossano, docente associato, per la supervisione
+      e il supporto offerto durante lo sviluppo di AUT-INC.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1806489703247872
+    m_Localized: Universita' e Supervisione
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1806917635502080
+    m_Localized: 'AUT-INC e'' un videogioco gestionale sviluppato come progetto di
+      laurea, pensato per sensibilizzare gli utenti sull''autismo.
+
+      Il giocatore
+      assume il ruolo di Direttore Generale di un''azienda informatica inclusiva,
+      gestendo dipendenti e progetti. Attraverso la lettura dei profili dei candidati
+      e la gestione dei team, il giocatore e'' guidato a comprendere le potenzialita''
+      e le difficolta'' delle persone neurodivergenti, sviluppando empatia e consapevolezza.
+
+      Il
+      gioco mette in evidenza come l''autismo possa rappresentare una risorsa nel
+      contesto lavorativo, incoraggiando strategie inclusive e una gestione attenta
+      delle risorse umane.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1806893992210432
+    m_Localized: Il Progetto
     m_Metadata:
       m_Items: []
   references:

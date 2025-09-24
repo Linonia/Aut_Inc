@@ -11,30 +11,6 @@ public class VisualizzaTutorialMenuPrincipale : MonoBehaviour
     public GameObject TutorialPrefab;
     
     public CompilaTutorialPanelMenuPrincipale tutorialPanelObject;
-
-    public List<string> tutorialFlags = new()
-    {
-        "introduzione1",
-        "introduzione2",
-        "introduzione3",
-        "introduzione4",
-        "introduzione5",
-        "introduzione6",
-        "dipartimenti1",
-        "dipartimenti2",
-        "dipartimenti3",
-        "dipartimenti4",
-        "dipendenti1",
-        "dipendenti2",
-        "dipendenti3",
-        "nuoviDipendenti1",
-        "progetti1",
-        "progetti2",
-        "progetti3",
-        "nuoviProgetti1"
-    };
-
-    
     
     private void OnEnable()
     {
@@ -45,7 +21,7 @@ public class VisualizzaTutorialMenuPrincipale : MonoBehaviour
         }
 
         // Aggiungi i tutorial non ancora visti
-        foreach (var tutorial in tutorialFlags)
+        foreach (var tutorial in tutorialPanelObject.tutorialFlags)
         {
             
             GameObject tutorialItem = Instantiate(TutorialPrefab, ContentPanel.transform);

@@ -52,19 +52,27 @@ public class CompilaTutorialPanel : MonoBehaviour
                     "introduzione3" => "introduzione4",
                     "introduzione4" => "introduzione5",
                     "introduzione5" => "introduzione6",
-                    "dipendenti1" => "dipendenti2",
-                    "dipendenti2" => "dipendenti3",
-                    "progetti1" => "progetti2",
-                    "progetti2" => "progetti3",
                     "dipartimenti1" => "dipartimenti2",
                     "dipartimenti2" => "dipartimenti3",
                     "dipartimenti3" => "dipartimenti4",
+                    "dipendenti1" => "dipendenti2",
+                    "dipendenti2" => "dipendenti3",
+                    "nuoviDipendenti1" => null,   // fine sequenza dipendenti
+                    "progetti1" => "progetti2",
+                    "progetti2" => "progetti3",
+                    "progetti3" => "progetti4",
+                    "progetti4" => null,           // fine sequenza progetti
+                    "nuoviProgetti1" => null,      // solo uno nuovoProgetti
+                    "aboutus1" => "aboutus2",
+                    "aboutus2" => "aboutus3",
+                    "aboutus3" => null,            // ultimo aboutus
                     _ => null
                 };
 
+
                 if (nextTutorial != null)
                 {
-                    chiudiButton.onClick.AddListener(() => MostraTutorial(nextTutorial));
+                    chiudiButton.onClick.AddListener(() => MostraTutorial(nextTutorial, null, mostraComunque, continua));
                 }
                 else
                 {

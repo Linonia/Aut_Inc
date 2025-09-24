@@ -323,6 +323,10 @@ MonoBehaviour:
     m_Key: selezionaProgetto
     m_Metadata:
       m_Items: []
+  - m_Id: 13667037919145984
+    m_Key: crediti
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

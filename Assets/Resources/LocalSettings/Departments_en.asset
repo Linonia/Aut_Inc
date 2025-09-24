@@ -47,35 +47,47 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4983693864960
-    m_Localized: This department needs people who can express themselves clearly
-      and understand others needs. The ability to adapt language is essential to
-      provide effective help.
+    m_Localized: "This department requires people who can communicate clearly and
+      understand others\u2019 needs easily.\nThe ability to adapt one\u2019s language
+      is essential to help clients and colleagues effectively."
     m_Metadata:
       m_Items: []
   - m_Id: 5032125493248
-    m_Localized: This area requires strong attention to detail and consistency in
-      following procedures. Accuracy is key to prevent hidden mistakes.
+    m_Localized: 'This department requires great attention to detail and consistency
+      in following procedures.
+
+      Precision is essential to spot hidden errors
+      and ensure reliable products.'
     m_Metadata:
       m_Items: []
   - m_Id: 5457478250496
-    m_Localized: This department values the ability to notice visual and sensory
-      nuances. Aesthetic sensitivity helps create pleasant user experiences.
+    m_Localized: 'This department seeks people able to notice visual and sensory
+      nuances.
+
+      Aesthetic sensitivity and attention to detail help create enjoyable
+      experiences for users.'
     m_Metadata:
       m_Items: []
   - m_Id: 5497760346112
-    m_Localized: This area requires solving complex problems and thinking logically.
-      The ability to plan and stay focused is essential.
+    m_Localized: 'In this department, it is important to solve complex problems and
+      think logically.
+
+      The ability to plan and maintain focus is essential
+      to successfully complete projects.'
     m_Metadata:
       m_Items: []
   - m_Id: 5560750403584
-    m_Localized: This department needs creativity combined with the ability to communicate
-      messages effectively. Understanding emotions is important to reach the audience.
+    m_Localized: 'This department requires curiosity and dedication to constantly
+      analyze and improve.
+
+      The ability to spot patterns and experiment with
+      new solutions is essential to innovate and help the company grow.'
     m_Metadata:
       m_Items: []
   - m_Id: 5617612582912
-    m_Localized: This area requires curiosity and dedication to analyze and constantly
-      improve. The ability to identify patterns and experiment with new solutions
-      is crucial.
+    m_Localized: "This department requires creativity combined with the ability to
+      communicate messages clearly.\nKnowing how to spark users\u2019 visual and
+      auditory curiosity is essential to reach and engage the audience."
     m_Metadata:
       m_Items: []
   references:

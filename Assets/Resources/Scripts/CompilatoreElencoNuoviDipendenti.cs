@@ -23,7 +23,9 @@ public class CompilatoreElencoNuoviDipendenti : MonoBehaviour
         // Riempi la lista con dei nuovi dipendenti
         for (int i = 0; i < 4; i++)
         {   
-            Dipendente dip = Dipendente.GeneraDipendente2();
+            // genera un booleano che sia true il 75% delle volte
+            bool neurodiv = UnityEngine.Random.value < 0.75f; // 75% true, 25% false
+            Dipendente dip = Dipendente.GeneraDipendente2(neurodiv);
             GameObject nuovoDipe = Instantiate(prefabNuovoDipendente, contenitore);
             nuovoDipe.GetComponent<CompilatoreEtichettaNuoviDipendenti>().Compila(dip);
         }

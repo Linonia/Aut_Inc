@@ -322,6 +322,10 @@ MonoBehaviour:
     m_Localized: Select any project to see its information
     m_Metadata:
       m_Items: []
+  - m_Id: 13667037919145984
+    m_Localized: Credits
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

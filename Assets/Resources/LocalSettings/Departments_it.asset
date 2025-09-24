@@ -47,35 +47,49 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4983693864960
-    m_Localized: Questo dipartimento richiede persone capaci di esprimersi in modo
-      chiaro e di comprendere bene le esigenze degli altri. La capacita' di adattare
-      il proprio linguaggio e' fondamentale per aiutare in modo efficace.
+    m_Localized: 'Questo dipartimento richiede persone che sappiano esprimersi in
+      modo chiaro e capire facilmente le esigenze degli altri.
+
+      La capacita''
+      di adattare il proprio linguaggio e'' essenziale per aiutare clienti e colleghi
+      in modo efficace.'
     m_Metadata:
       m_Items: []
   - m_Id: 5032125493248
-    m_Localized: Qui serve una grande attenzione ai dettagli e costanza nel seguire
-      procedure. La precisione e fondamentale per evitare errori nascosti.
+    m_Localized: 'In questo dipartimento serve grande attenzione ai dettagli e costanza
+      nel seguire le procedure.
+
+      La precisione e'' fondamentale per individuare
+      errori nascosti e garantire prodotti affidabili.'
     m_Metadata:
       m_Items: []
   - m_Id: 5457478250496
-    m_Localized: Questo dipartimento cerca persone capaci di cogliere sfumature visive
-      e sensoriali. La sensibilita' estetica aiuta a creare esperienze piacevoli
-      per gli utenti.
+    m_Localized: "Questo dipartimento cerca persone capaci di cogliere sfumature
+      visive e sensoriali.\nLa sensibilita' estetica e l\u2019attenzione ai dettagli
+      aiutano a creare esperienze piacevoli per gli utenti."
     m_Metadata:
       m_Items: []
   - m_Id: 5497760346112
-    m_Localized: Qui e importante risolvere problemi complessi e ragionare in modo
-      logico. La capacita di pianificare e mantenere la concentrazione e essenziale.
+    m_Localized: 'In questo dipartimento e'' importante saper risolvere problemi
+      complessi e ragionare in modo logico.
+
+      La capacita'' di pianificare e
+      mantenere la concentrazione e'' essenziale per completare i progetti con successo.'
     m_Metadata:
       m_Items: []
   - m_Id: 5560750403584
-    m_Localized: Serve creativita unita alla capacita di comunicare messaggi in modo
-      efficace. Comprendere le emozioni e importante per raggiungere il pubblico.
+    m_Localized: "In questo dipartimento servono curiosita' e dedizione per analizzare
+      e migliorare costantemente.\nLa capacita' di individuare schemi e sperimentare
+      nuove soluzioni e' fondamentale per innovare e far crescere l\u2019azienda."
     m_Metadata:
       m_Items: []
   - m_Id: 5617612582912
-    m_Localized: Qui servono curiosita e dedizione per analizzare e migliorare costantemente.
-      La capacita di individuare schemi e sperimentare nuove soluzioni e fondamentale.
+    m_Localized: 'In questo dipartimento serve creativita'' unita alla capacita''
+      di comunicare messaggi in modo chiaro.
+
+      Sapere come stimolare la curiosita''
+      visiva e sonora degli utenti e'' fondamentale per raggiungere e coinvolgere
+      il pubblico.'
     m_Metadata:
       m_Items: []
   references:

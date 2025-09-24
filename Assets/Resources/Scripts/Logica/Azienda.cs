@@ -27,7 +27,7 @@ public class Azienda : MonoBehaviour
     
     // Meomoria dell'azienda
     // informazioni di economia dell'azienda
-    [HideInInspector] public int capitale = 50000; // capitale attuale
+    [HideInInspector] public int capitale = 40000; // capitale attuale
     [HideInInspector] public int costoDipendenteLibero = 1500; // costo di un dipendente libero mensile
     [HideInInspector] public int tasseMensile = 8000; // tasse mensili da pagare
     [HideInInspector] public int tempoDiminuzioneGuadagno = 18; // mesi dopo i quali il guadagno diminuisce se non si fanno upgrades
@@ -44,7 +44,7 @@ public class Azienda : MonoBehaviour
     // informazioni sui reparti
     [HideInInspector] public Dictionary<NomiReparti, Reparto> reparti = new Dictionary<NomiReparti, Reparto>(); // reparti dell'azienda
     [HideInInspector] public List<NomiReparti> repartiDaSbloccare = new List<NomiReparti>(); // reparti che si possono sbloccare
-    [HideInInspector] public int costoReparto = 40000; // costo per sbloccare un reparto
+    [HideInInspector] public int costoReparto = 80000; // costo per sbloccare un reparto
     [HideInInspector] public int costoAssunzioneDipendente = 5000;
     [HideInInspector] public int costoLicenziamento = 3000;
     [HideInInspector] public int ricercheDipendentiGratuite = 3;
@@ -56,6 +56,8 @@ public class Azienda : MonoBehaviour
     [HideInInspector] public List<Progetto> progettiInCorso = new List<Progetto>(); // progetti attualmente in corso
     [HideInInspector] public List<Progetto> progettiCompletatiInSettimana = new List<Progetto>(); // progetti completati nella settimana corrente
     [HideInInspector] public List<Progetto> progettiProposti = new List<Progetto>(); // progetti che si possono iniziare
+    [HideInInspector] public int progettiCostante = 3;
+    [HideInInspector] public float progettiPerDipartimento = 1f;
     
     // oggetti di gestione della UI in game
     [JsonIgnore] public TMP_Text tempo;
@@ -143,7 +145,7 @@ public class Azienda : MonoBehaviour
         
         progettiInCorso = new List<Progetto>();
         
-        capitale = 50000;
+        capitale = 40000;
         costoDipendenteLibero = 1500;
         tasseMensile = 8000;
         tempoDiminuzioneGuadagno = 18;
@@ -154,43 +156,55 @@ public class Azienda : MonoBehaviour
         currentTimer = 8f;
         pausa = true;
         inPausa = true;
-        costoReparto = 30000;
+        costoReparto = 80000;
         costoAssunzioneDipendente = 5000;
         costoLicenziamento = 3000;
         ricercheDipendentiGratuite = 3;
+        progettiCostante = 3;
+        progettiPerDipartimento = 1f;
         
         // Sblocco il primo reparto
         AperturaNuovoReparto(NomiReparti.AssistenzaESupportoTecnico);
         AperturaNuovoReparto(NomiReparti.SviluppoSoftware);
         
         //creazioneFlags
-        warningFlags = new Dictionary<string, bool>();
-        warningFlags.Add("licenziamento", false);
-        warningFlags.Add("rescissione", false);
-        warningFlags.Add("cambioTeam", false);
-        warningFlags.Add("acquistoReparto", false);
-        warningFlags.Add("avvisoRicaricaDipendenti", false);
-        warningFlags.Add("potenziaReparto", false);
+        warningFlags = new Dictionary<string, bool>()
+        {
+            { "licenziamento", false },
+            { "rescissione", false },
+            { "cambioTeam", false },
+            { "acquistoReparto", false },
+            { "avvisoRicaricaDipendenti", false },
+            { "potenziaReparto", false }
+        };
+
         
         //tutorial
-        tutorialFlags.Add("introduzione1", false);
-        tutorialFlags.Add("introduzione2", false);
-        tutorialFlags.Add("introduzione3", false);
-        tutorialFlags.Add("introduzione4", false);
-        tutorialFlags.Add("introduzione5", false);
-        tutorialFlags.Add("introduzione6", false);
-        tutorialFlags.Add("dipartimenti1", false);
-        tutorialFlags.Add("dipartimenti2", false);
-        tutorialFlags.Add("dipartimenti3", false);
-        tutorialFlags.Add("dipartimenti4", false);
-        tutorialFlags.Add("dipendenti1", false);
-        tutorialFlags.Add("dipendenti2", false);
-        tutorialFlags.Add("dipendenti3", false);
-        tutorialFlags.Add("nuoviDipendenti1", false);
-        tutorialFlags.Add("progetti1", false);
-        tutorialFlags.Add("progetti2", false);
-        tutorialFlags.Add("progetti3", false);
-        tutorialFlags.Add("nuoviProgetti1", false);
+        tutorialFlags = new Dictionary<string, bool>()
+        {
+            { "introduzione1", false },
+            { "introduzione2", false },
+            { "introduzione3", false },
+            { "introduzione4", false },
+            { "introduzione5", false },
+            { "introduzione6", false },
+            { "dipartimenti1", false },
+            { "dipartimenti2", false },
+            { "dipartimenti3", false },
+            { "dipartimenti4", false },
+            { "dipendenti1", false },
+            { "dipendenti2", false },
+            { "dipendenti3", false },
+            { "nuoviDipendenti1", false },
+            { "progetti1", false },
+            { "progetti2", false },
+            { "progetti3", false },
+            { "progetti4", false },
+            { "nuoviProgetti1", false },
+            { "aboutus1", false },
+            { "aboutus2", false },
+            { "aboutus3", false }
+        };
     }
 
     public void CompraNuovoReparto(NomiReparti nomeReparto)
@@ -202,7 +216,7 @@ public class Azienda : MonoBehaviour
                 //capitale -= costoReparto;
                 aggiornaCapitale(-costoReparto, new List<string>{"acquistoReparto"});
                 tasseMensile += 5000;
-                costoReparto += costoReparto;
+                costoReparto = (int)(costoReparto * 1.5f);
                 tempoDiminuzioneGuadagno = Math.Min(tempoDiminuzioneGuadagno + 18, 18);
                 AperturaNuovoReparto(nomeReparto);
                 aggiornaDipendenti();
@@ -426,8 +440,8 @@ public class Azienda : MonoBehaviour
     public void GeneraProgettiSettimanali()
     {
         progettiProposti.Clear();
-        //int numeroProgetti = 3 + RepartiSbloccati().Count;
-        int numeroProgetti = 1;
+        int numeroProgetti = progettiCostante + (int)(RepartiSbloccati().Count * progettiPerDipartimento);
+        //int numeroProgetti = 1;
         for (int i = 0; i < numeroProgetti; i++)
         {   
             Progetto progetto = Progetto.CreaProgetto(this);

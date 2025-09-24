@@ -421,7 +421,7 @@ namespace Scripts.Logica
             }
             
             // Scrivo la descrizione del dipendente
-            List<string> descrizioneCompleta = descrizioni.OrderBy(x => Guid.NewGuid()).ToList();
+            List<string> descrizioneCompleta = descrizioni.OrderBy(x => UnityEngine.Random.value).ToList();
             
             // Genero un numero casuale da 0 a 1 per decidere se il dipendente è maschio o femmina
             int genere = UnityEngine.Random.Range(0, 2);

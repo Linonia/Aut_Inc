@@ -6,7 +6,6 @@ public class VisualizzaCrediti : MonoBehaviour
     
     public void MostraCrediti()
     {
-        Debug.Log("AAOAAOAOAOAO");
         tutorialPanelObject.MostraTutorial("aboutus1", null, true);
     }
 }

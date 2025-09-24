@@ -20,10 +20,11 @@ public class VisualizzaTutorialMenuPrincipale : MonoBehaviour
             Destroy(child.gameObject);
         }
 
-        // Aggiungi i tutorial non ancora visti
+        // Aggiungi i tutorial
         foreach (var tutorial in tutorialPanelObject.tutorialFlags)
         {
-            
+            if(tutorial == "aboutus1" || tutorial == "aboutus2" || tutorial == "aboutus3")
+                continue;
             GameObject tutorialItem = Instantiate(TutorialPrefab, ContentPanel.transform);
             tutorialItem.GetComponentInChildren<TMP_Text>().text = LocalizationSettings.StringDatabase.GetLocalizedString("Tutorial", tutorial + "TITOLO");
             tutorialItem.GetComponent<Button>().onClick.AddListener(() =>

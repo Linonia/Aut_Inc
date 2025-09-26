@@ -126,7 +126,7 @@ public class VisualizzaInformazioniDipartimento : MonoBehaviour
         
         teamConsigliato.color = ColorUtility.TryParseHtmlString(coloreScritte, out colore) ? colore : Color.white;
         
-        teamNumeroConsigliato.text = reparto.numeroMinimoTeam + " / " + reparto.numeroMaxTeam;
+        teamNumeroConsigliato.text = reparto.numeroMinimoTeam + " - " + reparto.numeroMaxTeam;
         teamNumeroConsigliato.color = ColorUtility.TryParseHtmlString(coloreScritte, out colore) ? colore : Color.white;
         
         teamAttuale.color = ColorUtility.TryParseHtmlString(coloreScritte, out colore) ? colore : Color.white;

@@ -34,19 +34,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1800814117875712
-    m_Localized: 'Sei nuovo?
+    m_Localized: 'E'' la prima volta che giochi ad AUT-INC?
 
-      Per orientarti ti consiglio di aprire i menu
-      in questo ordine:
+      Per orientarti
+      ti consiglio di aprire i menu in questo ordine:
 
       - Dipartimenti
 
-      - Dipendenti
+      -
+      Dipendenti
 
       - Progetti
 
-      Cosi''
-      capirai subito come funziona l''azienda.'
+      Cosi'' capirai subito come funziona l''azienda.'
     m_Metadata:
       m_Items: []
   - m_Id: 1800608940912640
@@ -59,11 +59,15 @@ MonoBehaviour:
       Ogni settimana che passa i progetti
       avanzano!
 
-      - Premi il simbolo della pausa per fermare il tempo.
+      - Gestisci il tempo dal riquadro in alto utilizzando i bottoni
+      di play e pausa, puoi interromperlo e riprenderlo a piacimento.
 
-      -
-      Quando apri un menu (dipendenti, progetti, reparti), il gioco si mette in pausa
-      da solo.'
+      - Quando
+      apri un menu (dipendenti, progetti, dipartimenti), il gioco si mette in pausa
+      da solo.
+
+      Ricordati di premere su "play" per avviare il tempo di gioco
+      quando ti senti pronto.'
     m_Metadata:
       m_Items: []
   - m_Id: 1800558235971584
@@ -76,9 +80,9 @@ MonoBehaviour:
 
       - progetti in corso.
 
-      In
-      alto a sinistra trovi i dati essenziali: numero di dipendenti, tempo trascorso
-      e capitale disponibile.'
+      In alto
+      a sinistra trovi i dati essenziali: numero di dipendenti, tempo trascorso e
+      capitale disponibile.'
     m_Metadata:
       m_Items: []
   - m_Id: 1800528586436608
@@ -92,13 +96,13 @@ MonoBehaviour:
   - m_Id: 1800447858667520
     m_Localized: 'Il tuo obiettivo?
 
-      Far crescere l''azienda senza finire
-      in bancarotta. Per riuscirci dovrai:
+      Far crescere l''azienda senza finire in
+      bancarotta. Per riuscirci dovrai:
 
-      - migliorare i reparti,
+      - migliorare i dipartimenti,
 
       -
-      sbloccarne di nuovi,
+      attivarne di nuovi,
 
       - accettare i giusti progetti dai clienti.
 
@@ -112,8 +116,8 @@ MonoBehaviour:
     m_Localized: 'Benvenuto in AUT-INC!
 
       Sei il manager di una nuova azienda
-      informatica: il tuo compito e'' gestire dipendenti e reparti per farla crescere.
-      Preparati a prendere decisioni importanti ogni settimana!'
+      informatica: il tuo compito e'' gestire dipendenti e dipartimenti per farla
+      crescere. Preparati a prendere decisioni importanti ogni settimana!'
     m_Metadata:
       m_Items: []
   - m_Id: 1800314693709824
@@ -129,7 +133,7 @@ MonoBehaviour:
       richieste.
 
       Leggi attentamente queste informazioni per capire quali dipendenti
-      assegnare e ottenere il massimo dalla tua squadra.'
+      assegnare al fine di ottenere il massimo dalla tua squadra.'
     m_Metadata:
       m_Items: []
   - m_Id: 1804574353354752
@@ -166,11 +170,11 @@ MonoBehaviour:
     m_Localized: 'Ogni dipendente produce fino a 100 unita'' di lavoro a settimana.
 
       Aumentare
-      il livello del dipartimento ti permette di assumere piu'' dipendenti e produrre
-      di piu''.
+      il livello del dipartimento ti permette di assumere piu'' dipendenti e quindi
+      produrre di piu''.
 
-      Organizza i team in modo efficace per ottenere il massimo
-      da ciascun membro del reparto.'
+      Organizza i team in modo efficace per ottenere il
+      massimo da ciascun membro del dipartimento.'
     m_Metadata:
       m_Items: []
   - m_Id: 1805028562923520
@@ -178,14 +182,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1805057881108480
-    m_Localized: 'Qui puoi vedere tutti i tuoi dipendenti, ordinati per dipartimento
-      e team.
-
-      Verso la fine troverai quelli assunti ma non ancora operativi.
-
-      Usa
-      la funzione di ricerca per trovare nuovi candidati, ma ricorda: ogni ricerca
-      ha un costo!'
+    m_Localized: "Qui puoi vedere tutti i tuoi dipendenti, ordinati per dipartimento
+      e team.\r\nVerso la fine dell'elenco troverai quelli assunti ma non ancora
+      operativi.\r\nI dipendenti assegnati ad un dipartimento assumono nell'elenco
+      il colore del dipartimento.\r\nUsa la funzione di ricerca per trovare nuovi
+      candidati, ma ricorda: ogni ricerca ha un costo!\r"
     m_Metadata:
       m_Items: []
   - m_Id: 1805139581956096
@@ -193,12 +194,10 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1805163527237632
-    m_Localized: 'Seleziona un dipendente per visualizzare le sue informazioni e
-      caratteristiche.
-
-      Puoi modificare il team di appartenenza, ma attenzione:
-      spostare o rimuovere un dipendente puo'' ridurre temporaneamente l''umore e
-      la produttivita'' del team.'
+    m_Localized: "Seleziona un dipendente per visualizzare le sue informazioni e
+      caratteristiche.\r\nIn ogni momento puoi spostare un dipendente da un team
+      all'altro, ma attenzione: spostare o rimuovere un dipendente puo' ridurre temporaneamente
+      l'umore e la produttivita' del team.\r"
     m_Metadata:
       m_Items: []
   - m_Id: 1805211916922880
@@ -206,14 +205,10 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1805246956138496
-    m_Localized: 'Ogni dipendente puo'' produrre fino a 100 unita'' di lavoro a settimana.
-
-      La
-      sua efficacia dipende dal reparto e dall''umore, che e'' influenzato dal numero
-      di colleghi nel team.
-
-      Assegna ciascun dipendente al contesto piu'' adatto
-      per ottenere il massimo.'
+    m_Localized: "Ogni dipendente puo' produrre fino a 100 unita' di lavoro a settimana.\r\nLa
+      sua efficacia dipende dalla competenza nel dipartimento e dal suo umore, che
+      e' influenzato dal numero di colleghi nel team.\r\nAssegna ciascun dipendente
+      al contesto piu' adatto per ottenere il massimo delle sue prestazioni.\r"
     m_Metadata:
       m_Items: []
   - m_Id: 1805331223900160
@@ -221,16 +216,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1805372923670528
-    m_Localized: 'Esamina le descrizioni dei candidati per capire chi e'' piu'' adatto
-      al ruolo.
-
-      Puoi fare piu'' ricerche consecutive, pagando il relativo
-      costo.
-
-      Attenzione: i candidati attuali spariranno quando richiederai
-      una nuova ricerca.
-
-      Le prime 3 ricerche sono gratuite!'
+    m_Localized: "Esamina le descrizioni dei candidati per capire chi e' piu' adatto
+      al ruolo.\r\nPuoi fare piu' ricerche consecutive, pagando il relativo costo.\r\nAttenzione:
+      i candidati cambiano quando richiedi una nuova ricerca.\r\nRicordati di assegnare
+      i nuovi dipendenti ai dipartimenti prima di andare avanti nel gioco.\r\nLe
+      prime 3 ricerche sono gratuite!\r"
     m_Metadata:
       m_Items: []
   - m_Id: 1805659512074240
@@ -265,7 +255,7 @@ MonoBehaviour:
     m_Localized: 'Alcuni progetti richiedono il lavoro di piu'' dipartimenti contemporaneamente.
 
       Assegna
-      i dipendenti giusti ad ogni reparto per completare il progetto con successo.'
+      i dipendenti giusti ad ogni dipartimento per completare il progetto con successo.'
     m_Metadata:
       m_Items: []
   - m_Id: 1805979180953600
@@ -291,8 +281,8 @@ MonoBehaviour:
     m_Localized: 'Ogni settimana arrivano nuovi progetti da valutare.
 
       Controlla
-      regolarmente per scoprire opportunita'' interessanti e vantaggiose per la tua
-      azienda.'
+      regolarmente la lista dei nuovi progetti per scoprire opportunita'' interessanti
+      e vantaggiose per la tua azienda.'
     m_Metadata:
       m_Items: []
   - m_Id: 1806390327603200
@@ -300,30 +290,21 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1806418907590656
-    m_Localized: 'AUT-INC e'' stato sviluppato da Daniele Gentile, studente di Informatica
-      all''Universita'' degli Studi di Bari Aldo Moro.
+    m_Localized: 'Progettato e realizzato da Daniele Gentile, del corso di laurea
+      in Informatica del Dipartimento di Informatica dell''Universita'' degli Studi
+      di Bari Aldo Moro.
 
-      Per la parte grafica
-      hanno collaborato in maniera volontaria Vanessa Romano e Dario Gentile, creando
-      le immagini in pixel art presenti nel gioco.'
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1806510599270400
-    m_Localized: 'Il progetto e'' stato realizzato presso il Dipartimento di Informatica
-      dell''Universita'' degli Studi di Bari Aldo Moro.
+      Un ringraziamento speciale va alla prof.ssa Veronica
+      Rossano per la supervisione e il supporto offerto durante lo sviluppo della
+      tesi di laurea.
 
-      Un ringraziamento
-      speciale alla professoressa Veronica Rossano, docente associato, per la supervisione
-      e il supporto offerto durante lo sviluppo di AUT-INC.'
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1806489703247872
-    m_Localized: Universita' e Supervisione
+      La parte grafica ha visto la collaborazione di Vanessa
+      Romano e Dario Gentile per la realizzazione delle immagini in pixel art.'
     m_Metadata:
       m_Items: []
   - m_Id: 1806917635502080
-    m_Localized: 'AUT-INC e'' un videogioco gestionale sviluppato come progetto di
-      laurea, pensato per sensibilizzare gli utenti sull''autismo.
+    m_Localized: 'AUT-INC e'' un Serious Game gestionale pensato per sensibilizzare
+      gli utenti sulle problematiche sociali dell''autismo.
 
       Il giocatore
       assume il ruolo di Direttore Generale di un''azienda informatica inclusiva,
@@ -338,7 +319,25 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1806893992210432
-    m_Localized: Il Progetto
+    m_Localized: Il Progetto AUT-INC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2234312079273984
+    m_Localized: Sbloccare nuovi Dipartimenti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2234388373663744
+    m_Localized: 'Ogni dipartimento attivo ha una sua schermata accessibile clickando
+      sull''apposito bottone "Informazioni".
+
+      Per sbloccare un nuovo dipartimento
+      dovrai clickare sul bottone "Sblocca il Dipartimento" che trovi sopra il riquadro
+      del dipartimento in questione.
+
+      I dipartimenti sono sbloccabili in un
+      ordine predefinito.
+
+'
     m_Metadata:
       m_Items: []
   references:

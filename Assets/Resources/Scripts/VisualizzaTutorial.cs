@@ -23,7 +23,8 @@ public class VisualizzaTutorial : MonoBehaviour
         // Aggiungi i tutorial non ancora visti
         foreach (var tutorial in azienda.tutorialFlags)
         {
-            
+            if(tutorial.Key == "aboutus1" || tutorial.Key == "aboutus2")
+                continue;
             GameObject tutorialItem = Instantiate(TutorialPrefab, ContentPanel.transform);
             tutorialItem.GetComponentInChildren<TMP_Text>().text = LocalizationSettings.StringDatabase.GetLocalizedString("Tutorial", tutorial.Key + "TITOLO");
             tutorialItem.GetComponent<Button>().onClick.AddListener(() =>

@@ -64,9 +64,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 5457478250496
-    m_Localized: "Questo dipartimento cerca persone capaci di cogliere sfumature
-      visive e sensoriali.\nLa sensibilita' estetica e l\u2019attenzione ai dettagli
-      aiutano a creare esperienze piacevoli per gli utenti."
+    m_Localized: 'Questo dipartimento cerca persone capaci di cogliere sfumature
+      visive e sensoriali.
+
+      La sensibilita'' estetica e l''attenzione ai dettagli
+      aiutano a creare esperienze piacevoli per gli utenti.'
     m_Metadata:
       m_Items: []
   - m_Id: 5497760346112
@@ -78,9 +80,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 5560750403584
-    m_Localized: "In questo dipartimento servono curiosita' e dedizione per analizzare
-      e migliorare costantemente.\nLa capacita' di individuare schemi e sperimentare
-      nuove soluzioni e' fondamentale per innovare e far crescere l\u2019azienda."
+    m_Localized: 'In questo dipartimento servono curiosita'' e dedizione per analizzare
+      e migliorare costantemente.
+
+      La capacita'' di individuare schemi e sperimentare
+      nuove soluzioni e'' fondamentale per innovare e far crescere l''azienda.'
     m_Metadata:
       m_Items: []
   - m_Id: 5617612582912

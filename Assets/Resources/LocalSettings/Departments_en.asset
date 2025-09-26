@@ -47,9 +47,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4983693864960
-    m_Localized: "This department requires people who can communicate clearly and
-      understand others\u2019 needs easily.\nThe ability to adapt one\u2019s language
-      is essential to help clients and colleagues effectively."
+    m_Localized: 'This department requires people who can communicate clearly and
+      understand others'' needs easily.
+
+      The ability to adapt one''s language
+      is essential to help clients and colleagues effectively.'
     m_Metadata:
       m_Items: []
   - m_Id: 5032125493248
@@ -85,9 +87,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 5617612582912
-    m_Localized: "This department requires creativity combined with the ability to
-      communicate messages clearly.\nKnowing how to spark users\u2019 visual and
-      auditory curiosity is essential to reach and engage the audience."
+    m_Localized: 'This department requires creativity combined with the ability to
+      communicate messages clearly.
+
+      Knowing how to spark users'' visual and
+      auditory curiosity is essential to reach and engage the audience.'
     m_Metadata:
       m_Items: []
   references:

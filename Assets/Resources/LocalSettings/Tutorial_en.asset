@@ -17,7 +17,342 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: 567da0f27ceb5364a9fea3c9364162c3, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 1800314693709824
+    m_Localized: Welcome
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1800347358949376
+    m_Localized: 'Welcome to AUT-INC!
+
+      You are the manager of a new IT company:
+      your task is to manage employees and departments to help it grow. Get ready
+      to make important decisions every week!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1800420423725056
+    m_Localized: Game Objective
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1800447858667520
+    m_Localized: 'Your goal?
+
+      Grow your company without going bankrupt. To
+      succeed, you will need to:
+
+      - improve your departments,
+
+      - unlock
+      new ones,
+
+      - accept the right projects from clients.
+
+      The bigger
+      you grow, the more opportunities will open up!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1800528586436608
+    m_Localized: Main Interface
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1800558235971584
+    m_Localized: 'From the main screen, you can keep everything under control:
+
+      -
+      departments,
+
+      - employees,
+
+      - ongoing projects.
+
+      At the top
+      left, you''ll find the essential information: number of employees, elapsed
+      time, and available capital.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1800608940912640
+    m_Localized: Time Management
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1800613319766016
+    m_Localized: 'Time is precious.
+
+      Every week that passes using play and
+      pause buttons, projects move forward!
+
+      - Manage time from the panel at
+      the top: you can pause and resume it whenever you like.
+
+      - When you open
+      a menu (employees, projects, departments), the game automatically pauses.
+
+      Remember
+      to press "play" to start the game time whenever you feel ready.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1800786590658560
+    m_Localized: Getting Started
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1800814117875712
+    m_Localized: 'Is this your first time playing AUT-INC?
+
+      To get oriented,
+      I recommend opening the menus in this order:
+
+      - Departments
+
+      -
+      Employees
+
+      - Projects
+
+      This way you''ll quickly understand how
+      the company works.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1800890303213568
+    m_Localized: A helpful tip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1800913753567232
+    m_Localized: 'Want to succeed?
+
+      Don''t focus only on profit: happy, well-organized
+      employees are much more productive!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1804463497900032
+    m_Localized: Departments
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1804513217179648
+    m_Localized: 'Each department includes a description of its activities and the
+      skills required.
+
+      Read this information carefully to understand which
+      employees to assign and get the most out of your team.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1804551695724544
+    m_Localized: Team Management
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1804574353354752
+    m_Localized: 'Within each department, you can create one or more teams.
+
+      Try
+      to keep the number of teams close to the recommended value and respect employees''
+      preferences for working alone or in a group to maximize productivity and team
+      satisfaction.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1804665034207232
+    m_Localized: Upgrade the Department
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1804748916092928
+    m_Localized: 'You can upgrade a department to increase the maximum number of
+      employees and its productivity.
+
+      Keep in mind that upgrades may affect
+      salaries and the recommended number of teams, so organize your team carefully.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1804796106207232
+    m_Localized: Work Output
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1804833741697024
+    m_Localized: 'Each employee produces up to 100 units of work per week.
+
+      Increasing
+      the department''s level allows you to hire more employees and increase production.
+
+      Organize
+      your teams effectively to get the most out of each department member.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1805028562923520
+    m_Localized: Employee List
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1805057881108480
+    m_Localized: 'Here you can see all your employees, organized by department and
+      team.
+
+      Towards the end of the list, you will find those who have been
+      hired but are not yet active.
+
+      Employees assigned to a department take
+      on the department''s color in the list.
+
+      Use the search function to find
+      new candidates, but remember: each search has a cost!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1805139581956096
+    m_Localized: Employee Details
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1805163527237632
+    m_Localized: 'Select an employee to view their information and attributes.
+
+      At
+      any time, you can move an employee from one team to another, but be careful:
+      moving or removing an employee may temporarily reduce the team''s mood and
+      productivity.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1805211916922880
+    m_Localized: Employee Productivity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1805246956138496
+    m_Localized: 'Each employee can produce up to 100 units of work per week.
+
+      Their
+      effectiveness depends on their skills in the department and on their mood,
+      which is influenced by the number of colleagues in the team.
+
+      Assign
+      each employee to the most suitable context to get the best performance out
+      of them.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1805331223900160
+    m_Localized: Hiring New Employees
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1805372923670528
+    m_Localized: 'Review the candidates'' profiles to understand who is best suited
+      for the role.
+
+      You can perform multiple consecutive searches, paying
+      the associated cost.
+
+      Warning:  candidates will change when you request
+      a new search.
+
+      Remember to assign new employees to departments before
+      moving forward in the game.
+
+      The first three searches are free!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1805659512074240
+    m_Localized: Project List
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1805712922341376
+    m_Localized: 'Here you can see all ongoing projects as well as proposed projects
+      not yet accepted.
+
+      Each project displays the remaining time and the work
+      left to complete.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1805757205803008
+    m_Localized: Project Details
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1805777598509056
+    m_Localized: 'Select a project to see which departments are involved, how much
+      work remains, and how many weeks are left.
+
+      You can also view the financial
+      details: advance payment, weekly payments, and final payment.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1805846259265536
+    m_Localized: Projects and Departments
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1805884054138880
+    m_Localized: 'Some projects require the work of multiple departments simultaneously.
+
+      Assign
+      the right employees to each department to successfully complete the project.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1805953398566912
+    m_Localized: Project Completion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1805979180953600
+    m_Localized: 'A project is considered complete if finished within the deadline.
+
+      The
+      final payment increases or decreases depending on whether it is delivered early
+      or late.
+
+      If you cannot complete a project, you can cancel the contract
+      by paying a penalty, freeing your employees to work on other tasks.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1806103017779200
+    m_Localized: New Projects
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1806148668583936
+    m_Localized: 'Every week, new projects arrive for evaluation.
+
+      Check regularly
+      the list of new projects list to discover interesting and profitable opportunities
+      for your company.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1806390327603200
+    m_Localized: Project Team
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1806418907590656
+    m_Localized: 'Designed and developed by Daniele Gentile, from the Computer Science
+      degree program of the Department of Computer Science at the Universita'' degli
+      Studi di Bari Aldo Moro.
+
+      Special thanks go to Prof.ssa Veronica Rossano
+      for the supervision and support provided during the development of the thesis.
+
+      The
+      graphic part involved the collaboration of Vanessa Romano and Dario Gentile
+      for the creation of the pixel art images.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1806893992210432
+    m_Localized: The Project AUT-INC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1806917635502080
+    m_Localized: 'AUT-INC is a management Serious Game designed to raise awareness
+      about the social issues of autism.
+
+      The player takes on the role of General
+      Manager of an inclusive IT company, managing employees and projects. Through
+      reading candidate profiles and managing teams, the player is guided to understand
+      the potential and challenges of neurodivergent people, developing empathy and
+      awareness.
+
+      The game highlights how autism can be a valuable resource
+      in the workplace, encouraging inclusive strategies and careful human resource
+      management.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2234312079273984
+    m_Localized: Unlock new Departments
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2234388373663744
+    m_Localized: 'Each active department has its own screen, accessible by clicking
+      the dedicated "Details" button.
+
+      To unlock a new department, you need
+      to click the "Unlock Department" button located above the panel of the department
+      in question.
+
+      Departments can only be unlocked in a predefined order.'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

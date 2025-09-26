@@ -255,7 +255,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10683916810547200
-    m_Localized: Buy Department
+    m_Localized: Unlock Department
     m_Metadata:
       m_Items: []
   - m_Id: 10781753409892352
@@ -324,6 +324,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 13667037919145984
     m_Localized: Credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14087898778136576
+    m_Localized: Next
     m_Metadata:
       m_Items: []
   references:

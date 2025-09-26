@@ -220,7 +220,7 @@ namespace Scripts.Logica
             durataRimanente--;
 
             // Ogni settimana si guadagna solo la quota settimanale
-            if(durataRimanente >= 0)
+            if(durataRimanente > 0)
                 guadagnoSettimanale += settimanale;
 
             // Non tocciamo qui il finale o la penalità
@@ -248,7 +248,6 @@ namespace Scripts.Logica
                     guadagno += settimanale * durataRimanente;
                 }
                 guadagno += finale - (finale * percentualeDetrazione / 100 * (durataRimanente));
-                azienda.progettiCompletatiInSettimana.Add(this);
             }
             else
             {
@@ -257,7 +256,6 @@ namespace Scripts.Logica
                     if (forcedEnd)
                     {
                         guadagno += finaleDetrazione;
-                        azienda.progettiCompletatiInSettimana.Add(this);
                     }
                 }
                 else
@@ -296,6 +294,11 @@ namespace Scripts.Logica
         
         // Chiude il progetto
         public void ChiudiProgetto()
+        {
+            azienda.progettiCompletatiInSettimana.Add(this);
+        }
+
+        public void RimuoviProgetto()
         {
             foreach (var reparto in repartiCoinvolti)
             {

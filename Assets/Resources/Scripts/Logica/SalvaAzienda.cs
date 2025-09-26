@@ -16,9 +16,14 @@ public class SalvaAzienda
     public int anno;
     public int mese;
     public int settimana;
+    public float timer;
+    public float currentTimer;
+    public bool pausa;
+    public bool inPausa;
 
     public int costoReparto;
     public int costoAssunzioneDipendente;
+    public int costoLicenziamento;
     public int ricercheDipendentiGratuite;
 
     public List<NomiReparti> repartiDaSbloccare;
@@ -27,8 +32,11 @@ public class SalvaAzienda
     public List<Progetto> progettiInCorso;
     public List<Progetto> progettiCompletatiInSettimana;
     public List<Progetto> progettiProposti;
+    public int progettiCostante;
+    public float progettiPerDipartimento;
 
     public Dictionary<string, bool> flags;
+    public Dictionary<string, bool> tutorial;
 }
 
 public static class SalvataggioAzienda
@@ -47,9 +55,14 @@ public static class SalvataggioAzienda
             anno = azienda.anno,
             mese = azienda.mese,
             settimana = azienda.settimana,
+            timer = azienda.timer,
+            currentTimer = azienda.timer,
+            pausa = azienda.pausa,
+            inPausa = azienda.inPausa,
 
             costoReparto = azienda.costoReparto,
             costoAssunzioneDipendente = azienda.costoAssunzioneDipendente,
+            costoLicenziamento = azienda.costoLicenziamento,
             ricercheDipendentiGratuite = azienda.ricercheDipendentiGratuite,
 
             reparti = azienda.reparti,
@@ -58,8 +71,11 @@ public static class SalvataggioAzienda
             progettiInCorso = azienda.progettiInCorso,
             progettiCompletatiInSettimana = azienda.progettiCompletatiInSettimana,
             progettiProposti = azienda.progettiProposti,
+            progettiCostante = azienda.progettiCostante,
+            progettiPerDipartimento = azienda.progettiPerDipartimento,
 
-            flags = azienda.warningFlags
+            flags = azienda.warningFlags,
+            tutorial = azienda.tutorialFlags
         };
 
         // convertiamo i dizionari con enum come chiave in stringhe
@@ -92,6 +108,7 @@ public static class SalvataggioAzienda
             data.progettiCompletatiInSettimana ??= new List<Progetto>();
             data.progettiProposti ??= new List<Progetto>();
             data.flags ??= new Dictionary<string,bool>();
+            data.tutorial ??= new Dictionary<string,bool>();
 
             // Assegna valori ad Azienda
             azienda.capitale = data.capitale;
@@ -102,9 +119,14 @@ public static class SalvataggioAzienda
             azienda.anno = data.anno;
             azienda.mese = data.mese;
             azienda.settimana = data.settimana;
+            azienda.timer = data.timer;
+            azienda.currentTimer = data.currentTimer;
+            azienda.pausa = false;
+            azienda.inPausa = false;
 
             azienda.costoReparto = data.costoReparto;
             azienda.costoAssunzioneDipendente = data.costoAssunzioneDipendente;
+            azienda.costoLicenziamento = data.costoLicenziamento;
             azienda.ricercheDipendentiGratuite = data.ricercheDipendentiGratuite;
 
             azienda.reparti = data.reparti;
@@ -113,8 +135,11 @@ public static class SalvataggioAzienda
             azienda.progettiInCorso = data.progettiInCorso;
             azienda.progettiCompletatiInSettimana = data.progettiCompletatiInSettimana;
             azienda.progettiProposti = data.progettiProposti;
+            azienda.progettiCostante = data.progettiCostante;
+            azienda.progettiPerDipartimento = data.progettiPerDipartimento;
 
             azienda.warningFlags = data.flags;
+            azienda.tutorialFlags = data.tutorial;
         }
         catch (Exception e)
         {

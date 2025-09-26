@@ -36,8 +36,8 @@ public class Azienda : MonoBehaviour
     [HideInInspector] public int anno = 1; // anno attuale
     [HideInInspector] public int mese = 1; // mese attuale
     [HideInInspector] public int settimana = 1; // settimana attuale
-    [JsonIgnore][SerializeReference] public float timer = 8f;
-    [JsonIgnore][SerializeReference] public float currentTimer = 8f;
+    [JsonIgnore][SerializeReference] public float timer = 6f;
+    [JsonIgnore][SerializeReference] public float currentTimer = 6f;
     [JsonIgnore][SerializeReference] public bool pausa = true;
     [JsonIgnore][SerializeReference] public bool inPausa = true;
     
@@ -56,7 +56,7 @@ public class Azienda : MonoBehaviour
     [HideInInspector] public List<Progetto> progettiInCorso = new List<Progetto>(); // progetti attualmente in corso
     [HideInInspector] public List<Progetto> progettiCompletatiInSettimana = new List<Progetto>(); // progetti completati nella settimana corrente
     [HideInInspector] public List<Progetto> progettiProposti = new List<Progetto>(); // progetti che si possono iniziare
-    [HideInInspector] public int progettiCostante = 3;
+    [HideInInspector] public int progettiCostante = 2;
     [HideInInspector] public float progettiPerDipartimento = 1f;
     
     // oggetti di gestione della UI in game
@@ -152,8 +152,8 @@ public class Azienda : MonoBehaviour
         settimana = 1;
         mese = 1;
         anno = 1;
-        timer = 8f;
-        currentTimer = 8f;
+        timer = 6f;
+        currentTimer = 6f;
         pausa = true;
         inPausa = true;
         costoReparto = 80000;
@@ -188,6 +188,7 @@ public class Azienda : MonoBehaviour
             { "introduzione4", false },
             { "introduzione5", false },
             { "introduzione6", false },
+            { "introduzione7", false },
             { "dipartimenti1", false },
             { "dipartimenti2", false },
             { "dipartimenti3", false },
@@ -202,8 +203,7 @@ public class Azienda : MonoBehaviour
             { "progetti4", false },
             { "nuoviProgetti1", false },
             { "aboutus1", false },
-            { "aboutus2", false },
-            { "aboutus3", false }
+            { "aboutus2", false }
         };
     }
 
@@ -239,7 +239,6 @@ public class Azienda : MonoBehaviour
     
     public void AperturaNuovoReparto(NomiReparti nomeReparto)
     {
-        
         reparti[nomeReparto].ApriReparto();
         repartiDaSbloccare.Remove(nomeReparto);
         if (repartiDaSbloccare.Count > 0)
@@ -332,12 +331,23 @@ public class Azienda : MonoBehaviour
 
         var chiusureProgetti = 0;
         var almenoUnoChiuso = false;
+
         foreach (var progetto in progettiInCorso)
         {
             var singoloProgetto = progetto.ChiudiProgetto2();
             chiusureProgetti += singoloProgetto;
-            almenoUnoChiuso = singoloProgetto != 0 || almenoUnoChiuso;
+            if (singoloProgetto != 0)
+                almenoUnoChiuso = true;
         }
+        
+        foreach (var progetto in progettiCompletatiInSettimana)
+        {
+            progetto.RimuoviProgetto();
+        }
+        
+        progettiCompletatiInSettimana.Clear();
+
+        guadagnoTotale += chiusureProgetti;
 
         if (almenoUnoChiuso)
         {
@@ -406,7 +416,7 @@ public class Azienda : MonoBehaviour
                     aggiornaCapitale(-reparto.costoPotenziamento, new List<string>{"potenziamentoReparto"});
                     tempoDiminuzioneGuadagno = Math.Min(tempoDiminuzioneGuadagno + 18, 18);
                     reparto.AumentaLivello();
-                    tasseMensile += 1000;
+                    tasseMensile += 2000;
                 }, 
                 () => 
                 {
@@ -617,6 +627,15 @@ public class Azienda : MonoBehaviour
             r5.OnAfterLoad(this, etichettaRicerca);
         if (reparti.TryGetValue(NomiReparti.Marketing, out var r6))
             r6.OnAfterLoad(this, etichettaMarketing);
+        
+        if(progettiInCorso != null)
+            foreach (var progetto in progettiInCorso)
+                progetto.OnAfterLoad(this);
+        
+        if (progettiProposti != null)
+            foreach (var progetto in progettiProposti)
+                progetto.OnAfterLoad(this);
+        
 
         Dipendente.CaricaJsonCategorie();
         Progetto.CaricaJsonProgetti();
@@ -918,7 +937,7 @@ public class Azienda : MonoBehaviour
 
     public void Start()
     {
-        // OnNewGame();
+        //OnNewGame();
     }
     
     // Funzione di update dello scorrere del tempo

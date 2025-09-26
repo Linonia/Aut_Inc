@@ -52,6 +52,8 @@ public class CompilaTutorialPanel : MonoBehaviour
                     "introduzione3" => "introduzione4",
                     "introduzione4" => "introduzione5",
                     "introduzione5" => "introduzione6",
+                    "introduzione6" => "introduzione7",
+                    "introduzione7" => null,
                     "dipartimenti1" => "dipartimenti2",
                     "dipartimenti2" => "dipartimenti3",
                     "dipartimenti3" => "dipartimenti4",
@@ -64,8 +66,7 @@ public class CompilaTutorialPanel : MonoBehaviour
                     "progetti4" => null,           // fine sequenza progetti
                     "nuoviProgetti1" => null,      // solo uno nuovoProgetti
                     "aboutus1" => "aboutus2",
-                    "aboutus2" => "aboutus3",
-                    "aboutus3" => null,            // ultimo aboutus
+                    "aboutus2" => null,            // ultimo aboutus
                     _ => null
                 };
 
@@ -73,14 +74,20 @@ public class CompilaTutorialPanel : MonoBehaviour
                 if (nextTutorial != null)
                 {
                     chiudiButton.onClick.AddListener(() => MostraTutorial(nextTutorial, null, mostraComunque, continua));
+                    chiudiButton.GetComponentInChildren<TMP_Text>().text =
+                        LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", "avanti");
                 }
                 else
                 {
                     chiudiButton.onClick.AddListener(() => StartCoroutine(FadeOut()));
+                    chiudiButton.GetComponentInChildren<TMP_Text>().text =
+                        LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", "chiudi");
                 }
             }
             else
             {
+                chiudiButton.GetComponentInChildren<TMP_Text>().text =
+                    LocalizationSettings.StringDatabase.GetLocalizedString("TextTranslation", "chiudi");
                 chiudiButton.onClick.AddListener(() => StartCoroutine(FadeOut()));
             }
             
